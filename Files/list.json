@@ -4,7 +4,7 @@
     "jobtitle":"Senior UX Architect (Content Planning, Interaction Design)",
     "location":"Greater Jakarta Area, Indonesia",
     "jobdesc":"Consulting, Reserach, & Legal Services",
-    "commision":"IDR 10.000.000",
+    "commision":10000000,
     "reference":[
        {
          "name":"Irwan Gunawan",
@@ -23,7 +23,7 @@
     "jobtitle":"Senior UX Architect (Content Planning, Interaction Design)",
     "location":"Greater Jakarta Area, Indonesia",
     "jobdesc":"Consulting, Reserach, & Legal Services",
-    "commision":"IDR 10.000.000",
+    "commision":12000000,
     "reference":[
        {
          "name":"Cynthia Stevens",
@@ -37,7 +37,21 @@
     "jobtitle":"Junior Web Developer (Content Planning, Interaction Design)",
     "location":"Greater Jakarta Area, Indonesia",
     "jobdesc":"Consulting, Reserach, & Legal Services",
-    "commision":"IDR 10.000.000",
+    "commision":13000000,
     "reference":[]
+  },
+  {
+    "id": 4,
+    "jobtitle":"Junior iOS Developer (Content Planning, Interaction Design)",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Consulting, Reserach, & Legal Services",
+    "commision":15000000,
+    "reference":[
+		{
+         "name":"Bondan Eko Prasetyo",
+         "company":"B-Site",
+         "status":"Complete"
+       }
+	]
   }
 ]

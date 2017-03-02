@@ -32,7 +32,7 @@ public class main extends Activity implements B4AActivity{
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if (isFirst) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.qolega", "b4a.qolega.main");
+			processBA = new BA(this.getApplicationContext(), null, null, "b4a.qolega", "b4a.qolega.main");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -308,65 +308,6 @@ public class main extends Activity implements B4AActivity{
 		processBA.raiseEvent2(null, true, "globals", false, (Object[])null);
 	}
 
-
-
-public static void initializeProcessGlobals() {
-    
-    if (main.processGlobalsRun == false) {
-	    main.processGlobalsRun = true;
-		try {
-		        		
-        } catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-    }
-}
-public static boolean isAnyActivityVisible() {
-    boolean vis = false;
-vis = vis | (main.mostCurrent != null);
-vis = vis | (referringlist.mostCurrent != null);
-vis = vis | (test.mostCurrent != null);
-return vis;}
-
-public static void killProgram() {
-     {
-            Activity __a = null;
-            if (main.previousOne != null) {
-				__a = main.previousOne.get();
-			}
-            else {
-                BA ba = main.mostCurrent.processBA.sharedProcessBA.activityBA.get();
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
-BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
- {
-            Activity __a = null;
-            if (referringlist.previousOne != null) {
-				__a = referringlist.previousOne.get();
-			}
-            else {
-                BA ba = referringlist.mostCurrent.processBA.sharedProcessBA.activityBA.get();
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (test.previousOne != null) {
-				__a = test.previousOne.get();
-			}
-            else {
-                BA ba = test.mostCurrent.processBA.sharedProcessBA.activityBA.get();
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
-}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public static anywheresoftware.b4a.objects.Timer _splashtimer = null;
 public anywheresoftware.b4a.objects.PanelWrapper _backgroundpanel = null;
@@ -374,97 +315,102 @@ public anywheresoftware.b4a.objects.PanelWrapper _panel1 = null;
 public b4a.qolega.starter _starter = null;
 public b4a.qolega.referringlist _referringlist = null;
 public b4a.qolega.test _test = null;
+
+public static boolean isAnyActivityVisible() {
+    boolean vis = false;
+vis = vis | (main.mostCurrent != null);
+vis = vis | (referringlist.mostCurrent != null);
+vis = vis | (test.mostCurrent != null);
+return vis;}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime});
 anywheresoftware.b4a.objects.ImageViewWrapper _qolegalogo = null;
-RDebugUtils.currentLine=131072;
- //BA.debugLineNum = 131072;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=131080;
- //BA.debugLineNum = 131080;BA.debugLine="SplashTimer.Initialize(\"SplashTimer\",3000)";
+int _w = 0;
+int _h = 0;
+ //BA.debugLineNum = 29;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 37;BA.debugLine="SplashTimer.Initialize(\"SplashTimer\",3000)";
 _splashtimer.Initialize(processBA,"SplashTimer",(long) (3000));
-RDebugUtils.currentLine=131081;
- //BA.debugLineNum = 131081;BA.debugLine="SplashTimer.Enabled = True";
+ //BA.debugLineNum = 38;BA.debugLine="SplashTimer.Enabled = True";
 _splashtimer.setEnabled(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=131083;
- //BA.debugLineNum = 131083;BA.debugLine="Panel1.Initialize(\"Panel1\")";
+ //BA.debugLineNum = 40;BA.debugLine="Panel1.Initialize(\"Panel1\")";
 mostCurrent._panel1.Initialize(mostCurrent.activityBA,"Panel1");
-RDebugUtils.currentLine=131084;
- //BA.debugLineNum = 131084;BA.debugLine="Panel1.SetBackgroundImage(LoadBitmap(File.DirAsse";
+ //BA.debugLineNum = 41;BA.debugLine="Panel1.SetBackgroundImage(LoadBitmap(File.DirAsse";
 mostCurrent._panel1.SetBackgroundImage((android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"7aa1c09d-5afb-40e9-8e79-0d3e5b17a8ea.png").getObject()));
-RDebugUtils.currentLine=131085;
- //BA.debugLineNum = 131085;BA.debugLine="Panel1.Visible=True";
+ //BA.debugLineNum = 42;BA.debugLine="Panel1.Visible=True";
 mostCurrent._panel1.setVisible(anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=131087;
- //BA.debugLineNum = 131087;BA.debugLine="Dim QolegaLogo As ImageView";
+ //BA.debugLineNum = 44;BA.debugLine="Dim QolegaLogo As ImageView";
 _qolegalogo = new anywheresoftware.b4a.objects.ImageViewWrapper();
-RDebugUtils.currentLine=131089;
- //BA.debugLineNum = 131089;BA.debugLine="QolegaLogo.Initialize(\"QolegaLabel\")";
-_qolegalogo.Initialize(mostCurrent.activityBA,"QolegaLabel");
-RDebugUtils.currentLine=131090;
- //BA.debugLineNum = 131090;BA.debugLine="QolegaLogo.bitmap = LoadBitmap(File.DirAssets,\"lo";
+ //BA.debugLineNum = 46;BA.debugLine="Dim W As Int = 300dip 'This is picture width";
+_w = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (300));
+ //BA.debugLineNum = 47;BA.debugLine="Dim H As Int = 40dip ' and height";
+_h = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40));
+ //BA.debugLineNum = 49;BA.debugLine="QolegaLogo.Initialize(\"QolegaLogo\")";
+_qolegalogo.Initialize(mostCurrent.activityBA,"QolegaLogo");
+ //BA.debugLineNum = 50;BA.debugLine="QolegaLogo.bitmap = LoadBitmap(File.DirAssets,\"lo";
 _qolegalogo.setBitmap((android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"logo.png").getObject()));
-RDebugUtils.currentLine=131091;
- //BA.debugLineNum = 131091;BA.debugLine="Panel1.AddView(QolegaLogo, 0, 100%y/2, 300dip,";
-mostCurrent._panel1.AddView((android.view.View)(_qolegalogo.getObject()),(int) (0),(int) (anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA)/(double)2),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (300)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40)));
-RDebugUtils.currentLine=131093;
- //BA.debugLineNum = 131093;BA.debugLine="Activity.LoadLayout(\"loginLayout\")";
+ //BA.debugLineNum = 51;BA.debugLine="Panel1.AddView(QolegaLogo, (100%x - W)/2, (100";
+mostCurrent._panel1.AddView((android.view.View)(_qolegalogo.getObject()),(int) ((anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA)-_w)/(double)2),(int) ((anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA)-_h)/(double)2),_w,_h);
+ //BA.debugLineNum = 53;BA.debugLine="Activity.LoadLayout(\"loginLayout\")";
 mostCurrent._activity.LoadLayout("loginLayout",mostCurrent.activityBA);
-RDebugUtils.currentLine=131094;
- //BA.debugLineNum = 131094;BA.debugLine="Activity.AddView(Panel1,0,0,Activity.Width,Activi";
+ //BA.debugLineNum = 54;BA.debugLine="Activity.AddView(Panel1,0,0,Activity.Width,Activi";
 mostCurrent._activity.AddView((android.view.View)(mostCurrent._panel1.getObject()),(int) (0),(int) (0),mostCurrent._activity.getWidth(),mostCurrent._activity.getHeight());
-RDebugUtils.currentLine=131096;
- //BA.debugLineNum = 131096;BA.debugLine="End Sub";
+ //BA.debugLineNum = 56;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_pause"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "activity_pause", new Object[] {_userclosed});
-RDebugUtils.currentLine=262144;
- //BA.debugLineNum = 262144;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=262146;
- //BA.debugLineNum = 262146;BA.debugLine="End Sub";
+ //BA.debugLineNum = 62;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 64;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null);
-RDebugUtils.currentLine=196608;
- //BA.debugLineNum = 196608;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=196610;
- //BA.debugLineNum = 196610;BA.debugLine="End Sub";
+ //BA.debugLineNum = 58;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 60;BA.debugLine="End Sub";
+return "";
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 21;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 25;BA.debugLine="Private BackgroundPanel As Panel";
+mostCurrent._backgroundpanel = new anywheresoftware.b4a.objects.PanelWrapper();
+ //BA.debugLineNum = 26;BA.debugLine="Dim Panel1 As Panel";
+mostCurrent._panel1 = new anywheresoftware.b4a.objects.PanelWrapper();
+ //BA.debugLineNum = 27;BA.debugLine="End Sub";
 return "";
 }
 public static String  _loginbtn_click() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "loginbtn_click"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "loginbtn_click", null);
-RDebugUtils.currentLine=327680;
- //BA.debugLineNum = 327680;BA.debugLine="Sub LoginBtn_Click";
-RDebugUtils.currentLine=327681;
- //BA.debugLineNum = 327681;BA.debugLine="StartActivity(Test)";
+ //BA.debugLineNum = 66;BA.debugLine="Sub LoginBtn_Click";
+ //BA.debugLineNum = 67;BA.debugLine="StartActivity(Test)";
 anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(mostCurrent._test.getObject()));
-RDebugUtils.currentLine=327682;
- //BA.debugLineNum = 327682;BA.debugLine="End Sub";
+ //BA.debugLineNum = 68;BA.debugLine="End Sub";
+return "";
+}
+
+public static void initializeProcessGlobals() {
+    
+    if (main.processGlobalsRun == false) {
+	    main.processGlobalsRun = true;
+		try {
+		        main._process_globals();
+starter._process_globals();
+referringlist._process_globals();
+test._process_globals();
+		
+        } catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+    }
+}public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 15;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 18;BA.debugLine="Dim SplashTimer As Timer";
+_splashtimer = new anywheresoftware.b4a.objects.Timer();
+ //BA.debugLineNum = 19;BA.debugLine="End Sub";
 return "";
 }
 public static String  _splashtimer_tick() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "splashtimer_tick"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "splashtimer_tick", null);
-RDebugUtils.currentLine=393216;
- //BA.debugLineNum = 393216;BA.debugLine="Sub SplashTimer_Tick";
-RDebugUtils.currentLine=393217;
- //BA.debugLineNum = 393217;BA.debugLine="Panel1.RemoveView()";
+ //BA.debugLineNum = 70;BA.debugLine="Sub SplashTimer_Tick";
+ //BA.debugLineNum = 71;BA.debugLine="Panel1.RemoveView()";
 mostCurrent._panel1.RemoveView();
-RDebugUtils.currentLine=393218;
- //BA.debugLineNum = 393218;BA.debugLine="SplashTimer.Enabled = False";
+ //BA.debugLineNum = 72;BA.debugLine="SplashTimer.Enabled = False";
 _splashtimer.setEnabled(anywheresoftware.b4a.keywords.Common.False);
-RDebugUtils.currentLine=393219;
- //BA.debugLineNum = 393219;BA.debugLine="End Sub";
+ //BA.debugLineNum = 73;BA.debugLine="End Sub";
 return "";
 }
 }

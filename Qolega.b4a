@@ -10,9 +10,10 @@ NumberOfFiles=3
 File1=loginLayout.bal
 File2=referringLayout.bal
 File3=splashscreen.bal
-NumberOfLibraries=2
+NumberOfLibraries=3
 Library1=core
-Library2=json
+Library2=stringutils
+Library3=json
 @EndOfDesignText@
 #Region  Project Attributes 
 	#ApplicationLabel: Qolega
@@ -58,10 +59,13 @@ Sub Activity_Create(FirstTime As Boolean)
 	Panel1.Visible=True
 	
 	Dim QolegaLogo As ImageView
-
-    QolegaLogo.Initialize("QolegaLabel")
+	
+	Dim W As Int = 300dip 'This is picture width
+	Dim H As Int = 40dip ' and height
+	
+    QolegaLogo.Initialize("QolegaLogo")
 	QolegaLogo.bitmap = LoadBitmap(File.DirAssets,"logo.png")
-    Panel1.AddView(QolegaLogo, 0, 100%y/2, 300dip, 40dip)
+    Panel1.AddView(QolegaLogo, (100%x - W)/2, (100%y - H)/2 , W, H)
 	
 	Activity.LoadLayout("loginLayout")
 	Activity.AddView(Panel1,0,0,Activity.Width,Activity.Height)
