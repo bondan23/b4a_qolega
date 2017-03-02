@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "jobtitle":"Senior UX Architect (Content Planning, Interaction Design)",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Consulting, Reserach, & Legal Services",
+    "commision":"IDR 10.000.000",
+    "reference":[
+       {
+         "name":"Irwan Gunawan",
+         "company":"Chevron Pacific Indonesia PT",
+         "status":"Qualifying"
+       },
+       {
+         "name":"Gregory Stone",
+         "company":"Indofood Sukses Makmur Tbk PT",
+         "status":"1st Interview"
+       }
+    ]
+  },
+  {
+    "id": 2,
+    "jobtitle":"Senior UX Architect (Content Planning, Interaction Design)",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Consulting, Reserach, & Legal Services",
+    "commision":"IDR 10.000.000",
+    "reference":[
+       {
+         "name":"Cynthia Stevens",
+         "company":"Mayora Indah Tbk PT",
+         "status":"Complete"
+       }
+    ]
+  },
+  {
+    "id": 3,
+    "jobtitle":"Junior Web Developer (Content Planning, Interaction Design)",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Consulting, Reserach, & Legal Services",
+    "commision":"IDR 10.000.000",
+    "reference":[]
+  }
+]

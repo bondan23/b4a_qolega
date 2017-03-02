@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="Theme.QolegaStyleLogin" parent="@android:style/Theme.Material.Light.DarkActionBar">
+	  <item name="android:colorPrimary">#16B0DD</item>
+	  <item name="android:colorPrimaryDark">#56585E</item>
+	  <item name="android:colorAccent">#16B0DD</item>
+  </style>
+  <style name="Theme.QolegaStyleDefault" parent="@android:style/Theme.Material.Light.DarkActionBar">
+	  <item name="android:colorPrimary">#16B0DD</item>
+	  <item name="android:colorPrimaryDark">#008DAC</item>
+	  <item name="android:colorAccent">#16B0DD</item>
+  </style>
+</resources>

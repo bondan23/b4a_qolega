@@ -1,0 +1,86 @@
+﻿Version=5.8
+NumberOfModules=3
+Module1=Starter
+Module2=ReferringList
+Module3=Test
+Build1=Default,b4a.qolega
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="22"/>~\n~<uses-permission android:name="android.permission.INTERNET" />~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~SetActivityAttribute(Main,android:theme,@style/Theme.QolegaStyleLogin)~\n~SetApplicationAttribute(android:theme, "@style/Theme.QolegaStyleDefault")~\n~'End of default text.~\n~
+IconFile=
+NumberOfFiles=3
+File1=loginLayout.bal
+File2=referringLayout.bal
+File3=splashscreen.bal
+NumberOfLibraries=2
+Library1=core
+Library2=json
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: Qolega
+	#VersionCode: 1
+	#VersionName: 
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: False
+	#IncludeTitle: False
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+	Dim SplashTimer As Timer
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+
+	Private BackgroundPanel As Panel
+	Dim Panel1 As Panel
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	'Http
+	'Dim job As HttpJob
+	
+	'job.Initialize("Job1", Me)
+	'job.Download2("http://www.basic4ppc.com/print.php", Array As String("first key", "first value :)", "second key", "value 2"))
+	
+	'Do not forget to load the layout file created with the visual designer. For example:
+	SplashTimer.Initialize("SplashTimer",3000)
+	SplashTimer.Enabled = True
+	
+	Panel1.Initialize("Panel1")
+	Panel1.SetBackgroundImage(LoadBitmap(File.DirAssets,"7aa1c09d-5afb-40e9-8e79-0d3e5b17a8ea.png"))
+	Panel1.Visible=True
+	
+	Dim QolegaLogo As ImageView
+
+    QolegaLogo.Initialize("QolegaLabel")
+	QolegaLogo.bitmap = LoadBitmap(File.DirAssets,"logo.png")
+    Panel1.AddView(QolegaLogo, 0, 100%y/2, 300dip, 40dip)
+	
+	Activity.LoadLayout("loginLayout")
+	Activity.AddView(Panel1,0,0,Activity.Width,Activity.Height)
+	
+End Sub
+
+Sub Activity_Resume
+
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+Sub LoginBtn_Click
+	StartActivity(Test)
+End Sub
+
+Sub SplashTimer_Tick
+	Panel1.RemoveView()
+	SplashTimer.Enabled = False
+End Sub
