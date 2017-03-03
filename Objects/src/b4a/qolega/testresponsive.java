@@ -32,7 +32,7 @@ public class testresponsive extends Activity implements B4AActivity{
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if (isFirst) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.qolega", "b4a.qolega.testresponsive");
+			processBA = new BA(this.getApplicationContext(), null, null, "b4a.qolega", "b4a.qolega.testresponsive");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -308,15 +308,6 @@ public class testresponsive extends Activity implements B4AActivity{
 		processBA.raiseEvent2(null, true, "globals", false, (Object[])null);
 	}
 
-
-
-public static void initializeProcessGlobals() {
-             try {
-                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public anywheresoftware.b4a.objects.ScrollViewWrapper _scrollview = null;
 public anywheresoftware.b4a.objects.collections.JSONParser _json = null;
@@ -327,72 +318,71 @@ public b4a.qolega.main _main = null;
 public b4a.qolega.starter _starter = null;
 public b4a.qolega.referringlist _referringlist = null;
 public b4a.qolega.test _test = null;
-public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="testresponsive";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime});
-RDebugUtils.currentLine=1835008;
- //BA.debugLineNum = 1835008;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=1835011;
- //BA.debugLineNum = 1835011;BA.debugLine="Activity.AddMenuItem3(\"SearchItem\", \"SearchItem\",";
-mostCurrent._activity.AddMenuItem3("SearchItem","SearchItem",(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"search.png").getObject()),anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=1835012;
- //BA.debugLineNum = 1835012;BA.debugLine="scrollView.Initialize(Activity.Height)";
-mostCurrent._scrollview.Initialize(mostCurrent.activityBA,mostCurrent._activity.getHeight());
-RDebugUtils.currentLine=1835013;
- //BA.debugLineNum = 1835013;BA.debugLine="scrollView.Color = Colors.RGB(219,219,219)";
-mostCurrent._scrollview.setColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (219),(int) (219),(int) (219)));
-RDebugUtils.currentLine=1835014;
- //BA.debugLineNum = 1835014;BA.debugLine="Activity.AddView(scrollView,0,0,100%x,100%y)";
-mostCurrent._activity.AddView((android.view.View)(mostCurrent._scrollview.getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
-RDebugUtils.currentLine=1835015;
- //BA.debugLineNum = 1835015;BA.debugLine="LoopView";
-_loopview();
-RDebugUtils.currentLine=1835016;
- //BA.debugLineNum = 1835016;BA.debugLine="End Sub";
-return "";
+
+public static void initializeProcessGlobals() {
+             try {
+                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
 }
-public static String  _loopview() throws Exception{
-RDebugUtils.currentModule="testresponsive";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "loopview"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "loopview", null);
-anywheresoftware.b4a.objects.PanelWrapper _container = null;
-RDebugUtils.currentLine=2555904;
- //BA.debugLineNum = 2555904;BA.debugLine="Sub LoopView";
-RDebugUtils.currentLine=2555905;
- //BA.debugLineNum = 2555905;BA.debugLine="Dim Container As Panel";
-_container = new anywheresoftware.b4a.objects.PanelWrapper();
-RDebugUtils.currentLine=2555907;
- //BA.debugLineNum = 2555907;BA.debugLine="Container = scrollView.Panel";
-_container = mostCurrent._scrollview.getPanel();
-RDebugUtils.currentLine=2555908;
- //BA.debugLineNum = 2555908;BA.debugLine="Container.LoadLayout(\"testResponsive\")";
-_container.LoadLayout("testResponsive",mostCurrent.activityBA);
-RDebugUtils.currentLine=2555909;
- //BA.debugLineNum = 2555909;BA.debugLine="Container.Height = 2000";
-_container.setHeight((int) (2000));
-RDebugUtils.currentLine=2555911;
- //BA.debugLineNum = 2555911;BA.debugLine="End Sub";
+public static String  _activity_create(boolean _firsttime) throws Exception{
+ //BA.debugLineNum = 22;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 25;BA.debugLine="Activity.AddMenuItem3(\"SearchItem\", \"SearchItem\",";
+mostCurrent._activity.AddMenuItem3("SearchItem","SearchItem",(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"search.png").getObject()),anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 26;BA.debugLine="scrollView.Initialize(Activity.Height)";
+mostCurrent._scrollview.Initialize(mostCurrent.activityBA,mostCurrent._activity.getHeight());
+ //BA.debugLineNum = 27;BA.debugLine="scrollView.Color = Colors.RGB(219,219,219)";
+mostCurrent._scrollview.setColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (219),(int) (219),(int) (219)));
+ //BA.debugLineNum = 28;BA.debugLine="Activity.AddView(scrollView,0,0,100%x,100%y)";
+mostCurrent._activity.AddView((android.view.View)(mostCurrent._scrollview.getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
+ //BA.debugLineNum = 29;BA.debugLine="LoopView";
+_loopview();
+ //BA.debugLineNum = 30;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="testresponsive";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_pause"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "activity_pause", new Object[] {_userclosed});
-RDebugUtils.currentLine=1966080;
- //BA.debugLineNum = 1966080;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=1966082;
- //BA.debugLineNum = 1966082;BA.debugLine="End Sub";
+ //BA.debugLineNum = 45;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 47;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="testresponsive";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null);
-RDebugUtils.currentLine=1900544;
- //BA.debugLineNum = 1900544;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=1900546;
- //BA.debugLineNum = 1900546;BA.debugLine="End Sub";
+ //BA.debugLineNum = 41;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 43;BA.debugLine="End Sub";
+return "";
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 12;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 15;BA.debugLine="Dim scrollView As ScrollView";
+mostCurrent._scrollview = new anywheresoftware.b4a.objects.ScrollViewWrapper();
+ //BA.debugLineNum = 16;BA.debugLine="Dim JSON As JSONParser";
+mostCurrent._json = new anywheresoftware.b4a.objects.collections.JSONParser();
+ //BA.debugLineNum = 17;BA.debugLine="Dim su As StringUtils";
+mostCurrent._su = new anywheresoftware.b4a.objects.StringUtils();
+ //BA.debugLineNum = 18;BA.debugLine="Private FirstContainer As Panel";
+mostCurrent._firstcontainer = new anywheresoftware.b4a.objects.PanelWrapper();
+ //BA.debugLineNum = 19;BA.debugLine="Private Label1 As Label";
+mostCurrent._label1 = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 20;BA.debugLine="End Sub";
+return "";
+}
+public static String  _loopview() throws Exception{
+anywheresoftware.b4a.objects.PanelWrapper _container = null;
+ //BA.debugLineNum = 32;BA.debugLine="Sub LoopView";
+ //BA.debugLineNum = 33;BA.debugLine="Dim Container As Panel";
+_container = new anywheresoftware.b4a.objects.PanelWrapper();
+ //BA.debugLineNum = 35;BA.debugLine="Container = scrollView.Panel";
+_container = mostCurrent._scrollview.getPanel();
+ //BA.debugLineNum = 36;BA.debugLine="Container.LoadLayout(\"testResponsive\")";
+_container.LoadLayout("testResponsive",mostCurrent.activityBA);
+ //BA.debugLineNum = 37;BA.debugLine="Container.Height = 2000";
+_container.setHeight((int) (2000));
+ //BA.debugLineNum = 39;BA.debugLine="End Sub";
+return "";
+}
+public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";
 }
 }

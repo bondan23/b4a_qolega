@@ -1,10 +1,9 @@
 ﻿Version=5.8
-NumberOfModules=5
+NumberOfModules=4
 Module1=Starter
 Module2=ReferringList
 Module3=Test
 Module4=TestResponsive
-Module5=onesignal
 Build1=Default,b4a.qolega
 ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="22"/>~\n~<uses-permission android:name="android.permission.INTERNET" />~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~SetActivityAttribute(Main,android:theme,@style/Theme.QolegaStyleLogin)~\n~SetApplicationAttribute(android:theme, "@style/Theme.QolegaStyleDefault")~\n~'End of default text.~\n~
 IconFile=
@@ -13,10 +12,11 @@ File1=loginLayout.bal
 File2=referringLayout.bal
 File3=splashscreen.bal
 File4=testResponsive.bal
-NumberOfLibraries=3
+NumberOfLibraries=4
 Library1=core
 Library2=stringutils
 Library3=json
+Library4=http
 @EndOfDesignText@
 #Region  Project Attributes 
 	#ApplicationLabel: Qolega
