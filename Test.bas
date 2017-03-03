@@ -111,10 +111,9 @@ Sub LoopPanel
 		PanelHeight = PanelHeight+(ReferenceHeight*SizeOfRef)+(Gap*SizeOfRef)
 		
 		For Each colreference As Map In reference
-			Dim refName,refCompany,refStatus As Label
+			Dim refName,refCompany,refStatus,detailBtn As Label
 			Dim statusRef As String
 			Dim rHeight,statusRefColor As Int
-			Dim detailBtn As Button
 			
 			'Json parsing
 			Dim rName As String = colreference.Get("name") 
@@ -124,22 +123,22 @@ Sub LoopPanel
 			
 			ReferencePanel.Initialize("")	
 			ReferencePanel.Color = Colors.White
-			JoblistPanel.AddView(ReferencePanel,40,ReferenceTop,90%x-10,ReferenceHeight)
-			DrawBorder(ReferencePanel,Colors.RGB(219,219,219),4)
+			JoblistPanel.AddView(ReferencePanel,25dip,ReferenceTop,85%x,ReferenceHeight)
+			DrawBorder(ReferencePanel,Colors.RGB(0,0,0),4)
 			
 			'refName
 			refName.Initialize("")
 			refName.Text = rName
 			refName.TextColor = Colors.RGB(74,74,74)
 			refName.Typeface = Typeface.DEFAULT_BOLD
-			ReferencePanel.AddView(refName,10,10,ReferencePanel.Width-Gap,50)
+			ReferencePanel.AddView(refName,10,10,ReferencePanel.Width-Gap,50dip)
 			rHeight = su.MeasureMultilineTextHeight(refName,refName.Text)
 			
 			'refCompany
 			refCompany.Initialize("")
 			refCompany.Text = rCompany
-			refCompany.TextColor = Colors.RGB(219,219,219)
-			ReferencePanel.AddView(refCompany,10,rHeight+Gap,ReferencePanel.Width-Gap,50)
+			refCompany.TextColor = Colors.RGB(0,0,0)
+			ReferencePanel.AddView(refCompany,10,rHeight+Gap,ReferencePanel.Width-Gap,50dip)
 			rHeight = rHeight + su.MeasureMultilineTextHeight(refCompany,refCompany.Text)
 			
 			'refStatus
@@ -160,14 +159,13 @@ Sub LoopPanel
 			refStatus.TextColor = Colors.White
 			refStatus.Color = statusRefColor
 			refStatus.Gravity = Gravity.CENTER
-			ReferencePanel.AddView(refStatus,10,rHeight+Gap+10,(ReferencePanel.Width-Gap)/2,50)
+			ReferencePanel.AddView(refStatus,10dip,rHeight+Gap+10dip,(ReferencePanel.Width-Gap)/2,20dip)
 			
 			'detailBtn
 			detailBtn.Initialize("detailBtn")
 			detailBtn.Text = "Detail Progress"
 			detailBtn.Gravity = Gravity.CENTER
-			detailBtn.TextSize = 10
-			ReferencePanel.AddView(detailBtn,((ReferencePanel.Width-Gap)/2)+10,rHeight+Gap,(ReferencePanel.Width-Gap)/2,65)
+			ReferencePanel.AddView(detailBtn,((ReferencePanel.Width-Gap)/2)+10dip,rHeight+Gap+10dip,(ReferencePanel.Width-Gap)/2,20dip)
 			
 			
 			ReferenceTop = ReferenceTop+ReferenceHeight+Gap
