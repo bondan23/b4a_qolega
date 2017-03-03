@@ -41,13 +41,13 @@ Sub LoopPanel
 	Dim JobTitle,Location,JobDesc,Currency,Commision As Label
 	
 	'Default Panel Top position
-	PanelTop = 10
+	PanelTop = 10dip
 	'Default Panel height
-	PanelHeight = 100
+	PanelHeight = 110dip
 	'Default Gap
-	Gap = 10
+	Gap = 10dip
 	
-	Bitmap1.Initialize(File.DirAssets,"logo.png")
+	'Bitmap1.Initialize(File.DirAssets,"logo.png")
 	Container = scrollView.Panel
 	Container.Color = Colors.RGB(219,219,219)
 	
@@ -83,23 +83,23 @@ Sub LoopPanel
 		Commision.TextColor = Colors.RGB(179,179,179)
 		
 		'JobTitle Add View
-		JoblistPanel.AddView(JobTitle,10,10,100%x,50)
+		JoblistPanel.AddView(JobTitle,10dip,10dip,100%x,50dip)
 		TextHeight = su.MeasureMultilineTextHeight(JobTitle,JobTitle.Text)
 		'Location Add View
-		JoblistPanel.AddView(Location,10,TextHeight+Gap,100%x,50)
+		JoblistPanel.AddView(Location,10dip,TextHeight+Gap,100%x,50dip)
 		TextHeight = TextHeight + su.MeasureMultilineTextHeight(Location,Location.Text)
 		'Jobdesc Add View
-		JoblistPanel.AddView(JobDesc,10,TextHeight+Gap,100%x,50)
+		JoblistPanel.AddView(JobDesc,10dip,TextHeight+Gap,100%x,50dip)
 		TextHeight = TextHeight + su.MeasureMultilineTextHeight(JobDesc,JobDesc.Text)
 		'Currency & Commision Add View
-		JoblistPanel.AddView(Currency,10,TextHeight+Gap,100,50)
-		JoblistPanel.AddView(Commision,110,TextHeight+Gap,100,50)
+		JoblistPanel.AddView(Currency,10dip,TextHeight+Gap,100%x,50dip)
+		JoblistPanel.AddView(Commision,110dip,TextHeight+Gap,100%x,50dip)
 		TextHeight = TextHeight + su.MeasureMultilineTextHeight(Currency,JobDesc.Text)
 		
 		JoblistPanel.Color=Colors.RGB(255,255,255)
 		
 		'Default Reference Panel Top Location
-		ReferenceTop = TextHeight-Gap
+		ReferenceTop = TextHeight+Gap*2
 		'Default Reference Panel Height
 		ReferenceHeight = 89dip
 		
@@ -112,8 +112,15 @@ Sub LoopPanel
 		
 		For Each colreference As Map In reference
 			Dim refName,refCompany,refStatus As Label
+			Dim statusRef As String
+			Dim rHeight,statusRefColor As Int
+			Dim detailBtn As Button
+			
 			'Json parsing
 			Dim rName As String = colreference.Get("name") 
+			Dim rCompany As String = colreference.Get("company") 
+			Dim rStatus As String = colreference.Get("status") 
+			
 			
 			ReferencePanel.Initialize("")	
 			ReferencePanel.Color = Colors.White
@@ -125,17 +132,50 @@ Sub LoopPanel
 			refName.Text = rName
 			refName.TextColor = Colors.RGB(74,74,74)
 			refName.Typeface = Typeface.DEFAULT_BOLD
-			ReferencePanel.AddView(refName,10,10,200,50)
+			ReferencePanel.AddView(refName,10,10,ReferencePanel.Width-Gap,50)
+			rHeight = su.MeasureMultilineTextHeight(refName,refName.Text)
 			
 			'refCompany
 			refCompany.Initialize("")
+			refCompany.Text = rCompany
+			refCompany.TextColor = Colors.RGB(219,219,219)
+			ReferencePanel.AddView(refCompany,10,rHeight+Gap,ReferencePanel.Width-Gap,50)
+			rHeight = rHeight + su.MeasureMultilineTextHeight(refCompany,refCompany.Text)
+			
+			'refStatus
+			Select rStatus
+				Case 0
+					statusRef = "Qualifying"
+					statusRefColor = Colors.RGB(249,191,55)
+				Case 1
+					statusRef = "1st Interview"
+					statusRefColor = Colors.RGB(102,195,67)
+				Case Else
+					statusRef = "Completed"
+					statusRefColor = Colors.RGB(22,176,221)
+			End Select
+			
+			refStatus.Initialize("")
+			refStatus.Text = statusRef
+			refStatus.TextColor = Colors.White
+			refStatus.Color = statusRefColor
+			refStatus.Gravity = Gravity.CENTER
+			ReferencePanel.AddView(refStatus,10,rHeight+Gap+10,(ReferencePanel.Width-Gap)/2,50)
+			
+			'detailBtn
+			detailBtn.Initialize("detailBtn")
+			detailBtn.Text = "Detail Progress"
+			detailBtn.Gravity = Gravity.CENTER
+			detailBtn.TextSize = 10
+			ReferencePanel.AddView(detailBtn,((ReferencePanel.Width-Gap)/2)+10,rHeight+Gap,(ReferencePanel.Width-Gap)/2,65)
+			
 			
 			ReferenceTop = ReferenceTop+ReferenceHeight+Gap
 		Next
 		
 		Container.AddView(JoblistPanel,0,PanelTop,Container.Width,PanelHeight)
 		PanelTop = PanelTop+PanelHeight+Gap
-		PanelHeight = 100
+		PanelHeight = 110dip
 	Next
 	Container.Height = PanelTop
 End Sub

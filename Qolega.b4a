@@ -1,15 +1,18 @@
 ﻿Version=5.8
-NumberOfModules=3
+NumberOfModules=5
 Module1=Starter
 Module2=ReferringList
 Module3=Test
+Module4=TestResponsive
+Module5=onesignal
 Build1=Default,b4a.qolega
 ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="22"/>~\n~<uses-permission android:name="android.permission.INTERNET" />~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~SetActivityAttribute(Main,android:theme,@style/Theme.QolegaStyleLogin)~\n~SetApplicationAttribute(android:theme, "@style/Theme.QolegaStyleDefault")~\n~'End of default text.~\n~
 IconFile=
-NumberOfFiles=3
+NumberOfFiles=4
 File1=loginLayout.bal
 File2=referringLayout.bal
 File3=splashscreen.bal
+File4=testResponsive.bal
 NumberOfLibraries=3
 Library1=core
 Library2=stringutils
@@ -51,8 +54,8 @@ Sub Activity_Create(FirstTime As Boolean)
 	'job.Download2("http://www.basic4ppc.com/print.php", Array As String("first key", "first value :)", "second key", "value 2"))
 	
 	'Do not forget to load the layout file created with the visual designer. For example:
-	SplashTimer.Initialize("SplashTimer",3000)
-	SplashTimer.Enabled = True
+	SplashTimer.Initialize("SplashTimer",1000)
+	SplashTimer.Enabled = False
 	
 	Panel1.Initialize("Panel1")
 	Panel1.SetBackgroundImage(LoadBitmap(File.DirAssets,"7aa1c09d-5afb-40e9-8e79-0d3e5b17a8ea.png"))
@@ -67,7 +70,8 @@ Sub Activity_Create(FirstTime As Boolean)
 	QolegaLogo.bitmap = LoadBitmap(File.DirAssets,"logo.png")
     Panel1.AddView(QolegaLogo, (100%x - W)/2, (100%y - H)/2 , W, H)
 	
-	Activity.LoadLayout("loginLayout")
+	'Activity.LoadLayout("loginLayout")
+	StartActivity(Test)
 	Activity.AddView(Panel1,0,0,Activity.Width,Activity.Height)
 	
 End Sub

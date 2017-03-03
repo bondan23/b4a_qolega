@@ -7,14 +7,16 @@
     "commision":10000000,
     "reference":[
        {
+	     "userId":1,
          "name":"Irwan Gunawan",
          "company":"Chevron Pacific Indonesia PT",
-         "status":"Qualifying"
+         "status":0
        },
        {
+	     "userId":2,
          "name":"Gregory Stone",
          "company":"Indofood Sukses Makmur Tbk PT",
-         "status":"1st Interview"
+         "status":1
        }
     ]
   },
@@ -26,9 +28,10 @@
     "commision":12000000,
     "reference":[
        {
+	     "userId":3,
          "name":"Cynthia Stevens",
          "company":"Mayora Indah Tbk PT",
-         "status":"Complete"
+         "status":2
        }
     ]
   },
@@ -48,9 +51,10 @@
     "commision":15000000,
     "reference":[
 		{
+	     "userId":4,
          "name":"Bondan Eko Prasetyo",
          "company":"B-Site",
-         "status":"Complete"
+         "status":2
        }
 	]
   }

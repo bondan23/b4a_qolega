@@ -14,8 +14,8 @@ import anywheresoftware.b4a.B4AUncaughtException;
 import anywheresoftware.b4a.debug.*;
 import java.lang.ref.WeakReference;
 
-public class referringlist extends Activity implements B4AActivity{
-	public static referringlist mostCurrent;
+public class testresponsive extends Activity implements B4AActivity{
+	public static testresponsive mostCurrent;
 	static boolean afterFirstLayout;
 	static boolean isFirst = true;
     private static boolean processGlobalsRun = false;
@@ -32,7 +32,7 @@ public class referringlist extends Activity implements B4AActivity{
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if (isFirst) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.qolega", "b4a.qolega.referringlist");
+			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "b4a.qolega", "b4a.qolega.testresponsive");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -41,7 +41,7 @@ public class referringlist extends Activity implements B4AActivity{
 		else if (previousOne != null) {
 			Activity p = previousOne.get();
 			if (p != null && p != this) {
-                BA.LogInfo("Killing previous instance (referringlist).");
+                BA.LogInfo("Killing previous instance (testresponsive).");
 				p.finish();
 			}
 		}
@@ -83,7 +83,7 @@ public class referringlist extends Activity implements B4AActivity{
 	private void afterFirstLayout() {
         if (this != mostCurrent)
 			return;
-		activityBA = new BA(this, layout, processBA, "b4a.qolega", "b4a.qolega.referringlist");
+		activityBA = new BA(this, layout, processBA, "b4a.qolega", "b4a.qolega.testresponsive");
         
         processBA.sharedProcessBA.activityBA = new java.lang.ref.WeakReference<BA>(activityBA);
         anywheresoftware.b4a.objects.ViewWrapper.lastId = 0;
@@ -92,19 +92,19 @@ public class referringlist extends Activity implements B4AActivity{
         if (BA.isShellModeRuntimeCheck(processBA)) {
 			if (isFirst)
 				processBA.raiseEvent2(null, true, "SHELL", false);
-			processBA.raiseEvent2(null, true, "CREATE", true, "b4a.qolega.referringlist", processBA, activityBA, _activity, anywheresoftware.b4a.keywords.Common.Density, mostCurrent);
+			processBA.raiseEvent2(null, true, "CREATE", true, "b4a.qolega.testresponsive", processBA, activityBA, _activity, anywheresoftware.b4a.keywords.Common.Density, mostCurrent);
 			_activity.reinitializeForShell(activityBA, "activity");
 		}
         initializeProcessGlobals();		
         initializeGlobals();
         
-        BA.LogInfo("** Activity (referringlist) Create, isFirst = " + isFirst + " **");
+        BA.LogInfo("** Activity (testresponsive) Create, isFirst = " + isFirst + " **");
         processBA.raiseEvent2(null, true, "activity_create", false, isFirst);
 		isFirst = false;
 		if (this != mostCurrent)
 			return;
         processBA.setActivityPaused(false);
-        BA.LogInfo("** Activity (referringlist) Resume **");
+        BA.LogInfo("** Activity (testresponsive) Resume **");
         processBA.raiseEvent(null, "activity_resume");
         if (android.os.Build.VERSION.SDK_INT >= 11) {
 			try {
@@ -193,7 +193,7 @@ public class referringlist extends Activity implements B4AActivity{
 		}
 	}
     public static Class<?> getObject() {
-		return referringlist.class;
+		return testresponsive.class;
 	}
     private Boolean onKeySubExist = null;
     private Boolean onKeyUpSubExist = null;
@@ -258,7 +258,7 @@ public class referringlist extends Activity implements B4AActivity{
         if (_activity == null) //workaround for emulator bug (Issue 2423)
             return;
 		anywheresoftware.b4a.Msgbox.dismiss(true);
-        BA.LogInfo("** Activity (referringlist) Pause, UserClosed = " + activityBA.activity.isFinishing() + " **");
+        BA.LogInfo("** Activity (testresponsive) Pause, UserClosed = " + activityBA.activity.isFinishing() + " **");
         processBA.raiseEvent2(_activity, true, "activity_pause", false, activityBA.activity.isFinishing());		
         processBA.setActivityPaused(true);
         mostCurrent = null;
@@ -294,7 +294,7 @@ public class referringlist extends Activity implements B4AActivity{
 			if (mostCurrent == null || mostCurrent != activity.get())
 				return;
 			processBA.setActivityPaused(false);
-            BA.LogInfo("** Activity (referringlist) Resume **");
+            BA.LogInfo("** Activity (testresponsive) Resume **");
 		    processBA.raiseEvent(mostCurrent._activity, "activity_resume", (Object[])null);
 		}
     }
@@ -318,57 +318,81 @@ public static void initializeProcessGlobals() {
             }
 }
 public anywheresoftware.b4a.keywords.Common __c = null;
+public anywheresoftware.b4a.objects.ScrollViewWrapper _scrollview = null;
+public anywheresoftware.b4a.objects.collections.JSONParser _json = null;
+public anywheresoftware.b4a.objects.StringUtils _su = null;
+public anywheresoftware.b4a.objects.PanelWrapper _firstcontainer = null;
+public anywheresoftware.b4a.objects.LabelWrapper _label1 = null;
 public b4a.qolega.main _main = null;
 public b4a.qolega.starter _starter = null;
+public b4a.qolega.referringlist _referringlist = null;
 public b4a.qolega.test _test = null;
-public b4a.qolega.testresponsive _testresponsive = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="referringlist";
+RDebugUtils.currentModule="testresponsive";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create"))
 	return (String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime});
-RDebugUtils.currentLine=917504;
- //BA.debugLineNum = 917504;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=917507;
- //BA.debugLineNum = 917507;BA.debugLine="Activity.AddMenuItem3(\"SearchItem\", \"SearchItem\",";
+RDebugUtils.currentLine=1835008;
+ //BA.debugLineNum = 1835008;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=1835011;
+ //BA.debugLineNum = 1835011;BA.debugLine="Activity.AddMenuItem3(\"SearchItem\", \"SearchItem\",";
 mostCurrent._activity.AddMenuItem3("SearchItem","SearchItem",(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"search.png").getObject()),anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=917509;
- //BA.debugLineNum = 917509;BA.debugLine="Activity.LoadLayout(\"referringLayout\")";
-mostCurrent._activity.LoadLayout("referringLayout",mostCurrent.activityBA);
-RDebugUtils.currentLine=917511;
- //BA.debugLineNum = 917511;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1835012;
+ //BA.debugLineNum = 1835012;BA.debugLine="scrollView.Initialize(Activity.Height)";
+mostCurrent._scrollview.Initialize(mostCurrent.activityBA,mostCurrent._activity.getHeight());
+RDebugUtils.currentLine=1835013;
+ //BA.debugLineNum = 1835013;BA.debugLine="scrollView.Color = Colors.RGB(219,219,219)";
+mostCurrent._scrollview.setColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (219),(int) (219),(int) (219)));
+RDebugUtils.currentLine=1835014;
+ //BA.debugLineNum = 1835014;BA.debugLine="Activity.AddView(scrollView,0,0,100%x,100%y)";
+mostCurrent._activity.AddView((android.view.View)(mostCurrent._scrollview.getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
+RDebugUtils.currentLine=1835015;
+ //BA.debugLineNum = 1835015;BA.debugLine="LoopView";
+_loopview();
+RDebugUtils.currentLine=1835016;
+ //BA.debugLineNum = 1835016;BA.debugLine="End Sub";
+return "";
+}
+public static String  _loopview() throws Exception{
+RDebugUtils.currentModule="testresponsive";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "loopview"))
+	return (String) Debug.delegate(mostCurrent.activityBA, "loopview", null);
+anywheresoftware.b4a.objects.PanelWrapper _container = null;
+RDebugUtils.currentLine=2555904;
+ //BA.debugLineNum = 2555904;BA.debugLine="Sub LoopView";
+RDebugUtils.currentLine=2555905;
+ //BA.debugLineNum = 2555905;BA.debugLine="Dim Container As Panel";
+_container = new anywheresoftware.b4a.objects.PanelWrapper();
+RDebugUtils.currentLine=2555907;
+ //BA.debugLineNum = 2555907;BA.debugLine="Container = scrollView.Panel";
+_container = mostCurrent._scrollview.getPanel();
+RDebugUtils.currentLine=2555908;
+ //BA.debugLineNum = 2555908;BA.debugLine="Container.LoadLayout(\"testResponsive\")";
+_container.LoadLayout("testResponsive",mostCurrent.activityBA);
+RDebugUtils.currentLine=2555909;
+ //BA.debugLineNum = 2555909;BA.debugLine="Container.Height = 2000";
+_container.setHeight((int) (2000));
+RDebugUtils.currentLine=2555911;
+ //BA.debugLineNum = 2555911;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="referringlist";
+RDebugUtils.currentModule="testresponsive";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_pause"))
 	return (String) Debug.delegate(mostCurrent.activityBA, "activity_pause", new Object[] {_userclosed});
-RDebugUtils.currentLine=1114112;
- //BA.debugLineNum = 1114112;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=1114114;
- //BA.debugLineNum = 1114114;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1966080;
+ //BA.debugLineNum = 1966080;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=1966082;
+ //BA.debugLineNum = 1966082;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="referringlist";
+RDebugUtils.currentModule="testresponsive";
 if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume"))
 	return (String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null);
-RDebugUtils.currentLine=1048576;
- //BA.debugLineNum = 1048576;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=1048578;
- //BA.debugLineNum = 1048578;BA.debugLine="End Sub";
-return "";
-}
-public static String  _searchitem_click() throws Exception{
-RDebugUtils.currentModule="referringlist";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "searchitem_click"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "searchitem_click", null);
-RDebugUtils.currentLine=983040;
- //BA.debugLineNum = 983040;BA.debugLine="Sub SearchItem_Click";
-RDebugUtils.currentLine=983041;
- //BA.debugLineNum = 983041;BA.debugLine="Msgbox(\"Search Box Clicked\",\"Search\")";
-anywheresoftware.b4a.keywords.Common.Msgbox("Search Box Clicked","Search",mostCurrent.activityBA);
-RDebugUtils.currentLine=983042;
- //BA.debugLineNum = 983042;BA.debugLine="End Sub";
+RDebugUtils.currentLine=1900544;
+ //BA.debugLineNum = 1900544;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=1900546;
+ //BA.debugLineNum = 1900546;BA.debugLine="End Sub";
 return "";
 }
 }
