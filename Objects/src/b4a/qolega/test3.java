@@ -14,8 +14,8 @@ import anywheresoftware.b4a.B4AUncaughtException;
 import anywheresoftware.b4a.debug.*;
 import java.lang.ref.WeakReference;
 
-public class main extends Activity implements B4AActivity{
-	public static main mostCurrent;
+public class test3 extends Activity implements B4AActivity{
+	public static test3 mostCurrent;
 	static boolean afterFirstLayout;
 	static boolean isFirst = true;
     private static boolean processGlobalsRun = false;
@@ -25,14 +25,14 @@ public class main extends Activity implements B4AActivity{
     ActivityWrapper _activity;
     java.util.ArrayList<B4AMenuItem> menuItems;
 	public static final boolean fullScreen = false;
-	public static final boolean includeTitle = false;
+	public static final boolean includeTitle = true;
     public static WeakReference<Activity> previousOne;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if (isFirst) {
-			processBA = new BA(this.getApplicationContext(), null, null, "b4a.qolega", "b4a.qolega.main");
+			processBA = new BA(this.getApplicationContext(), null, null, "b4a.qolega", "b4a.qolega.test3");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -41,7 +41,7 @@ public class main extends Activity implements B4AActivity{
 		else if (previousOne != null) {
 			Activity p = previousOne.get();
 			if (p != null && p != this) {
-                BA.LogInfo("Killing previous instance (main).");
+                BA.LogInfo("Killing previous instance (test3).");
 				p.finish();
 			}
 		}
@@ -83,7 +83,7 @@ public class main extends Activity implements B4AActivity{
 	private void afterFirstLayout() {
         if (this != mostCurrent)
 			return;
-		activityBA = new BA(this, layout, processBA, "b4a.qolega", "b4a.qolega.main");
+		activityBA = new BA(this, layout, processBA, "b4a.qolega", "b4a.qolega.test3");
         
         processBA.sharedProcessBA.activityBA = new java.lang.ref.WeakReference<BA>(activityBA);
         anywheresoftware.b4a.objects.ViewWrapper.lastId = 0;
@@ -92,19 +92,19 @@ public class main extends Activity implements B4AActivity{
         if (BA.isShellModeRuntimeCheck(processBA)) {
 			if (isFirst)
 				processBA.raiseEvent2(null, true, "SHELL", false);
-			processBA.raiseEvent2(null, true, "CREATE", true, "b4a.qolega.main", processBA, activityBA, _activity, anywheresoftware.b4a.keywords.Common.Density, mostCurrent);
+			processBA.raiseEvent2(null, true, "CREATE", true, "b4a.qolega.test3", processBA, activityBA, _activity, anywheresoftware.b4a.keywords.Common.Density, mostCurrent);
 			_activity.reinitializeForShell(activityBA, "activity");
 		}
         initializeProcessGlobals();		
         initializeGlobals();
         
-        BA.LogInfo("** Activity (main) Create, isFirst = " + isFirst + " **");
+        BA.LogInfo("** Activity (test3) Create, isFirst = " + isFirst + " **");
         processBA.raiseEvent2(null, true, "activity_create", false, isFirst);
 		isFirst = false;
 		if (this != mostCurrent)
 			return;
         processBA.setActivityPaused(false);
-        BA.LogInfo("** Activity (main) Resume **");
+        BA.LogInfo("** Activity (test3) Resume **");
         processBA.raiseEvent(null, "activity_resume");
         if (android.os.Build.VERSION.SDK_INT >= 11) {
 			try {
@@ -193,7 +193,7 @@ public class main extends Activity implements B4AActivity{
 		}
 	}
     public static Class<?> getObject() {
-		return main.class;
+		return test3.class;
 	}
     private Boolean onKeySubExist = null;
     private Boolean onKeyUpSubExist = null;
@@ -258,7 +258,7 @@ public class main extends Activity implements B4AActivity{
         if (_activity == null) //workaround for emulator bug (Issue 2423)
             return;
 		anywheresoftware.b4a.Msgbox.dismiss(true);
-        BA.LogInfo("** Activity (main) Pause, UserClosed = " + activityBA.activity.isFinishing() + " **");
+        BA.LogInfo("** Activity (test3) Pause, UserClosed = " + activityBA.activity.isFinishing() + " **");
         processBA.raiseEvent2(_activity, true, "activity_pause", false, activityBA.activity.isFinishing());		
         processBA.setActivityPaused(true);
         mostCurrent = null;
@@ -294,7 +294,7 @@ public class main extends Activity implements B4AActivity{
 			if (mostCurrent == null || mostCurrent != activity.get())
 				return;
 			processBA.setActivityPaused(false);
-            BA.LogInfo("** Activity (main) Resume **");
+            BA.LogInfo("** Activity (test3) Resume **");
 		    processBA.raiseEvent(mostCurrent._activity, "activity_resume", (Object[])null);
 		}
     }
@@ -309,132 +309,55 @@ public class main extends Activity implements B4AActivity{
 	}
 
 public anywheresoftware.b4a.keywords.Common __c = null;
-public anywheresoftware.b4a.objects.PanelWrapper _backgroundpanel = null;
-public anywheresoftware.b4a.objects.Timer _splashtimer = null;
-public anywheresoftware.b4a.objects.PanelWrapper _panel1 = null;
-public anywheresoftware.b4a.objects.EditTextWrapper _emailfield = null;
-public anywheresoftware.b4a.objects.EditTextWrapper _passwordfield = null;
-public b4a.qolega.auth _qauth = null;
 public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
+public b4a.qolega.main _main = null;
 public b4a.qolega.starter _starter = null;
 public b4a.qolega.referringlist _referringlist = null;
 public b4a.qolega.test _test = null;
 public b4a.qolega.testresponsive _testresponsive = null;
-public b4a.qolega.test3 _test3 = null;
 public b4a.qolega.test4 _test4 = null;
 
-public static boolean isAnyActivityVisible() {
-    boolean vis = false;
-vis = vis | (main.mostCurrent != null);
-vis = vis | (referringlist.mostCurrent != null);
-vis = vis | (test.mostCurrent != null);
-vis = vis | (testresponsive.mostCurrent != null);
-vis = vis | (test3.mostCurrent != null);
-vis = vis | (test4.mostCurrent != null);
-return vis;}
+public static void initializeProcessGlobals() {
+             try {
+                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-anywheresoftware.b4a.objects.ImageViewWrapper _qolegalogo = null;
-int _w = 0;
-int _h = 0;
- //BA.debugLineNum = 32;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 33;BA.debugLine="qAuth.Initialize(Activity)";
-mostCurrent._qauth._initialize(mostCurrent.activityBA,mostCurrent._activity);
- //BA.debugLineNum = 36;BA.debugLine="SplashTimer.Initialize(\"SplashTimer\",1000)";
-mostCurrent._splashtimer.Initialize(processBA,"SplashTimer",(long) (1000));
- //BA.debugLineNum = 37;BA.debugLine="SplashTimer.Enabled = True";
-mostCurrent._splashtimer.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 39;BA.debugLine="Panel1.Initialize(\"Panel1\")";
-mostCurrent._panel1.Initialize(mostCurrent.activityBA,"Panel1");
- //BA.debugLineNum = 40;BA.debugLine="Panel1.SetBackgroundImage(LoadBitmap(File.DirAsse";
-mostCurrent._panel1.SetBackgroundImage((android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"7aa1c09d-5afb-40e9-8e79-0d3e5b17a8ea.png").getObject()));
- //BA.debugLineNum = 41;BA.debugLine="Panel1.Visible=True";
-mostCurrent._panel1.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 43;BA.debugLine="Dim QolegaLogo As ImageView";
-_qolegalogo = new anywheresoftware.b4a.objects.ImageViewWrapper();
- //BA.debugLineNum = 45;BA.debugLine="Dim W As Int = 300dip 'This is picture width";
-_w = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (300));
- //BA.debugLineNum = 46;BA.debugLine="Dim H As Int = 40dip ' and height";
-_h = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40));
- //BA.debugLineNum = 48;BA.debugLine="QolegaLogo.Initialize(\"QolegaLogo\")";
-_qolegalogo.Initialize(mostCurrent.activityBA,"QolegaLogo");
- //BA.debugLineNum = 49;BA.debugLine="QolegaLogo.bitmap = LoadBitmap(File.DirAssets,\"lo";
-_qolegalogo.setBitmap((android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"logo.png").getObject()));
- //BA.debugLineNum = 50;BA.debugLine="Panel1.AddView(QolegaLogo, (100%x - W)/2, (100";
-mostCurrent._panel1.AddView((android.view.View)(_qolegalogo.getObject()),(int) ((anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA)-_w)/(double)2),(int) ((anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA)-_h)/(double)2),_w,_h);
- //BA.debugLineNum = 53;BA.debugLine="qAuth.CheckLoginSession";
-mostCurrent._qauth._checkloginsession();
- //BA.debugLineNum = 55;BA.debugLine="Activity.LoadLayout(\"loginLayout\")";
-mostCurrent._activity.LoadLayout("loginLayout",mostCurrent.activityBA);
- //BA.debugLineNum = 56;BA.debugLine="Activity.AddView(Panel1,0,0,Activity.Width,Activi";
-mostCurrent._activity.AddView((android.view.View)(mostCurrent._panel1.getObject()),(int) (0),(int) (0),mostCurrent._activity.getWidth(),mostCurrent._activity.getHeight());
- //BA.debugLineNum = 57;BA.debugLine="End Sub";
+ //BA.debugLineNum = 17;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 20;BA.debugLine="Activity.AddMenuItem3(\"SearchItem\", \"SearchItem\",";
+mostCurrent._activity.AddMenuItem3("SearchItem","SearchItem",(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"search.png").getObject()),anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 22;BA.debugLine="Activity.LoadLayout(\"referringLayout\")";
+mostCurrent._activity.LoadLayout("referringLayout",mostCurrent.activityBA);
+ //BA.debugLineNum = 24;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 63;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 65;BA.debugLine="End Sub";
+ //BA.debugLineNum = 34;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 36;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 59;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 61;BA.debugLine="End Sub";
+ //BA.debugLineNum = 30;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 32;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{
- //BA.debugLineNum = 21;BA.debugLine="Sub Globals";
- //BA.debugLineNum = 24;BA.debugLine="Private BackgroundPanel As Panel";
-mostCurrent._backgroundpanel = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 25;BA.debugLine="Private SplashTimer As Timer";
-mostCurrent._splashtimer = new anywheresoftware.b4a.objects.Timer();
- //BA.debugLineNum = 26;BA.debugLine="Private Panel1 As Panel";
-mostCurrent._panel1 = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 27;BA.debugLine="Private EmailField As EditText";
-mostCurrent._emailfield = new anywheresoftware.b4a.objects.EditTextWrapper();
- //BA.debugLineNum = 28;BA.debugLine="Private PasswordField As EditText";
-mostCurrent._passwordfield = new anywheresoftware.b4a.objects.EditTextWrapper();
- //BA.debugLineNum = 29;BA.debugLine="Dim qAuth As Auth";
-mostCurrent._qauth = new b4a.qolega.auth();
- //BA.debugLineNum = 30;BA.debugLine="End Sub";
+ //BA.debugLineNum = 12;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 15;BA.debugLine="End Sub";
 return "";
 }
-public static String  _loginbtn_click() throws Exception{
- //BA.debugLineNum = 67;BA.debugLine="Sub LoginBtn_Click";
- //BA.debugLineNum = 68;BA.debugLine="qAuth.Login(EmailField,PasswordField)";
-mostCurrent._qauth._login(mostCurrent._emailfield,mostCurrent._passwordfield);
- //BA.debugLineNum = 69;BA.debugLine="End Sub";
+public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";
 }
-
-public static void initializeProcessGlobals() {
-    
-    if (main.processGlobalsRun == false) {
-	    main.processGlobalsRun = true;
-		try {
-		        anywheresoftware.b4a.samples.httputils2.httputils2service._process_globals();
-main._process_globals();
-starter._process_globals();
-referringlist._process_globals();
-test._process_globals();
-testresponsive._process_globals();
-test3._process_globals();
-test4._process_globals();
-		
-        } catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-    }
-}public static String  _process_globals() throws Exception{
- //BA.debugLineNum = 15;BA.debugLine="Sub Process_Globals";
- //BA.debugLineNum = 19;BA.debugLine="End Sub";
-return "";
-}
-public static String  _splashtimer_tick() throws Exception{
- //BA.debugLineNum = 71;BA.debugLine="Sub SplashTimer_Tick";
- //BA.debugLineNum = 72;BA.debugLine="Panel1.RemoveView()";
-mostCurrent._panel1.RemoveView();
- //BA.debugLineNum = 73;BA.debugLine="SplashTimer.Enabled = False";
-mostCurrent._splashtimer.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 74;BA.debugLine="End Sub";
+public static String  _searchitem_click() throws Exception{
+ //BA.debugLineNum = 26;BA.debugLine="Sub SearchItem_Click";
+ //BA.debugLineNum = 27;BA.debugLine="Msgbox(\"Search Box Clicked\",\"Search\")";
+anywheresoftware.b4a.keywords.Common.Msgbox("Search Box Clicked","Search",mostCurrent.activityBA);
+ //BA.debugLineNum = 28;BA.debugLine="End Sub";
 return "";
 }
 }

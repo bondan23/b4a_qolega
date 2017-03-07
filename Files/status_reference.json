@@ -1,0 +1,44 @@
+{
+	"id": 1,
+	"userId":3,
+	"name":"Irwan Gunawan",
+	"company":"Mayora Indah Tbk PT",
+	"jobtitle":"Senior UX Architect (Content Planning, Interaction Design)",
+	"journeys":[
+	   {
+		 "journeyId":1,
+		 "text":"Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.",
+		 "status":0
+	   },
+	   {
+		 "journeyId":2,
+		 "text":"Phone Interview by Consultant.",
+		 "status":0
+	   },
+	   {
+		 "journeyId":2,
+		 "text":"Interviewed by Consultant.",
+		 "status":0
+	   },
+	   {
+		 "journeyId":2,
+		 "text":"Interviewed by HR.",
+		 "status":0
+	   },
+	   {
+		 "journeyId":2,
+		 "text":"Interviewed by Manager.",
+		 "status":0
+	   },
+	   {
+		 "journeyId":2,
+		 "text":"Interviewed by Group Head.",
+		 "status":0
+	   },
+	   {
+		 "journeyId":2,
+		 "text":"Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.",
+		 "status":0
+	   }
+	]
+}

@@ -309,15 +309,16 @@ public class testresponsive extends Activity implements B4AActivity{
 	}
 
 public anywheresoftware.b4a.keywords.Common __c = null;
-public anywheresoftware.b4a.objects.ScrollViewWrapper _scrollview = null;
-public anywheresoftware.b4a.objects.collections.JSONParser _json = null;
-public anywheresoftware.b4a.objects.StringUtils _su = null;
-public anywheresoftware.b4a.objects.PanelWrapper _firstcontainer = null;
-public anywheresoftware.b4a.objects.LabelWrapper _label1 = null;
+public anywheresoftware.b4a.objects.ScrollViewWrapper _scrollview1 = null;
+public anywheresoftware.b4a.objects.collections.List _lstchecks = null;
+public static int _height = 0;
+public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
 public b4a.qolega.main _main = null;
 public b4a.qolega.starter _starter = null;
 public b4a.qolega.referringlist _referringlist = null;
 public b4a.qolega.test _test = null;
+public b4a.qolega.test3 _test3 = null;
+public b4a.qolega.test4 _test4 = null;
 
 public static void initializeProcessGlobals() {
              try {
@@ -327,62 +328,103 @@ public static void initializeProcessGlobals() {
             }
 }
 public static String  _activity_create(boolean _firsttime) throws Exception{
- //BA.debugLineNum = 22;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 25;BA.debugLine="Activity.AddMenuItem3(\"SearchItem\", \"SearchItem\",";
-mostCurrent._activity.AddMenuItem3("SearchItem","SearchItem",(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"search.png").getObject()),anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 26;BA.debugLine="scrollView.Initialize(Activity.Height)";
-mostCurrent._scrollview.Initialize(mostCurrent.activityBA,mostCurrent._activity.getHeight());
- //BA.debugLineNum = 27;BA.debugLine="scrollView.Color = Colors.RGB(219,219,219)";
-mostCurrent._scrollview.setColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (219),(int) (219),(int) (219)));
- //BA.debugLineNum = 28;BA.debugLine="Activity.AddView(scrollView,0,0,100%x,100%y)";
-mostCurrent._activity.AddView((android.view.View)(mostCurrent._scrollview.getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
- //BA.debugLineNum = 29;BA.debugLine="LoopView";
-_loopview();
- //BA.debugLineNum = 30;BA.debugLine="End Sub";
-return "";
-}
-public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 45;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 47;BA.debugLine="End Sub";
-return "";
-}
-public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 41;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 43;BA.debugLine="End Sub";
+anywheresoftware.b4a.objects.PanelWrapper _pnl = null;
+int _i = 0;
+anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper _chk = null;
+anywheresoftware.b4a.objects.LabelWrapper _lbl1 = null;
+ //BA.debugLineNum = 16;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 17;BA.debugLine="ScrollView1.Initialize(0)";
+mostCurrent._scrollview1.Initialize(mostCurrent.activityBA,(int) (0));
+ //BA.debugLineNum = 18;BA.debugLine="Dim pnl As Panel";
+_pnl = new anywheresoftware.b4a.objects.PanelWrapper();
+ //BA.debugLineNum = 19;BA.debugLine="pnl = ScrollView1.Panel";
+_pnl = mostCurrent._scrollview1.getPanel();
+ //BA.debugLineNum = 20;BA.debugLine="Activity.AddView(ScrollView1, 0, 0, 100%x, 100";
+mostCurrent._activity.AddView((android.view.View)(mostCurrent._scrollview1.getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
+ //BA.debugLineNum = 21;BA.debugLine="lstChecks.Initialize";
+mostCurrent._lstchecks.Initialize();
+ //BA.debugLineNum = 23;BA.debugLine="For i = 1 To 100";
+{
+final int step6 = 1;
+final int limit6 = (int) (100);
+for (_i = (int) (1) ; (step6 > 0 && _i <= limit6) || (step6 < 0 && _i >= limit6); _i = ((int)(0 + _i + step6)) ) {
+ //BA.debugLineNum = 24;BA.debugLine="Dim chk As CheckBox";
+_chk = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper();
+ //BA.debugLineNum = 25;BA.debugLine="chk.Initialize(\"mnuChecked\")";
+_chk.Initialize(mostCurrent.activityBA,"mnuChecked");
+ //BA.debugLineNum = 26;BA.debugLine="chk.Text = \"Item #\" & i";
+_chk.setText((Object)("Item #"+BA.NumberToString(_i)));
+ //BA.debugLineNum = 27;BA.debugLine="lstChecks.Add(chk)";
+mostCurrent._lstchecks.Add((Object)(_chk.getObject()));
+ //BA.debugLineNum = 28;BA.debugLine="Dim lbl1 As Label";
+_lbl1 = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 29;BA.debugLine="lbl1.Initialize(\"\")";
+_lbl1.Initialize(mostCurrent.activityBA,"");
+ //BA.debugLineNum = 30;BA.debugLine="lbl1.Text = \"Value #\" & i";
+_lbl1.setText((Object)("Value #"+BA.NumberToString(_i)));
+ //BA.debugLineNum = 31;BA.debugLine="lbl1.Gravity = Gravity.CENTER_VERTICAL";
+_lbl1.setGravity(anywheresoftware.b4a.keywords.Common.Gravity.CENTER_VERTICAL);
+ //BA.debugLineNum = 32;BA.debugLine="pnl.AddView(chk, 0, height * (i - 1), 120d";
+_pnl.AddView((android.view.View)(_chk.getObject()),(int) (0),(int) (_height*(_i-1)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (120)),_height);
+ //BA.debugLineNum = 33;BA.debugLine="pnl.AddView(lbl1, 125dip, height * (i - 1)";
+_pnl.AddView((android.view.View)(_lbl1.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (125)),(int) (_height*(_i-1)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (120)),_height);
+ }
+};
+ //BA.debugLineNum = 35;BA.debugLine="pnl.Height = lstChecks.Size * height";
+_pnl.setHeight((int) (mostCurrent._lstchecks.getSize()*_height));
+ //BA.debugLineNum = 36;BA.debugLine="Activity.AddMenuItem(\"Display checked\", \"mnuCh";
+mostCurrent._activity.AddMenuItem("Display checked","mnuChecked");
+ //BA.debugLineNum = 37;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{
- //BA.debugLineNum = 12;BA.debugLine="Sub Globals";
- //BA.debugLineNum = 15;BA.debugLine="Dim scrollView As ScrollView";
-mostCurrent._scrollview = new anywheresoftware.b4a.objects.ScrollViewWrapper();
- //BA.debugLineNum = 16;BA.debugLine="Dim JSON As JSONParser";
-mostCurrent._json = new anywheresoftware.b4a.objects.collections.JSONParser();
- //BA.debugLineNum = 17;BA.debugLine="Dim su As StringUtils";
-mostCurrent._su = new anywheresoftware.b4a.objects.StringUtils();
- //BA.debugLineNum = 18;BA.debugLine="Private FirstContainer As Panel";
-mostCurrent._firstcontainer = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 19;BA.debugLine="Private Label1 As Label";
-mostCurrent._label1 = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 20;BA.debugLine="End Sub";
+ //BA.debugLineNum = 10;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 11;BA.debugLine="Dim ScrollView1 As ScrollView";
+mostCurrent._scrollview1 = new anywheresoftware.b4a.objects.ScrollViewWrapper();
+ //BA.debugLineNum = 12;BA.debugLine="Dim lstChecks As List";
+mostCurrent._lstchecks = new anywheresoftware.b4a.objects.collections.List();
+ //BA.debugLineNum = 13;BA.debugLine="Dim height As Int";
+_height = 0;
+ //BA.debugLineNum = 14;BA.debugLine="height = 50dip";
+_height = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (50));
+ //BA.debugLineNum = 15;BA.debugLine="End Sub";
 return "";
 }
-public static String  _loopview() throws Exception{
-anywheresoftware.b4a.objects.PanelWrapper _container = null;
- //BA.debugLineNum = 32;BA.debugLine="Sub LoopView";
- //BA.debugLineNum = 33;BA.debugLine="Dim Container As Panel";
-_container = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 35;BA.debugLine="Container = scrollView.Panel";
-_container = mostCurrent._scrollview.getPanel();
- //BA.debugLineNum = 36;BA.debugLine="Container.LoadLayout(\"testResponsive\")";
-_container.LoadLayout("testResponsive",mostCurrent.activityBA);
- //BA.debugLineNum = 37;BA.debugLine="Container.Height = 2000";
-_container.setHeight((int) (2000));
- //BA.debugLineNum = 39;BA.debugLine="End Sub";
+public static String  _mnuchecked_click() throws Exception{
+anywheresoftware.b4a.keywords.StringBuilderWrapper _sb = null;
+int _i = 0;
+anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper _chk = null;
+ //BA.debugLineNum = 39;BA.debugLine="Sub mnuChecked_Click";
+ //BA.debugLineNum = 40;BA.debugLine="Dim sb As StringBuilder";
+_sb = new anywheresoftware.b4a.keywords.StringBuilderWrapper();
+ //BA.debugLineNum = 41;BA.debugLine="sb.Initialize";
+_sb.Initialize();
+ //BA.debugLineNum = 42;BA.debugLine="For i = 0 To lstChecks.Size - 1";
+{
+final int step3 = 1;
+final int limit3 = (int) (mostCurrent._lstchecks.getSize()-1);
+for (_i = (int) (0) ; (step3 > 0 && _i <= limit3) || (step3 < 0 && _i >= limit3); _i = ((int)(0 + _i + step3)) ) {
+ //BA.debugLineNum = 43;BA.debugLine="Dim chk As CheckBox";
+_chk = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper();
+ //BA.debugLineNum = 44;BA.debugLine="chk = lstChecks.Get(i)";
+_chk.setObject((android.widget.CheckBox)(mostCurrent._lstchecks.Get(_i)));
+ //BA.debugLineNum = 45;BA.debugLine="If chk.Checked Then";
+if (_chk.getChecked()) { 
+ //BA.debugLineNum = 46;BA.debugLine="sb.Append(i).Append(CRLF)";
+_sb.Append(BA.NumberToString(_i)).Append(anywheresoftware.b4a.keywords.Common.CRLF);
+ };
+ }
+};
+ //BA.debugLineNum = 49;BA.debugLine="Log(sb)";
+anywheresoftware.b4a.keywords.Common.Log(BA.ObjectToString(_sb));
+ //BA.debugLineNum = 50;BA.debugLine="Msgbox(sb.ToString, \"Checked indices\")";
+anywheresoftware.b4a.keywords.Common.Msgbox(_sb.ToString(),"Checked indices",mostCurrent.activityBA);
+ //BA.debugLineNum = 51;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{
  //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
- //BA.debugLineNum = 10;BA.debugLine="End Sub";
+ //BA.debugLineNum = 8;BA.debugLine="End Sub";
 return "";
 }
 }

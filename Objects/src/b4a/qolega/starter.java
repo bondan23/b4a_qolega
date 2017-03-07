@@ -111,10 +111,13 @@ public class starter extends android.app.Service {
         processBA.runHook("ondestroy", this, null);
 	}
 public anywheresoftware.b4a.keywords.Common __c = null;
+public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
 public b4a.qolega.main _main = null;
 public b4a.qolega.referringlist _referringlist = null;
 public b4a.qolega.test _test = null;
 public b4a.qolega.testresponsive _testresponsive = null;
+public b4a.qolega.test3 _test3 = null;
+public b4a.qolega.test4 _test4 = null;
 public static boolean  _application_error(anywheresoftware.b4a.objects.B4AException _error,String _stacktrace) throws Exception{
  //BA.debugLineNum = 23;BA.debugLine="Sub Application_Error (Error As Exception, StackTr";
  //BA.debugLineNum = 24;BA.debugLine="Return True";
