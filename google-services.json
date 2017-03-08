@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "757474538332",
+    "firebase_url": "https://qolega-1186d.firebaseio.com",
+    "project_id": "qolega-1186d",
+    "storage_bucket": "qolega-1186d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757474538332:android:0ded0a4b210c864d",
+        "android_client_info": {
+          "package_name": "com.qolega.qolegapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757474538332-aqo39uh43dnk3qj5eadr0130bvfjqe5k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZtUQGOU-vRhThgvge-AbeJPBxmDdsPPo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	package="b4a.qolega"
+	package="com.qolega.qolegapp"
 	android:versionCode="1"
-	android:versionName=""
+	android:versionName="1.1"
 	android:installLocation="internalOnly">
 	
 	<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="22"/>
@@ -12,7 +12,9 @@
 	    android:normalScreens="true" 
 	    android:smallScreens="true" 
 	    android:anyDensity="true"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 	<application
 		android:icon="@drawable/icon"
 		android:label="Qolega"
@@ -22,7 +24,7 @@
 			android:launchMode="singleTop"
 			android:name=".main"
 			android:label="Qolega"
-			android:screenOrientation="unspecified"
+			android:screenOrientation="portrait"
 			android:theme="@style/Theme.QolegaStyleLogin">
 			<intent-filter>
 			   <action android:name="android.intent.action.MAIN" />
@@ -33,41 +35,44 @@
 		<service android:name=".starter">
 		</service>
 		<receiver android:name=".starter$starter_BR">
+			<intent-filter>
+			<action android:name="android.intent.action.BOOT_COMPLETED"/>
+			</intent-filter>
 		</receiver>
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".referringlist"
 			android:label="Qolega"
-			android:screenOrientation="unspecified">
-		</activity>
-		<activity
-			android:windowSoftInputMode="stateHidden"
-			android:launchMode="singleTop"
-			android:name=".test"
-			android:label="Qolega"
-			android:screenOrientation="unspecified">
+			android:screenOrientation="portrait">
 		</activity>
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".testresponsive"
 			android:label="Qolega"
-			android:screenOrientation="unspecified">
+			android:screenOrientation="portrait">
 		</activity>
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".test3"
 			android:label="Qolega"
-			android:screenOrientation="unspecified">
+			android:screenOrientation="portrait">
 		</activity>
 		<activity
 			android:windowSoftInputMode="stateHidden"
 			android:launchMode="singleTop"
 			android:name=".test4"
 			android:label="Qolega"
-			android:screenOrientation="unspecified">
+			android:screenOrientation="portrait">
+		</activity>
+		<activity
+			android:windowSoftInputMode="stateHidden"
+			android:launchMode="singleTop"
+			android:name=".referringprogress"
+			android:label="Qolega"
+			android:screenOrientation="portrait">
 		</activity>
 		<service android:name="anywheresoftware.b4a.samples.httputils2.httputils2service">
 		</service>

@@ -13,22 +13,32 @@
 	   {
 		 "journeyId":2,
 		 "text":"Phone Interview by Consultant.",
-		 "status":0
+		 "status":1
 	   },
 	   {
 		 "journeyId":2,
 		 "text":"Interviewed by Consultant.",
-		 "status":0
+		 "status":2
 	   },
 	   {
 		 "journeyId":2,
 		 "text":"Interviewed by HR.",
-		 "status":0
+		 "status":2
 	   },
 	   {
 		 "journeyId":2,
 		 "text":"Interviewed by Manager.",
-		 "status":0
+		 "status":2
+	   },
+	   {
+		 "journeyId":2,
+		 "text":"Interviewed by Group Head.",
+		 "status":1
+	   },
+	   {
+		 "journeyId":2,
+		 "text":"Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.",
+		 "status":1
 	   },
 	   {
 		 "journeyId":2,
@@ -39,6 +49,21 @@
 		 "journeyId":2,
 		 "text":"Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.",
 		 "status":0
+	   },
+	   {
+		 "journeyId":2,
+		 "text":"Interviewed by Group Head.",
+		 "status":0
+	   },
+	   {
+		 "journeyId":2,
+		 "text":"Interviewed by Group Head.",
+		 "status":0
+	   },
+	   {
+		 "journeyId":2,
+		 "text":"Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.",
+		 "status":2
 	   }
 	]
 }

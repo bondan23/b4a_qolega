@@ -1,4 +1,4 @@
-﻿VisibleModules=1,2,3,4,5,6
+﻿VisibleModules=1,2,8,3,4,5,6
 ModuleBreakpoints0=
 ModuleClosedNodes0=
 ModuleBreakpoints1=
@@ -15,4 +15,6 @@ ModuleBreakpoints6=
 ModuleClosedNodes6=
 ModuleBreakpoints7=
 ModuleClosedNodes7=
+ModuleBreakpoints8=
+ModuleClosedNodes8=
 SelectedBuild=0
