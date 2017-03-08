@@ -73,7 +73,7 @@ Sub LoopPanel
 	refName.Initialize("")
 	refName.Text = dataName
 	refName.TextColor = Colors.RGB(74,74,74)
-	refName.TextSize = 14dip
+'	refName.TextSize = 14dip
 	refName.Typeface = font.proximanovaSemiBold
 	
 	detailPanel.AddView(userIcon,10dip,10dip,24dip,24dip)
@@ -84,7 +84,7 @@ Sub LoopPanel
 	refCompany.Initialize("")
 	refCompany.Text = dataCompany
 	refCompany.TextColor = Colors.RGB(179,179,179)
-	refCompany.TextSize = 12dip
+'	refCompany.TextSize = 12dip
 	refCompany.Typeface = font.proximanovaRegular
 	detailPanel.AddView(refCompany,38dip,TextHeight+Gap,detailPanel.Width-(Gap*2),50dip)
 	
@@ -103,7 +103,7 @@ Sub LoopPanel
 
 	jobTitle.Initialize("")
 	jobTitle.Text = "Referal Progress for "&dataJobtitle
-	jobTitle.TextSize = 14dip
+'	jobTitle.TextSize = 14dip
 	jobTitle.TextColor = Colors.RGB(74,74,74)
 	jobTitlePanel.AddView(jobTitle,10dip,6dip,jobTitlePanel.Width - (10dip*2),jobTitlePanel.Height)
 	Dim titleHeight As Int
@@ -154,14 +154,14 @@ Sub LoopPanel
 		End Select
 		
 		refStatus.TextColor = Colors.White
-		refStatus.TextSize = 10dip
+'		refStatus.TextSize = 10dip
 		refStatus.Typeface = font.proximanovaSemiBold
 		refStatus.Gravity = Gravity.CENTER
 		progressBox.AddView(refStatus,15dip,10dip,100dip,20dip)
 		
 		refText.Initialize("")
 		refText.Text = journeyText
-		refText.TextSize = 10dip
+'		refText.TextSize = 10dip
 		refText.Typeface = font.proximanovaRegular
 		progressBox.AddView(refText,refStatus.Width+(Gap*2)+5,10dip,progressBox.Width/1.5,100%y)
 		
@@ -210,33 +210,6 @@ Sub LoopPanel
 	Next
 	
 	detailPanel.Height = LastBoxHeight + scrollView.Top + Gap
-	
-'	progressBox.Initialize("")
-'	detailPanel.AddView(progressBox,30dip,0,100%x-(30dip*2),80dip)
-'	DrawLeftBorder(progressBox,Colors.RGB(151,151,151),2dip)
-'	
-'	'Icon
-'	Dim statusIcon As ImageView
-'	statusIcon.Initialize("")
-'	statusIcon.Bitmap = LoadBitmap(File.DirAssets,"checked.png")
-'	detailPanel.AddView(statusIcon,24dip,12dip,16dip,16dip)
-'	
-'	refStatus.Initialize("")
-'	refStatus.Text = "Qualifying"
-'	refStatus.Color =  Colors.RGB(249,191,55)
-'	refStatus.TextColor = Colors.White
-'	refStatus.Gravity = Gravity.CENTER
-'	progressBox.AddView(refStatus,15dip,10dip,100dip,20dip)
-'	
-'	refText.Initialize("")
-'	refText.Text = "Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum"
-'	refText.TextSize = 12
-'	progressBox.AddView(refText,refStatus.Width+(Gap*2)+5,10dip,progressBox.Width/2,100%y)
-'	Dim tHeight As Int
-'	tHeight =  su.MeasureMultilineTextHeight(refText,refText.Text)
-'	'Update Height to make it fit
-'	progressBox.Height = tHeight
-	
 	
 End Sub
 

@@ -16,7 +16,7 @@ File1=loginLayout.bal
 File2=referringLayout.bal
 File3=splashscreen.bal
 File4=testResponsive.bal
-NumberOfLibraries=8
+NumberOfLibraries=9
 Library1=core
 Library2=stringutils
 Library3=json
@@ -25,6 +25,7 @@ Library5=http
 Library6=preferenceactivity
 Library7=stdactionbar
 Library8=byteconverter
+Library9=phone
 @EndOfDesignText@
 #Region  Project Attributes 
 	#ApplicationLabel: Qolega
@@ -101,7 +102,24 @@ Sub Activity_Pause (UserClosed As Boolean)
 End Sub
 
 Sub showUpdateDialog
-	ProgressDialogShow2("Downloading Update",False)
+	'ProgressDialogShow2("Downloading Update",False)
+	Dim i As Int
+	i = Msgbox2("There Was a New Version of This App, Update to Continue","New Update Release","Update","","Cancel",Null)
+	
+	Select i
+	  Case DialogResponse.POSITIVE
+	  	Dim p As PhoneIntents
+		StartActivity(p.OpenBrowser("http://qerja.com"))
+		ExitApplication
+		Activity.Finish
+	  Case DialogResponse.CANCEL
+	  	Activity.Finish
+	  	ExitApplication
+	  Case DialogResponse.NEGATIVE
+	  	Activity.Finish
+	  	ExitApplication
+	End Select
+	
 End Sub
 
 Sub LoginBtn_Click

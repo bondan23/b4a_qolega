@@ -24,7 +24,7 @@ Sub Service_Create
 	
 	'Running version check before user login
 	If AreEqual(isLogin,False) Then
-		ToastMessageShow("Checking Version...",True)
+		ToastMessageShow("Checking Version...",False)
 		
 		'Running version check
 		gHttpVersionJob.Initialize("version_check", Me)
@@ -58,8 +58,8 @@ Sub JobDone (Job As HttpJob)
 					Log("Download new Version")
 					
 					CallSubDelayed(Main,"showUpdateDialog")
-					updateApp.Initialize("download_app",Me)
-					updateApp.Download(downloadAppUrl)
+'					updateApp.Initialize("download_app",Me)
+'					updateApp.Download(downloadAppUrl)
 				End If		
 			Case "download_app"
 				Dim OutStream As OutputStream

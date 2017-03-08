@@ -90,27 +90,27 @@ Sub LoopPanel
 		'JobTitle Label
 		JobTitle.Typeface = font.proximanovaSemiBold
 		JobTitle.Text = job_title
-		JobTitle.TextSize = 14dip
+'		JobTitle.TextSize = 14dip
 		
 		Location.Typeface = font.proximanovaRegular
 		Location.Text = job_location
 		Location.TextColor = Colors.RGB(179,179,179)
-		Location.TextSize = 12dip
+'		Location.TextSize = 12dip
 		
 		JobDesc.Typeface = font.proximanovaRegular
 		JobDesc.Text = job_desc
 		JobDesc.TextColor = Colors.RGB(179,179,179)
-		JobDesc.TextSize = 12dip
+'		JobDesc.TextSize = 12dip
 		
 		Currency.Typeface = font.proximanovaSemiBold
 		Currency.Text = "IDR "&NumberFormat(job_commision,0,2)
 		Currency.Typeface = Typeface.DEFAULT_BOLD
 		Currency.TextColor = Colors.RGB(74,74,74)
-		Currency.TextSize = 12dip
+'		Currency.TextSize = 12dip
 		Commision.Typeface = font.proximanovaSemiBold
 		Commision.Text = "Commision"
 		Commision.TextColor = Colors.RGB(179,179,179)
-		Commision.TextSize = 12dip
+'		Commision.TextSize = 12dip
 		
 		'JobTitle Add View
 		JoblistPanel.AddView(JobTitle,10dip,10dip,100%x-(10dip*2),50dip)
@@ -174,7 +174,7 @@ Sub LoopPanel
 			refName.Initialize("")
 			refName.Text = rName
 			refName.TextColor = Colors.RGB(74,74,74)
-			refName.TextSize = 14dip
+'			refName.TextSize = 14dip
 			refName.Typeface = Typeface.DEFAULT_BOLD
 			ReferencePanel.AddView(refName,38dip,8dip,ReferencePanel.Width-Gap,50dip)
 			rHeight = su.MeasureMultilineTextHeight(refName,refName.Text)
@@ -183,7 +183,7 @@ Sub LoopPanel
 			refCompany.Initialize("")
 			refCompany.Text = rCompany
 			refCompany.TextColor = Colors.RGB(179,179,179)
-			refCompany.TextSize = 12dip
+'			refCompany.TextSize = 12dip
 			ReferencePanel.AddView(refCompany,38dip,rHeight+Gap,ReferencePanel.Width-Gap,50dip)
 			rHeight = rHeight + su.MeasureMultilineTextHeight(refCompany,refCompany.Text)
 			
@@ -203,16 +203,16 @@ Sub LoopPanel
 			refStatus.Initialize("")
 			refStatus.Text = statusRef
 			refStatus.TextColor = Colors.White
-			refStatus.TextSize = 10dip
+'			refStatus.TextSize = 10dip
 			refStatus.Color = statusRefColor
 			refStatus.Gravity = Gravity.CENTER
-			ReferencePanel.AddView(refStatus,38dip,rHeight+Gap+10dip,150dip,20dip)
+			ReferencePanel.AddView(refStatus,38dip,rHeight+Gap+10dip,120dip,20dip)
 			
 			'detailBtn
 			detailBtn.Initialize("detailBtn")
 			detailBtn.Tag = userId
 			detailBtn.Text = "Detail Progress"
-			detailBtn.TextSize = 10dip
+'			detailBtn.TextSize = 10dip
 			detailBtn.TextColor = Colors.RGB(22,176,221)
 			detailBtn.Gravity = Gravity.CENTER
 			'add to list

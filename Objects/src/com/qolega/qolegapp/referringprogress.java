@@ -332,10 +332,10 @@ public static void initializeProcessGlobals() {
             }
 }
 public static String  _activity_actionbarhomeclick() throws Exception{
- //BA.debugLineNum = 238;BA.debugLine="Sub Activity_ActionBarHomeClick";
- //BA.debugLineNum = 239;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 211;BA.debugLine="Sub Activity_ActionBarHomeClick";
+ //BA.debugLineNum = 212;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
- //BA.debugLineNum = 240;BA.debugLine="End Sub";
+ //BA.debugLineNum = 213;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_create(boolean _firsttime) throws Exception{
@@ -360,52 +360,52 @@ _looppanel();
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 246;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 248;BA.debugLine="End Sub";
+ //BA.debugLineNum = 219;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 221;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 242;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 244;BA.debugLine="End Sub";
+ //BA.debugLineNum = 215;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 217;BA.debugLine="End Sub";
 return "";
 }
 public static boolean  _areequal(int _b1,int _b2) throws Exception{
- //BA.debugLineNum = 270;BA.debugLine="Sub AreEqual(b1 As Int, b2 As Int) As Boolean";
- //BA.debugLineNum = 271;BA.debugLine="If b1 <> b2 Then Return False";
+ //BA.debugLineNum = 243;BA.debugLine="Sub AreEqual(b1 As Int, b2 As Int) As Boolean";
+ //BA.debugLineNum = 244;BA.debugLine="If b1 <> b2 Then Return False";
 if (_b1!=_b2) { 
 if (true) return anywheresoftware.b4a.keywords.Common.False;};
- //BA.debugLineNum = 272;BA.debugLine="Return True";
+ //BA.debugLineNum = 245;BA.debugLine="Return True";
 if (true) return anywheresoftware.b4a.keywords.Common.True;
- //BA.debugLineNum = 273;BA.debugLine="End Sub";
+ //BA.debugLineNum = 246;BA.debugLine="End Sub";
 return false;
 }
 public static String  _drawleftborder(anywheresoftware.b4a.objects.ConcreteViewWrapper _target,int _acolor,int _strokewidth,boolean _last,boolean _single) throws Exception{
 anywheresoftware.b4a.objects.drawable.CanvasWrapper _c = null;
 anywheresoftware.b4a.objects.drawable.CanvasWrapper.PathWrapper _path1 = null;
- //BA.debugLineNum = 250;BA.debugLine="Public Sub DrawLeftBorder(Target As View, aColor A";
- //BA.debugLineNum = 251;BA.debugLine="Dim c As Canvas";
+ //BA.debugLineNum = 223;BA.debugLine="Public Sub DrawLeftBorder(Target As View, aColor A";
+ //BA.debugLineNum = 224;BA.debugLine="Dim c As Canvas";
 _c = new anywheresoftware.b4a.objects.drawable.CanvasWrapper();
- //BA.debugLineNum = 252;BA.debugLine="c.Initialize(Target)";
+ //BA.debugLineNum = 225;BA.debugLine="c.Initialize(Target)";
 _c.Initialize((android.view.View)(_target.getObject()));
- //BA.debugLineNum = 253;BA.debugLine="Dim Path1 As Path";
+ //BA.debugLineNum = 226;BA.debugLine="Dim Path1 As Path";
 _path1 = new anywheresoftware.b4a.objects.drawable.CanvasWrapper.PathWrapper();
- //BA.debugLineNum = 254;BA.debugLine="Path1.Initialize(0,0)";
+ //BA.debugLineNum = 227;BA.debugLine="Path1.Initialize(0,0)";
 _path1.Initialize((float) (0),(float) (0));
- //BA.debugLineNum = 256;BA.debugLine="If Last == True Then";
+ //BA.debugLineNum = 229;BA.debugLine="If Last == True Then";
 if (_last==anywheresoftware.b4a.keywords.Common.True) { 
  }else {
- //BA.debugLineNum = 259;BA.debugLine="If Single == True Then";
+ //BA.debugLineNum = 232;BA.debugLine="If Single == True Then";
 if (_single==anywheresoftware.b4a.keywords.Common.True) { 
  }else {
- //BA.debugLineNum = 262;BA.debugLine="Path1.LineTo(0,Target.Height)";
+ //BA.debugLineNum = 235;BA.debugLine="Path1.LineTo(0,Target.Height)";
 _path1.LineTo((float) (0),(float) (_target.getHeight()));
  };
  };
- //BA.debugLineNum = 266;BA.debugLine="c.DrawPath(Path1, aColor, False, StrokeWidth)";
+ //BA.debugLineNum = 239;BA.debugLine="c.DrawPath(Path1, aColor, False, StrokeWidth)";
 _c.DrawPath((android.graphics.Path)(_path1.getObject()),_acolor,anywheresoftware.b4a.keywords.Common.False,(float) (_strokewidth));
- //BA.debugLineNum = 267;BA.debugLine="Target.Invalidate";
+ //BA.debugLineNum = 240;BA.debugLine="Target.Invalidate";
 _target.Invalidate();
- //BA.debugLineNum = 268;BA.debugLine="End Sub";
+ //BA.debugLineNum = 241;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{
@@ -518,8 +518,6 @@ _refname.Initialize(mostCurrent.activityBA,"");
 _refname.setText((Object)(_dataname));
  //BA.debugLineNum = 70;BA.debugLine="refName.TextColor = Colors.RGB(74,74,74)";
 _refname.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (74),(int) (74),(int) (74)));
- //BA.debugLineNum = 71;BA.debugLine="refName.TextSize = 14dip";
-_refname.setTextSize((float) (anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (14))));
  //BA.debugLineNum = 72;BA.debugLine="refName.Typeface = font.proximanovaSemiBold";
 _refname.setTypeface((android.graphics.Typeface)(mostCurrent._font._proximanovasemibold().getObject()));
  //BA.debugLineNum = 74;BA.debugLine="detailPanel.AddView(userIcon,10dip,10dip,24dip,24";
@@ -534,8 +532,6 @@ _refcompany.Initialize(mostCurrent.activityBA,"");
 _refcompany.setText((Object)(_datacompany));
  //BA.debugLineNum = 81;BA.debugLine="refCompany.TextColor = Colors.RGB(179,179,179)";
 _refcompany.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (179),(int) (179),(int) (179)));
- //BA.debugLineNum = 82;BA.debugLine="refCompany.TextSize = 12dip";
-_refcompany.setTextSize((float) (anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (12))));
  //BA.debugLineNum = 83;BA.debugLine="refCompany.Typeface = font.proximanovaRegular";
 _refcompany.setTypeface((android.graphics.Typeface)(mostCurrent._font._proximanovaregular().getObject()));
  //BA.debugLineNum = 84;BA.debugLine="detailPanel.AddView(refCompany,38dip,TextHeight+G";
@@ -562,8 +558,6 @@ _jobtitlepanel.setColor(anywheresoftware.b4a.keywords.Common.Colors.White);
 _jobtitle.Initialize(mostCurrent.activityBA,"");
  //BA.debugLineNum = 100;BA.debugLine="jobTitle.Text = \"Referal Progress for \"&dataJobti";
 _jobtitle.setText((Object)("Referal Progress for "+_datajobtitle));
- //BA.debugLineNum = 101;BA.debugLine="jobTitle.TextSize = 14dip";
-_jobtitle.setTextSize((float) (anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (14))));
  //BA.debugLineNum = 102;BA.debugLine="jobTitle.TextColor = Colors.RGB(74,74,74)";
 _jobtitle.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (74),(int) (74),(int) (74)));
  //BA.debugLineNum = 103;BA.debugLine="jobTitlePanel.AddView(jobTitle,10dip,6dip,jobTitl";
@@ -597,10 +591,10 @@ _lastboxheight = 0;
 _boxheight = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (30));
  //BA.debugLineNum = 122;BA.debugLine="For Each coljourneys As Map In journeys";
 _coljourneys = new anywheresoftware.b4a.objects.collections.Map();
-final anywheresoftware.b4a.BA.IterableList group59 = _journeys;
-final int groupLen59 = group59.getSize();
-for (int index59 = 0;index59 < groupLen59 ;index59++){
-_coljourneys.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(group59.Get(index59)));
+final anywheresoftware.b4a.BA.IterableList group56 = _journeys;
+final int groupLen56 = group56.getSize();
+for (int index56 = 0;index56 < groupLen56 ;index56++){
+_coljourneys.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(group56.Get(index56)));
  //BA.debugLineNum = 123;BA.debugLine="Dim journeyText As String = coljourneys.Get(\"tex";
 _journeytext = BA.ObjectToString(_coljourneys.Get((Object)("text")));
  //BA.debugLineNum = 124;BA.debugLine="Dim rStatus As Int = coljourneys.Get(\"status\")";
@@ -643,8 +637,6 @@ _refstatus.setColor(anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (22),(
 ;
  //BA.debugLineNum = 151;BA.debugLine="refStatus.TextColor = Colors.White";
 _refstatus.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.White);
- //BA.debugLineNum = 152;BA.debugLine="refStatus.TextSize = 10dip";
-_refstatus.setTextSize((float) (anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10))));
  //BA.debugLineNum = 153;BA.debugLine="refStatus.Typeface = font.proximanovaSemiBold";
 _refstatus.setTypeface((android.graphics.Typeface)(mostCurrent._font._proximanovasemibold().getObject()));
  //BA.debugLineNum = 154;BA.debugLine="refStatus.Gravity = Gravity.CENTER";
@@ -655,8 +647,6 @@ _progressbox.AddView((android.view.View)(_refstatus.getObject()),anywheresoftwar
 _reftext.Initialize(mostCurrent.activityBA,"");
  //BA.debugLineNum = 158;BA.debugLine="refText.Text = journeyText";
 _reftext.setText((Object)(_journeytext));
- //BA.debugLineNum = 159;BA.debugLine="refText.TextSize = 10dip";
-_reftext.setTextSize((float) (anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10))));
  //BA.debugLineNum = 160;BA.debugLine="refText.Typeface = font.proximanovaRegular";
 _reftext.setTypeface((android.graphics.Typeface)(mostCurrent._font._proximanovaregular().getObject()));
  //BA.debugLineNum = 161;BA.debugLine="progressBox.AddView(refText,refStatus.Width+(Gap";
@@ -721,7 +711,7 @@ _iterator = (int) (_iterator+1);
 ;
  //BA.debugLineNum = 207;BA.debugLine="detailPanel.Height = LastBoxHeight + scrollView.T";
 _detailpanel.setHeight((int) (_lastboxheight+mostCurrent._scrollview.getTop()+_gap));
- //BA.debugLineNum = 236;BA.debugLine="End Sub";
+ //BA.debugLineNum = 209;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{

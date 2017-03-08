@@ -408,12 +408,12 @@ mostCurrent._version = new anywheresoftware.b4a.objects.LabelWrapper();
 return "";
 }
 public static String  _loginbtn_click() throws Exception{
- //BA.debugLineNum = 79;BA.debugLine="Sub LoginBtn_Click";
- //BA.debugLineNum = 80;BA.debugLine="ProgressDialogShow2(\"Logged In\",False)";
+ //BA.debugLineNum = 96;BA.debugLine="Sub LoginBtn_Click";
+ //BA.debugLineNum = 97;BA.debugLine="ProgressDialogShow2(\"Logged In\",False)";
 anywheresoftware.b4a.keywords.Common.ProgressDialogShow2(mostCurrent.activityBA,"Logged In",anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 81;BA.debugLine="qAuth.Login(EmailField,PasswordField)";
+ //BA.debugLineNum = 98;BA.debugLine="qAuth.Login(EmailField,PasswordField)";
 mostCurrent._qauth._login(mostCurrent._emailfield,mostCurrent._passwordfield);
- //BA.debugLineNum = 82;BA.debugLine="End Sub";
+ //BA.debugLineNum = 99;BA.debugLine="End Sub";
 return "";
 }
 
@@ -441,19 +441,49 @@ referringprogress._process_globals();
 return "";
 }
 public static String  _showupdatedialog() throws Exception{
+int _i = 0;
+anywheresoftware.b4a.phone.Phone.PhoneIntents _p = null;
  //BA.debugLineNum = 75;BA.debugLine="Sub showUpdateDialog";
- //BA.debugLineNum = 76;BA.debugLine="ProgressDialogShow2(\"Downloading Update\",False)";
-anywheresoftware.b4a.keywords.Common.ProgressDialogShow2(mostCurrent.activityBA,"Downloading Update",anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 77;BA.debugLine="End Sub";
+ //BA.debugLineNum = 77;BA.debugLine="Dim i As Int";
+_i = 0;
+ //BA.debugLineNum = 78;BA.debugLine="i = Msgbox2(\"There Was a New Version of This App,";
+_i = anywheresoftware.b4a.keywords.Common.Msgbox2("There Was a New Version of This App, Update to Continue","New Update Release","Update","","Cancel",(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null),mostCurrent.activityBA);
+ //BA.debugLineNum = 80;BA.debugLine="Select i";
+switch (BA.switchObjectToInt(_i,anywheresoftware.b4a.keywords.Common.DialogResponse.POSITIVE,anywheresoftware.b4a.keywords.Common.DialogResponse.CANCEL,anywheresoftware.b4a.keywords.Common.DialogResponse.NEGATIVE)) {
+case 0: {
+ //BA.debugLineNum = 82;BA.debugLine="Dim p As PhoneIntents";
+_p = new anywheresoftware.b4a.phone.Phone.PhoneIntents();
+ //BA.debugLineNum = 83;BA.debugLine="StartActivity(p.OpenBrowser(\"http://qerja.com\"))";
+anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(_p.OpenBrowser("http://qerja.com")));
+ //BA.debugLineNum = 84;BA.debugLine="ExitApplication";
+anywheresoftware.b4a.keywords.Common.ExitApplication();
+ //BA.debugLineNum = 85;BA.debugLine="Activity.Finish";
+mostCurrent._activity.Finish();
+ break; }
+case 1: {
+ //BA.debugLineNum = 87;BA.debugLine="Activity.Finish";
+mostCurrent._activity.Finish();
+ //BA.debugLineNum = 88;BA.debugLine="ExitApplication";
+anywheresoftware.b4a.keywords.Common.ExitApplication();
+ break; }
+case 2: {
+ //BA.debugLineNum = 90;BA.debugLine="Activity.Finish";
+mostCurrent._activity.Finish();
+ //BA.debugLineNum = 91;BA.debugLine="ExitApplication";
+anywheresoftware.b4a.keywords.Common.ExitApplication();
+ break; }
+}
+;
+ //BA.debugLineNum = 94;BA.debugLine="End Sub";
 return "";
 }
 public static String  _splashtimer_tick() throws Exception{
- //BA.debugLineNum = 84;BA.debugLine="Sub SplashTimer_Tick";
- //BA.debugLineNum = 85;BA.debugLine="Panel1.RemoveView()";
+ //BA.debugLineNum = 101;BA.debugLine="Sub SplashTimer_Tick";
+ //BA.debugLineNum = 102;BA.debugLine="Panel1.RemoveView()";
 mostCurrent._panel1.RemoveView();
- //BA.debugLineNum = 86;BA.debugLine="SplashTimer.Enabled = False";
+ //BA.debugLineNum = 103;BA.debugLine="SplashTimer.Enabled = False";
 mostCurrent._splashtimer.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 87;BA.debugLine="End Sub";
+ //BA.debugLineNum = 104;BA.debugLine="End Sub";
 return "";
 }
 }

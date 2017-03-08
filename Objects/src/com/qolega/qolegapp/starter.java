@@ -179,10 +179,6 @@ if ((double)(Double.parseDouble(_version))<(double)(Double.parseDouble(_currentv
 anywheresoftware.b4a.keywords.Common.Log("Download new Version");
  //BA.debugLineNum = 55;BA.debugLine="CallSubDelayed(Main,\"showUpdateDialog\")";
 anywheresoftware.b4a.keywords.Common.CallSubDelayed(processBA,(Object)(mostCurrent._main.getObject()),"showUpdateDialog");
- //BA.debugLineNum = 56;BA.debugLine="updateApp.Initialize(\"download_app\",Me)";
-_updateapp._initialize(processBA,"download_app",starter.getObject());
- //BA.debugLineNum = 57;BA.debugLine="updateApp.Download(downloadAppUrl)";
-_updateapp._download(_downloadappurl);
  };
  break; }
 case 1: {
@@ -237,8 +233,8 @@ _manager = new anywheresoftware.b4a.objects.preferenceactivity.PreferenceManager
 _islogin = _manager.GetBoolean("is_login");
  //BA.debugLineNum = 21;BA.debugLine="If AreEqual(isLogin,False) Then";
 if (_areequal(_islogin,anywheresoftware.b4a.keywords.Common.False)) { 
- //BA.debugLineNum = 22;BA.debugLine="ToastMessageShow(\"Checking Version...\",True)";
-anywheresoftware.b4a.keywords.Common.ToastMessageShow("Checking Version...",anywheresoftware.b4a.keywords.Common.True);
+ //BA.debugLineNum = 22;BA.debugLine="ToastMessageShow(\"Checking Version...\",False)";
+anywheresoftware.b4a.keywords.Common.ToastMessageShow("Checking Version...",anywheresoftware.b4a.keywords.Common.False);
  //BA.debugLineNum = 25;BA.debugLine="gHttpVersionJob.Initialize(\"version_check\", Me)";
 _ghttpversionjob._initialize(processBA,"version_check",starter.getObject());
  //BA.debugLineNum = 26;BA.debugLine="gHttpVersionJob.Download(getVersion)";
