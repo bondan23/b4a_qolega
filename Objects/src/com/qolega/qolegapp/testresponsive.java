@@ -316,9 +316,9 @@ public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2serv
 public com.qolega.qolegapp.main _main = null;
 public com.qolega.qolegapp.starter _starter = null;
 public com.qolega.qolegapp.referringlist _referringlist = null;
+public com.qolega.qolegapp.referringprogress _referringprogress = null;
 public com.qolega.qolegapp.test3 _test3 = null;
 public com.qolega.qolegapp.test4 _test4 = null;
-public com.qolega.qolegapp.referringprogress _referringprogress = null;
 
 public static void initializeProcessGlobals() {
              try {

@@ -118,10 +118,10 @@ public static String _downloadappurl = "";
 public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
 public com.qolega.qolegapp.main _main = null;
 public com.qolega.qolegapp.referringlist _referringlist = null;
+public com.qolega.qolegapp.referringprogress _referringprogress = null;
 public com.qolega.qolegapp.testresponsive _testresponsive = null;
 public com.qolega.qolegapp.test3 _test3 = null;
 public com.qolega.qolegapp.test4 _test4 = null;
-public com.qolega.qolegapp.referringprogress _referringprogress = null;
 public static boolean  _application_error(anywheresoftware.b4a.objects.B4AException _error,String _stacktrace) throws Exception{
  //BA.debugLineNum = 78;BA.debugLine="Sub Application_Error (Error As Exception, StackTr";
  //BA.debugLineNum = 79;BA.debugLine="Return True";

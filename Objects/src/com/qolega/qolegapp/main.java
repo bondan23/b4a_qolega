@@ -320,50 +320,25 @@ public anywheresoftware.b4a.objects.LabelWrapper _version = null;
 public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
 public com.qolega.qolegapp.starter _starter = null;
 public com.qolega.qolegapp.referringlist _referringlist = null;
+public com.qolega.qolegapp.referringprogress _referringprogress = null;
 public com.qolega.qolegapp.testresponsive _testresponsive = null;
 public com.qolega.qolegapp.test3 _test3 = null;
 public com.qolega.qolegapp.test4 _test4 = null;
-public com.qolega.qolegapp.referringprogress _referringprogress = null;
 
 public static boolean isAnyActivityVisible() {
     boolean vis = false;
 vis = vis | (main.mostCurrent != null);
 vis = vis | (referringlist.mostCurrent != null);
+vis = vis | (referringprogress.mostCurrent != null);
 vis = vis | (testresponsive.mostCurrent != null);
 vis = vis | (test3.mostCurrent != null);
 vis = vis | (test4.mostCurrent != null);
-vis = vis | (referringprogress.mostCurrent != null);
 return vis;}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-anywheresoftware.b4a.objects.ImageViewWrapper _qolegalogo = null;
-int _w = 0;
-int _h = 0;
  //BA.debugLineNum = 33;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
  //BA.debugLineNum = 34;BA.debugLine="qAuth.Initialize(Activity)";
 mostCurrent._qauth._initialize(mostCurrent.activityBA,mostCurrent._activity);
- //BA.debugLineNum = 37;BA.debugLine="SplashTimer.Initialize(\"SplashTimer\",1000)";
-mostCurrent._splashtimer.Initialize(processBA,"SplashTimer",(long) (1000));
- //BA.debugLineNum = 38;BA.debugLine="SplashTimer.Enabled = True";
-mostCurrent._splashtimer.setEnabled(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 40;BA.debugLine="Panel1.Initialize(\"Panel1\")";
-mostCurrent._panel1.Initialize(mostCurrent.activityBA,"Panel1");
- //BA.debugLineNum = 41;BA.debugLine="Panel1.SetBackgroundImage(LoadBitmap(File.DirAsse";
-mostCurrent._panel1.SetBackgroundImage((android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"7aa1c09d-5afb-40e9-8e79-0d3e5b17a8ea.png").getObject()));
- //BA.debugLineNum = 42;BA.debugLine="Panel1.Visible=True";
-mostCurrent._panel1.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 44;BA.debugLine="Dim QolegaLogo As ImageView";
-_qolegalogo = new anywheresoftware.b4a.objects.ImageViewWrapper();
- //BA.debugLineNum = 46;BA.debugLine="Dim W As Int = 300dip 'This is picture width";
-_w = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (300));
- //BA.debugLineNum = 47;BA.debugLine="Dim H As Int = 40dip ' and height";
-_h = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40));
- //BA.debugLineNum = 49;BA.debugLine="QolegaLogo.Initialize(\"QolegaLogo\")";
-_qolegalogo.Initialize(mostCurrent.activityBA,"QolegaLogo");
- //BA.debugLineNum = 50;BA.debugLine="QolegaLogo.bitmap = LoadBitmap(File.DirAssets,\"lo";
-_qolegalogo.setBitmap((android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"logo.png").getObject()));
- //BA.debugLineNum = 51;BA.debugLine="Panel1.AddView(QolegaLogo, (100%x - W)/2, (100";
-mostCurrent._panel1.AddView((android.view.View)(_qolegalogo.getObject()),(int) ((anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA)-_w)/(double)2),(int) ((anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA)-_h)/(double)2),_w,_h);
- //BA.debugLineNum = 54;BA.debugLine="qAuth.CheckLoginSession";
+ //BA.debugLineNum = 55;BA.debugLine="qAuth.CheckLoginSession";
 mostCurrent._qauth._checkloginsession();
  //BA.debugLineNum = 58;BA.debugLine="Activity.LoadLayout(\"loginLayout\")";
 mostCurrent._activity.LoadLayout("loginLayout",mostCurrent.activityBA);
@@ -371,8 +346,6 @@ mostCurrent._activity.LoadLayout("loginLayout",mostCurrent.activityBA);
 mostCurrent._wrapper.setTop((int) ((anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA)-mostCurrent._wrapper.getHeight())/(double)2));
  //BA.debugLineNum = 62;BA.debugLine="Version.Text = \"V \"&Application.VersionName";
 mostCurrent._version.setText((Object)("V "+anywheresoftware.b4a.keywords.Common.Application.getVersionName()));
- //BA.debugLineNum = 64;BA.debugLine="Activity.AddView(Panel1,0,0,Activity.Width,Activi";
-mostCurrent._activity.AddView((android.view.View)(mostCurrent._panel1.getObject()),(int) (0),(int) (0),mostCurrent._activity.getWidth(),mostCurrent._activity.getHeight());
  //BA.debugLineNum = 65;BA.debugLine="End Sub";
 return "";
 }
@@ -409,11 +382,18 @@ return "";
 }
 public static String  _loginbtn_click() throws Exception{
  //BA.debugLineNum = 96;BA.debugLine="Sub LoginBtn_Click";
- //BA.debugLineNum = 97;BA.debugLine="ProgressDialogShow2(\"Logged In\",False)";
-anywheresoftware.b4a.keywords.Common.ProgressDialogShow2(mostCurrent.activityBA,"Logged In",anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 98;BA.debugLine="qAuth.Login(EmailField,PasswordField)";
+ //BA.debugLineNum = 98;BA.debugLine="If EmailField.Text = \"\" Then";
+if ((mostCurrent._emailfield.getText()).equals("")) { 
+ //BA.debugLineNum = 99;BA.debugLine="ToastMessageShow(\"Email Field is Required\",False";
+anywheresoftware.b4a.keywords.Common.ToastMessageShow("Email Field is Required",anywheresoftware.b4a.keywords.Common.False);
+ }else if((mostCurrent._passwordfield.getText()).equals("")) { 
+ //BA.debugLineNum = 101;BA.debugLine="ToastMessageShow(\"Password Field is Required\",Fa";
+anywheresoftware.b4a.keywords.Common.ToastMessageShow("Password Field is Required",anywheresoftware.b4a.keywords.Common.False);
+ }else {
+ //BA.debugLineNum = 103;BA.debugLine="qAuth.Login(EmailField,PasswordField)";
 mostCurrent._qauth._login(mostCurrent._emailfield,mostCurrent._passwordfield);
- //BA.debugLineNum = 99;BA.debugLine="End Sub";
+ };
+ //BA.debugLineNum = 105;BA.debugLine="End Sub";
 return "";
 }
 
@@ -426,10 +406,10 @@ public static void initializeProcessGlobals() {
 main._process_globals();
 starter._process_globals();
 referringlist._process_globals();
+referringprogress._process_globals();
 testresponsive._process_globals();
 test3._process_globals();
 test4._process_globals();
-referringprogress._process_globals();
 		
         } catch (Exception e) {
 			throw new RuntimeException(e);
@@ -475,15 +455,6 @@ anywheresoftware.b4a.keywords.Common.ExitApplication();
 }
 ;
  //BA.debugLineNum = 94;BA.debugLine="End Sub";
-return "";
-}
-public static String  _splashtimer_tick() throws Exception{
- //BA.debugLineNum = 101;BA.debugLine="Sub SplashTimer_Tick";
- //BA.debugLineNum = 102;BA.debugLine="Panel1.RemoveView()";
-mostCurrent._panel1.RemoveView();
- //BA.debugLineNum = 103;BA.debugLine="SplashTimer.Enabled = False";
-mostCurrent._splashtimer.setEnabled(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 104;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -23,6 +23,8 @@ Public Sub Login(email As EditText,password As EditText)
 	email.Text = ""
 	password.Text = ""
 	
+	
+	ProgressDialogShow2("Logged In",False)	
 	Job.Initialize("Job1", Me)
     'Send a GET request
     Job.PostString("http://phalcon.puma.mylits.com/users/authenticate",Null)
@@ -39,11 +41,10 @@ Public Sub Logout()
 	ToastMessageShow("Logout berhasil", False)
 End Sub
 
-
 Sub JobDone (Job As HttpJob)
    Dim JSON As JSONParser
    Log("JobName = " & Job.JobName & ", Success = " & Job.Success)
-   
+   ProgressDialogHide
    If Job.Success = True Then
       Select Job.JobName
          Case "Job1"
@@ -66,7 +67,7 @@ Public Sub CheckLoginSession()
 	Dim isLogin As Boolean
 	isLogin = manager.GetBoolean("is_login")
 	
-	If isLogin Then
+	If isLogin = True Then
 		StartActivity(ReferringList)
 		Act.Finish
 	End If
@@ -76,7 +77,6 @@ Public Sub SetLoginSession(Token As String)
 	manager.SetBoolean("is_login", True)
 	manager.SetString("token",Token)
 	StartActivity(ReferringList)
-	Act.Finish
 End Sub
 
 Public Sub GetAccessToken()

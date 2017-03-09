@@ -30,25 +30,25 @@ public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2serv
 public com.qolega.qolegapp.main _main = null;
 public com.qolega.qolegapp.starter _starter = null;
 public com.qolega.qolegapp.referringlist _referringlist = null;
+public com.qolega.qolegapp.referringprogress _referringprogress = null;
 public com.qolega.qolegapp.testresponsive _testresponsive = null;
 public com.qolega.qolegapp.test3 _test3 = null;
 public com.qolega.qolegapp.test4 _test4 = null;
-public com.qolega.qolegapp.referringprogress _referringprogress = null;
 public String  _checkloginsession() throws Exception{
 boolean _islogin = false;
- //BA.debugLineNum = 60;BA.debugLine="Public Sub CheckLoginSession()";
- //BA.debugLineNum = 61;BA.debugLine="Dim isLogin As Boolean";
+ //BA.debugLineNum = 61;BA.debugLine="Public Sub CheckLoginSession()";
+ //BA.debugLineNum = 62;BA.debugLine="Dim isLogin As Boolean";
 _islogin = false;
- //BA.debugLineNum = 62;BA.debugLine="isLogin = manager.GetBoolean(\"is_login\")";
+ //BA.debugLineNum = 63;BA.debugLine="isLogin = manager.GetBoolean(\"is_login\")";
 _islogin = _manager.GetBoolean("is_login");
- //BA.debugLineNum = 64;BA.debugLine="If isLogin Then";
-if (_islogin) { 
- //BA.debugLineNum = 65;BA.debugLine="StartActivity(ReferringList)";
+ //BA.debugLineNum = 65;BA.debugLine="If isLogin = True Then";
+if (_islogin==__c.True) { 
+ //BA.debugLineNum = 66;BA.debugLine="StartActivity(ReferringList)";
 __c.StartActivity(ba,(Object)(_referringlist.getObject()));
- //BA.debugLineNum = 66;BA.debugLine="Act.Finish";
+ //BA.debugLineNum = 67;BA.debugLine="Act.Finish";
 _act.Finish();
  };
- //BA.debugLineNum = 68;BA.debugLine="End Sub";
+ //BA.debugLineNum = 69;BA.debugLine="End Sub";
 return "";
 }
 public String  _class_globals() throws Exception{
@@ -96,42 +96,44 @@ anywheresoftware.b4a.objects.collections.JSONParser _json = null;
 anywheresoftware.b4a.objects.collections.Map _root = null;
 anywheresoftware.b4a.objects.collections.Map _data = null;
 String _token = "";
- //BA.debugLineNum = 38;BA.debugLine="Sub JobDone (Job As HttpJob)";
- //BA.debugLineNum = 39;BA.debugLine="Dim JSON As JSONParser";
+ //BA.debugLineNum = 39;BA.debugLine="Sub JobDone (Job As HttpJob)";
+ //BA.debugLineNum = 40;BA.debugLine="Dim JSON As JSONParser";
 _json = new anywheresoftware.b4a.objects.collections.JSONParser();
- //BA.debugLineNum = 40;BA.debugLine="Log(\"JobName = \" & Job.JobName & \", Success = \"";
+ //BA.debugLineNum = 41;BA.debugLine="Log(\"JobName = \" & Job.JobName & \", Success = \"";
 __c.Log("JobName = "+_job._jobname+", Success = "+BA.ObjectToString(_job._success));
- //BA.debugLineNum = 42;BA.debugLine="If Job.Success = True Then";
+ //BA.debugLineNum = 42;BA.debugLine="ProgressDialogHide";
+__c.ProgressDialogHide();
+ //BA.debugLineNum = 43;BA.debugLine="If Job.Success = True Then";
 if (_job._success==__c.True) { 
- //BA.debugLineNum = 43;BA.debugLine="Select Job.JobName";
+ //BA.debugLineNum = 44;BA.debugLine="Select Job.JobName";
 switch (BA.switchObjectToInt(_job._jobname,"Job1")) {
 case 0: {
- //BA.debugLineNum = 46;BA.debugLine="JSON.Initialize(Job.GetString)";
+ //BA.debugLineNum = 47;BA.debugLine="JSON.Initialize(Job.GetString)";
 _json.Initialize(_job._getstring());
- //BA.debugLineNum = 47;BA.debugLine="Dim root As Map = JSON.NextObject";
+ //BA.debugLineNum = 48;BA.debugLine="Dim root As Map = JSON.NextObject";
 _root = new anywheresoftware.b4a.objects.collections.Map();
 _root = _json.NextObject();
- //BA.debugLineNum = 48;BA.debugLine="Dim data As Map = root.Get(\"data\")";
+ //BA.debugLineNum = 49;BA.debugLine="Dim data As Map = root.Get(\"data\")";
 _data = new anywheresoftware.b4a.objects.collections.Map();
 _data.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_root.Get((Object)("data"))));
- //BA.debugLineNum = 49;BA.debugLine="Dim token As String = data.Get(\"token\")";
+ //BA.debugLineNum = 50;BA.debugLine="Dim token As String = data.Get(\"token\")";
 _token = BA.ObjectToString(_data.Get((Object)("token")));
- //BA.debugLineNum = 50;BA.debugLine="SetLoginSession(token)";
+ //BA.debugLineNum = 51;BA.debugLine="SetLoginSession(token)";
 _setloginsession(_token);
- //BA.debugLineNum = 51;BA.debugLine="Log(token)";
+ //BA.debugLineNum = 52;BA.debugLine="Log(token)";
 __c.Log(_token);
  break; }
 }
 ;
  }else {
- //BA.debugLineNum = 54;BA.debugLine="Log(\"Error: \" & Job.ErrorMessage)";
+ //BA.debugLineNum = 55;BA.debugLine="Log(\"Error: \" & Job.ErrorMessage)";
 __c.Log("Error: "+_job._errormessage);
- //BA.debugLineNum = 55;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessag";
+ //BA.debugLineNum = 56;BA.debugLine="ToastMessageShow(\"Error: \" & Job.ErrorMessag";
 __c.ToastMessageShow("Error: "+_job._errormessage,__c.True);
  };
- //BA.debugLineNum = 57;BA.debugLine="Job.Release";
+ //BA.debugLineNum = 58;BA.debugLine="Job.Release";
 _job._release();
- //BA.debugLineNum = 58;BA.debugLine="End Sub";
+ //BA.debugLineNum = 59;BA.debugLine="End Sub";
 return "";
 }
 public String  _login(anywheresoftware.b4a.objects.EditTextWrapper _email,anywheresoftware.b4a.objects.EditTextWrapper _password) throws Exception{
@@ -147,44 +149,44 @@ _bauth = _encodebasicauth(_email.getText(),_password.getText());
 _email.setText((Object)(""));
  //BA.debugLineNum = 19;BA.debugLine="password.Text = \"\"";
 _password.setText((Object)(""));
- //BA.debugLineNum = 21;BA.debugLine="Job.Initialize(\"Job1\", Me)";
+ //BA.debugLineNum = 22;BA.debugLine="ProgressDialogShow2(\"Logged In\",False)";
+__c.ProgressDialogShow2(ba,"Logged In",__c.False);
+ //BA.debugLineNum = 23;BA.debugLine="Job.Initialize(\"Job1\", Me)";
 _job._initialize(ba,"Job1",this);
- //BA.debugLineNum = 23;BA.debugLine="Job.PostString(\"http://phalcon.puma.mylits.com";
+ //BA.debugLineNum = 25;BA.debugLine="Job.PostString(\"http://phalcon.puma.mylits.com";
 _job._poststring("http://phalcon.puma.mylits.com/users/authenticate",BA.ObjectToString(__c.Null));
- //BA.debugLineNum = 24;BA.debugLine="Job.Username = email.Text";
+ //BA.debugLineNum = 26;BA.debugLine="Job.Username = email.Text";
 _job._username = _email.getText();
- //BA.debugLineNum = 25;BA.debugLine="Job.Password = password.Text";
+ //BA.debugLineNum = 27;BA.debugLine="Job.Password = password.Text";
 _job._password = _password.getText();
- //BA.debugLineNum = 26;BA.debugLine="Job.GetRequest.SetContentType(\"application/json;";
+ //BA.debugLineNum = 28;BA.debugLine="Job.GetRequest.SetContentType(\"application/json;";
 _job._getrequest().SetContentType("application/json; charset=UTF-8");
- //BA.debugLineNum = 27;BA.debugLine="Job.GetRequest.SetHeader(\"Authorization\", \"Basic";
+ //BA.debugLineNum = 29;BA.debugLine="Job.GetRequest.SetHeader(\"Authorization\", \"Basic";
 _job._getrequest().SetHeader("Authorization","Basic "+_bauth);
- //BA.debugLineNum = 28;BA.debugLine="End Sub";
+ //BA.debugLineNum = 30;BA.debugLine="End Sub";
 return "";
 }
 public String  _logout() throws Exception{
- //BA.debugLineNum = 30;BA.debugLine="Public Sub Logout()";
- //BA.debugLineNum = 31;BA.debugLine="manager.SetBoolean(\"is_login\", False)";
+ //BA.debugLineNum = 32;BA.debugLine="Public Sub Logout()";
+ //BA.debugLineNum = 33;BA.debugLine="manager.SetBoolean(\"is_login\", False)";
 _manager.SetBoolean("is_login",__c.False);
- //BA.debugLineNum = 32;BA.debugLine="StartActivity(Main)";
+ //BA.debugLineNum = 34;BA.debugLine="StartActivity(Main)";
 __c.StartActivity(ba,(Object)(_main.getObject()));
- //BA.debugLineNum = 33;BA.debugLine="Act.Finish";
+ //BA.debugLineNum = 35;BA.debugLine="Act.Finish";
 _act.Finish();
- //BA.debugLineNum = 34;BA.debugLine="ToastMessageShow(\"Logout berhasil\", False)";
+ //BA.debugLineNum = 36;BA.debugLine="ToastMessageShow(\"Logout berhasil\", False)";
 __c.ToastMessageShow("Logout berhasil",__c.False);
- //BA.debugLineNum = 35;BA.debugLine="End Sub";
+ //BA.debugLineNum = 37;BA.debugLine="End Sub";
 return "";
 }
 public String  _setloginsession(String _token) throws Exception{
- //BA.debugLineNum = 70;BA.debugLine="Public Sub SetLoginSession(Token As String)";
- //BA.debugLineNum = 71;BA.debugLine="manager.SetBoolean(\"is_login\", True)";
+ //BA.debugLineNum = 71;BA.debugLine="Public Sub SetLoginSession(Token As String)";
+ //BA.debugLineNum = 72;BA.debugLine="manager.SetBoolean(\"is_login\", True)";
 _manager.SetBoolean("is_login",__c.True);
- //BA.debugLineNum = 72;BA.debugLine="manager.SetString(\"token\",Token)";
+ //BA.debugLineNum = 73;BA.debugLine="manager.SetString(\"token\",Token)";
 _manager.SetString("token",_token);
- //BA.debugLineNum = 73;BA.debugLine="StartActivity(ReferringList)";
+ //BA.debugLineNum = 74;BA.debugLine="StartActivity(ReferringList)";
 __c.StartActivity(ba,(Object)(_referringlist.getObject()));
- //BA.debugLineNum = 74;BA.debugLine="Act.Finish";
-_act.Finish();
  //BA.debugLineNum = 75;BA.debugLine="End Sub";
 return "";
 }
