@@ -22,6 +22,7 @@ Sub Globals
 	Dim detailList As List
 	Dim qAuth As Auth
 	Dim font As Fonts
+	Dim loadMore As Button
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
@@ -30,16 +31,16 @@ Sub Activity_Create(FirstTime As Boolean)
 	
 	'Do not forget to load the layout file created with the visual designer. For example:
 	'Activity.LoadLayout("Layout1")
-	Activity.AddMenuItem3("SearchItem", "SearchItem", LoadBitmap(File.DirAssets, "search.png"), True)
+	Activity.AddMenuItem3("SearchItem", "SearchItem", LoadBitmap(File.DirAssets, "Logout.png"), True)
 	scrollView.Initialize(Activity.Height)
 	scrollView.Color = Colors.RGB(246,246,246)
 	Activity.AddView(scrollView,0,0,100%x,100%y)
 	detailList.Initialize
-	LoopPanel
+	LoopPanel(10dip)
 End Sub
 
 
-Sub LoopPanel
+Sub LoopPanel(StartTop As Int)
 	Dim Bitmap1 As Bitmap
 	Dim Container As Panel
 	Dim JoblistPanel,ReferencePanel As Panel
@@ -48,7 +49,7 @@ Sub LoopPanel
 	Dim locationIcon,industryIcon,moneyIcon As ImageView
 	
 	'Default Panel Top position
-	PanelTop = 10dip
+	PanelTop = StartTop
 	
 	'Default Panel height
 	PanelHeight = 110dip
@@ -141,7 +142,13 @@ Sub LoopPanel
 		'Moneyicon
 		JoblistPanel.AddView(moneyIcon,10dip,TextHeight+Gap*2.2,14dip,11.2dip)
 		'Currency & Commision Add View
-		JoblistPanel.AddView(Currency,30.9dip,TextHeight+Gap*2,100dip,50dip)
+		JoblistPanel.AddView(Currency,30.9dip,TextHeight+Gap*2,105dip,50dip)
+		
+		Dim Canv As Canvas
+		Canv.Initialize(Currency)
+		Dim newCurrencyWidth = Canv.MeasureStringWidth(Currency.Text,font.proximanovaRegular,Currency.TextSize) As Int
+		Currency.Width = newCurrencyWidth+Gap/2
+		
 		JoblistPanel.AddView(Commision,Currency.Width+Currency.Left,TextHeight+Gap*2.2,100%x,50dip)
 		TextHeight = TextHeight + su.MeasureMultilineTextHeight(Currency,Currency.Text)
 		
@@ -170,6 +177,7 @@ Sub LoopPanel
 			Dim rName As String = colreference.Get("name") 
 			Dim rCompany As String = colreference.Get("company") 
 			Dim rStatus As String = colreference.Get("status") 
+			Dim rStatusText As String = colreference.Get("status_text") 
 			Dim userId As Int = colreference.Get("userId") 
 			
 			'Icon
@@ -216,31 +224,48 @@ Sub LoopPanel
 			ReferencePanel.AddView(refCompany,38dip,refName.Height+refName.Top,ReferencePanel.Width-38dip*2,20dip)
 			
 			'refStatus
-
+			refStatus.Initialize("")
 			Select rStatus
-				Case 0
-					statusRef = "Qualifying"
-					statusRefColor = Colors.RGB(249,191,55)
 				Case 1
-					statusRef = "1st Interview"
-					statusRefColor = Colors.RGB(102,195,67)
+					cd.Initialize(Colors.RGB(249,128,55), 2dip)
+					refStatus.Background = cd
+				Case 2
+					cd.Initialize(Colors.RGB(248,190,56), 2dip)
+					refStatus.Background = cd
+				Case 3
+					cd.Initialize(Colors.RGB(186,220,63), 2dip)
+					refStatus.Background = cd
+				Case 4
+					cd.Initialize(Colors.RGB(103,195,68), 2dip)
+					refStatus.Background = cd
+				Case 5
+					cd.Initialize(Colors.RGB(62,222,176), 2dip)
+					refStatus.Background = cd
+				Case 6
+					cd.Initialize(Colors.RGB(21,176,220), 2dip)
+					refStatus.Background = cd
+				Case 7
+					cd.Initialize(Colors.RGB(38,143,235), 2dip)
+					refStatus.Background = cd
 				Case Else
-					statusRef = "Completed"
-					statusRefColor = Colors.RGB(22,176,221)
+					cd.Initialize(Colors.RGB(3,117,216), 2dip)
+					refStatus.Background = cd
 			End Select
 			
-			Dim cd2 As ColorDrawable
-			cd2.Initialize(statusRefColor, 2dip)
-			refStatus.Initialize("")
-			refStatus.Text = statusRef
+			refStatus.Text = rStatusText
 			refStatus.TextColor = Colors.White
 			'refStatus.TextSize =JobTitle.TextSize / 1.4
-			refStatus.Background = cd2
 '			refStatus.Color = statusRefColor
 			refStatus.Gravity = Gravity.CENTER
-			
+
 			ReferencePanel.AddView(refStatus,38dip,refCompany.Top+refCompany.Height+Gap,100dip,20dip)
+			Dim refStatusHeight As Int
+			refStatusHeight =  su.MeasureMultilineTextHeight(refStatus,refStatus.Text)
 			
+			If refStatusHeight > refStatus.Height Then
+				refStatus.Height = refStatusHeight
+				ReferencePanel.Height = ReferenceHeight + Gap
+			End If
 			
 '			Dim gd1 As GradientDrawable 
 '			Dim cols(2) As Int 
@@ -255,14 +280,13 @@ Sub LoopPanel
 			'detailButton
 			Dim sld As StateListDrawable
 			Dim pressed As ColorDrawable
-    		pressed.Initialize(Colors.RGB(105, 203, 231), 2dip)
+    		pressed.Initialize(Colors.RGB(255, 255, 255), 2dip)
 			
 			sld.Initialize
 			sld.AddState(sld.State_Pressed,pressed)
 			
 			
 			detailButton.Initialize("detailBtn") 
-			detailButton.TextColor = Colors.RGB(22,176,221)
 			detailButton.Typeface = font.awesome.FontAwesomeTypeface
 			detailButton.Tag = userId
 			detailButton.Text = "Detail Progress "&font.awesome.GetFontAwesomeIconByName("fa-arrow-right")
@@ -283,7 +307,7 @@ Sub LoopPanel
 			detailList.Add(detailButton)
 			
 			'Log(ReferencePanel.Width)
-			ReferencePanel.AddView(detailButton,(ReferencePanel.Width - 100dip)-Gap,refCompany.Top+refCompany.Height+6dip,110dip,30dip)
+			ReferencePanel.AddView(detailButton,(ReferencePanel.Width - 125dip)-Gap,refCompany.Top+refCompany.Height+5dip,125dip,35dip)
 			
 			ReferenceTop = ReferenceTop+ReferenceHeight+Gap
 		Next
@@ -292,7 +316,26 @@ Sub LoopPanel
 		PanelTop = PanelTop+PanelHeight+Gap
 		PanelHeight = defaultPanelHeight
 	Next
-	Container.Height = PanelTop
+	
+	'loadMoreColorDrawable
+	Dim sld As StateListDrawable
+	Dim pressed,enabled As ColorDrawable
+	pressed.Initialize(Colors.RGB(105, 203, 231), 2dip)
+	enabled.Initialize(Colors.RGB(22,176,221), 2dip)
+	
+	sld.Initialize
+	sld.AddState(sld.State_Pressed,pressed)
+	sld.AddState(sld.State_Enabled,enabled)
+	
+	loadMore.Initialize("loadMore")
+	loadMore.Text = "Load More"
+	loadMore.Background = sld
+	loadMore.TextColor = Colors.White
+	loadMore.Gravity = Gravity.CENTER
+	loadMore.Tag = PanelTop
+	Container.AddView(loadMore,(100%x-100dip)/2,PanelTop,100dip,40dip)
+	
+	Container.Height = PanelTop + 50dip
 End Sub
 
 Sub SearchItem_Click
@@ -307,6 +350,24 @@ Sub Activity_Pause (UserClosed As Boolean)
 
 End Sub
 
+Sub loadMore_Click
+	loadMore = Sender
+	loadMore.Text = "Loading..."
+	loadMore.Color = Colors.Gray
+	Sleep(1200)
+	loadMore.Visible = False
+	LoopPanel(loadMore.Tag)
+End Sub
+
+Sub Sleep(ms As Long)
+Dim now As Long
+   If ms > 1000 Then ms =1000   'avoid application not responding error
+   now=DateTime.Now
+   Do Until (DateTime.Now>now+ms)
+     DoEvents
+   Loop
+End Sub
+
 Sub detailBtn_Click
 	For i = 0 To detailList.Size - 1
 		Dim detailBtn As Button
@@ -315,8 +376,27 @@ Sub detailBtn_Click
 	Next
 	
 	'Msgbox(detailBtn.Tag&" Was Clicked","Button Clicked")
-	detailBtn.TextColor = Colors.RGB(117, 207, 233)
 	ReferringProgress.userId = detailBtn.Tag
 	StartActivity(ReferringProgress)
 		
+End Sub
+
+Sub detailBtn_Down
+	For i = 0 To detailList.Size - 1
+		Dim detailBtn As Button
+		detailBtn = detailList.Get(i)
+		detailBtn = Sender
+	Next
+	
+	detailBtn.TextColor = Colors.RGB(105, 203, 231)
+End Sub
+
+Sub detailBtn_Up
+	For i = 0 To detailList.Size - 1
+		Dim detailBtn As Button
+		detailBtn = detailList.Get(i)
+		detailBtn = Sender
+	Next
+	
+	detailBtn.TextColor = Colors.RGB(22,176,221)
 End Sub

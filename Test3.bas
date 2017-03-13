@@ -24,7 +24,12 @@ Sub Activity_Create(FirstTime As Boolean)
 	'Add Layout Menu
 	Activity.AddMenuItem3("SearchItem", "SearchItem", LoadBitmap(File.DirAssets, "search.png"), True)
 	
-	Activity.LoadLayout("referringLayout")
+	Dim parser As JSONParser
+	parser.Initialize(File.ReadString(File.DirAssets, "status_reference.json"))
+	Dim root As List = parser.NextArray
+	Dim root2 As Map = root.Get(0)
+	
+	Log(root2.Get("id"))
 
 End Sub
 

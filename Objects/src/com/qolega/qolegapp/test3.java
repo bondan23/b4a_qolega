@@ -325,22 +325,35 @@ public static void initializeProcessGlobals() {
             }
 }
 public static String  _activity_create(boolean _firsttime) throws Exception{
+anywheresoftware.b4a.objects.collections.JSONParser _parser = null;
+anywheresoftware.b4a.objects.collections.List _root = null;
+anywheresoftware.b4a.objects.collections.Map _root2 = null;
  //BA.debugLineNum = 17;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
  //BA.debugLineNum = 20;BA.debugLine="Activity.AddMenuItem3(\"SearchItem\", \"SearchItem\",";
 mostCurrent._activity.AddMenuItem3("SearchItem","SearchItem",(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"search.png").getObject()),anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 22;BA.debugLine="Activity.LoadLayout(\"referringLayout\")";
-mostCurrent._activity.LoadLayout("referringLayout",mostCurrent.activityBA);
- //BA.debugLineNum = 24;BA.debugLine="End Sub";
+ //BA.debugLineNum = 22;BA.debugLine="Dim parser As JSONParser";
+_parser = new anywheresoftware.b4a.objects.collections.JSONParser();
+ //BA.debugLineNum = 23;BA.debugLine="parser.Initialize(File.ReadString(File.DirAssets,";
+_parser.Initialize(anywheresoftware.b4a.keywords.Common.File.ReadString(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"status_reference.json"));
+ //BA.debugLineNum = 24;BA.debugLine="Dim root As List = parser.NextArray";
+_root = new anywheresoftware.b4a.objects.collections.List();
+_root = _parser.NextArray();
+ //BA.debugLineNum = 25;BA.debugLine="Dim root2 As Map = root.Get(0)";
+_root2 = new anywheresoftware.b4a.objects.collections.Map();
+_root2.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_root.Get((int) (0))));
+ //BA.debugLineNum = 27;BA.debugLine="Log(root2.Get(\"id\"))";
+anywheresoftware.b4a.keywords.Common.Log(BA.ObjectToString(_root2.Get((Object)("id"))));
+ //BA.debugLineNum = 29;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 34;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 36;BA.debugLine="End Sub";
+ //BA.debugLineNum = 39;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 41;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 30;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 32;BA.debugLine="End Sub";
+ //BA.debugLineNum = 35;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 37;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{
@@ -354,10 +367,10 @@ public static String  _process_globals() throws Exception{
 return "";
 }
 public static String  _searchitem_click() throws Exception{
- //BA.debugLineNum = 26;BA.debugLine="Sub SearchItem_Click";
- //BA.debugLineNum = 27;BA.debugLine="Msgbox(\"Search Box Clicked\",\"Search\")";
+ //BA.debugLineNum = 31;BA.debugLine="Sub SearchItem_Click";
+ //BA.debugLineNum = 32;BA.debugLine="Msgbox(\"Search Box Clicked\",\"Search\")";
 anywheresoftware.b4a.keywords.Common.Msgbox("Search Box Clicked","Search",mostCurrent.activityBA);
- //BA.debugLineNum = 28;BA.debugLine="End Sub";
+ //BA.debugLineNum = 33;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -1,61 +1,103 @@
 [
   {
     "id": 1,
-    "jobtitle":"Senior UX Architect (Content Planning, Interaction Design)",
+    "jobtitle":"Head of Marketing & External Relation",
     "location":"Greater Jakarta Area, Indonesia",
     "jobdesc":"Consulting, Reserach, & Legal Services",
-    "commision":10000000,
+    "commision":8000000,
     "reference":[
        {
+	     "userId":0,
+         "name":"Ferdyansyah Assegaf",
+         "company":"Focus Forward Indonesia",
+		 "status_text":"Qualifying",
+         "status":1
+       },
+       {
 	     "userId":1,
-         "name":"Irwan Gunawan",
-         "company":"Chevron Pacific Indonesia PT",
-         "status":0
+         "name":"Ferry Kurniawan",
+         "company":"Energizer Indonesia",
+		 "status_text":"Qualifying",
+         "status":1
        },
        {
 	     "userId":2,
-         "name":"Gregory Stone",
-         "company":"Indofood Sukses Makmur Tbk PT",
-         "status":1
+         "name":"Cicilia Elisabeth Tenges",
+         "company":"Cussons Indonesia",
+		 "status_text":"Completed",
+         "status":8
        }
     ]
   },
   {
     "id": 2,
-    "jobtitle":"Senior UX Architect (Content Planning, Interaction Design)",
+    "jobtitle":"Trade Marketing Manager / Senior Manager",
     "location":"Greater Jakarta Area, Indonesia",
     "jobdesc":"Consulting, Reserach, & Legal Services",
-    "commision":12000000,
+    "commision":9500000,
     "reference":[
        {
 	     "userId":3,
-         "name":"Cynthia Stevens",
-         "company":"Mayora Indah Tbk PT",
-         "status":2
+         "name":"Puput Prihadi",
+         "company":"PT M3",
+		 "status_text":"Qualifying",
+         "status":1
+       },
+       {
+	     "userId":4,
+         "name":"Sidharta Sugiono",
+         "company":"PT HM Sampoerna, Tbk",
+		 "status_text":"Qualifying",
+         "status":1
        }
     ]
   },
   {
     "id": 3,
-    "jobtitle":"Junior Web Developer (Content Planning, Interaction Design)",
+    "jobtitle":"Head of Investor Relations",
     "location":"Greater Jakarta Area, Indonesia",
     "jobdesc":"Consulting, Reserach, & Legal Services",
-    "commision":13000000,
-    "reference":[]
+    "commision":10000000,
+    "reference":[
+		{
+	     "userId":5,
+         "name":"Eko Kurniadi",
+         "company":"Astra International",
+		 "status_text":"2nd Interview",
+         "status":4
+        }
+	]
   },
   {
     "id": 4,
-    "jobtitle":"Junior iOS Developer (Content Planning, Interaction Design)",
+    "jobtitle":"R & D Senior Manager",
     "location":"Greater Jakarta Area, Indonesia",
     "jobdesc":"Consulting, Reserach, & Legal Services",
-    "commision":15000000,
+    "commision":8500000,
     "reference":[
 		{
-	     "userId":4,
-         "name":"Bondan Eko Prasetyo",
-         "company":"B-Site",
-         "status":2
+	     "userId":6,
+         "name":"Setiawan Wijaya",
+         "company":"PT Kino Indonesia Tbk",
+		 "status_text":"1st interview",
+         "status":4
        }
+	]
+  },
+  {
+    "id": 5,
+    "jobtitle":"Senior Sales & Marketing Manager",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Consulting, Reserach, & Legal Services",
+    "commision":3500000,
+    "reference":[
+		{
+		 "userId":7,
+		 "name":"Rinto Kwan",
+		 "company":"PT Lippo Karawaci Tbk",
+		 "status_text":"Completed",
+		 "status":8
+		}
 	]
   }
 ]

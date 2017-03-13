@@ -1,69 +1,396 @@
-{
-	"id": 1,
-	"userId":3,
-	"name":"Irwan Gunawan",
-	"company":"Mayora Indah Tbk PT",
-	"jobtitle":"Senior UX Architect (Content Planning, Interaction Design)",
-	"journeys":[
-	   {
-		 "journeyId":1,
-		 "text":"Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.",
-		 "status":0
-	   },
-	   {
-		 "journeyId":2,
-		 "text":"Phone Interview by Consultant.",
-		 "status":1
-	   },
-	   {
-		 "journeyId":2,
-		 "text":"Interviewed by Consultant.",
-		 "status":2
-	   },
-	   {
-		 "journeyId":2,
-		 "text":"Interviewed by HR.",
-		 "status":2
-	   },
-	   {
-		 "journeyId":2,
-		 "text":"Interviewed by Manager.",
-		 "status":2
-	   },
-	   {
-		 "journeyId":2,
-		 "text":"Interviewed by Group Head.",
-		 "status":1
-	   },
-	   {
-		 "journeyId":2,
-		 "text":"Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.",
-		 "status":1
-	   },
-	   {
-		 "journeyId":2,
-		 "text":"Interviewed by Group Head.",
-		 "status":0
-	   },
-	   {
-		 "journeyId":2,
-		 "text":"Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.",
-		 "status":0
-	   },
-	   {
-		 "journeyId":2,
-		 "text":"Interviewed by Group Head.",
-		 "status":0
-	   },
-	   {
-		 "journeyId":2,
-		 "text":"Interviewed by Group Head.",
-		 "status":0
-	   },
-	   {
-		 "journeyId":2,
-		 "text":"Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.",
-		 "status":2
-	   }
-	]
-}
+[
+	{
+		"id": 1,
+		"userId":0,
+		"name":"Ferdyansyah Assegaf",
+		"company":"Focus Forward Indonesia",
+		"latest_position":"Country Manager",
+		"linkedin_url":"",
+		"note":"",
+		"cv_uploaded":"",
+		"phone_number":"0818677686",
+		"email":"ferdyansyah.assega@gmail.com",
+		"jobtitle":"Head of Marketing & External Relation",
+		"journeys":[
+		   {
+			 "journeyId":1,
+			 "text":"Preliminary Checking",
+			 "status_text":"Qualifying",
+			 "status":1,
+			 "state":1
+		   },
+		   {
+			 "journeyId":2,
+			 "text":"Candidate is going through the qualifying stage",
+			 "status_text":null,
+			 "status":0,
+			 "state":0
+		   }
+		]
+	},
+	{
+		"id": 2,
+		"userId":1,
+		"name":"Ferry Kurniawan",
+		"company":"Energizer Indonesia",
+		"latest_position":"Brand Manager",
+		"linkedin_url":"",
+		"note":"",
+		"cv_uploaded":"",
+		"phone_number":"0811232191",
+		"email":"fery.kurniawan@live.com",
+		"jobtitle":"Head of Marketing & External Relation",
+		"journeys":[
+		   {
+			 "journeyId":1,
+			 "text":"Preliminary Checking",
+			 "status_text":"Qualifying",
+			 "status":1,
+			 "state":1
+		   },
+		   {
+			 "journeyId":2,
+			 "text":"Candidate didn't pass the qualification",
+			 "status_text":null,
+			 "status":0,
+			 "state":2
+		   }
+		]
+	},
+	{
+		"id": 2,
+		"userId":2,
+		"name":"Cicilia Elisabeth Tenges",
+		"company":"Cussons Indonesia",
+		"latest_position":"Brand Activation Manager",
+		"linkedin_url":"",
+		"note":"",
+		"cv_uploaded":"",
+		"phone_number":"0811232191",
+		"email":"cicilia.elizabeth@gmail.com",
+		"jobtitle":"Head of Marketing & External Relation",
+		"journeys":[
+		   {
+			 "journeyId":1,
+			 "text":"Candidate is qualified and interested",
+			 "status_text":"Qualifying",
+			 "status":1,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Interview by consultant",
+			 "status_text":"Interview by consultant",
+			 "status":2,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Sent to client",
+			 "status_text":"Candidate's profile has been sent to client",
+			 "status":3,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Interviewed by HR",
+			 "status_text":"1st Interview",
+			 "status":4,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Interviewed by Manager",
+			 "status_text":"2nd Interview",
+			 "status":4,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Interview by Manager",
+			 "status_text":"3rd Interview",
+			 "status":4,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Follow Up",
+			 "status_text":"Following up with client",
+			 "status":5,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Candidate is hired",
+			 "status_text":"Hired",
+			 "status":6,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Candidate 1st day at new job",
+			 "status_text":"1st Day",
+			 "status":7,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"End of guarantee period.Recruitment process is complete. Thank you for referring the best candidate.",
+			 "status_text":"Complete",
+			 "status":8,
+			 "state":1
+		   }
+		]
+	},
+	{
+		"id": 2,
+		"userId":2,
+		"name":"Puput Prihadi",
+		"company":"PT M3",
+		"latest_position":"Board of Advisor",
+		"linkedin_url":"",
+		"note":"",
+		"cv_uploaded":"",
+		"phone_number":"0818177977",
+		"email":"puput.prihadi@rocketmail.com",
+		"jobtitle":"Head of Marketing & External Relation",
+		"journeys":[
+		   {
+			 "journeyId":1,
+			 "text":"Preliminary Checking",
+			 "status_text":"Qualifying",
+			 "status":1,
+			 "state":1
+		   },
+		   {
+			 "journeyId":2,
+			 "text":"Candidate is going through the qualifying stage",
+			 "status_text":null,
+			 "status":0,
+			 "state":0
+		   }
+		]
+	},
+	{
+		"id": 2,
+		"userId":2,
+		"name":"Sidharta Sugiono",
+		"company":"PT HM Sampoerna, Tbk ",
+		"latest_position":"Manager Retail Channel",
+		"linkedin_url":"",
+		"note":"",
+		"cv_uploaded":"",
+		"phone_number":"08170901982",
+		"email":"sihadrta.sugiono@gmail.com",
+		"jobtitle":"Head of Marketing & External Relation",
+		"journeys":[
+		   {
+			 "journeyId":1,
+			 "text":"Preliminary Checking",
+			 "status_text":"Qualifying",
+			 "status":1,
+			 "state":1
+		   },
+		   {
+			 "journeyId":2,
+			 "text":"Candidate is going through the qualifying stage",
+			 "status_text":null,
+			 "status":0,
+			 "state":0
+		   }
+		]
+	},
+	{
+		"id": 2,
+		"userId":2,
+		"name":"Eko Kurniadi",
+		"company":"Astra International",
+		"latest_position":"Corporate Finance, Strategy Manager",
+		"linkedin_url":"",
+		"note":"",
+		"cv_uploaded":"",
+		"phone_number":"087884496980",
+		"email":"eko.kurniadi@yahoo.com",
+		"jobtitle":"Head of Marketing & External Relation",
+		"journeys":[
+		   {
+			 "journeyId":1,
+			 "text":"Preliminary Checking",
+			 "status_text":"Qualifying",
+			 "status":1,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Interview by consultant",
+			 "status_text":"Interview by consultant",
+			 "status":2,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Sent to client",
+			 "status_text":"Candidate's profile has been sent to client",
+			 "status":3,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Interviewed by HR",
+			 "status_text":"1st Interview",
+			 "status":4,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Interviewed by Manager",
+			 "status_text":"2nd Interview",
+			 "status":4,
+			 "state":1
+		   },
+		   {
+			 "journeyId":2,
+			 "text":"Waiting for the next interview",
+			 "status_text":null,
+			 "status":0,
+			 "state":0
+		   }
+		   
+		]
+	},
+	{
+		"id": 2,
+		"userId":2,
+		"name":"Setiawan Wijaya",
+		"company":"PT Kino Indonesia Tbk",
+		"latest_position":"R&D Senior Manager",
+		"linkedin_url":"",
+		"note":"",
+		"cv_uploaded":"",
+		"phone_number":"087884737659",
+		"email":"setiawan.wijaya@yahoo.com",
+		"jobtitle":"Head of Marketing & External Relation",
+		"journeys":[
+		   {
+			 "journeyId":1,
+			 "text":"Preliminary Checking",
+			 "status_text":"Qualifying",
+			 "status":1,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Interview by consultant",
+			 "status_text":"Interview by consultant",
+			 "status":2,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Sent to client",
+			 "status_text":"Candidate's profile has been sent to client",
+			 "status":3,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Interviewed by HR",
+			 "status_text":"1st Interview",
+			 "status":4,
+			 "state":1
+		   },
+		   {
+			 "journeyId":2,
+			 "text":"Waiting for the next interview",
+			 "status_text":null,
+			 "status":0,
+			 "state":0
+		   }
+		]
+	},
+	{
+		"id": 2,
+		"userId":2,
+		"name":"Rinto Kwan",
+		"company":"PT Lippo Karawaci Tbk",
+		"latest_position":"Senior Sales Marketing Manager",
+		"linkedin_url":"",
+		"note":"",
+		"cv_uploaded":"",
+		"phone_number":"08128787812",
+		"email":"rinto.kwan@gmail.com",
+		"jobtitle":"Head of Marketing & External Relation",
+		"journeys":[
+		   {
+			 "journeyId":1,
+			 "text":"Candidate is qualified and interested",
+			 "status_text":"Qualifying",
+			 "status":1,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Interview by consultant",
+			 "status_text":"Interview by consultant",
+			 "status":2,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Sent to client",
+			 "status_text":"Candidate's profile has been sent to client",
+			 "status":3,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Interviewed by HR",
+			 "status_text":"1st Interview",
+			 "status":4,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Interviewed by Manager",
+			 "status_text":"2nd Interview",
+			 "status":4,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Interview by Manager",
+			 "status_text":"3rd Interview",
+			 "status":4,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Follow Up",
+			 "status_text":"Following up with client",
+			 "status":5,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Candidate is hired",
+			 "status_text":"Hired",
+			 "status":6,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"Candidate 1st day at new job",
+			 "status_text":"1st Day",
+			 "status":7,
+			 "state":1
+		   },
+		   {
+			 "journeyId":1,
+			 "text":"End of guarantee period.Recruitment process is complete. Thank you for referring the best candidate.",
+			 "status_text":"Complete",
+			 "status":8,
+			 "state":1
+		   }
+		]
+	}
+]

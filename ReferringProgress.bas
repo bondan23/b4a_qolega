@@ -26,6 +26,7 @@ Sub Globals
 	Private bar As StdActionBar
 	Dim detailList As List
 	
+	Type RowCol (Row As Int, Col As Int)
 	Dim showIcon,closeIcon As ImageView
 End Sub
 
@@ -50,14 +51,23 @@ Sub LoopPanel
 	Dim jobTitlePanel,detailPanel,journeyPanel,referencePanel,progressBox As Panel
 	Dim PanelTop,IconTop,PanelHeight,ReferenceTop,ReferenceHeight,Gap,TextHeight As Int
 	Dim jobTitle,utilText,refName,refCompany,refStatus,refText,detailBtn As Label
+	
+	Dim refDetWrapper As Panel
+	
 	Dim userIcon As ImageView
 	
 	'json
     JSON.Initialize(File.ReadString(File.DirAssets, "status_reference.json"))
-	Dim root As Map = JSON.NextObject
+	Dim roots As List = JSON.NextArray
+	Dim root As Map = roots.Get(userId)
 	
 	Dim dataName As String = root.Get("name")
 	Dim dataCompany As String = root.Get("company")
+	Dim dataLatestPos As String = root.Get("latest_position")
+	Dim dataPhoneNum As String = root.Get("phone_number")
+	Dim dataUrl As String = root.Get("linkedin_url")
+	Dim dataEmail As String = root.Get("email")
+	Dim dataNote As String = root.Get("note")
 	Dim dataJobtitle As String = root.Get("jobtitle")
 	
 	'Default Panel Top position
@@ -69,7 +79,7 @@ Sub LoopPanel
 	
 	detailPanel.Initialize("")
 	detailPanel.Color = Colors.White
-	Container.AddView(detailPanel,0,10dip,100%x,80dip)
+	Container.AddView(detailPanel,0,10dip,100%x,70dip)
 	
 	
 	'Icon
@@ -82,6 +92,7 @@ Sub LoopPanel
 '	refName.TextSize = 14dip
 	refName.Typeface = font.proximanovaSemiBold
 	
+
 	detailPanel.AddView(userIcon,10dip,10dip,24dip,24dip)
 	detailPanel.AddView(refName,38dip,12dip,detailPanel.Width-(38dip*2),20dip)
 	
@@ -92,6 +103,64 @@ Sub LoopPanel
 '	refCompany.TextSize = 12dip
 	refCompany.Typeface = font.proximanovaRegular
 	detailPanel.AddView(refCompany,38dip,refName.Top+refName.Height,detailPanel.Width-(38*2),20dip)
+	
+	
+	'detailWrapper
+	refDetWrapper.Initialize("")
+	detailPanel.AddView(refDetWrapper,10dip,refCompany.Top+refCompany.Height+Gap*2,detailPanel.Width-20dip,100%y)
+	DrawBorderTop(refDetWrapper,Colors.RGB(219,219,219),2dip)
+	
+	'detailContent
+	Dim detEmail,detPhoneNumber,detLatestComp,detLastPos,detLinkedInUrl,detNote As Label
+	
+'	detEmail.Initialize("")
+'	detEmail.Text = dataEmail
+'	refDetWrapper.AddView(detEmail,0,0,100dip,20dip)
+	
+	Dim textList,valueList As List
+	textList.Initialize
+	textList.AddAll(Array As String("Email", "Phone Number", "Latest Company", "Latest Position", "LinkedIn URL","Note"))
+	valueList.Initialize
+	valueList.AddAll(Array As String(dataEmail,dataPhoneNum,dataCompany,dataLatestPos,dataUrl,dataNote))
+	Dim topPos As Int
+	topPos = 20dip
+	
+	For i=0 To textList.Size -1 
+		Dim l,ll,lll As Label
+		l.Initialize("cell")
+		l.Text = textList.Get(i)
+		l.Typeface = font.proximanovaRegular
+		l.TextColor = Colors.RGB(179,179,179)
+		'add text
+		refDetWrapper.AddView(l,0,topPos,120dip,20dip)
+		'add :
+		ll.Initialize("cell2")
+		ll.Text = ":"
+		ll.Typeface = font.proximanovaRegular
+		ll.TextColor = Colors.RGB(179,179,179)
+		refDetWrapper.AddView(ll,l.Width,topPos,10dip,20dip)
+		'add val
+		lll.Initialize("cell3")
+		
+		If i > 0 Then
+			lll.TextColor = Colors.RGB(74,74,74)
+		Else	
+			lll.TextColor = Colors.RGB(179,179,179)
+		End If
+		
+		lll.Typeface = font.proximanovaRegular
+		If valueList.Get(i) = "" Then
+			lll.Text = "-"
+		Else
+			lll.Text = valueList.Get(i)
+		End If
+		refDetWrapper.AddView(lll,l.Width+ll.Width+Gap,topPos,100%x/1.5,-2)
+		Dim x As Int
+		x = su.MeasureMultilineTextHeight(lll,lll.Text)
+		
+		topPos = topPos + x + Gap
+	Next
+	
 	
 	'Add Object detailPanel
 	detailList.Add(detailPanel)
@@ -165,47 +234,86 @@ Sub LoopPanel
 	For Each coljourneys As Map In journeys
 		Dim journeyText As String = coljourneys.Get("text")
 		Dim rStatus As Int = coljourneys.Get("status")
+		Dim rStatusText As String = coljourneys.Get("status_text")
+		Dim rState As Int = coljourneys.Get("state")
 		
 		progressBox.Initialize("")
 		'progressBox.Color = Colors.Cyan
 		journeyPanel.AddView(progressBox,30dip,PanelTop,100%x-(30dip*2),BoxHeight)
 		
+		Dim iconName As String
+		Select rState
+			Case 0
+				iconName = "Progress.png"
+			Case 1
+				iconName = "Done.png"
+			Case 2
+				iconName = "Fail.png"
+		End Select
+		
 		'Icon
 		Dim statusIcon As ImageView
 		statusIcon.Initialize("")
-		statusIcon.Bitmap = LoadBitmap(File.DirAssets,"checked.png")
+		statusIcon.Bitmap = LoadBitmap(File.DirAssets,iconName)
 		statusIcon.Gravity = Gravity.FILL
 		journeyPanel.AddView(statusIcon,30dip-7.5dip,IconTop,16dip,16dip)
 		
 		'refStatus
-		Dim cd As ColorDrawable
-	    refStatus.Initialize("")
-		Select rStatus
-			Case 0
-				refStatus.Text = "Qualifying"
-				cd.Initialize(Colors.RGB(249,191,55), 2dip)
-				refStatus.Background = cd
-			Case 1
-				refStatus.Text = "1st Interview"
-				cd.Initialize(Colors.RGB(102,195,67), 2dip)
-				refStatus.Background = cd
-			Case Else
-				refStatus.Text = "Completed"	
-				cd.Initialize(Colors.RGB(22,176,221), 2dip)
-				refStatus.Background = cd
-		End Select
-		
-		refStatus.TextColor = Colors.White
-'		refStatus.TextSize = 10dip
-		refStatus.Typeface = font.proximanovaSemiBold
-		refStatus.Gravity = Gravity.CENTER
-		progressBox.AddView(refStatus,15dip,10dip,100dip,20dip)
+		If rStatus <> 0 Then
+			Dim cd As ColorDrawable
+		    refStatus.Initialize("")
+			Select rStatus
+				Case 1
+					cd.Initialize(Colors.RGB(249,128,55), 2dip)
+					refStatus.Background = cd
+				Case 2
+					cd.Initialize(Colors.RGB(248,190,56), 2dip)
+					refStatus.Background = cd
+				Case 3
+					cd.Initialize(Colors.RGB(186,220,63), 2dip)
+					refStatus.Background = cd
+				Case 4
+					cd.Initialize(Colors.RGB(103,195,68), 2dip)
+					refStatus.Background = cd
+				Case 5
+					cd.Initialize(Colors.RGB(62,222,176), 2dip)
+					refStatus.Background = cd
+				Case 6
+					cd.Initialize(Colors.RGB(21,176,220), 2dip)
+					refStatus.Background = cd
+				Case 7
+					cd.Initialize(Colors.RGB(38,143,235), 2dip)
+					refStatus.Background = cd
+				Case Else
+					cd.Initialize(Colors.RGB(3,117,216), 2dip)
+					refStatus.Background = cd
+			End Select
+			
+			refStatus.TextColor = Colors.White
+	'		refStatus.TextSize = 10dip
+			refStatus.Text = rStatusText
+			refStatus.Typeface = font.proximanovaSemiBold
+			refStatus.Gravity = Gravity.CENTER
+			progressBox.AddView(refStatus,15dip,10dip,100dip,20dip)
+			Dim refStatusHeight As Int
+			refStatusHeight =  su.MeasureMultilineTextHeight(refStatus,refStatus.Text)
+			
+			If refStatusHeight > refStatus.Height Then
+			refStatus.Height = refStatusHeight
+			End If
+		End If
 		
 		'refText
 		refText.Initialize("")
 		refText.Text = journeyText
 		refText.Typeface = font.proximanovaRegular
-		progressBox.AddView(refText,refStatus.Left+refStatus.Width+Gap,10dip,progressBox.Width/1.5,100%y)
+		
+		If rStatus = 0 Then
+			progressBox.AddView(refText,15dip,10dip,progressBox.Width-30dip,100%y)
+		Else
+			progressBox.AddView(refText,refStatus.Left+refStatus.Width+Gap,10dip,progressBox.Width/1.5,100%y)
+		End If
+		
 		'measure text height, get value, and update to progressBox
 		Dim TextHeight As Int
 		TextHeight =  su.MeasureMultilineTextHeight(refText,refText.Text)
@@ -268,7 +376,7 @@ Sub showIcon_Click
 	jobTitlePanel = detailList.Get(2)
 	journeyPanel = detailList.Get(3)
 	
-	detailPanel.Height = detailPanel.Height + 100dip
+	detailPanel.Height = detailPanel.Height + 200dip
 	utilTextLabel.Top = detailPanel.Height
 	utilTextLabel.Text = "Hide candidate details"
 	jobTitlePanel.Top = utilTextLabel.Top + utilTextLabel.Height
@@ -290,7 +398,7 @@ Sub closeIcon_Click
 	jobTitlePanel = detailList.Get(2)
 	journeyPanel = detailList.Get(3)
 	
-	detailPanel.Height = detailPanel.Height - 100dip
+	detailPanel.Height = detailPanel.Height - 200dip
 	utilTextLabel.Top = detailPanel.Height
 	utilTextLabel.Text = "Show candidate details"
 	jobTitlePanel.Top = utilTextLabel.Top + utilTextLabel.Height
@@ -319,6 +427,16 @@ Sub DrawDashLine(Target As View,x1 As Float, y1 As Float, x2 As Float, y2 As Flo
     p.SetDashPathEffect(1, Array As Float(2dip, 2dip), 0)
     p.DoPathEffectSingle(1)
     ExtDrawing.DrawLine(cvsMain, x1, y1, x2, y2, p)
+End Sub
+
+Sub DrawBorderTop(Target As View,aColor As Int,StrokeWidth As Int)
+	Dim c As Canvas
+	c.Initialize(Target)
+	Dim Path As Path
+	Path.Initialize(0,0)
+	Path.LineTo(Target.Width,0)
+	c.DrawPath(Path,aColor,False,StrokeWidth)
+	Target.Invalidate
 End Sub
 
 Sub AreEqual(b1 As Int, b2 As Int) As Boolean
