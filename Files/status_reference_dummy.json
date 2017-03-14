@@ -1,0 +1,51 @@
+{
+  "id": "1",
+  "user_id": 3,
+  "name": "Layar Kuning",
+  "user_job_title": "Web Administrator",
+  "company": "PT Sumber Elektronik",
+  "linkedin": "http://www.qerja.com/",
+  "cv_url": "http://www.pdf995.com/samples/pdf.pdf",
+  "phone": "087829922112",
+  "email": "layarhitam@gmail.com",
+  "note": "this is another candidate",
+  "job_job_title": "Web Developer",
+  "journeys": [
+    {
+      "journey_id": 1,
+      "text": "Phone Interview by HR.",
+      "status": "qualifying",
+      "days_ago": 13,
+      "state_status": "COMPLETE",
+      "state_description": "Waiting for response",
+      "state_additional_info": null
+    },
+    {
+      "journey_id": 2,
+      "text": "Interviewed by Group Head.",
+      "status": "1st_interview",
+      "days_ago": 12,
+      "state_status": "COMPLETE",
+      "state_description": "Candidate quit before 1 month",
+      "state_additional_info": null
+    },
+    {
+      "journey_id": 3,
+      "text": "Interviewed by HR.",
+      "status": "2nd_interview",
+      "days_ago": 11,
+      "state_status": "WAITING",
+      "state_description": "Candidate will start working on",
+      "state_additional_info": "10 July 2017"
+    },
+    {
+      "journey_id": null,
+      "text": null,
+      "status": null,
+      "days_ago": null,
+      "state_status": "WAITING",
+      "state_description": "Candidate will start working on",
+      "state_additional_info": "10 July 2017"
+    }
+  ]
+}

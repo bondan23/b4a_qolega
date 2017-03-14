@@ -20,14 +20,20 @@ Sub Globals
 	Dim JSON As JSONParser
 	Dim su As StringUtils
 	Dim detailList As List
+	Dim resultList As List
 	Dim qAuth As Auth
 	Dim font As Fonts
 	Dim loadMore As Button
+	Dim Api As Api
+	
+	Dim loadMoreTop = 10dip As Int
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
+	'Initialize
 	qAuth.Initialize(Activity)
 	font.Initialize
+	Api.Initialize("refferingList",Me)
 	
 	'Do not forget to load the layout file created with the visual designer. For example:
 	'Activity.LoadLayout("Layout1")
@@ -36,11 +42,29 @@ Sub Activity_Create(FirstTime As Boolean)
 	scrollView.Color = Colors.RGB(246,246,246)
 	Activity.AddView(scrollView,0,0,100%x,100%y)
 	detailList.Initialize
-	LoopPanel(10dip)
+	resultList.Initialize
+	
+'	Dim Job As HttpJob
+'	Job.Initialize("requestList",Me)
+'	Job.Download("http://gandalf.x.testing.jobs.id/referrals/list")
+	Api.Get("/referrals/list/"&qAuth.GetStore("id"))
+	ProgressDialogShow2("Loading Data",False)
+End Sub
+
+Sub JobDone(Job As HttpJob)
+   ProgressDialogHide
+   Log("JobName = " & Job.JobName & ", Success = " & Job.Success)
+   If Job.Success = True Then
+      LoopPanel(loadMoreTop,Job.GetString)
+   Else
+      Log("Error: " & Job.ErrorMessage)
+      ToastMessageShow("Error: " & Job.ErrorMessage, True)
+   End If
+   Job.Release
 End Sub
 
 
-Sub LoopPanel(StartTop As Int)
+Sub LoopPanel(StartTop As Int,Data As String)
 	Dim Bitmap1 As Bitmap
 	Dim Container As Panel
 	Dim JoblistPanel,ReferencePanel As Panel
@@ -62,15 +86,15 @@ Sub LoopPanel(StartTop As Int)
 	Container.Color = Colors.RGB(219,219,219)
 	
 	'json
-    JSON.Initialize(File.ReadString(File.DirAssets, "list.json"))
+    JSON.Initialize(Data)
 	Dim root As List = JSON.NextArray 
 	
 	For Each colroot As Map In root
 		'Init Json Object
 		Dim reference As List = colroot.Get("reference") 
-		Dim job_title As String = colroot.Get("jobtitle")
+		Dim job_title As String = colroot.Get("job_title")
 		Dim job_location As String = colroot.Get("location")
-		Dim job_desc As String = colroot.Get("jobdesc")
+		Dim job_desc As String = colroot.Get("industry")
 		Dim job_commision As Double = colroot.Get("commision")
 		
 		'Init
@@ -177,8 +201,8 @@ Sub LoopPanel(StartTop As Int)
 			Dim rName As String = colreference.Get("name") 
 			Dim rCompany As String = colreference.Get("company") 
 			Dim rStatus As String = colreference.Get("status") 
-			Dim rStatusText As String = colreference.Get("status_text") 
-			Dim userId As Int = colreference.Get("userId") 
+			'Dim rStatusText As String = colreference.Get("status_text") 
+			Dim userId As Int = colreference.Get("user_id") 
 			
 			'Icon
 			userIcon.Initialize("")
@@ -226,25 +250,25 @@ Sub LoopPanel(StartTop As Int)
 			'refStatus
 			refStatus.Initialize("")
 			Select rStatus
-				Case 1
+				Case "qualifying"
 					cd.Initialize(Colors.RGB(249,128,55), 2dip)
 					refStatus.Background = cd
-				Case 2
+				Case "interview_by_consultant"
 					cd.Initialize(Colors.RGB(248,190,56), 2dip)
 					refStatus.Background = cd
-				Case 3
+				Case "sent_to_client"
 					cd.Initialize(Colors.RGB(186,220,63), 2dip)
 					refStatus.Background = cd
-				Case 4
+				Case "1st_interview","2nd_interview","3rd_interview"
 					cd.Initialize(Colors.RGB(103,195,68), 2dip)
 					refStatus.Background = cd
-				Case 5
+				Case "follow_up"
 					cd.Initialize(Colors.RGB(62,222,176), 2dip)
 					refStatus.Background = cd
-				Case 6
+				Case "hired"
 					cd.Initialize(Colors.RGB(21,176,220), 2dip)
 					refStatus.Background = cd
-				Case 7
+				Case "1st_day"
 					cd.Initialize(Colors.RGB(38,143,235), 2dip)
 					refStatus.Background = cd
 				Case Else
@@ -252,7 +276,7 @@ Sub LoopPanel(StartTop As Int)
 					refStatus.Background = cd
 			End Select
 			
-			refStatus.Text = rStatusText
+			refStatus.Text = ToMixCase(rStatus.Replace("_"," "))
 			refStatus.TextColor = Colors.White
 			'refStatus.TextSize =JobTitle.TextSize / 1.4
 '			refStatus.Color = statusRefColor
@@ -333,9 +357,9 @@ Sub LoopPanel(StartTop As Int)
 	loadMore.TextColor = Colors.White
 	loadMore.Gravity = Gravity.CENTER
 	loadMore.Tag = PanelTop
-	Container.AddView(loadMore,(100%x-100dip)/2,PanelTop,100dip,40dip)
+	'Container.AddView(loadMore,(100%x-100dip)/2,PanelTop,100dip,40dip)
 	
-	Container.Height = PanelTop + 50dip
+	Container.Height = PanelTop' + 50dip
 End Sub
 
 Sub SearchItem_Click
@@ -356,7 +380,8 @@ Sub loadMore_Click
 	loadMore.Color = Colors.Gray
 	Sleep(1200)
 	loadMore.Visible = False
-	LoopPanel(loadMore.Tag)
+	loadMoreTop = loadMore.Tag
+	Api.Get("/referrals/list")
 End Sub
 
 Sub Sleep(ms As Long)
@@ -399,4 +424,44 @@ Sub detailBtn_Up
 	Next
 	
 	detailBtn.TextColor = Colors.RGB(22,176,221)
+End Sub
+
+Sub ToMixCase(Entry As String) As String
+
+    Dim sb As StringBuilder
+    Dim m As Matcher
+    Dim I As Int
+            
+    Entry = Entry.ToLowerCase
+
+    sb.Initialize
+    
+    m = Regex.Matcher("(^\w)|(\s\w)", Entry)
+    
+    Do While m.Find
+            
+       If m.Match.Length > 1 Then    
+    
+          sb.Append(Entry.SubString2(I, m.GetStart(0) + 1))
+          sb.Append(m.Match.SubString(1).ToUpperCase)
+                              
+       Else
+      
+          sb.Append(Entry.SubString2(I, m.GetStart(0)))
+          sb.Append(m.Match.ToUpperCase)
+                              
+       End If
+                     
+       I = m.GetEnd(0)
+                     
+    Loop
+            
+    If I < Entry.Length Then
+            
+       sb.Append(Entry.SubString(I))
+                     
+    End If
+            
+    Return sb.ToString
+
 End Sub

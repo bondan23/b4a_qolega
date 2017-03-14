@@ -32,7 +32,7 @@ public class test3 extends Activity implements B4AActivity{
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if (isFirst) {
-			processBA = new BA(this.getApplicationContext(), null, null, "com.qolega.qolegapp", "com.qolega.qolegapp.test3");
+			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "com.qolega.qolegapp", "com.qolega.qolegapp.test3");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -308,14 +308,7 @@ public class test3 extends Activity implements B4AActivity{
 		processBA.raiseEvent2(null, true, "globals", false, (Object[])null);
 	}
 
-public anywheresoftware.b4a.keywords.Common __c = null;
-public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
-public com.qolega.qolegapp.main _main = null;
-public com.qolega.qolegapp.starter _starter = null;
-public com.qolega.qolegapp.referringlist _referringlist = null;
-public com.qolega.qolegapp.referringprogress _referringprogress = null;
-public com.qolega.qolegapp.testresponsive _testresponsive = null;
-public com.qolega.qolegapp.test4 _test4 = null;
+
 
 public static void initializeProcessGlobals() {
              try {
@@ -324,53 +317,78 @@ public static void initializeProcessGlobals() {
                 throw new RuntimeException(e);
             }
 }
+public anywheresoftware.b4a.keywords.Common __c = null;
+public com.qolega.qolegapp.main _main = null;
+public com.qolega.qolegapp.starter _starter = null;
+public com.qolega.qolegapp.referringlist _referringlist = null;
+public com.qolega.qolegapp.referringprogress _referringprogress = null;
+public com.qolega.qolegapp.testresponsive _testresponsive = null;
+public com.qolega.qolegapp.test4 _test4 = null;
+public com.qolega.qolegapp.httputils2service _httputils2service = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
+RDebugUtils.currentModule="test3";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create"))
+	return (String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime});
 anywheresoftware.b4a.objects.collections.JSONParser _parser = null;
 anywheresoftware.b4a.objects.collections.List _root = null;
 anywheresoftware.b4a.objects.collections.Map _root2 = null;
- //BA.debugLineNum = 17;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 20;BA.debugLine="Activity.AddMenuItem3(\"SearchItem\", \"SearchItem\",";
+RDebugUtils.currentLine=2949120;
+ //BA.debugLineNum = 2949120;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=2949123;
+ //BA.debugLineNum = 2949123;BA.debugLine="Activity.AddMenuItem3(\"SearchItem\", \"SearchItem\",";
 mostCurrent._activity.AddMenuItem3("SearchItem","SearchItem",(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"search.png").getObject()),anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 22;BA.debugLine="Dim parser As JSONParser";
+RDebugUtils.currentLine=2949125;
+ //BA.debugLineNum = 2949125;BA.debugLine="Dim parser As JSONParser";
 _parser = new anywheresoftware.b4a.objects.collections.JSONParser();
- //BA.debugLineNum = 23;BA.debugLine="parser.Initialize(File.ReadString(File.DirAssets,";
+RDebugUtils.currentLine=2949126;
+ //BA.debugLineNum = 2949126;BA.debugLine="parser.Initialize(File.ReadString(File.DirAssets,";
 _parser.Initialize(anywheresoftware.b4a.keywords.Common.File.ReadString(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"status_reference.json"));
- //BA.debugLineNum = 24;BA.debugLine="Dim root As List = parser.NextArray";
+RDebugUtils.currentLine=2949127;
+ //BA.debugLineNum = 2949127;BA.debugLine="Dim root As List = parser.NextArray";
 _root = new anywheresoftware.b4a.objects.collections.List();
 _root = _parser.NextArray();
- //BA.debugLineNum = 25;BA.debugLine="Dim root2 As Map = root.Get(0)";
+RDebugUtils.currentLine=2949128;
+ //BA.debugLineNum = 2949128;BA.debugLine="Dim root2 As Map = root.Get(0)";
 _root2 = new anywheresoftware.b4a.objects.collections.Map();
 _root2.setObject((anywheresoftware.b4a.objects.collections.Map.MyMap)(_root.Get((int) (0))));
- //BA.debugLineNum = 27;BA.debugLine="Log(root2.Get(\"id\"))";
+RDebugUtils.currentLine=2949130;
+ //BA.debugLineNum = 2949130;BA.debugLine="Log(root2.Get(\"id\"))";
 anywheresoftware.b4a.keywords.Common.Log(BA.ObjectToString(_root2.Get((Object)("id"))));
- //BA.debugLineNum = 29;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2949132;
+ //BA.debugLineNum = 2949132;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 39;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 41;BA.debugLine="End Sub";
+RDebugUtils.currentModule="test3";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_pause"))
+	return (String) Debug.delegate(mostCurrent.activityBA, "activity_pause", new Object[] {_userclosed});
+RDebugUtils.currentLine=3145728;
+ //BA.debugLineNum = 3145728;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+RDebugUtils.currentLine=3145730;
+ //BA.debugLineNum = 3145730;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 35;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 37;BA.debugLine="End Sub";
-return "";
-}
-public static String  _globals() throws Exception{
- //BA.debugLineNum = 12;BA.debugLine="Sub Globals";
- //BA.debugLineNum = 15;BA.debugLine="End Sub";
-return "";
-}
-public static String  _process_globals() throws Exception{
- //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
- //BA.debugLineNum = 10;BA.debugLine="End Sub";
+RDebugUtils.currentModule="test3";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume"))
+	return (String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null);
+RDebugUtils.currentLine=3080192;
+ //BA.debugLineNum = 3080192;BA.debugLine="Sub Activity_Resume";
+RDebugUtils.currentLine=3080194;
+ //BA.debugLineNum = 3080194;BA.debugLine="End Sub";
 return "";
 }
 public static String  _searchitem_click() throws Exception{
- //BA.debugLineNum = 31;BA.debugLine="Sub SearchItem_Click";
- //BA.debugLineNum = 32;BA.debugLine="Msgbox(\"Search Box Clicked\",\"Search\")";
+RDebugUtils.currentModule="test3";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "searchitem_click"))
+	return (String) Debug.delegate(mostCurrent.activityBA, "searchitem_click", null);
+RDebugUtils.currentLine=3014656;
+ //BA.debugLineNum = 3014656;BA.debugLine="Sub SearchItem_Click";
+RDebugUtils.currentLine=3014657;
+ //BA.debugLineNum = 3014657;BA.debugLine="Msgbox(\"Search Box Clicked\",\"Search\")";
 anywheresoftware.b4a.keywords.Common.Msgbox("Search Box Clicked","Search",mostCurrent.activityBA);
- //BA.debugLineNum = 33;BA.debugLine="End Sub";
+RDebugUtils.currentLine=3014658;
+ //BA.debugLineNum = 3014658;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -32,7 +32,7 @@ public class testresponsive extends Activity implements B4AActivity{
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if (isFirst) {
-			processBA = new BA(this.getApplicationContext(), null, null, "com.qolega.qolegapp", "com.qolega.qolegapp.testresponsive");
+			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "com.qolega.qolegapp", "com.qolega.qolegapp.testresponsive");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -308,17 +308,7 @@ public class testresponsive extends Activity implements B4AActivity{
 		processBA.raiseEvent2(null, true, "globals", false, (Object[])null);
 	}
 
-public anywheresoftware.b4a.keywords.Common __c = null;
-public anywheresoftware.b4a.objects.ScrollViewWrapper _scrollview1 = null;
-public anywheresoftware.b4a.objects.collections.List _lstchecks = null;
-public static int _height = 0;
-public anywheresoftware.b4a.samples.httputils2.httputils2service _httputils2service = null;
-public com.qolega.qolegapp.main _main = null;
-public com.qolega.qolegapp.starter _starter = null;
-public com.qolega.qolegapp.referringlist _referringlist = null;
-public com.qolega.qolegapp.referringprogress _referringprogress = null;
-public com.qolega.qolegapp.test3 _test3 = null;
-public com.qolega.qolegapp.test4 _test4 = null;
+
 
 public static void initializeProcessGlobals() {
              try {
@@ -327,104 +317,134 @@ public static void initializeProcessGlobals() {
                 throw new RuntimeException(e);
             }
 }
+public anywheresoftware.b4a.keywords.Common __c = null;
+public anywheresoftware.b4a.objects.ScrollViewWrapper _scrollview1 = null;
+public anywheresoftware.b4a.objects.collections.List _lstchecks = null;
+public static int _height = 0;
+public com.qolega.qolegapp.main _main = null;
+public com.qolega.qolegapp.starter _starter = null;
+public com.qolega.qolegapp.referringlist _referringlist = null;
+public com.qolega.qolegapp.referringprogress _referringprogress = null;
+public com.qolega.qolegapp.test3 _test3 = null;
+public com.qolega.qolegapp.test4 _test4 = null;
+public com.qolega.qolegapp.httputils2service _httputils2service = null;
 public static String  _activity_create(boolean _firsttime) throws Exception{
+RDebugUtils.currentModule="testresponsive";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create"))
+	return (String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime});
 anywheresoftware.b4a.objects.PanelWrapper _pnl = null;
 int _i = 0;
 anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper _chk = null;
 anywheresoftware.b4a.objects.LabelWrapper _lbl1 = null;
- //BA.debugLineNum = 16;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
- //BA.debugLineNum = 17;BA.debugLine="ScrollView1.Initialize(0)";
+RDebugUtils.currentLine=2686976;
+ //BA.debugLineNum = 2686976;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+RDebugUtils.currentLine=2686977;
+ //BA.debugLineNum = 2686977;BA.debugLine="ScrollView1.Initialize(0)";
 mostCurrent._scrollview1.Initialize(mostCurrent.activityBA,(int) (0));
- //BA.debugLineNum = 18;BA.debugLine="Dim pnl As Panel";
+RDebugUtils.currentLine=2686978;
+ //BA.debugLineNum = 2686978;BA.debugLine="Dim pnl As Panel";
 _pnl = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 19;BA.debugLine="pnl = ScrollView1.Panel";
+RDebugUtils.currentLine=2686979;
+ //BA.debugLineNum = 2686979;BA.debugLine="pnl = ScrollView1.Panel";
 _pnl = mostCurrent._scrollview1.getPanel();
- //BA.debugLineNum = 20;BA.debugLine="Activity.AddView(ScrollView1, 0, 0, 100%x, 100";
+RDebugUtils.currentLine=2686980;
+ //BA.debugLineNum = 2686980;BA.debugLine="Activity.AddView(ScrollView1, 0, 0, 100%x, 100";
 mostCurrent._activity.AddView((android.view.View)(mostCurrent._scrollview1.getObject()),(int) (0),(int) (0),anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
- //BA.debugLineNum = 21;BA.debugLine="lstChecks.Initialize";
+RDebugUtils.currentLine=2686981;
+ //BA.debugLineNum = 2686981;BA.debugLine="lstChecks.Initialize";
 mostCurrent._lstchecks.Initialize();
- //BA.debugLineNum = 23;BA.debugLine="For i = 1 To 100";
+RDebugUtils.currentLine=2686983;
+ //BA.debugLineNum = 2686983;BA.debugLine="For i = 1 To 100";
 {
 final int step6 = 1;
 final int limit6 = (int) (100);
 for (_i = (int) (1) ; (step6 > 0 && _i <= limit6) || (step6 < 0 && _i >= limit6); _i = ((int)(0 + _i + step6)) ) {
- //BA.debugLineNum = 24;BA.debugLine="Dim chk As CheckBox";
+RDebugUtils.currentLine=2686984;
+ //BA.debugLineNum = 2686984;BA.debugLine="Dim chk As CheckBox";
 _chk = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper();
- //BA.debugLineNum = 25;BA.debugLine="chk.Initialize(\"mnuChecked\")";
+RDebugUtils.currentLine=2686985;
+ //BA.debugLineNum = 2686985;BA.debugLine="chk.Initialize(\"mnuChecked\")";
 _chk.Initialize(mostCurrent.activityBA,"mnuChecked");
- //BA.debugLineNum = 26;BA.debugLine="chk.Text = \"Item #\" & i";
+RDebugUtils.currentLine=2686986;
+ //BA.debugLineNum = 2686986;BA.debugLine="chk.Text = \"Item #\" & i";
 _chk.setText((Object)("Item #"+BA.NumberToString(_i)));
- //BA.debugLineNum = 27;BA.debugLine="lstChecks.Add(chk)";
+RDebugUtils.currentLine=2686987;
+ //BA.debugLineNum = 2686987;BA.debugLine="lstChecks.Add(chk)";
 mostCurrent._lstchecks.Add((Object)(_chk.getObject()));
- //BA.debugLineNum = 28;BA.debugLine="Dim lbl1 As Label";
+RDebugUtils.currentLine=2686988;
+ //BA.debugLineNum = 2686988;BA.debugLine="Dim lbl1 As Label";
 _lbl1 = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 29;BA.debugLine="lbl1.Initialize(\"\")";
+RDebugUtils.currentLine=2686989;
+ //BA.debugLineNum = 2686989;BA.debugLine="lbl1.Initialize(\"\")";
 _lbl1.Initialize(mostCurrent.activityBA,"");
- //BA.debugLineNum = 30;BA.debugLine="lbl1.Text = \"Value #\" & i";
+RDebugUtils.currentLine=2686990;
+ //BA.debugLineNum = 2686990;BA.debugLine="lbl1.Text = \"Value #\" & i";
 _lbl1.setText((Object)("Value #"+BA.NumberToString(_i)));
- //BA.debugLineNum = 31;BA.debugLine="lbl1.Gravity = Gravity.CENTER_VERTICAL";
+RDebugUtils.currentLine=2686991;
+ //BA.debugLineNum = 2686991;BA.debugLine="lbl1.Gravity = Gravity.CENTER_VERTICAL";
 _lbl1.setGravity(anywheresoftware.b4a.keywords.Common.Gravity.CENTER_VERTICAL);
- //BA.debugLineNum = 32;BA.debugLine="pnl.AddView(chk, 0, height * (i - 1), 120d";
+RDebugUtils.currentLine=2686992;
+ //BA.debugLineNum = 2686992;BA.debugLine="pnl.AddView(chk, 0, height * (i - 1), 120d";
 _pnl.AddView((android.view.View)(_chk.getObject()),(int) (0),(int) (_height*(_i-1)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (120)),_height);
- //BA.debugLineNum = 33;BA.debugLine="pnl.AddView(lbl1, 125dip, height * (i - 1)";
+RDebugUtils.currentLine=2686993;
+ //BA.debugLineNum = 2686993;BA.debugLine="pnl.AddView(lbl1, 125dip, height * (i - 1)";
 _pnl.AddView((android.view.View)(_lbl1.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (125)),(int) (_height*(_i-1)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (120)),_height);
  }
 };
- //BA.debugLineNum = 35;BA.debugLine="pnl.Height = lstChecks.Size * height";
+RDebugUtils.currentLine=2686995;
+ //BA.debugLineNum = 2686995;BA.debugLine="pnl.Height = lstChecks.Size * height";
 _pnl.setHeight((int) (mostCurrent._lstchecks.getSize()*_height));
- //BA.debugLineNum = 36;BA.debugLine="Activity.AddMenuItem(\"Display checked\", \"mnuCh";
+RDebugUtils.currentLine=2686996;
+ //BA.debugLineNum = 2686996;BA.debugLine="Activity.AddMenuItem(\"Display checked\", \"mnuCh";
 mostCurrent._activity.AddMenuItem("Display checked","mnuChecked");
- //BA.debugLineNum = 37;BA.debugLine="End Sub";
-return "";
-}
-public static String  _globals() throws Exception{
- //BA.debugLineNum = 10;BA.debugLine="Sub Globals";
- //BA.debugLineNum = 11;BA.debugLine="Dim ScrollView1 As ScrollView";
-mostCurrent._scrollview1 = new anywheresoftware.b4a.objects.ScrollViewWrapper();
- //BA.debugLineNum = 12;BA.debugLine="Dim lstChecks As List";
-mostCurrent._lstchecks = new anywheresoftware.b4a.objects.collections.List();
- //BA.debugLineNum = 13;BA.debugLine="Dim height As Int";
-_height = 0;
- //BA.debugLineNum = 14;BA.debugLine="height = 50dip";
-_height = anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (50));
- //BA.debugLineNum = 15;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2686997;
+ //BA.debugLineNum = 2686997;BA.debugLine="End Sub";
 return "";
 }
 public static String  _mnuchecked_click() throws Exception{
+RDebugUtils.currentModule="testresponsive";
+if (Debug.shouldDelegate(mostCurrent.activityBA, "mnuchecked_click"))
+	return (String) Debug.delegate(mostCurrent.activityBA, "mnuchecked_click", null);
 anywheresoftware.b4a.keywords.StringBuilderWrapper _sb = null;
 int _i = 0;
 anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper _chk = null;
- //BA.debugLineNum = 39;BA.debugLine="Sub mnuChecked_Click";
- //BA.debugLineNum = 40;BA.debugLine="Dim sb As StringBuilder";
+RDebugUtils.currentLine=2752512;
+ //BA.debugLineNum = 2752512;BA.debugLine="Sub mnuChecked_Click";
+RDebugUtils.currentLine=2752513;
+ //BA.debugLineNum = 2752513;BA.debugLine="Dim sb As StringBuilder";
 _sb = new anywheresoftware.b4a.keywords.StringBuilderWrapper();
- //BA.debugLineNum = 41;BA.debugLine="sb.Initialize";
+RDebugUtils.currentLine=2752514;
+ //BA.debugLineNum = 2752514;BA.debugLine="sb.Initialize";
 _sb.Initialize();
- //BA.debugLineNum = 42;BA.debugLine="For i = 0 To lstChecks.Size - 1";
+RDebugUtils.currentLine=2752515;
+ //BA.debugLineNum = 2752515;BA.debugLine="For i = 0 To lstChecks.Size - 1";
 {
 final int step3 = 1;
 final int limit3 = (int) (mostCurrent._lstchecks.getSize()-1);
 for (_i = (int) (0) ; (step3 > 0 && _i <= limit3) || (step3 < 0 && _i >= limit3); _i = ((int)(0 + _i + step3)) ) {
- //BA.debugLineNum = 43;BA.debugLine="Dim chk As CheckBox";
+RDebugUtils.currentLine=2752516;
+ //BA.debugLineNum = 2752516;BA.debugLine="Dim chk As CheckBox";
 _chk = new anywheresoftware.b4a.objects.CompoundButtonWrapper.CheckBoxWrapper();
- //BA.debugLineNum = 44;BA.debugLine="chk = lstChecks.Get(i)";
+RDebugUtils.currentLine=2752517;
+ //BA.debugLineNum = 2752517;BA.debugLine="chk = lstChecks.Get(i)";
 _chk.setObject((android.widget.CheckBox)(mostCurrent._lstchecks.Get(_i)));
- //BA.debugLineNum = 45;BA.debugLine="If chk.Checked Then";
+RDebugUtils.currentLine=2752518;
+ //BA.debugLineNum = 2752518;BA.debugLine="If chk.Checked Then";
 if (_chk.getChecked()) { 
- //BA.debugLineNum = 46;BA.debugLine="sb.Append(i).Append(CRLF)";
+RDebugUtils.currentLine=2752519;
+ //BA.debugLineNum = 2752519;BA.debugLine="sb.Append(i).Append(CRLF)";
 _sb.Append(BA.NumberToString(_i)).Append(anywheresoftware.b4a.keywords.Common.CRLF);
  };
  }
 };
- //BA.debugLineNum = 49;BA.debugLine="Log(sb)";
+RDebugUtils.currentLine=2752522;
+ //BA.debugLineNum = 2752522;BA.debugLine="Log(sb)";
 anywheresoftware.b4a.keywords.Common.Log(BA.ObjectToString(_sb));
- //BA.debugLineNum = 50;BA.debugLine="Msgbox(sb.ToString, \"Checked indices\")";
+RDebugUtils.currentLine=2752523;
+ //BA.debugLineNum = 2752523;BA.debugLine="Msgbox(sb.ToString, \"Checked indices\")";
 anywheresoftware.b4a.keywords.Common.Msgbox(_sb.ToString(),"Checked indices",mostCurrent.activityBA);
- //BA.debugLineNum = 51;BA.debugLine="End Sub";
-return "";
-}
-public static String  _process_globals() throws Exception{
- //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
- //BA.debugLineNum = 8;BA.debugLine="End Sub";
+RDebugUtils.currentLine=2752524;
+ //BA.debugLineNum = 2752524;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -28,26 +28,43 @@ Sub Globals
 	
 	Type RowCol (Row As Int, Col As Int)
 	Dim showIcon,closeIcon As ImageView
+	Dim Api As Api
 End Sub
 
 Sub Activity_Create(FirstTime As Boolean)
+	'Init
 	font.Initialize
+	Api.Initialize("referringProgress",Me)
+	detailList.Initialize
+	
 	'Do not forget to load the layout file created with the visual designer. For example:
 	'Activity.LoadLayout("Layout1")
 	Activity.Title = "Candidate Progress"
 	
 	Container.Initialize("")
-	Container.Color = Colors.RGB(245,245,245)
+	Container.Color = Colors.RGB(246,246,246)
 	Activity.AddView(Container,0,0,100%x,100%y)
 	
 	bar.Initialize("bar")
 	bar.ShowUpIndicator = True
 	
-	detailList.Initialize
-	LoopPanel
+	ProgressDialogShow("Loading Data")
+	Api.Get("/referrals/detail/"&userId)
 End Sub
 
-Sub LoopPanel
+Sub JobDone(Job As HttpJob)
+   ProgressDialogHide
+   Log("JobName = " & Job.JobName & ", Success = " & Job.Success)
+   If Job.Success = True Then
+      LoopPanel(Job.GetString)
+   Else
+      Log("Error: " & Job.ErrorMessage)
+      ToastMessageShow("Error: " & Job.ErrorMessage, True)
+   End If
+   Job.Release
+End Sub
+
+Sub LoopPanel(Data As String)
 	Dim jobTitlePanel,detailPanel,journeyPanel,referencePanel,progressBox As Panel
 	Dim PanelTop,IconTop,PanelHeight,ReferenceTop,ReferenceHeight,Gap,TextHeight As Int
 	Dim jobTitle,utilText,refName,refCompany,refStatus,refText,detailBtn As Label
@@ -57,18 +74,17 @@ Sub LoopPanel
 	Dim userIcon As ImageView
 	
 	'json
-    JSON.Initialize(File.ReadString(File.DirAssets, "status_reference.json"))
-	Dim roots As List = JSON.NextArray
-	Dim root As Map = roots.Get(userId)
+    JSON.Initialize(Data)
+	Dim root As Map = JSON.NextObject
 	
 	Dim dataName As String = root.Get("name")
 	Dim dataCompany As String = root.Get("company")
-	Dim dataLatestPos As String = root.Get("latest_position")
-	Dim dataPhoneNum As String = root.Get("phone_number")
-	Dim dataUrl As String = root.Get("linkedin_url")
+	Dim dataLatestPos As String = root.Get("user_job_title")
+	Dim dataPhoneNum As String = root.Get("phone")
+	Dim dataUrl As String = root.Get("linkedin")
 	Dim dataEmail As String = root.Get("email")
 	Dim dataNote As String = root.Get("note")
-	Dim dataJobtitle As String = root.Get("jobtitle")
+	Dim dataJobtitle As String = "Text"
 	
 	'Default Panel Top position
 	PanelTop = 10dip
@@ -80,7 +96,6 @@ Sub LoopPanel
 	detailPanel.Initialize("")
 	detailPanel.Color = Colors.White
 	Container.AddView(detailPanel,0,10dip,100%x,70dip)
-	
 	
 	'Icon
 	userIcon.Initialize("")
@@ -190,7 +205,6 @@ Sub LoopPanel
 	'Add Object JobtitlePanel
 	detailList.Add(utilText)
 	
-	
 	'JobtitlePanel
 	jobTitlePanel.Initialize("")
 	Container.AddView(jobTitlePanel,0,(detailPanel.Height+utilText.Height)-Gap,100%x,100dip)
@@ -233,23 +247,27 @@ Sub LoopPanel
 	
 	For Each coljourneys As Map In journeys
 		Dim journeyText As String = coljourneys.Get("text")
-		Dim rStatus As Int = coljourneys.Get("status")
-		Dim rStatusText As String = coljourneys.Get("status_text")
-		Dim rState As Int = coljourneys.Get("state")
+		Dim rStatus As String = coljourneys.Get("status")
+		Dim rState As String = coljourneys.Get("state_status")
+		Dim rStateDesc As String = coljourneys.Get("state_description")
 		
 		progressBox.Initialize("")
 		'progressBox.Color = Colors.Cyan
 		journeyPanel.AddView(progressBox,30dip,PanelTop,100%x-(30dip*2),BoxHeight)
 		
 		Dim iconName As String
-		Select rState
-			Case 0
-				iconName = "Progress.png"
-			Case 1
-				iconName = "Done.png"
-			Case 2
-				iconName = "Fail.png"
-		End Select
+		If rStatus = "null" Then
+			Select rState
+				Case "WAITING"
+					iconName = "Progress.png"
+				Case "COMPLETE"
+					iconName = "Done.png"
+				Case "FAILED"
+					iconName = "Fail.png"
+			End Select
+		Else
+			iconName = "Done.png"
+		End If
 		
 		'Icon
 		Dim statusIcon As ImageView
@@ -258,30 +276,31 @@ Sub LoopPanel
 		statusIcon.Gravity = Gravity.FILL
 		journeyPanel.AddView(statusIcon,30dip-7.5dip,IconTop,16dip,16dip)
 		
+		Log(rStatus)
 		'refStatus
-		If rStatus <> 0 Then
+		If rStatus <> "null" Then
 			Dim cd As ColorDrawable
 		    refStatus.Initialize("")
 			Select rStatus
-				Case 1
+				Case "qualifying"
 					cd.Initialize(Colors.RGB(249,128,55), 2dip)
 					refStatus.Background = cd
-				Case 2
+				Case "interview_by_consultant"
 					cd.Initialize(Colors.RGB(248,190,56), 2dip)
 					refStatus.Background = cd
-				Case 3
+				Case "sent_to_client"
 					cd.Initialize(Colors.RGB(186,220,63), 2dip)
 					refStatus.Background = cd
-				Case 4
+				Case "1st_interview","2nd_interview","3rd_interview"
 					cd.Initialize(Colors.RGB(103,195,68), 2dip)
 					refStatus.Background = cd
-				Case 5
+				Case "follow_up"
 					cd.Initialize(Colors.RGB(62,222,176), 2dip)
 					refStatus.Background = cd
-				Case 6
+				Case "hired"
 					cd.Initialize(Colors.RGB(21,176,220), 2dip)
 					refStatus.Background = cd
-				Case 7
+				Case "1st_day"
 					cd.Initialize(Colors.RGB(38,143,235), 2dip)
 					refStatus.Background = cd
 				Case Else
@@ -291,7 +310,7 @@ Sub LoopPanel
 			
 			refStatus.TextColor = Colors.White
 	'		refStatus.TextSize = 10dip
-			refStatus.Text = rStatusText
+			refStatus.Text = ToMixCase(rStatus.Replace("_"," "))
 			refStatus.Typeface = font.proximanovaSemiBold
 			refStatus.Gravity = Gravity.CENTER
 			progressBox.AddView(refStatus,15dip,10dip,100dip,20dip)
@@ -305,13 +324,14 @@ Sub LoopPanel
 		
 		'refText
 		refText.Initialize("")
-		refText.Text = journeyText
 		refText.Typeface = font.proximanovaRegular
 		
-		If rStatus = 0 Then
-			progressBox.AddView(refText,15dip,10dip,progressBox.Width-30dip,100%y)
+		If rStatus <> "null" Then
+			refText.Text = journeyText
+			progressBox.AddView(refText,refStatus.Left+refStatus.Width+Gap,10dip,progressBox.Width/1.5,-2)
 		Else
-			progressBox.AddView(refText,refStatus.Left+refStatus.Width+Gap,10dip,progressBox.Width/1.5,100%y)
+			refText.Text = rStateDesc
+			progressBox.AddView(refText,15dip,13.5dip,progressBox.Width-30dip,-2)
 		End If
 		
 		'measure text height, get value, and update to progressBox
@@ -442,4 +462,44 @@ End Sub
 Sub AreEqual(b1 As Int, b2 As Int) As Boolean
  If b1 <> b2 Then Return False
  Return True
+End Sub
+
+Sub ToMixCase(Entry As String) As String
+
+    Dim sb As StringBuilder
+    Dim m As Matcher
+    Dim I As Int
+            
+    Entry = Entry.ToLowerCase
+
+    sb.Initialize
+    
+    m = Regex.Matcher("(^\w)|(\s\w)", Entry)
+    
+    Do While m.Find
+            
+       If m.Match.Length > 1 Then    
+    
+          sb.Append(Entry.SubString2(I, m.GetStart(0) + 1))
+          sb.Append(m.Match.SubString(1).ToUpperCase)
+                              
+       Else
+      
+          sb.Append(Entry.SubString2(I, m.GetStart(0)))
+          sb.Append(m.Match.ToUpperCase)
+                              
+       End If
+                     
+       I = m.GetEnd(0)
+                     
+    Loop
+            
+    If I < Entry.Length Then
+            
+       sb.Append(Entry.SubString(I))
+                     
+    End If
+            
+    Return sb.ToString
+
 End Sub
