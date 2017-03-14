@@ -32,7 +32,7 @@ public class main extends Activity implements B4AActivity{
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if (isFirst) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "com.qolega.qolegapp", "com.qolega.qolegapp.main");
+			processBA = new BA(this.getApplicationContext(), null, null, "com.qolega.qolegapp", "com.qolega.qolegapp.main");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -308,105 +308,6 @@ public class main extends Activity implements B4AActivity{
 		processBA.raiseEvent2(null, true, "globals", false, (Object[])null);
 	}
 
-
-
-public static void initializeProcessGlobals() {
-    
-    if (main.processGlobalsRun == false) {
-	    main.processGlobalsRun = true;
-		try {
-		        		
-        } catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-    }
-}
-public static boolean isAnyActivityVisible() {
-    boolean vis = false;
-vis = vis | (main.mostCurrent != null);
-vis = vis | (referringlist.mostCurrent != null);
-vis = vis | (referringprogress.mostCurrent != null);
-vis = vis | (testresponsive.mostCurrent != null);
-vis = vis | (test3.mostCurrent != null);
-vis = vis | (test4.mostCurrent != null);
-return vis;}
-
-public static void killProgram() {
-     {
-            Activity __a = null;
-            if (main.previousOne != null) {
-				__a = main.previousOne.get();
-			}
-            else {
-                BA ba = main.mostCurrent.processBA.sharedProcessBA.activityBA.get();
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
-BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, starter.class));
- {
-            Activity __a = null;
-            if (referringlist.previousOne != null) {
-				__a = referringlist.previousOne.get();
-			}
-            else {
-                BA ba = referringlist.mostCurrent.processBA.sharedProcessBA.activityBA.get();
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (referringprogress.previousOne != null) {
-				__a = referringprogress.previousOne.get();
-			}
-            else {
-                BA ba = referringprogress.mostCurrent.processBA.sharedProcessBA.activityBA.get();
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (testresponsive.previousOne != null) {
-				__a = testresponsive.previousOne.get();
-			}
-            else {
-                BA ba = testresponsive.mostCurrent.processBA.sharedProcessBA.activityBA.get();
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
- {
-            Activity __a = null;
-            if (test3.previousOne != null) {
-				__a = test3.previousOne.get();
-			}
-            else {
-                BA ba = test3.mostCurrent.processBA.sharedProcessBA.activityBA.get();
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
-BA.applicationContext.stopService(new android.content.Intent(BA.applicationContext, httputils2service.class));
- {
-            Activity __a = null;
-            if (test4.previousOne != null) {
-				__a = test4.previousOne.get();
-			}
-            else {
-                BA ba = test4.mostCurrent.processBA.sharedProcessBA.activityBA.get();
-                if (ba != null) __a = ba.activity;
-            }
-            if (__a != null)
-				__a.finish();}
-
-}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public anywheresoftware.b4a.objects.PanelWrapper _backgroundpanel = null;
 public anywheresoftware.b4a.objects.Timer _splashtimer = null;
@@ -423,130 +324,137 @@ public com.qolega.qolegapp.testresponsive _testresponsive = null;
 public com.qolega.qolegapp.test3 _test3 = null;
 public com.qolega.qolegapp.httputils2service _httputils2service = null;
 public com.qolega.qolegapp.test4 _test4 = null;
+
+public static boolean isAnyActivityVisible() {
+    boolean vis = false;
+vis = vis | (main.mostCurrent != null);
+vis = vis | (referringlist.mostCurrent != null);
+vis = vis | (referringprogress.mostCurrent != null);
+vis = vis | (testresponsive.mostCurrent != null);
+vis = vis | (test3.mostCurrent != null);
+vis = vis | (test4.mostCurrent != null);
+return vis;}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime});
-RDebugUtils.currentLine=131072;
- //BA.debugLineNum = 131072;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=131073;
- //BA.debugLineNum = 131073;BA.debugLine="qAuth.Initialize(Activity)";
-mostCurrent._qauth._initialize(null,mostCurrent.activityBA,mostCurrent._activity);
-RDebugUtils.currentLine=131094;
- //BA.debugLineNum = 131094;BA.debugLine="qAuth.CheckLoginSession";
-mostCurrent._qauth._checkloginsession(null);
-RDebugUtils.currentLine=131097;
- //BA.debugLineNum = 131097;BA.debugLine="Activity.LoadLayout(\"loginLayout\")";
+ //BA.debugLineNum = 33;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 34;BA.debugLine="qAuth.Initialize(Activity)";
+mostCurrent._qauth._initialize(mostCurrent.activityBA,mostCurrent._activity);
+ //BA.debugLineNum = 55;BA.debugLine="qAuth.CheckLoginSession";
+mostCurrent._qauth._checkloginsession();
+ //BA.debugLineNum = 58;BA.debugLine="Activity.LoadLayout(\"loginLayout\")";
 mostCurrent._activity.LoadLayout("loginLayout",mostCurrent.activityBA);
-RDebugUtils.currentLine=131099;
- //BA.debugLineNum = 131099;BA.debugLine="Wrapper.Top = (100%y - Wrapper.Height ) / 2";
+ //BA.debugLineNum = 60;BA.debugLine="Wrapper.Top = (100%y - Wrapper.Height ) / 2";
 mostCurrent._wrapper.setTop((int) ((anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA)-mostCurrent._wrapper.getHeight())/(double)2));
-RDebugUtils.currentLine=131101;
- //BA.debugLineNum = 131101;BA.debugLine="Version.Text = \"V \"&Application.VersionName";
+ //BA.debugLineNum = 62;BA.debugLine="Version.Text = \"V \"&Application.VersionName";
 mostCurrent._version.setText((Object)("V "+anywheresoftware.b4a.keywords.Common.Application.getVersionName()));
-RDebugUtils.currentLine=131104;
- //BA.debugLineNum = 131104;BA.debugLine="End Sub";
+ //BA.debugLineNum = 65;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_pause"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "activity_pause", new Object[] {_userclosed});
-RDebugUtils.currentLine=262144;
- //BA.debugLineNum = 262144;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=262146;
- //BA.debugLineNum = 262146;BA.debugLine="End Sub";
+ //BA.debugLineNum = 71;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 73;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null);
-RDebugUtils.currentLine=196608;
- //BA.debugLineNum = 196608;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=196610;
- //BA.debugLineNum = 196610;BA.debugLine="End Sub";
+ //BA.debugLineNum = 67;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 69;BA.debugLine="End Sub";
+return "";
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 20;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 23;BA.debugLine="Private BackgroundPanel As Panel";
+mostCurrent._backgroundpanel = new anywheresoftware.b4a.objects.PanelWrapper();
+ //BA.debugLineNum = 24;BA.debugLine="Private SplashTimer As Timer";
+mostCurrent._splashtimer = new anywheresoftware.b4a.objects.Timer();
+ //BA.debugLineNum = 25;BA.debugLine="Private Panel1 As Panel";
+mostCurrent._panel1 = new anywheresoftware.b4a.objects.PanelWrapper();
+ //BA.debugLineNum = 26;BA.debugLine="Private EmailField As EditText";
+mostCurrent._emailfield = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 27;BA.debugLine="Private PasswordField As EditText";
+mostCurrent._passwordfield = new anywheresoftware.b4a.objects.EditTextWrapper();
+ //BA.debugLineNum = 28;BA.debugLine="Dim qAuth As Auth";
+mostCurrent._qauth = new com.qolega.qolegapp.auth();
+ //BA.debugLineNum = 29;BA.debugLine="Private Wrapper As Panel";
+mostCurrent._wrapper = new anywheresoftware.b4a.objects.PanelWrapper();
+ //BA.debugLineNum = 30;BA.debugLine="Private Version As Label";
+mostCurrent._version = new anywheresoftware.b4a.objects.LabelWrapper();
+ //BA.debugLineNum = 31;BA.debugLine="End Sub";
 return "";
 }
 public static String  _loginbtn_click() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "loginbtn_click"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "loginbtn_click", null);
-RDebugUtils.currentLine=1769472;
- //BA.debugLineNum = 1769472;BA.debugLine="Sub LoginBtn_Click";
-RDebugUtils.currentLine=1769474;
- //BA.debugLineNum = 1769474;BA.debugLine="If EmailField.Text = \"\" Then";
+ //BA.debugLineNum = 96;BA.debugLine="Sub LoginBtn_Click";
+ //BA.debugLineNum = 98;BA.debugLine="If EmailField.Text = \"\" Then";
 if ((mostCurrent._emailfield.getText()).equals("")) { 
-RDebugUtils.currentLine=1769475;
- //BA.debugLineNum = 1769475;BA.debugLine="ToastMessageShow(\"Email Field is Required\",False";
+ //BA.debugLineNum = 99;BA.debugLine="ToastMessageShow(\"Email Field is Required\",False";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow("Email Field is Required",anywheresoftware.b4a.keywords.Common.False);
- }else 
-{RDebugUtils.currentLine=1769476;
- //BA.debugLineNum = 1769476;BA.debugLine="Else If PasswordField.Text = \"\" Then";
-if ((mostCurrent._passwordfield.getText()).equals("")) { 
-RDebugUtils.currentLine=1769477;
- //BA.debugLineNum = 1769477;BA.debugLine="ToastMessageShow(\"Password Field is Required\",Fa";
+ }else if((mostCurrent._passwordfield.getText()).equals("")) { 
+ //BA.debugLineNum = 101;BA.debugLine="ToastMessageShow(\"Password Field is Required\",Fa";
 anywheresoftware.b4a.keywords.Common.ToastMessageShow("Password Field is Required",anywheresoftware.b4a.keywords.Common.False);
  }else {
-RDebugUtils.currentLine=1769479;
- //BA.debugLineNum = 1769479;BA.debugLine="qAuth.Login(EmailField,PasswordField)";
-mostCurrent._qauth._login(null,mostCurrent._emailfield,mostCurrent._passwordfield);
- }};
-RDebugUtils.currentLine=1769481;
- //BA.debugLineNum = 1769481;BA.debugLine="End Sub";
+ //BA.debugLineNum = 103;BA.debugLine="qAuth.Login(EmailField,PasswordField)";
+mostCurrent._qauth._login(mostCurrent._emailfield,mostCurrent._passwordfield);
+ };
+ //BA.debugLineNum = 105;BA.debugLine="End Sub";
+return "";
+}
+
+public static void initializeProcessGlobals() {
+    
+    if (main.processGlobalsRun == false) {
+	    main.processGlobalsRun = true;
+		try {
+		        main._process_globals();
+starter._process_globals();
+referringlist._process_globals();
+referringprogress._process_globals();
+testresponsive._process_globals();
+test3._process_globals();
+httputils2service._process_globals();
+test4._process_globals();
+		
+        } catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+    }
+}public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 15;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 18;BA.debugLine="End Sub";
 return "";
 }
 public static String  _showupdatedialog() throws Exception{
-RDebugUtils.currentModule="main";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "showupdatedialog"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "showupdatedialog", null);
 int _i = 0;
 anywheresoftware.b4a.phone.Phone.PhoneIntents _p = null;
-RDebugUtils.currentLine=1703936;
- //BA.debugLineNum = 1703936;BA.debugLine="Sub showUpdateDialog";
-RDebugUtils.currentLine=1703938;
- //BA.debugLineNum = 1703938;BA.debugLine="Dim i As Int";
+ //BA.debugLineNum = 75;BA.debugLine="Sub showUpdateDialog";
+ //BA.debugLineNum = 77;BA.debugLine="Dim i As Int";
 _i = 0;
-RDebugUtils.currentLine=1703939;
- //BA.debugLineNum = 1703939;BA.debugLine="i = Msgbox2(\"There Was a New Version of This App,";
+ //BA.debugLineNum = 78;BA.debugLine="i = Msgbox2(\"There Was a New Version of This App,";
 _i = anywheresoftware.b4a.keywords.Common.Msgbox2("There Was a New Version of This App, Update to Continue","New Update Release","Update","","Cancel",(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.Null),mostCurrent.activityBA);
-RDebugUtils.currentLine=1703941;
- //BA.debugLineNum = 1703941;BA.debugLine="Select i";
+ //BA.debugLineNum = 80;BA.debugLine="Select i";
 switch (BA.switchObjectToInt(_i,anywheresoftware.b4a.keywords.Common.DialogResponse.POSITIVE,anywheresoftware.b4a.keywords.Common.DialogResponse.CANCEL,anywheresoftware.b4a.keywords.Common.DialogResponse.NEGATIVE)) {
 case 0: {
-RDebugUtils.currentLine=1703943;
- //BA.debugLineNum = 1703943;BA.debugLine="Dim p As PhoneIntents";
+ //BA.debugLineNum = 82;BA.debugLine="Dim p As PhoneIntents";
 _p = new anywheresoftware.b4a.phone.Phone.PhoneIntents();
-RDebugUtils.currentLine=1703944;
- //BA.debugLineNum = 1703944;BA.debugLine="StartActivity(p.OpenBrowser(\"http://qerja.com\"))";
+ //BA.debugLineNum = 83;BA.debugLine="StartActivity(p.OpenBrowser(\"http://qerja.com\"))";
 anywheresoftware.b4a.keywords.Common.StartActivity(mostCurrent.activityBA,(Object)(_p.OpenBrowser("http://qerja.com")));
-RDebugUtils.currentLine=1703945;
- //BA.debugLineNum = 1703945;BA.debugLine="ExitApplication";
+ //BA.debugLineNum = 84;BA.debugLine="ExitApplication";
 anywheresoftware.b4a.keywords.Common.ExitApplication();
-RDebugUtils.currentLine=1703946;
- //BA.debugLineNum = 1703946;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 85;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
  break; }
 case 1: {
-RDebugUtils.currentLine=1703948;
- //BA.debugLineNum = 1703948;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 87;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=1703949;
- //BA.debugLineNum = 1703949;BA.debugLine="ExitApplication";
+ //BA.debugLineNum = 88;BA.debugLine="ExitApplication";
 anywheresoftware.b4a.keywords.Common.ExitApplication();
  break; }
 case 2: {
-RDebugUtils.currentLine=1703951;
- //BA.debugLineNum = 1703951;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 90;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
-RDebugUtils.currentLine=1703952;
- //BA.debugLineNum = 1703952;BA.debugLine="ExitApplication";
+ //BA.debugLineNum = 91;BA.debugLine="ExitApplication";
 anywheresoftware.b4a.keywords.Common.ExitApplication();
  break; }
 }
 ;
-RDebugUtils.currentLine=1703955;
- //BA.debugLineNum = 1703955;BA.debugLine="End Sub";
+ //BA.debugLineNum = 94;BA.debugLine="End Sub";
 return "";
 }
 }

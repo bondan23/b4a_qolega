@@ -32,7 +32,7 @@ public class test4 extends Activity implements B4AActivity{
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		if (isFirst) {
-			processBA = new anywheresoftware.b4a.ShellBA(this.getApplicationContext(), null, null, "com.qolega.qolegapp", "com.qolega.qolegapp.test4");
+			processBA = new BA(this.getApplicationContext(), null, null, "com.qolega.qolegapp", "com.qolega.qolegapp.test4");
 			processBA.loadHtSubs(this.getClass());
 	        float deviceScale = getApplicationContext().getResources().getDisplayMetrics().density;
 	        BALayout.setDeviceScale(deviceScale);
@@ -308,15 +308,6 @@ public class test4 extends Activity implements B4AActivity{
 		processBA.raiseEvent2(null, true, "globals", false, (Object[])null);
 	}
 
-
-
-public static void initializeProcessGlobals() {
-             try {
-                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
-            } catch (Exception e) {
-                throw new RuntimeException(e);
-            }
-}
 public anywheresoftware.b4a.keywords.Common __c = null;
 public com.qolega.qolegapp.main _main = null;
 public com.qolega.qolegapp.starter _starter = null;
@@ -325,53 +316,48 @@ public com.qolega.qolegapp.referringprogress _referringprogress = null;
 public com.qolega.qolegapp.testresponsive _testresponsive = null;
 public com.qolega.qolegapp.test3 _test3 = null;
 public com.qolega.qolegapp.httputils2service _httputils2service = null;
+
+public static void initializeProcessGlobals() {
+             try {
+                Class.forName(BA.applicationContext.getPackageName() + ".main").getMethod("initializeProcessGlobals").invoke(null, null);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+}
 public static String  _activity_create(boolean _firsttime) throws Exception{
-RDebugUtils.currentModule="test4";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_create"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "activity_create", new Object[] {_firsttime});
-RDebugUtils.currentLine=6684672;
- //BA.debugLineNum = 6684672;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
-RDebugUtils.currentLine=6684675;
- //BA.debugLineNum = 6684675;BA.debugLine="Activity.AddMenuItem3(\"SearchItem\", \"SearchItem\",";
+ //BA.debugLineNum = 17;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
+ //BA.debugLineNum = 20;BA.debugLine="Activity.AddMenuItem3(\"SearchItem\", \"SearchItem\",";
 mostCurrent._activity.AddMenuItem3("SearchItem","SearchItem",(android.graphics.Bitmap)(anywheresoftware.b4a.keywords.Common.LoadBitmap(anywheresoftware.b4a.keywords.Common.File.getDirAssets(),"search.png").getObject()),anywheresoftware.b4a.keywords.Common.True);
-RDebugUtils.currentLine=6684677;
- //BA.debugLineNum = 6684677;BA.debugLine="Activity.LoadLayout(\"referringLayout\")";
+ //BA.debugLineNum = 22;BA.debugLine="Activity.LoadLayout(\"referringLayout\")";
 mostCurrent._activity.LoadLayout("referringLayout",mostCurrent.activityBA);
-RDebugUtils.currentLine=6684679;
- //BA.debugLineNum = 6684679;BA.debugLine="End Sub";
+ //BA.debugLineNum = 24;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
-RDebugUtils.currentModule="test4";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_pause"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "activity_pause", new Object[] {_userclosed});
-RDebugUtils.currentLine=6881280;
- //BA.debugLineNum = 6881280;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-RDebugUtils.currentLine=6881282;
- //BA.debugLineNum = 6881282;BA.debugLine="End Sub";
+ //BA.debugLineNum = 34;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 36;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
-RDebugUtils.currentModule="test4";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "activity_resume"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "activity_resume", null);
-RDebugUtils.currentLine=6815744;
- //BA.debugLineNum = 6815744;BA.debugLine="Sub Activity_Resume";
-RDebugUtils.currentLine=6815746;
- //BA.debugLineNum = 6815746;BA.debugLine="End Sub";
+ //BA.debugLineNum = 30;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 32;BA.debugLine="End Sub";
+return "";
+}
+public static String  _globals() throws Exception{
+ //BA.debugLineNum = 12;BA.debugLine="Sub Globals";
+ //BA.debugLineNum = 15;BA.debugLine="End Sub";
+return "";
+}
+public static String  _process_globals() throws Exception{
+ //BA.debugLineNum = 6;BA.debugLine="Sub Process_Globals";
+ //BA.debugLineNum = 10;BA.debugLine="End Sub";
 return "";
 }
 public static String  _searchitem_click() throws Exception{
-RDebugUtils.currentModule="test4";
-if (Debug.shouldDelegate(mostCurrent.activityBA, "searchitem_click"))
-	return (String) Debug.delegate(mostCurrent.activityBA, "searchitem_click", null);
-RDebugUtils.currentLine=6750208;
- //BA.debugLineNum = 6750208;BA.debugLine="Sub SearchItem_Click";
-RDebugUtils.currentLine=6750209;
- //BA.debugLineNum = 6750209;BA.debugLine="Msgbox(\"Search Box Clicked\",\"Search\")";
+ //BA.debugLineNum = 26;BA.debugLine="Sub SearchItem_Click";
+ //BA.debugLineNum = 27;BA.debugLine="Msgbox(\"Search Box Clicked\",\"Search\")";
 anywheresoftware.b4a.keywords.Common.Msgbox("Search Box Clicked","Search",mostCurrent.activityBA);
-RDebugUtils.currentLine=6750210;
- //BA.debugLineNum = 6750210;BA.debugLine="End Sub";
+ //BA.debugLineNum = 28;BA.debugLine="End Sub";
 return "";
 }
 }
