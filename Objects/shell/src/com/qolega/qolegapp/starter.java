@@ -55,8 +55,8 @@ public static com.qolega.qolegapp.referringlist _referringlist = null;
 public static com.qolega.qolegapp.referringprogress _referringprogress = null;
 public static com.qolega.qolegapp.testresponsive _testresponsive = null;
 public static com.qolega.qolegapp.test3 _test3 = null;
-public static com.qolega.qolegapp.test4 _test4 = null;
 public static com.qolega.qolegapp.httputils2service _httputils2service = null;
+public static com.qolega.qolegapp.test4 _test4 = null;
   public Object[] GetGlobals() {
 		return new Object[] {"downloadAppUrl",starter._downloadappurl,"getVersion",starter._getversion,"gHttpVersionJob",starter._ghttpversionjob,"HttpUtils2Service",Debug.moduleToString(com.qolega.qolegapp.httputils2service.class),"Main",Debug.moduleToString(com.qolega.qolegapp.main.class),"ReferringList",Debug.moduleToString(com.qolega.qolegapp.referringlist.class),"ReferringProgress",Debug.moduleToString(com.qolega.qolegapp.referringprogress.class),"Service",starter.mostCurrent._service,"Test3",Debug.moduleToString(com.qolega.qolegapp.test3.class),"Test4",Debug.moduleToString(com.qolega.qolegapp.test4.class),"TestResponsive",Debug.moduleToString(com.qolega.qolegapp.testresponsive.class),"updateApp",starter._updateapp};
 }

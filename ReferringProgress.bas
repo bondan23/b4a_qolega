@@ -241,7 +241,7 @@ Sub LoopPanel(Data As String)
 	Dim iterator As Int = 1
 	Dim LastIconTop As Int
 	Dim IncrementBoxHeight As Int
-	Dim BoxHeight As Int = 40dip
+	Dim BoxHeight As Int = 50dip
 	
 	journeyPanel.AddView(referenceWrapper,30dip,PanelTop,100%x-(30dip*2),BoxHeight)
 	
@@ -250,6 +250,7 @@ Sub LoopPanel(Data As String)
 		Dim rStatus As String = coljourneys.Get("status")
 		Dim rState As String = coljourneys.Get("state_status")
 		Dim rStateDesc As String = coljourneys.Get("state_description")
+		Dim daysAgo As String = coljourneys.Get("days_ago")
 		
 		progressBox.Initialize("")
 		'progressBox.Color = Colors.Cyan
@@ -276,7 +277,6 @@ Sub LoopPanel(Data As String)
 		statusIcon.Gravity = Gravity.FILL
 		journeyPanel.AddView(statusIcon,30dip-7.5dip,IconTop,16dip,16dip)
 		
-		Log(rStatus)
 		'refStatus
 		If rStatus <> "null" Then
 			Dim cd As ColorDrawable
@@ -318,28 +318,42 @@ Sub LoopPanel(Data As String)
 			refStatusHeight =  su.MeasureMultilineTextHeight(refStatus,refStatus.Text)
 			
 			If refStatusHeight > refStatus.Height Then
-			refStatus.Height = refStatusHeight
+				refStatus.Height = refStatusHeight
 			End If
+			
+			'refDay
+			Dim refDay As Label
+			refDay.Initialize("")
+			refDay.Text = daysAgo&"d"
+			refDay.Typeface = font.proximanovaRegular
+			refDay.TextColor = Colors.RGB(179,179,179)
+			refDay.TextSize = refName.TextSize / 1.25
+			progressBox.AddView(refDay,15dip,refStatus.Top+refStatus.Height+5dip,100dip,20dip)
 		End If
-		
+
 		'refText
 		refText.Initialize("")
 		refText.Typeface = font.proximanovaRegular
 		
 		If rStatus <> "null" Then
 			refText.Text = journeyText
-			progressBox.AddView(refText,refStatus.Left+refStatus.Width+Gap,10dip,progressBox.Width/1.5,-2)
+			progressBox.AddView(refText,refStatus.Left+refStatus.Width+Gap,10dip,progressBox.Width/2,20dip)
 		Else
 			refText.Text = rStateDesc
-			progressBox.AddView(refText,15dip,13.5dip,progressBox.Width-30dip,-2)
+			progressBox.AddView(refText,15dip,13.5dip,progressBox.Width-30dip,20dip)
 		End If
 		
 		'measure text height, get value, and update to progressBox
 		Dim TextHeight As Int
 		TextHeight =  su.MeasureMultilineTextHeight(refText,refText.Text)
 		
-		If BoxHeight < TextHeight Then
-			progressBox.Height = TextHeight + BoxHeight
+		If refText.Height < TextHeight Then
+			'progressBox.Height = progressBox.Height + TextHeight
+			refText.Height = TextHeight
+			If progressBox.Height < TextHeight+refText.Top Then
+				Dim addHeight As Int = (TextHeight+refText.Top)-progressBox.Height
+				progressBox.Height = progressBox.Height + addHeight + refText.Top
+			End If
 		End If
 		
 		'Utility

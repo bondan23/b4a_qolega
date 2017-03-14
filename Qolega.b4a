@@ -7,10 +7,10 @@ Module4=TestResponsive
 Module5=Test3
 Module6=Auth
 Module7=Fonts
-Module8=Test4
-Module9=HttpJob
-Module10=HttpUtils2Service
-Module11=Api
+Module8=HttpJob
+Module9=HttpUtils2Service
+Module10=Api
+Module11=Test4
 Build1=Default,com.qolega.qolegapp
 ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.b4x.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="5" android:targetSdkVersion="22"/>~\n~<uses-permission android:name="android.permission.INTERNET" />~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~SetActivityAttribute(Main,android:theme,@style/Theme.QolegaStyleLogin)~\n~SetApplicationAttribute(android:theme, "@style/Theme.QolegaStyleDefault")~\n~'End of default text.~\n~
 IconFile=

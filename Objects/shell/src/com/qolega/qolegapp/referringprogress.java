@@ -71,8 +71,8 @@ public static com.qolega.qolegapp.starter _starter = null;
 public static com.qolega.qolegapp.referringlist _referringlist = null;
 public static com.qolega.qolegapp.testresponsive _testresponsive = null;
 public static com.qolega.qolegapp.test3 _test3 = null;
-public static com.qolega.qolegapp.test4 _test4 = null;
 public static com.qolega.qolegapp.httputils2service _httputils2service = null;
+public static com.qolega.qolegapp.test4 _test4 = null;
   public Object[] GetGlobals() {
 		return new Object[] {"Activity",referringprogress.mostCurrent._activity,"Api",Debug.moduleToString(com.qolega.qolegapp.api.class),"bar",referringprogress.mostCurrent._bar,"closeIcon",referringprogress.mostCurrent._closeicon,"Container",referringprogress.mostCurrent._container,"detailList",referringprogress.mostCurrent._detaillist,"font",referringprogress.mostCurrent._font,"HttpUtils2Service",Debug.moduleToString(com.qolega.qolegapp.httputils2service.class),"JSON",referringprogress.mostCurrent._json,"Main",Debug.moduleToString(com.qolega.qolegapp.main.class),"ReferringList",Debug.moduleToString(com.qolega.qolegapp.referringlist.class),"scrollView",referringprogress.mostCurrent._scrollview,"showIcon",referringprogress.mostCurrent._showicon,"Starter",Debug.moduleToString(com.qolega.qolegapp.starter.class),"su",referringprogress.mostCurrent._su,"Test3",Debug.moduleToString(com.qolega.qolegapp.test3.class),"Test4",Debug.moduleToString(com.qolega.qolegapp.test4.class),"TestResponsive",Debug.moduleToString(com.qolega.qolegapp.testresponsive.class),"userId",referringprogress._userid};
 }

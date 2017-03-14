@@ -203,6 +203,7 @@ Sub LoopPanel(StartTop As Int,Data As String)
 			Dim rStatus As String = colreference.Get("status") 
 			'Dim rStatusText As String = colreference.Get("status_text") 
 			Dim userId As Int = colreference.Get("user_id") 
+			Dim daysAgo As String = colreference.Get("days_ago") 
 			
 			'Icon
 			userIcon.Initialize("")
@@ -231,7 +232,7 @@ Sub LoopPanel(StartTop As Int,Data As String)
 			
 			'refDay
 			refDay.Initialize("")
-			refDay.Text = "2d"
+			refDay.Text = daysAgo&"d"
 			refDay.Typeface = font.proximanovaRegular
 			refDay.TextColor = Colors.RGB(179,179,179)
 			refDay.Gravity = Gravity.CENTER

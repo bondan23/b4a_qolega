@@ -142,8 +142,8 @@ referringlist_subs_0._process_globals();
 referringprogress_subs_0._process_globals();
 testresponsive_subs_0._process_globals();
 test3_subs_0._process_globals();
-test4_subs_0._process_globals();
 httputils2service_subs_0._process_globals();
+test4_subs_0._process_globals();
 main.myClass = BA.getDeviceClass ("com.qolega.qolegapp.main");
 starter.myClass = BA.getDeviceClass ("com.qolega.qolegapp.starter");
 referringlist.myClass = BA.getDeviceClass ("com.qolega.qolegapp.referringlist");
@@ -152,10 +152,10 @@ testresponsive.myClass = BA.getDeviceClass ("com.qolega.qolegapp.testresponsive"
 test3.myClass = BA.getDeviceClass ("com.qolega.qolegapp.test3");
 auth.myClass = BA.getDeviceClass ("com.qolega.qolegapp.auth");
 fonts.myClass = BA.getDeviceClass ("com.qolega.qolegapp.fonts");
-test4.myClass = BA.getDeviceClass ("com.qolega.qolegapp.test4");
 httpjob.myClass = BA.getDeviceClass ("com.qolega.qolegapp.httpjob");
 httputils2service.myClass = BA.getDeviceClass ("com.qolega.qolegapp.httputils2service");
 api.myClass = BA.getDeviceClass ("com.qolega.qolegapp.api");
+test4.myClass = BA.getDeviceClass ("com.qolega.qolegapp.test4");
 		
         } catch (Exception e) {
 			throw new RuntimeException(e);

@@ -8,15 +8,15 @@ public class referringprogress_subs_0 {
 
 public static RemoteObject  _activity_actionbarhomeclick() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_ActionBarHomeClick (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,353);
+		Debug.PushSubsStack("Activity_ActionBarHomeClick (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,367);
 if (RapidSub.canDelegate("activity_actionbarhomeclick")) return referringprogress.remoteMe.runUserSub(false, "referringprogress","activity_actionbarhomeclick");
- BA.debugLineNum = 353;BA.debugLine="Sub Activity_ActionBarHomeClick";
-Debug.ShouldStop(1);
- BA.debugLineNum = 354;BA.debugLine="Activity.Finish";
-Debug.ShouldStop(2);
+ BA.debugLineNum = 367;BA.debugLine="Sub Activity_ActionBarHomeClick";
+Debug.ShouldStop(16384);
+ BA.debugLineNum = 368;BA.debugLine="Activity.Finish";
+Debug.ShouldStop(32768);
 referringprogress.mostCurrent._activity.runVoidMethod ("Finish");
- BA.debugLineNum = 355;BA.debugLine="End Sub";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 369;BA.debugLine="End Sub";
+Debug.ShouldStop(65536);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -79,13 +79,13 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,361);
+		Debug.PushSubsStack("Activity_Pause (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,375);
 if (RapidSub.canDelegate("activity_pause")) return referringprogress.remoteMe.runUserSub(false, "referringprogress","activity_pause", _userclosed);
 Debug.locals.put("UserClosed", _userclosed);
- BA.debugLineNum = 361;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
-Debug.ShouldStop(256);
- BA.debugLineNum = 363;BA.debugLine="End Sub";
-Debug.ShouldStop(1024);
+ BA.debugLineNum = 375;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+Debug.ShouldStop(4194304);
+ BA.debugLineNum = 377;BA.debugLine="End Sub";
+Debug.ShouldStop(16777216);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -97,12 +97,12 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,357);
+		Debug.PushSubsStack("Activity_Resume (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,371);
 if (RapidSub.canDelegate("activity_resume")) return referringprogress.remoteMe.runUserSub(false, "referringprogress","activity_resume");
- BA.debugLineNum = 357;BA.debugLine="Sub Activity_Resume";
-Debug.ShouldStop(16);
- BA.debugLineNum = 359;BA.debugLine="End Sub";
-Debug.ShouldStop(64);
+ BA.debugLineNum = 371;BA.debugLine="Sub Activity_Resume";
+Debug.ShouldStop(262144);
+ BA.debugLineNum = 373;BA.debugLine="End Sub";
+Debug.ShouldStop(1048576);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -114,21 +114,21 @@ finally {
 		}}
 public static RemoteObject  _areequal(RemoteObject _b1,RemoteObject _b2) throws Exception{
 try {
-		Debug.PushSubsStack("AreEqual (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,457);
+		Debug.PushSubsStack("AreEqual (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,471);
 if (RapidSub.canDelegate("areequal")) return referringprogress.remoteMe.runUserSub(false, "referringprogress","areequal", _b1, _b2);
 Debug.locals.put("b1", _b1);
 Debug.locals.put("b2", _b2);
- BA.debugLineNum = 457;BA.debugLine="Sub AreEqual(b1 As Int, b2 As Int) As Boolean";
-Debug.ShouldStop(256);
- BA.debugLineNum = 458;BA.debugLine="If b1 <> b2 Then Return False";
-Debug.ShouldStop(512);
+ BA.debugLineNum = 471;BA.debugLine="Sub AreEqual(b1 As Int, b2 As Int) As Boolean";
+Debug.ShouldStop(4194304);
+ BA.debugLineNum = 472;BA.debugLine="If b1 <> b2 Then Return False";
+Debug.ShouldStop(8388608);
 if (RemoteObject.solveBoolean("!",_b1,BA.numberCast(double.class, _b2))) { 
-Debug.CheckDeviceExceptions();if (true) return referringprogress.mostCurrent.__c.getField(true,"False");};
- BA.debugLineNum = 459;BA.debugLine="Return True";
-Debug.ShouldStop(1024);
-Debug.CheckDeviceExceptions();if (true) return referringprogress.mostCurrent.__c.getField(true,"True");
- BA.debugLineNum = 460;BA.debugLine="End Sub";
-Debug.ShouldStop(2048);
+if (true) return referringprogress.mostCurrent.__c.getField(true,"False");};
+ BA.debugLineNum = 473;BA.debugLine="Return True";
+Debug.ShouldStop(16777216);
+if (true) return referringprogress.mostCurrent.__c.getField(true,"True");
+ BA.debugLineNum = 474;BA.debugLine="End Sub";
+Debug.ShouldStop(33554432);
 return RemoteObject.createImmutable(false);
 }
 catch (Exception e) {
@@ -140,60 +140,60 @@ finally {
 		}}
 public static RemoteObject  _closeicon_click() throws Exception{
 try {
-		Debug.PushSubsStack("closeIcon_Click (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,407);
+		Debug.PushSubsStack("closeIcon_Click (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,421);
 if (RapidSub.canDelegate("closeicon_click")) return referringprogress.remoteMe.runUserSub(false, "referringprogress","closeicon_click");
 RemoteObject _detailpanel = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 RemoteObject _jobtitlepanel = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 RemoteObject _journeypanel = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 RemoteObject _utiltextlabel = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
- BA.debugLineNum = 407;BA.debugLine="Sub closeIcon_Click";
-Debug.ShouldStop(4194304);
- BA.debugLineNum = 408;BA.debugLine="Dim detailPanel,jobTitlePanel,journeyPanel As Pan";
-Debug.ShouldStop(8388608);
+ BA.debugLineNum = 421;BA.debugLine="Sub closeIcon_Click";
+Debug.ShouldStop(16);
+ BA.debugLineNum = 422;BA.debugLine="Dim detailPanel,jobTitlePanel,journeyPanel As Pan";
+Debug.ShouldStop(32);
 _detailpanel = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");Debug.locals.put("detailPanel", _detailpanel);
 _jobtitlepanel = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");Debug.locals.put("jobTitlePanel", _jobtitlepanel);
 _journeypanel = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");Debug.locals.put("journeyPanel", _journeypanel);
- BA.debugLineNum = 409;BA.debugLine="Dim utilTextLabel As Label";
-Debug.ShouldStop(16777216);
+ BA.debugLineNum = 423;BA.debugLine="Dim utilTextLabel As Label";
+Debug.ShouldStop(64);
 _utiltextlabel = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");Debug.locals.put("utilTextLabel", _utiltextlabel);
- BA.debugLineNum = 411;BA.debugLine="detailPanel = detailList.Get(0)";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 425;BA.debugLine="detailPanel = detailList.Get(0)";
+Debug.ShouldStop(256);
 _detailpanel.setObject(referringprogress.mostCurrent._detaillist.runMethod(false,"Get",(Object)(BA.numberCast(int.class, 0))));
- BA.debugLineNum = 412;BA.debugLine="utilTextLabel = detailList.Get(1)";
-Debug.ShouldStop(134217728);
-_utiltextlabel.setObject(referringprogress.mostCurrent._detaillist.runMethod(false,"Get",(Object)(BA.numberCast(int.class, 1))));
- BA.debugLineNum = 413;BA.debugLine="jobTitlePanel = detailList.Get(2)";
-Debug.ShouldStop(268435456);
-_jobtitlepanel.setObject(referringprogress.mostCurrent._detaillist.runMethod(false,"Get",(Object)(BA.numberCast(int.class, 2))));
- BA.debugLineNum = 414;BA.debugLine="journeyPanel = detailList.Get(3)";
-Debug.ShouldStop(536870912);
-_journeypanel.setObject(referringprogress.mostCurrent._detaillist.runMethod(false,"Get",(Object)(BA.numberCast(int.class, 3))));
- BA.debugLineNum = 416;BA.debugLine="detailPanel.Height = detailPanel.Height - 200dip";
-Debug.ShouldStop(-2147483648);
-_detailpanel.runMethod(true,"setHeight",RemoteObject.solve(new RemoteObject[] {_detailpanel.runMethod(true,"getHeight"),referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 200)))}, "-",1, 1));
- BA.debugLineNum = 417;BA.debugLine="utilTextLabel.Top = detailPanel.Height";
-Debug.ShouldStop(1);
-_utiltextlabel.runMethod(true,"setTop",_detailpanel.runMethod(true,"getHeight"));
- BA.debugLineNum = 418;BA.debugLine="utilTextLabel.Text = \"Show candidate details\"";
-Debug.ShouldStop(2);
-_utiltextlabel.runMethod(true,"setText",RemoteObject.createImmutable(("Show candidate details")));
- BA.debugLineNum = 419;BA.debugLine="jobTitlePanel.Top = utilTextLabel.Top + utilTextL";
-Debug.ShouldStop(4);
-_jobtitlepanel.runMethod(true,"setTop",RemoteObject.solve(new RemoteObject[] {_utiltextlabel.runMethod(true,"getTop"),_utiltextlabel.runMethod(true,"getHeight")}, "+",1, 1));
- BA.debugLineNum = 420;BA.debugLine="scrollView.Top = jobTitlePanel.Top + jobTitlePane";
-Debug.ShouldStop(8);
-referringprogress.mostCurrent._scrollview.runMethod(true,"setTop",RemoteObject.solve(new RemoteObject[] {_jobtitlepanel.runMethod(true,"getTop"),_jobtitlepanel.runMethod(true,"getHeight")}, "+",1, 1));
- BA.debugLineNum = 421;BA.debugLine="journeyPanel.Height = journeyPanel.Height - jobTi";
-Debug.ShouldStop(16);
-_journeypanel.runMethod(true,"setHeight",RemoteObject.solve(new RemoteObject[] {_journeypanel.runMethod(true,"getHeight"),_jobtitlepanel.runMethod(true,"getTop"),_jobtitlepanel.runMethod(true,"getHeight")}, "-+",2, 1));
- BA.debugLineNum = 426;BA.debugLine="showIcon.Visible = True";
+ BA.debugLineNum = 426;BA.debugLine="utilTextLabel = detailList.Get(1)";
 Debug.ShouldStop(512);
-referringprogress.mostCurrent._showicon.runMethod(true,"setVisible",referringprogress.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 427;BA.debugLine="closeIcon.Visible = False";
+_utiltextlabel.setObject(referringprogress.mostCurrent._detaillist.runMethod(false,"Get",(Object)(BA.numberCast(int.class, 1))));
+ BA.debugLineNum = 427;BA.debugLine="jobTitlePanel = detailList.Get(2)";
 Debug.ShouldStop(1024);
-referringprogress.mostCurrent._closeicon.runMethod(true,"setVisible",referringprogress.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 428;BA.debugLine="End Sub";
+_jobtitlepanel.setObject(referringprogress.mostCurrent._detaillist.runMethod(false,"Get",(Object)(BA.numberCast(int.class, 2))));
+ BA.debugLineNum = 428;BA.debugLine="journeyPanel = detailList.Get(3)";
 Debug.ShouldStop(2048);
+_journeypanel.setObject(referringprogress.mostCurrent._detaillist.runMethod(false,"Get",(Object)(BA.numberCast(int.class, 3))));
+ BA.debugLineNum = 430;BA.debugLine="detailPanel.Height = detailPanel.Height - 200dip";
+Debug.ShouldStop(8192);
+_detailpanel.runMethod(true,"setHeight",RemoteObject.solve(new RemoteObject[] {_detailpanel.runMethod(true,"getHeight"),referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 200)))}, "-",1, 1));
+ BA.debugLineNum = 431;BA.debugLine="utilTextLabel.Top = detailPanel.Height";
+Debug.ShouldStop(16384);
+_utiltextlabel.runMethod(true,"setTop",_detailpanel.runMethod(true,"getHeight"));
+ BA.debugLineNum = 432;BA.debugLine="utilTextLabel.Text = \"Show candidate details\"";
+Debug.ShouldStop(32768);
+_utiltextlabel.runMethod(true,"setText",RemoteObject.createImmutable(("Show candidate details")));
+ BA.debugLineNum = 433;BA.debugLine="jobTitlePanel.Top = utilTextLabel.Top + utilTextL";
+Debug.ShouldStop(65536);
+_jobtitlepanel.runMethod(true,"setTop",RemoteObject.solve(new RemoteObject[] {_utiltextlabel.runMethod(true,"getTop"),_utiltextlabel.runMethod(true,"getHeight")}, "+",1, 1));
+ BA.debugLineNum = 434;BA.debugLine="scrollView.Top = jobTitlePanel.Top + jobTitlePane";
+Debug.ShouldStop(131072);
+referringprogress.mostCurrent._scrollview.runMethod(true,"setTop",RemoteObject.solve(new RemoteObject[] {_jobtitlepanel.runMethod(true,"getTop"),_jobtitlepanel.runMethod(true,"getHeight")}, "+",1, 1));
+ BA.debugLineNum = 435;BA.debugLine="journeyPanel.Height = journeyPanel.Height - jobTi";
+Debug.ShouldStop(262144);
+_journeypanel.runMethod(true,"setHeight",RemoteObject.solve(new RemoteObject[] {_journeypanel.runMethod(true,"getHeight"),_jobtitlepanel.runMethod(true,"getTop"),_jobtitlepanel.runMethod(true,"getHeight")}, "-+",2, 1));
+ BA.debugLineNum = 440;BA.debugLine="showIcon.Visible = True";
+Debug.ShouldStop(8388608);
+referringprogress.mostCurrent._showicon.runMethod(true,"setVisible",referringprogress.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 441;BA.debugLine="closeIcon.Visible = False";
+Debug.ShouldStop(16777216);
+referringprogress.mostCurrent._closeicon.runMethod(true,"setVisible",referringprogress.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 442;BA.debugLine="End Sub";
+Debug.ShouldStop(33554432);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -205,38 +205,38 @@ finally {
 		}}
 public static RemoteObject  _drawbordertop(RemoteObject _target,RemoteObject _acolor,RemoteObject _strokewidth) throws Exception{
 try {
-		Debug.PushSubsStack("DrawBorderTop (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,447);
+		Debug.PushSubsStack("DrawBorderTop (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,461);
 if (RapidSub.canDelegate("drawbordertop")) return referringprogress.remoteMe.runUserSub(false, "referringprogress","drawbordertop", _target, _acolor, _strokewidth);
 RemoteObject _c = RemoteObject.declareNull("anywheresoftware.b4a.objects.drawable.CanvasWrapper");
 RemoteObject _path = RemoteObject.declareNull("anywheresoftware.b4a.objects.drawable.CanvasWrapper.PathWrapper");
 Debug.locals.put("Target", _target);
 Debug.locals.put("aColor", _acolor);
 Debug.locals.put("StrokeWidth", _strokewidth);
- BA.debugLineNum = 447;BA.debugLine="Sub DrawBorderTop(Target As View,aColor As Int,Str";
-Debug.ShouldStop(1073741824);
- BA.debugLineNum = 448;BA.debugLine="Dim c As Canvas";
-Debug.ShouldStop(-2147483648);
+ BA.debugLineNum = 461;BA.debugLine="Sub DrawBorderTop(Target As View,aColor As Int,Str";
+Debug.ShouldStop(4096);
+ BA.debugLineNum = 462;BA.debugLine="Dim c As Canvas";
+Debug.ShouldStop(8192);
 _c = RemoteObject.createNew ("anywheresoftware.b4a.objects.drawable.CanvasWrapper");Debug.locals.put("c", _c);
- BA.debugLineNum = 449;BA.debugLine="c.Initialize(Target)";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 463;BA.debugLine="c.Initialize(Target)";
+Debug.ShouldStop(16384);
 _c.runVoidMethod ("Initialize",(Object)((_target.getObject())));
- BA.debugLineNum = 450;BA.debugLine="Dim Path As Path";
-Debug.ShouldStop(2);
+ BA.debugLineNum = 464;BA.debugLine="Dim Path As Path";
+Debug.ShouldStop(32768);
 _path = RemoteObject.createNew ("anywheresoftware.b4a.objects.drawable.CanvasWrapper.PathWrapper");Debug.locals.put("Path", _path);
- BA.debugLineNum = 451;BA.debugLine="Path.Initialize(0,0)";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 465;BA.debugLine="Path.Initialize(0,0)";
+Debug.ShouldStop(65536);
 _path.runVoidMethod ("Initialize",(Object)(BA.numberCast(float.class, 0)),(Object)(BA.numberCast(float.class, 0)));
- BA.debugLineNum = 452;BA.debugLine="Path.LineTo(Target.Width,0)";
-Debug.ShouldStop(8);
+ BA.debugLineNum = 466;BA.debugLine="Path.LineTo(Target.Width,0)";
+Debug.ShouldStop(131072);
 _path.runVoidMethod ("LineTo",(Object)(BA.numberCast(float.class, _target.runMethod(true,"getWidth"))),(Object)(BA.numberCast(float.class, 0)));
- BA.debugLineNum = 453;BA.debugLine="c.DrawPath(Path,aColor,False,StrokeWidth)";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 467;BA.debugLine="c.DrawPath(Path,aColor,False,StrokeWidth)";
+Debug.ShouldStop(262144);
 _c.runVoidMethod ("DrawPath",(Object)((_path.getObject())),(Object)(_acolor),(Object)(referringprogress.mostCurrent.__c.getField(true,"False")),(Object)(BA.numberCast(float.class, _strokewidth)));
- BA.debugLineNum = 454;BA.debugLine="Target.Invalidate";
-Debug.ShouldStop(32);
+ BA.debugLineNum = 468;BA.debugLine="Target.Invalidate";
+Debug.ShouldStop(524288);
 _target.runVoidMethod ("Invalidate");
- BA.debugLineNum = 455;BA.debugLine="End Sub";
-Debug.ShouldStop(64);
+ BA.debugLineNum = 469;BA.debugLine="End Sub";
+Debug.ShouldStop(1048576);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -248,7 +248,7 @@ finally {
 		}}
 public static RemoteObject  _drawdashline(RemoteObject _target,RemoteObject _x1,RemoteObject _y1,RemoteObject _x2,RemoteObject _y2,RemoteObject _col,RemoteObject _stroke) throws Exception{
 try {
-		Debug.PushSubsStack("DrawDashLine (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,431);
+		Debug.PushSubsStack("DrawDashLine (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,445);
 if (RapidSub.canDelegate("drawdashline")) return referringprogress.remoteMe.runUserSub(false, "referringprogress","drawdashline", _target, _x1, _y1, _x2, _y2, _col, _stroke);
 RemoteObject _p = RemoteObject.declareNull("com.AB.ABExtDrawing.ABExtDrawing.ABPaint");
 RemoteObject _extdrawing = RemoteObject.declareNull("com.AB.ABExtDrawing.ABExtDrawing");
@@ -260,43 +260,43 @@ Debug.locals.put("x2", _x2);
 Debug.locals.put("y2", _y2);
 Debug.locals.put("col", _col);
 Debug.locals.put("Stroke", _stroke);
- BA.debugLineNum = 431;BA.debugLine="Sub DrawDashLine(Target As View,x1 As Float, y1 As";
-Debug.ShouldStop(16384);
- BA.debugLineNum = 432;BA.debugLine="Dim p As ABPaint";
-Debug.ShouldStop(32768);
-_p = RemoteObject.createNew ("com.AB.ABExtDrawing.ABExtDrawing.ABPaint");Debug.locals.put("p", _p);
- BA.debugLineNum = 433;BA.debugLine="Dim ExtDrawing As ABExtDrawing";
-Debug.ShouldStop(65536);
-_extdrawing = RemoteObject.createNew ("com.AB.ABExtDrawing.ABExtDrawing");Debug.locals.put("ExtDrawing", _extdrawing);
- BA.debugLineNum = 434;BA.debugLine="Dim cvsMain As Canvas";
-Debug.ShouldStop(131072);
-_cvsmain = RemoteObject.createNew ("anywheresoftware.b4a.objects.drawable.CanvasWrapper");Debug.locals.put("cvsMain", _cvsmain);
- BA.debugLineNum = 436;BA.debugLine="cvsMain.Initialize(Target)";
-Debug.ShouldStop(524288);
-_cvsmain.runVoidMethod ("Initialize",(Object)((_target.getObject())));
- BA.debugLineNum = 438;BA.debugLine="p.Initialize";
-Debug.ShouldStop(2097152);
-_p.runVoidMethod ("Initialize");
- BA.debugLineNum = 439;BA.debugLine="p.SetStrokeWidth(Stroke)";
-Debug.ShouldStop(4194304);
-_p.runVoidMethod ("SetStrokeWidth",(Object)(_stroke));
- BA.debugLineNum = 440;BA.debugLine="p.SetStyle(p.Style_STROKE)";
-Debug.ShouldStop(8388608);
-_p.runVoidMethod ("SetStyle",(Object)(_p.getField(true,"Style_STROKE")));
- BA.debugLineNum = 441;BA.debugLine="p.SetColor(col)";
-Debug.ShouldStop(16777216);
-_p.runVoidMethod ("SetColor",(Object)(_col));
- BA.debugLineNum = 442;BA.debugLine="p.SetDashPathEffect(1, Array As Float(2dip, 2d";
-Debug.ShouldStop(33554432);
-_p.runVoidMethod ("SetDashPathEffect",(Object)(BA.numberCast(int.class, 1)),(Object)(RemoteObject.createNewArray("float",new int[] {2},new Object[] {BA.numberCast(float.class, referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 2)))),BA.numberCast(float.class, referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 2))))})),(Object)(BA.numberCast(float.class, 0)));
- BA.debugLineNum = 443;BA.debugLine="p.DoPathEffectSingle(1)";
-Debug.ShouldStop(67108864);
-_p.runVoidMethod ("DoPathEffectSingle",(Object)(BA.numberCast(int.class, 1)));
- BA.debugLineNum = 444;BA.debugLine="ExtDrawing.DrawLine(cvsMain, x1, y1, x2, y2, p";
-Debug.ShouldStop(134217728);
-_extdrawing.runVoidMethod ("drawLine",(Object)(_cvsmain),(Object)(_x1),(Object)(_y1),(Object)(_x2),(Object)(_y2),(Object)(_p));
- BA.debugLineNum = 445;BA.debugLine="End Sub";
+ BA.debugLineNum = 445;BA.debugLine="Sub DrawDashLine(Target As View,x1 As Float, y1 As";
 Debug.ShouldStop(268435456);
+ BA.debugLineNum = 446;BA.debugLine="Dim p As ABPaint";
+Debug.ShouldStop(536870912);
+_p = RemoteObject.createNew ("com.AB.ABExtDrawing.ABExtDrawing.ABPaint");Debug.locals.put("p", _p);
+ BA.debugLineNum = 447;BA.debugLine="Dim ExtDrawing As ABExtDrawing";
+Debug.ShouldStop(1073741824);
+_extdrawing = RemoteObject.createNew ("com.AB.ABExtDrawing.ABExtDrawing");Debug.locals.put("ExtDrawing", _extdrawing);
+ BA.debugLineNum = 448;BA.debugLine="Dim cvsMain As Canvas";
+Debug.ShouldStop(-2147483648);
+_cvsmain = RemoteObject.createNew ("anywheresoftware.b4a.objects.drawable.CanvasWrapper");Debug.locals.put("cvsMain", _cvsmain);
+ BA.debugLineNum = 450;BA.debugLine="cvsMain.Initialize(Target)";
+Debug.ShouldStop(2);
+_cvsmain.runVoidMethod ("Initialize",(Object)((_target.getObject())));
+ BA.debugLineNum = 452;BA.debugLine="p.Initialize";
+Debug.ShouldStop(8);
+_p.runVoidMethod ("Initialize");
+ BA.debugLineNum = 453;BA.debugLine="p.SetStrokeWidth(Stroke)";
+Debug.ShouldStop(16);
+_p.runVoidMethod ("SetStrokeWidth",(Object)(_stroke));
+ BA.debugLineNum = 454;BA.debugLine="p.SetStyle(p.Style_STROKE)";
+Debug.ShouldStop(32);
+_p.runVoidMethod ("SetStyle",(Object)(_p.getField(true,"Style_STROKE")));
+ BA.debugLineNum = 455;BA.debugLine="p.SetColor(col)";
+Debug.ShouldStop(64);
+_p.runVoidMethod ("SetColor",(Object)(_col));
+ BA.debugLineNum = 456;BA.debugLine="p.SetDashPathEffect(1, Array As Float(2dip, 2d";
+Debug.ShouldStop(128);
+_p.runVoidMethod ("SetDashPathEffect",(Object)(BA.numberCast(int.class, 1)),(Object)(RemoteObject.createNewArray("float",new int[] {2},new Object[] {BA.numberCast(float.class, referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 2)))),BA.numberCast(float.class, referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 2))))})),(Object)(BA.numberCast(float.class, 0)));
+ BA.debugLineNum = 457;BA.debugLine="p.DoPathEffectSingle(1)";
+Debug.ShouldStop(256);
+_p.runVoidMethod ("DoPathEffectSingle",(Object)(BA.numberCast(int.class, 1)));
+ BA.debugLineNum = 458;BA.debugLine="ExtDrawing.DrawLine(cvsMain, x1, y1, x2, y2, p";
+Debug.ShouldStop(512);
+_extdrawing.runVoidMethod ("drawLine",(Object)(_cvsmain),(Object)(_x1),(Object)(_y1),(Object)(_x2),(Object)(_y2),(Object)(_p));
+ BA.debugLineNum = 459;BA.debugLine="End Sub";
+Debug.ShouldStop(1024);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -308,7 +308,7 @@ finally {
 		}}
 public static RemoteObject  _drawleftborder(RemoteObject _target,RemoteObject _acolor,RemoteObject _strokewidth,RemoteObject _last,RemoteObject _single) throws Exception{
 try {
-		Debug.PushSubsStack("DrawLeftBorder (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,365);
+		Debug.PushSubsStack("DrawLeftBorder (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,379);
 if (RapidSub.canDelegate("drawleftborder")) return referringprogress.remoteMe.runUserSub(false, "referringprogress","drawleftborder", _target, _acolor, _strokewidth, _last, _single);
 RemoteObject _c = RemoteObject.declareNull("anywheresoftware.b4a.objects.drawable.CanvasWrapper");
 RemoteObject _path1 = RemoteObject.declareNull("anywheresoftware.b4a.objects.drawable.CanvasWrapper.PathWrapper");
@@ -317,41 +317,41 @@ Debug.locals.put("aColor", _acolor);
 Debug.locals.put("StrokeWidth", _strokewidth);
 Debug.locals.put("Last", _last);
 Debug.locals.put("Single", _single);
- BA.debugLineNum = 365;BA.debugLine="Public Sub DrawLeftBorder(Target As View, aColor A";
-Debug.ShouldStop(4096);
- BA.debugLineNum = 366;BA.debugLine="Dim c As Canvas";
-Debug.ShouldStop(8192);
+ BA.debugLineNum = 379;BA.debugLine="Public Sub DrawLeftBorder(Target As View, aColor A";
+Debug.ShouldStop(67108864);
+ BA.debugLineNum = 380;BA.debugLine="Dim c As Canvas";
+Debug.ShouldStop(134217728);
 _c = RemoteObject.createNew ("anywheresoftware.b4a.objects.drawable.CanvasWrapper");Debug.locals.put("c", _c);
- BA.debugLineNum = 367;BA.debugLine="c.Initialize(Target)";
-Debug.ShouldStop(16384);
+ BA.debugLineNum = 381;BA.debugLine="c.Initialize(Target)";
+Debug.ShouldStop(268435456);
 _c.runVoidMethod ("Initialize",(Object)((_target.getObject())));
- BA.debugLineNum = 368;BA.debugLine="Dim Path1 As Path";
-Debug.ShouldStop(32768);
+ BA.debugLineNum = 382;BA.debugLine="Dim Path1 As Path";
+Debug.ShouldStop(536870912);
 _path1 = RemoteObject.createNew ("anywheresoftware.b4a.objects.drawable.CanvasWrapper.PathWrapper");Debug.locals.put("Path1", _path1);
- BA.debugLineNum = 369;BA.debugLine="Path1.Initialize(0,0)";
-Debug.ShouldStop(65536);
+ BA.debugLineNum = 383;BA.debugLine="Path1.Initialize(0,0)";
+Debug.ShouldStop(1073741824);
 _path1.runVoidMethod ("Initialize",(Object)(BA.numberCast(float.class, 0)),(Object)(BA.numberCast(float.class, 0)));
- BA.debugLineNum = 371;BA.debugLine="If Last == True Then";
-Debug.ShouldStop(262144);
+ BA.debugLineNum = 385;BA.debugLine="If Last == True Then";
+Debug.ShouldStop(1);
 if (RemoteObject.solveBoolean("=",_last,referringprogress.mostCurrent.__c.getField(true,"True"))) { 
  }else {
- BA.debugLineNum = 374;BA.debugLine="If Single == True Then";
-Debug.ShouldStop(2097152);
+ BA.debugLineNum = 388;BA.debugLine="If Single == True Then";
+Debug.ShouldStop(8);
 if (RemoteObject.solveBoolean("=",_single,referringprogress.mostCurrent.__c.getField(true,"True"))) { 
  }else {
- BA.debugLineNum = 377;BA.debugLine="Path1.LineTo(0,Target.Height)";
-Debug.ShouldStop(16777216);
+ BA.debugLineNum = 391;BA.debugLine="Path1.LineTo(0,Target.Height)";
+Debug.ShouldStop(64);
 _path1.runVoidMethod ("LineTo",(Object)(BA.numberCast(float.class, 0)),(Object)(BA.numberCast(float.class, _target.runMethod(true,"getHeight"))));
  };
  };
- BA.debugLineNum = 381;BA.debugLine="c.DrawPath(Path1, aColor, False, StrokeWidth)";
-Debug.ShouldStop(268435456);
+ BA.debugLineNum = 395;BA.debugLine="c.DrawPath(Path1, aColor, False, StrokeWidth)";
+Debug.ShouldStop(1024);
 _c.runVoidMethod ("DrawPath",(Object)((_path1.getObject())),(Object)(_acolor),(Object)(referringprogress.mostCurrent.__c.getField(true,"False")),(Object)(BA.numberCast(float.class, _strokewidth)));
- BA.debugLineNum = 382;BA.debugLine="Target.Invalidate";
-Debug.ShouldStop(536870912);
+ BA.debugLineNum = 396;BA.debugLine="Target.Invalidate";
+Debug.ShouldStop(2048);
 _target.runVoidMethod ("Invalidate");
- BA.debugLineNum = 383;BA.debugLine="End Sub";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 397;BA.debugLine="End Sub";
+Debug.ShouldStop(4096);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -489,10 +489,13 @@ RemoteObject _journeytext = RemoteObject.createImmutable("");
 RemoteObject _rstatus = RemoteObject.createImmutable("");
 RemoteObject _rstate = RemoteObject.createImmutable("");
 RemoteObject _rstatedesc = RemoteObject.createImmutable("");
+RemoteObject _daysago = RemoteObject.createImmutable("");
 RemoteObject _iconname = RemoteObject.createImmutable("");
 RemoteObject _statusicon = RemoteObject.declareNull("anywheresoftware.b4a.objects.ImageViewWrapper");
 RemoteObject _cd = RemoteObject.declareNull("anywheresoftware.b4a.objects.drawable.ColorDrawable");
 RemoteObject _refstatusheight = RemoteObject.createImmutable(0);
+RemoteObject _refday = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
+RemoteObject _addheight = RemoteObject.createImmutable(0);
 Debug.locals.put("Data", _data);
  BA.debugLineNum = 62;BA.debugLine="Sub LoopPanel(Data As String)";
 Debug.ShouldStop(536870912);
@@ -866,9 +869,9 @@ _lasticontop = RemoteObject.createImmutable(0);Debug.locals.put("LastIconTop", _
  BA.debugLineNum = 238;BA.debugLine="Dim IncrementBoxHeight As Int";
 Debug.ShouldStop(8192);
 _incrementboxheight = RemoteObject.createImmutable(0);Debug.locals.put("IncrementBoxHeight", _incrementboxheight);
- BA.debugLineNum = 239;BA.debugLine="Dim BoxHeight As Int = 40dip";
+ BA.debugLineNum = 239;BA.debugLine="Dim BoxHeight As Int = 50dip";
 Debug.ShouldStop(16384);
-_boxheight = referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 40)));Debug.locals.put("BoxHeight", _boxheight);Debug.locals.put("BoxHeight", _boxheight);
+_boxheight = referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 50)));Debug.locals.put("BoxHeight", _boxheight);Debug.locals.put("BoxHeight", _boxheight);
  BA.debugLineNum = 241;BA.debugLine="journeyPanel.AddView(referenceWrapper,30dip,Panel";
 Debug.ShouldStop(65536);
 _journeypanel.runVoidMethod ("AddView",(Object)((_referencewrapper.getObject())),(Object)(referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 30)))),(Object)(_paneltop),(Object)(RemoteObject.solve(new RemoteObject[] {referringprogress.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 100)),referringprogress.mostCurrent.activityBA),(RemoteObject.solve(new RemoteObject[] {referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 30))),RemoteObject.createImmutable(2)}, "*",0, 1))}, "-",1, 1)),(Object)(_boxheight));
@@ -892,61 +895,61 @@ _rstate = BA.ObjectToString(_coljourneys.runMethod(false,"Get",(Object)((RemoteO
  BA.debugLineNum = 247;BA.debugLine="Dim rStateDesc As String = coljourneys.Get(\"stat";
 Debug.ShouldStop(4194304);
 _rstatedesc = BA.ObjectToString(_coljourneys.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("state_description")))));Debug.locals.put("rStateDesc", _rstatedesc);Debug.locals.put("rStateDesc", _rstatedesc);
- BA.debugLineNum = 249;BA.debugLine="progressBox.Initialize(\"\")";
-Debug.ShouldStop(16777216);
+ BA.debugLineNum = 248;BA.debugLine="Dim daysAgo As String = coljourneys.Get(\"days_ag";
+Debug.ShouldStop(8388608);
+_daysago = BA.ObjectToString(_coljourneys.runMethod(false,"Get",(Object)((RemoteObject.createImmutable("days_ago")))));Debug.locals.put("daysAgo", _daysago);Debug.locals.put("daysAgo", _daysago);
+ BA.debugLineNum = 250;BA.debugLine="progressBox.Initialize(\"\")";
+Debug.ShouldStop(33554432);
 _progressbox.runVoidMethod ("Initialize",referringprogress.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("")));
- BA.debugLineNum = 251;BA.debugLine="journeyPanel.AddView(progressBox,30dip,PanelTop,";
-Debug.ShouldStop(67108864);
+ BA.debugLineNum = 252;BA.debugLine="journeyPanel.AddView(progressBox,30dip,PanelTop,";
+Debug.ShouldStop(134217728);
 _journeypanel.runVoidMethod ("AddView",(Object)((_progressbox.getObject())),(Object)(referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 30)))),(Object)(_paneltop),(Object)(RemoteObject.solve(new RemoteObject[] {referringprogress.mostCurrent.__c.runMethod(true,"PerXToCurrent",(Object)(BA.numberCast(float.class, 100)),referringprogress.mostCurrent.activityBA),(RemoteObject.solve(new RemoteObject[] {referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 30))),RemoteObject.createImmutable(2)}, "*",0, 1))}, "-",1, 1)),(Object)(_boxheight));
- BA.debugLineNum = 253;BA.debugLine="Dim iconName As String";
-Debug.ShouldStop(268435456);
-_iconname = RemoteObject.createImmutable("");Debug.locals.put("iconName", _iconname);
- BA.debugLineNum = 254;BA.debugLine="If rStatus = \"null\" Then";
+ BA.debugLineNum = 254;BA.debugLine="Dim iconName As String";
 Debug.ShouldStop(536870912);
-if (RemoteObject.solveBoolean("=",_rstatus,BA.ObjectToString("null"))) { 
- BA.debugLineNum = 255;BA.debugLine="Select rState";
+_iconname = RemoteObject.createImmutable("");Debug.locals.put("iconName", _iconname);
+ BA.debugLineNum = 255;BA.debugLine="If rStatus = \"null\" Then";
 Debug.ShouldStop(1073741824);
+if (RemoteObject.solveBoolean("=",_rstatus,BA.ObjectToString("null"))) { 
+ BA.debugLineNum = 256;BA.debugLine="Select rState";
+Debug.ShouldStop(-2147483648);
 switch (BA.switchObjectToInt(_rstate,BA.ObjectToString("WAITING"),BA.ObjectToString("COMPLETE"),BA.ObjectToString("FAILED"))) {
 case 0: {
- BA.debugLineNum = 257;BA.debugLine="iconName = \"Progress.png\"";
-Debug.ShouldStop(1);
+ BA.debugLineNum = 258;BA.debugLine="iconName = \"Progress.png\"";
+Debug.ShouldStop(2);
 _iconname = BA.ObjectToString("Progress.png");Debug.locals.put("iconName", _iconname);
  break; }
 case 1: {
- BA.debugLineNum = 259;BA.debugLine="iconName = \"Done.png\"";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 260;BA.debugLine="iconName = \"Done.png\"";
+Debug.ShouldStop(8);
 _iconname = BA.ObjectToString("Done.png");Debug.locals.put("iconName", _iconname);
  break; }
 case 2: {
- BA.debugLineNum = 261;BA.debugLine="iconName = \"Fail.png\"";
-Debug.ShouldStop(16);
+ BA.debugLineNum = 262;BA.debugLine="iconName = \"Fail.png\"";
+Debug.ShouldStop(32);
 _iconname = BA.ObjectToString("Fail.png");Debug.locals.put("iconName", _iconname);
  break; }
 }
 ;
  }else {
- BA.debugLineNum = 264;BA.debugLine="iconName = \"Done.png\"";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 265;BA.debugLine="iconName = \"Done.png\"";
+Debug.ShouldStop(256);
 _iconname = BA.ObjectToString("Done.png");Debug.locals.put("iconName", _iconname);
  };
- BA.debugLineNum = 268;BA.debugLine="Dim statusIcon As ImageView";
-Debug.ShouldStop(2048);
-_statusicon = RemoteObject.createNew ("anywheresoftware.b4a.objects.ImageViewWrapper");Debug.locals.put("statusIcon", _statusicon);
- BA.debugLineNum = 269;BA.debugLine="statusIcon.Initialize(\"\")";
+ BA.debugLineNum = 269;BA.debugLine="Dim statusIcon As ImageView";
 Debug.ShouldStop(4096);
-_statusicon.runVoidMethod ("Initialize",referringprogress.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("")));
- BA.debugLineNum = 270;BA.debugLine="statusIcon.Bitmap = LoadBitmap(File.DirAssets,ic";
+_statusicon = RemoteObject.createNew ("anywheresoftware.b4a.objects.ImageViewWrapper");Debug.locals.put("statusIcon", _statusicon);
+ BA.debugLineNum = 270;BA.debugLine="statusIcon.Initialize(\"\")";
 Debug.ShouldStop(8192);
-_statusicon.runMethod(false,"setBitmap",(referringprogress.mostCurrent.__c.runMethod(false,"LoadBitmap",(Object)(referringprogress.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(_iconname)).getObject()));
- BA.debugLineNum = 271;BA.debugLine="statusIcon.Gravity = Gravity.FILL";
+_statusicon.runVoidMethod ("Initialize",referringprogress.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("")));
+ BA.debugLineNum = 271;BA.debugLine="statusIcon.Bitmap = LoadBitmap(File.DirAssets,ic";
 Debug.ShouldStop(16384);
-_statusicon.runMethod(true,"setGravity",referringprogress.mostCurrent.__c.getField(false,"Gravity").getField(true,"FILL"));
- BA.debugLineNum = 272;BA.debugLine="journeyPanel.AddView(statusIcon,30dip-7.5dip,Ico";
+_statusicon.runMethod(false,"setBitmap",(referringprogress.mostCurrent.__c.runMethod(false,"LoadBitmap",(Object)(referringprogress.mostCurrent.__c.getField(false,"File").runMethod(true,"getDirAssets")),(Object)(_iconname)).getObject()));
+ BA.debugLineNum = 272;BA.debugLine="statusIcon.Gravity = Gravity.FILL";
 Debug.ShouldStop(32768);
+_statusicon.runMethod(true,"setGravity",referringprogress.mostCurrent.__c.getField(false,"Gravity").getField(true,"FILL"));
+ BA.debugLineNum = 273;BA.debugLine="journeyPanel.AddView(statusIcon,30dip-7.5dip,Ico";
+Debug.ShouldStop(65536);
 _journeypanel.runVoidMethod ("AddView",(Object)((_statusicon.getObject())),(Object)(RemoteObject.solve(new RemoteObject[] {referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 30))),referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 7.5)))}, "-",1, 1)),(Object)(_icontop),(Object)(referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 16)))),(Object)(referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 16)))));
- BA.debugLineNum = 274;BA.debugLine="Log(rStatus)";
-Debug.ShouldStop(131072);
-referringprogress.mostCurrent.__c.runVoidMethod ("Log",(Object)(_rstatus));
  BA.debugLineNum = 276;BA.debugLine="If rStatus <> \"null\" Then";
 Debug.ShouldStop(524288);
 if (RemoteObject.solveBoolean("!",_rstatus,BA.ObjectToString("null"))) { 
@@ -1055,66 +1058,97 @@ if (RemoteObject.solveBoolean(">",_refstatusheight,BA.numberCast(double.class, _
 Debug.ShouldStop(134217728);
 _refstatus.runMethod(true,"setHeight",_refstatusheight);
  };
- };
- BA.debugLineNum = 321;BA.debugLine="refText.Initialize(\"\")";
+ BA.debugLineNum = 320;BA.debugLine="Dim refDay As Label";
+Debug.ShouldStop(-2147483648);
+_refday = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");Debug.locals.put("refDay", _refday);
+ BA.debugLineNum = 321;BA.debugLine="refDay.Initialize(\"\")";
 Debug.ShouldStop(1);
-_reftext.runVoidMethod ("Initialize",referringprogress.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("")));
- BA.debugLineNum = 322;BA.debugLine="refText.Typeface = font.proximanovaRegular";
+_refday.runVoidMethod ("Initialize",referringprogress.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("")));
+ BA.debugLineNum = 322;BA.debugLine="refDay.Text = daysAgo&\"d\"";
 Debug.ShouldStop(2);
-_reftext.runMethod(false,"setTypeface",(referringprogress.mostCurrent._font.runClassMethod (com.qolega.qolegapp.fonts.class, "_proximanovaregular").getObject()));
- BA.debugLineNum = 324;BA.debugLine="If rStatus <> \"null\" Then";
+_refday.runMethod(true,"setText",(RemoteObject.concat(_daysago,RemoteObject.createImmutable("d"))));
+ BA.debugLineNum = 323;BA.debugLine="refDay.Typeface = font.proximanovaRegular";
+Debug.ShouldStop(4);
+_refday.runMethod(false,"setTypeface",(referringprogress.mostCurrent._font.runClassMethod (com.qolega.qolegapp.fonts.class, "_proximanovaregular").getObject()));
+ BA.debugLineNum = 324;BA.debugLine="refDay.TextColor = Colors.RGB(179,179,179)";
 Debug.ShouldStop(8);
-if (RemoteObject.solveBoolean("!",_rstatus,BA.ObjectToString("null"))) { 
- BA.debugLineNum = 325;BA.debugLine="refText.Text = journeyText";
+_refday.runMethod(true,"setTextColor",referringprogress.mostCurrent.__c.getField(false,"Colors").runMethod(true,"RGB",(Object)(BA.numberCast(int.class, 179)),(Object)(BA.numberCast(int.class, 179)),(Object)(BA.numberCast(int.class, 179))));
+ BA.debugLineNum = 325;BA.debugLine="refDay.TextSize = refName.TextSize / 1.25";
 Debug.ShouldStop(16);
-_reftext.runMethod(true,"setText",(_journeytext));
- BA.debugLineNum = 326;BA.debugLine="progressBox.AddView(refText,refStatus.Left+refS";
+_refday.runMethod(true,"setTextSize",BA.numberCast(float.class, RemoteObject.solve(new RemoteObject[] {_refname.runMethod(true,"getTextSize"),RemoteObject.createImmutable(1.25)}, "/",0, 0)));
+ BA.debugLineNum = 326;BA.debugLine="progressBox.AddView(refDay,15dip,refStatus.Top+";
 Debug.ShouldStop(32);
-_progressbox.runVoidMethod ("AddView",(Object)((_reftext.getObject())),(Object)(RemoteObject.solve(new RemoteObject[] {_refstatus.runMethod(true,"getLeft"),_refstatus.runMethod(true,"getWidth"),_gap}, "++",2, 1)),(Object)(referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {_progressbox.runMethod(true,"getWidth"),RemoteObject.createImmutable(1.5)}, "/",0, 0))),(Object)(BA.numberCast(int.class, -(double) (0 + 2))));
- }else {
- BA.debugLineNum = 328;BA.debugLine="refText.Text = rStateDesc";
-Debug.ShouldStop(128);
-_reftext.runMethod(true,"setText",(_rstatedesc));
- BA.debugLineNum = 329;BA.debugLine="progressBox.AddView(refText,15dip,13.5dip,progr";
-Debug.ShouldStop(256);
-_progressbox.runVoidMethod ("AddView",(Object)((_reftext.getObject())),(Object)(referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 15)))),(Object)(referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 13.5)))),(Object)(RemoteObject.solve(new RemoteObject[] {_progressbox.runMethod(true,"getWidth"),referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 30)))}, "-",1, 1)),(Object)(BA.numberCast(int.class, -(double) (0 + 2))));
+_progressbox.runVoidMethod ("AddView",(Object)((_refday.getObject())),(Object)(referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 15)))),(Object)(RemoteObject.solve(new RemoteObject[] {_refstatus.runMethod(true,"getTop"),_refstatus.runMethod(true,"getHeight"),referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 5)))}, "++",2, 1)),(Object)(referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 100)))),(Object)(referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 20)))));
  };
- BA.debugLineNum = 333;BA.debugLine="Dim TextHeight As Int";
+ BA.debugLineNum = 330;BA.debugLine="refText.Initialize(\"\")";
+Debug.ShouldStop(512);
+_reftext.runVoidMethod ("Initialize",referringprogress.mostCurrent.activityBA,(Object)(RemoteObject.createImmutable("")));
+ BA.debugLineNum = 331;BA.debugLine="refText.Typeface = font.proximanovaRegular";
+Debug.ShouldStop(1024);
+_reftext.runMethod(false,"setTypeface",(referringprogress.mostCurrent._font.runClassMethod (com.qolega.qolegapp.fonts.class, "_proximanovaregular").getObject()));
+ BA.debugLineNum = 333;BA.debugLine="If rStatus <> \"null\" Then";
 Debug.ShouldStop(4096);
-_textheight = RemoteObject.createImmutable(0);Debug.locals.put("TextHeight", _textheight);
- BA.debugLineNum = 334;BA.debugLine="TextHeight =  su.MeasureMultilineTextHeight(refT";
+if (RemoteObject.solveBoolean("!",_rstatus,BA.ObjectToString("null"))) { 
+ BA.debugLineNum = 334;BA.debugLine="refText.Text = journeyText";
 Debug.ShouldStop(8192);
-_textheight = referringprogress.mostCurrent._su.runMethod(true,"MeasureMultilineTextHeight",(Object)((_reftext.getObject())),(Object)(_reftext.runMethod(true,"getText")));Debug.locals.put("TextHeight", _textheight);
- BA.debugLineNum = 336;BA.debugLine="If BoxHeight < TextHeight Then";
-Debug.ShouldStop(32768);
-if (RemoteObject.solveBoolean("<",_boxheight,BA.numberCast(double.class, _textheight))) { 
- BA.debugLineNum = 337;BA.debugLine="progressBox.Height = TextHeight + BoxHeight";
+_reftext.runMethod(true,"setText",(_journeytext));
+ BA.debugLineNum = 335;BA.debugLine="progressBox.AddView(refText,refStatus.Left+refS";
+Debug.ShouldStop(16384);
+_progressbox.runVoidMethod ("AddView",(Object)((_reftext.getObject())),(Object)(RemoteObject.solve(new RemoteObject[] {_refstatus.runMethod(true,"getLeft"),_refstatus.runMethod(true,"getWidth"),_gap}, "++",2, 1)),(Object)(referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 10)))),(Object)(BA.numberCast(int.class, RemoteObject.solve(new RemoteObject[] {_progressbox.runMethod(true,"getWidth"),RemoteObject.createImmutable(2)}, "/",0, 0))),(Object)(referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 20)))));
+ }else {
+ BA.debugLineNum = 337;BA.debugLine="refText.Text = rStateDesc";
 Debug.ShouldStop(65536);
-_progressbox.runMethod(true,"setHeight",RemoteObject.solve(new RemoteObject[] {_textheight,_boxheight}, "+",1, 1));
+_reftext.runMethod(true,"setText",(_rstatedesc));
+ BA.debugLineNum = 338;BA.debugLine="progressBox.AddView(refText,15dip,13.5dip,progr";
+Debug.ShouldStop(131072);
+_progressbox.runVoidMethod ("AddView",(Object)((_reftext.getObject())),(Object)(referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 15)))),(Object)(referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 13.5)))),(Object)(RemoteObject.solve(new RemoteObject[] {_progressbox.runMethod(true,"getWidth"),referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 30)))}, "-",1, 1)),(Object)(referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 20)))));
  };
- BA.debugLineNum = 341;BA.debugLine="IconTop = IconTop + progressBox.Height + Gap";
-Debug.ShouldStop(1048576);
-_icontop = RemoteObject.solve(new RemoteObject[] {_icontop,_progressbox.runMethod(true,"getHeight"),_gap}, "++",2, 1);Debug.locals.put("IconTop", _icontop);
- BA.debugLineNum = 342;BA.debugLine="PanelTop = PanelTop + progressBox.Height + Gap";
+ BA.debugLineNum = 342;BA.debugLine="Dim TextHeight As Int";
 Debug.ShouldStop(2097152);
-_paneltop = RemoteObject.solve(new RemoteObject[] {_paneltop,_progressbox.runMethod(true,"getHeight"),_gap}, "++",2, 1);Debug.locals.put("PanelTop", _paneltop);
- BA.debugLineNum = 343;BA.debugLine="LastIconTop = statusIcon.Top";
+_textheight = RemoteObject.createImmutable(0);Debug.locals.put("TextHeight", _textheight);
+ BA.debugLineNum = 343;BA.debugLine="TextHeight =  su.MeasureMultilineTextHeight(refT";
 Debug.ShouldStop(4194304);
+_textheight = referringprogress.mostCurrent._su.runMethod(true,"MeasureMultilineTextHeight",(Object)((_reftext.getObject())),(Object)(_reftext.runMethod(true,"getText")));Debug.locals.put("TextHeight", _textheight);
+ BA.debugLineNum = 345;BA.debugLine="If refText.Height < TextHeight Then";
+Debug.ShouldStop(16777216);
+if (RemoteObject.solveBoolean("<",_reftext.runMethod(true,"getHeight"),BA.numberCast(double.class, _textheight))) { 
+ BA.debugLineNum = 347;BA.debugLine="refText.Height = TextHeight";
+Debug.ShouldStop(67108864);
+_reftext.runMethod(true,"setHeight",_textheight);
+ BA.debugLineNum = 348;BA.debugLine="If progressBox.Height < TextHeight+refText.Top";
+Debug.ShouldStop(134217728);
+if (RemoteObject.solveBoolean("<",_progressbox.runMethod(true,"getHeight"),BA.numberCast(double.class, RemoteObject.solve(new RemoteObject[] {_textheight,_reftext.runMethod(true,"getTop")}, "+",1, 1)))) { 
+ BA.debugLineNum = 349;BA.debugLine="Dim addHeight As Int = (TextHeight+refText.Top";
+Debug.ShouldStop(268435456);
+_addheight = RemoteObject.solve(new RemoteObject[] {(RemoteObject.solve(new RemoteObject[] {_textheight,_reftext.runMethod(true,"getTop")}, "+",1, 1)),_progressbox.runMethod(true,"getHeight")}, "-",1, 1);Debug.locals.put("addHeight", _addheight);Debug.locals.put("addHeight", _addheight);
+ BA.debugLineNum = 350;BA.debugLine="progressBox.Height = progressBox.Height + addH";
+Debug.ShouldStop(536870912);
+_progressbox.runMethod(true,"setHeight",RemoteObject.solve(new RemoteObject[] {_progressbox.runMethod(true,"getHeight"),_addheight,_reftext.runMethod(true,"getTop")}, "++",2, 1));
+ };
+ };
+ BA.debugLineNum = 355;BA.debugLine="IconTop = IconTop + progressBox.Height + Gap";
+Debug.ShouldStop(4);
+_icontop = RemoteObject.solve(new RemoteObject[] {_icontop,_progressbox.runMethod(true,"getHeight"),_gap}, "++",2, 1);Debug.locals.put("IconTop", _icontop);
+ BA.debugLineNum = 356;BA.debugLine="PanelTop = PanelTop + progressBox.Height + Gap";
+Debug.ShouldStop(8);
+_paneltop = RemoteObject.solve(new RemoteObject[] {_paneltop,_progressbox.runMethod(true,"getHeight"),_gap}, "++",2, 1);Debug.locals.put("PanelTop", _paneltop);
+ BA.debugLineNum = 357;BA.debugLine="LastIconTop = statusIcon.Top";
+Debug.ShouldStop(16);
 _lasticontop = _statusicon.runMethod(true,"getTop");Debug.locals.put("LastIconTop", _lasticontop);
  }
 Debug.locals.put("coljourneys", _coljourneys);
 ;
- BA.debugLineNum = 346;BA.debugLine="journeyPanel.Height = PanelTop + scrollView.Top";
-Debug.ShouldStop(33554432);
+ BA.debugLineNum = 360;BA.debugLine="journeyPanel.Height = PanelTop + scrollView.Top";
+Debug.ShouldStop(128);
 _journeypanel.runMethod(true,"setHeight",RemoteObject.solve(new RemoteObject[] {_paneltop,referringprogress.mostCurrent._scrollview.runMethod(true,"getTop")}, "+",1, 1));
- BA.debugLineNum = 348;BA.debugLine="referenceWrapper.Height = LastIconTop";
-Debug.ShouldStop(134217728);
+ BA.debugLineNum = 362;BA.debugLine="referenceWrapper.Height = LastIconTop";
+Debug.ShouldStop(512);
 _referencewrapper.runMethod(true,"setHeight",_lasticontop);
- BA.debugLineNum = 349;BA.debugLine="DrawDashLine(referenceWrapper,0,0,0,referenceWrap";
-Debug.ShouldStop(268435456);
+ BA.debugLineNum = 363;BA.debugLine="DrawDashLine(referenceWrapper,0,0,0,referenceWrap";
+Debug.ShouldStop(1024);
 _drawdashline(RemoteObject.declareNull("anywheresoftware.b4a.AbsObjectWrapper").runMethod(false, "ConvertToWrapper", RemoteObject.createNew("anywheresoftware.b4a.objects.ConcreteViewWrapper"), _referencewrapper.getObject()),BA.numberCast(float.class, 0),BA.numberCast(float.class, 0),BA.numberCast(float.class, 0),BA.numberCast(float.class, _referencewrapper.runMethod(true,"getHeight")),referringprogress.mostCurrent.__c.getField(false,"Colors").runMethod(true,"RGB",(Object)(BA.numberCast(int.class, 177)),(Object)(BA.numberCast(int.class, 177)),(Object)(BA.numberCast(int.class, 177))),BA.numberCast(float.class, referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 4)))));
- BA.debugLineNum = 351;BA.debugLine="End Sub";
-Debug.ShouldStop(1073741824);
+ BA.debugLineNum = 365;BA.debugLine="End Sub";
+Debug.ShouldStop(4096);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -1133,63 +1167,63 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _showicon_click() throws Exception{
 try {
-		Debug.PushSubsStack("showIcon_Click (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,385);
+		Debug.PushSubsStack("showIcon_Click (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,399);
 if (RapidSub.canDelegate("showicon_click")) return referringprogress.remoteMe.runUserSub(false, "referringprogress","showicon_click");
 RemoteObject _detailpanel = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 RemoteObject _jobtitlepanel = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 RemoteObject _journeypanel = RemoteObject.declareNull("anywheresoftware.b4a.objects.PanelWrapper");
 RemoteObject _utiltextlabel = RemoteObject.declareNull("anywheresoftware.b4a.objects.LabelWrapper");
- BA.debugLineNum = 385;BA.debugLine="Sub showIcon_Click";
-Debug.ShouldStop(1);
- BA.debugLineNum = 386;BA.debugLine="Dim detailPanel,jobTitlePanel,journeyPanel As Pan";
-Debug.ShouldStop(2);
+ BA.debugLineNum = 399;BA.debugLine="Sub showIcon_Click";
+Debug.ShouldStop(16384);
+ BA.debugLineNum = 400;BA.debugLine="Dim detailPanel,jobTitlePanel,journeyPanel As Pan";
+Debug.ShouldStop(32768);
 _detailpanel = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");Debug.locals.put("detailPanel", _detailpanel);
 _jobtitlepanel = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");Debug.locals.put("jobTitlePanel", _jobtitlepanel);
 _journeypanel = RemoteObject.createNew ("anywheresoftware.b4a.objects.PanelWrapper");Debug.locals.put("journeyPanel", _journeypanel);
- BA.debugLineNum = 387;BA.debugLine="Dim utilTextLabel As Label";
-Debug.ShouldStop(4);
-_utiltextlabel = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");Debug.locals.put("utilTextLabel", _utiltextlabel);
- BA.debugLineNum = 389;BA.debugLine="detailPanel = detailList.Get(0)";
-Debug.ShouldStop(16);
-_detailpanel.setObject(referringprogress.mostCurrent._detaillist.runMethod(false,"Get",(Object)(BA.numberCast(int.class, 0))));
- BA.debugLineNum = 390;BA.debugLine="utilTextLabel = detailList.Get(1)";
-Debug.ShouldStop(32);
-_utiltextlabel.setObject(referringprogress.mostCurrent._detaillist.runMethod(false,"Get",(Object)(BA.numberCast(int.class, 1))));
- BA.debugLineNum = 391;BA.debugLine="jobTitlePanel = detailList.Get(2)";
-Debug.ShouldStop(64);
-_jobtitlepanel.setObject(referringprogress.mostCurrent._detaillist.runMethod(false,"Get",(Object)(BA.numberCast(int.class, 2))));
- BA.debugLineNum = 392;BA.debugLine="journeyPanel = detailList.Get(3)";
-Debug.ShouldStop(128);
-_journeypanel.setObject(referringprogress.mostCurrent._detaillist.runMethod(false,"Get",(Object)(BA.numberCast(int.class, 3))));
- BA.debugLineNum = 394;BA.debugLine="detailPanel.Height = detailPanel.Height + 200dip";
-Debug.ShouldStop(512);
-_detailpanel.runMethod(true,"setHeight",RemoteObject.solve(new RemoteObject[] {_detailpanel.runMethod(true,"getHeight"),referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 200)))}, "+",1, 1));
- BA.debugLineNum = 395;BA.debugLine="utilTextLabel.Top = detailPanel.Height";
-Debug.ShouldStop(1024);
-_utiltextlabel.runMethod(true,"setTop",_detailpanel.runMethod(true,"getHeight"));
- BA.debugLineNum = 396;BA.debugLine="utilTextLabel.Text = \"Hide candidate details\"";
-Debug.ShouldStop(2048);
-_utiltextlabel.runMethod(true,"setText",RemoteObject.createImmutable(("Hide candidate details")));
- BA.debugLineNum = 397;BA.debugLine="jobTitlePanel.Top = utilTextLabel.Top + utilTextL";
-Debug.ShouldStop(4096);
-_jobtitlepanel.runMethod(true,"setTop",RemoteObject.solve(new RemoteObject[] {_utiltextlabel.runMethod(true,"getTop"),_utiltextlabel.runMethod(true,"getHeight")}, "+",1, 1));
- BA.debugLineNum = 398;BA.debugLine="scrollView.Top = jobTitlePanel.Top + jobTitlePane";
-Debug.ShouldStop(8192);
-referringprogress.mostCurrent._scrollview.runMethod(true,"setTop",RemoteObject.solve(new RemoteObject[] {_jobtitlepanel.runMethod(true,"getTop"),_jobtitlepanel.runMethod(true,"getHeight")}, "+",1, 1));
- BA.debugLineNum = 399;BA.debugLine="journeyPanel.Height = journeyPanel.Height + jobTi";
-Debug.ShouldStop(16384);
-_journeypanel.runMethod(true,"setHeight",RemoteObject.solve(new RemoteObject[] {_journeypanel.runMethod(true,"getHeight"),_jobtitlepanel.runMethod(true,"getTop"),_jobtitlepanel.runMethod(true,"getHeight")}, "++",2, 1));
- BA.debugLineNum = 401;BA.debugLine="showIcon.Visible = False";
+ BA.debugLineNum = 401;BA.debugLine="Dim utilTextLabel As Label";
 Debug.ShouldStop(65536);
-referringprogress.mostCurrent._showicon.runMethod(true,"setVisible",referringprogress.mostCurrent.__c.getField(true,"False"));
- BA.debugLineNum = 403;BA.debugLine="closeIcon.Top = detailPanel.Height - 5dip";
+_utiltextlabel = RemoteObject.createNew ("anywheresoftware.b4a.objects.LabelWrapper");Debug.locals.put("utilTextLabel", _utiltextlabel);
+ BA.debugLineNum = 403;BA.debugLine="detailPanel = detailList.Get(0)";
 Debug.ShouldStop(262144);
-referringprogress.mostCurrent._closeicon.runMethod(true,"setTop",RemoteObject.solve(new RemoteObject[] {_detailpanel.runMethod(true,"getHeight"),referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 5)))}, "-",1, 1));
- BA.debugLineNum = 404;BA.debugLine="closeIcon.Visible = True";
+_detailpanel.setObject(referringprogress.mostCurrent._detaillist.runMethod(false,"Get",(Object)(BA.numberCast(int.class, 0))));
+ BA.debugLineNum = 404;BA.debugLine="utilTextLabel = detailList.Get(1)";
 Debug.ShouldStop(524288);
-referringprogress.mostCurrent._closeicon.runMethod(true,"setVisible",referringprogress.mostCurrent.__c.getField(true,"True"));
- BA.debugLineNum = 405;BA.debugLine="End Sub";
+_utiltextlabel.setObject(referringprogress.mostCurrent._detaillist.runMethod(false,"Get",(Object)(BA.numberCast(int.class, 1))));
+ BA.debugLineNum = 405;BA.debugLine="jobTitlePanel = detailList.Get(2)";
 Debug.ShouldStop(1048576);
+_jobtitlepanel.setObject(referringprogress.mostCurrent._detaillist.runMethod(false,"Get",(Object)(BA.numberCast(int.class, 2))));
+ BA.debugLineNum = 406;BA.debugLine="journeyPanel = detailList.Get(3)";
+Debug.ShouldStop(2097152);
+_journeypanel.setObject(referringprogress.mostCurrent._detaillist.runMethod(false,"Get",(Object)(BA.numberCast(int.class, 3))));
+ BA.debugLineNum = 408;BA.debugLine="detailPanel.Height = detailPanel.Height + 200dip";
+Debug.ShouldStop(8388608);
+_detailpanel.runMethod(true,"setHeight",RemoteObject.solve(new RemoteObject[] {_detailpanel.runMethod(true,"getHeight"),referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 200)))}, "+",1, 1));
+ BA.debugLineNum = 409;BA.debugLine="utilTextLabel.Top = detailPanel.Height";
+Debug.ShouldStop(16777216);
+_utiltextlabel.runMethod(true,"setTop",_detailpanel.runMethod(true,"getHeight"));
+ BA.debugLineNum = 410;BA.debugLine="utilTextLabel.Text = \"Hide candidate details\"";
+Debug.ShouldStop(33554432);
+_utiltextlabel.runMethod(true,"setText",RemoteObject.createImmutable(("Hide candidate details")));
+ BA.debugLineNum = 411;BA.debugLine="jobTitlePanel.Top = utilTextLabel.Top + utilTextL";
+Debug.ShouldStop(67108864);
+_jobtitlepanel.runMethod(true,"setTop",RemoteObject.solve(new RemoteObject[] {_utiltextlabel.runMethod(true,"getTop"),_utiltextlabel.runMethod(true,"getHeight")}, "+",1, 1));
+ BA.debugLineNum = 412;BA.debugLine="scrollView.Top = jobTitlePanel.Top + jobTitlePane";
+Debug.ShouldStop(134217728);
+referringprogress.mostCurrent._scrollview.runMethod(true,"setTop",RemoteObject.solve(new RemoteObject[] {_jobtitlepanel.runMethod(true,"getTop"),_jobtitlepanel.runMethod(true,"getHeight")}, "+",1, 1));
+ BA.debugLineNum = 413;BA.debugLine="journeyPanel.Height = journeyPanel.Height + jobTi";
+Debug.ShouldStop(268435456);
+_journeypanel.runMethod(true,"setHeight",RemoteObject.solve(new RemoteObject[] {_journeypanel.runMethod(true,"getHeight"),_jobtitlepanel.runMethod(true,"getTop"),_jobtitlepanel.runMethod(true,"getHeight")}, "++",2, 1));
+ BA.debugLineNum = 415;BA.debugLine="showIcon.Visible = False";
+Debug.ShouldStop(1073741824);
+referringprogress.mostCurrent._showicon.runMethod(true,"setVisible",referringprogress.mostCurrent.__c.getField(true,"False"));
+ BA.debugLineNum = 417;BA.debugLine="closeIcon.Top = detailPanel.Height - 5dip";
+Debug.ShouldStop(1);
+referringprogress.mostCurrent._closeicon.runMethod(true,"setTop",RemoteObject.solve(new RemoteObject[] {_detailpanel.runMethod(true,"getHeight"),referringprogress.mostCurrent.__c.runMethod(true,"DipToCurrent",(Object)(BA.numberCast(int.class, 5)))}, "-",1, 1));
+ BA.debugLineNum = 418;BA.debugLine="closeIcon.Visible = True";
+Debug.ShouldStop(2);
+referringprogress.mostCurrent._closeicon.runMethod(true,"setVisible",referringprogress.mostCurrent.__c.getField(true,"True"));
+ BA.debugLineNum = 419;BA.debugLine="End Sub";
+Debug.ShouldStop(4);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {
@@ -1201,69 +1235,69 @@ finally {
 		}}
 public static RemoteObject  _tomixcase(RemoteObject _entry) throws Exception{
 try {
-		Debug.PushSubsStack("ToMixCase (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,462);
+		Debug.PushSubsStack("ToMixCase (referringprogress) ","referringprogress",3,referringprogress.mostCurrent.activityBA,referringprogress.mostCurrent,476);
 if (RapidSub.canDelegate("tomixcase")) return referringprogress.remoteMe.runUserSub(false, "referringprogress","tomixcase", _entry);
 RemoteObject _sb = RemoteObject.declareNull("anywheresoftware.b4a.keywords.StringBuilderWrapper");
 RemoteObject _m = RemoteObject.declareNull("anywheresoftware.b4a.keywords.Regex.MatcherWrapper");
 RemoteObject _i = RemoteObject.createImmutable(0);
 Debug.locals.put("Entry", _entry);
- BA.debugLineNum = 462;BA.debugLine="Sub ToMixCase(Entry As String) As String";
-Debug.ShouldStop(8192);
- BA.debugLineNum = 464;BA.debugLine="Dim sb As StringBuilder";
-Debug.ShouldStop(32768);
-_sb = RemoteObject.createNew ("anywheresoftware.b4a.keywords.StringBuilderWrapper");Debug.locals.put("sb", _sb);
- BA.debugLineNum = 465;BA.debugLine="Dim m As Matcher";
-Debug.ShouldStop(65536);
-_m = RemoteObject.createNew ("anywheresoftware.b4a.keywords.Regex.MatcherWrapper");Debug.locals.put("m", _m);
- BA.debugLineNum = 466;BA.debugLine="Dim I As Int";
-Debug.ShouldStop(131072);
-_i = RemoteObject.createImmutable(0);Debug.locals.put("I", _i);
- BA.debugLineNum = 468;BA.debugLine="Entry = Entry.ToLowerCase";
-Debug.ShouldStop(524288);
-_entry = _entry.runMethod(true,"toLowerCase");Debug.locals.put("Entry", _entry);
- BA.debugLineNum = 470;BA.debugLine="sb.Initialize";
-Debug.ShouldStop(2097152);
-_sb.runVoidMethod ("Initialize");
- BA.debugLineNum = 472;BA.debugLine="m = Regex.Matcher(\"(^\\w)|(\\s\\w)\", Entry)";
-Debug.ShouldStop(8388608);
-_m = referringprogress.mostCurrent.__c.getField(false,"Regex").runMethod(false,"Matcher",(Object)(BA.ObjectToString("(^\\w)|(\\s\\w)")),(Object)(_entry));Debug.locals.put("m", _m);
- BA.debugLineNum = 474;BA.debugLine="Do While m.Find";
-Debug.ShouldStop(33554432);
-while (_m.runMethod(true,"Find").<Boolean>get().booleanValue()) {
- BA.debugLineNum = 476;BA.debugLine="If m.Match.Length > 1 Then";
+ BA.debugLineNum = 476;BA.debugLine="Sub ToMixCase(Entry As String) As String";
 Debug.ShouldStop(134217728);
-if (RemoteObject.solveBoolean(">",_m.runMethod(true,"getMatch").runMethod(true,"length"),BA.numberCast(double.class, 1))) { 
- BA.debugLineNum = 478;BA.debugLine="sb.Append(Entry.SubString2(I, m.GetStart";
+ BA.debugLineNum = 478;BA.debugLine="Dim sb As StringBuilder";
 Debug.ShouldStop(536870912);
-_sb.runVoidMethod ("Append",(Object)(_entry.runMethod(true,"substring",(Object)(_i),(Object)(RemoteObject.solve(new RemoteObject[] {_m.runMethod(true,"GetStart",(Object)(BA.numberCast(int.class, 0))),RemoteObject.createImmutable(1)}, "+",1, 1)))));
- BA.debugLineNum = 479;BA.debugLine="sb.Append(m.Match.SubString(1).ToUpperCa";
+_sb = RemoteObject.createNew ("anywheresoftware.b4a.keywords.StringBuilderWrapper");Debug.locals.put("sb", _sb);
+ BA.debugLineNum = 479;BA.debugLine="Dim m As Matcher";
 Debug.ShouldStop(1073741824);
+_m = RemoteObject.createNew ("anywheresoftware.b4a.keywords.Regex.MatcherWrapper");Debug.locals.put("m", _m);
+ BA.debugLineNum = 480;BA.debugLine="Dim I As Int";
+Debug.ShouldStop(-2147483648);
+_i = RemoteObject.createImmutable(0);Debug.locals.put("I", _i);
+ BA.debugLineNum = 482;BA.debugLine="Entry = Entry.ToLowerCase";
+Debug.ShouldStop(2);
+_entry = _entry.runMethod(true,"toLowerCase");Debug.locals.put("Entry", _entry);
+ BA.debugLineNum = 484;BA.debugLine="sb.Initialize";
+Debug.ShouldStop(8);
+_sb.runVoidMethod ("Initialize");
+ BA.debugLineNum = 486;BA.debugLine="m = Regex.Matcher(\"(^\\w)|(\\s\\w)\", Entry)";
+Debug.ShouldStop(32);
+_m = referringprogress.mostCurrent.__c.getField(false,"Regex").runMethod(false,"Matcher",(Object)(BA.ObjectToString("(^\\w)|(\\s\\w)")),(Object)(_entry));Debug.locals.put("m", _m);
+ BA.debugLineNum = 488;BA.debugLine="Do While m.Find";
+Debug.ShouldStop(128);
+while (_m.runMethod(true,"Find").<Boolean>get().booleanValue()) {
+ BA.debugLineNum = 490;BA.debugLine="If m.Match.Length > 1 Then";
+Debug.ShouldStop(512);
+if (RemoteObject.solveBoolean(">",_m.runMethod(true,"getMatch").runMethod(true,"length"),BA.numberCast(double.class, 1))) { 
+ BA.debugLineNum = 492;BA.debugLine="sb.Append(Entry.SubString2(I, m.GetStart";
+Debug.ShouldStop(2048);
+_sb.runVoidMethod ("Append",(Object)(_entry.runMethod(true,"substring",(Object)(_i),(Object)(RemoteObject.solve(new RemoteObject[] {_m.runMethod(true,"GetStart",(Object)(BA.numberCast(int.class, 0))),RemoteObject.createImmutable(1)}, "+",1, 1)))));
+ BA.debugLineNum = 493;BA.debugLine="sb.Append(m.Match.SubString(1).ToUpperCa";
+Debug.ShouldStop(4096);
 _sb.runVoidMethod ("Append",(Object)(_m.runMethod(true,"getMatch").runMethod(true,"substring",(Object)(BA.numberCast(int.class, 1))).runMethod(true,"toUpperCase")));
  }else {
- BA.debugLineNum = 483;BA.debugLine="sb.Append(Entry.SubString2(I, m.GetStart";
-Debug.ShouldStop(4);
+ BA.debugLineNum = 497;BA.debugLine="sb.Append(Entry.SubString2(I, m.GetStart";
+Debug.ShouldStop(65536);
 _sb.runVoidMethod ("Append",(Object)(_entry.runMethod(true,"substring",(Object)(_i),(Object)(_m.runMethod(true,"GetStart",(Object)(BA.numberCast(int.class, 0)))))));
- BA.debugLineNum = 484;BA.debugLine="sb.Append(m.Match.ToUpperCase)";
-Debug.ShouldStop(8);
+ BA.debugLineNum = 498;BA.debugLine="sb.Append(m.Match.ToUpperCase)";
+Debug.ShouldStop(131072);
 _sb.runVoidMethod ("Append",(Object)(_m.runMethod(true,"getMatch").runMethod(true,"toUpperCase")));
  };
- BA.debugLineNum = 488;BA.debugLine="I = m.GetEnd(0)";
-Debug.ShouldStop(128);
+ BA.debugLineNum = 502;BA.debugLine="I = m.GetEnd(0)";
+Debug.ShouldStop(2097152);
 _i = _m.runMethod(true,"GetEnd",(Object)(BA.numberCast(int.class, 0)));Debug.locals.put("I", _i);
  }
 ;
- BA.debugLineNum = 492;BA.debugLine="If I < Entry.Length Then";
-Debug.ShouldStop(2048);
+ BA.debugLineNum = 506;BA.debugLine="If I < Entry.Length Then";
+Debug.ShouldStop(33554432);
 if (RemoteObject.solveBoolean("<",_i,BA.numberCast(double.class, _entry.runMethod(true,"length")))) { 
- BA.debugLineNum = 494;BA.debugLine="sb.Append(Entry.SubString(I))";
-Debug.ShouldStop(8192);
+ BA.debugLineNum = 508;BA.debugLine="sb.Append(Entry.SubString(I))";
+Debug.ShouldStop(134217728);
 _sb.runVoidMethod ("Append",(Object)(_entry.runMethod(true,"substring",(Object)(_i))));
  };
- BA.debugLineNum = 498;BA.debugLine="Return sb.ToString";
-Debug.ShouldStop(131072);
-Debug.CheckDeviceExceptions();if (true) return _sb.runMethod(true,"ToString");
- BA.debugLineNum = 500;BA.debugLine="End Sub";
-Debug.ShouldStop(524288);
+ BA.debugLineNum = 512;BA.debugLine="Return sb.ToString";
+Debug.ShouldStop(-2147483648);
+if (true) return _sb.runMethod(true,"ToString");
+ BA.debugLineNum = 514;BA.debugLine="End Sub";
+Debug.ShouldStop(2);
 return RemoteObject.createImmutable("");
 }
 catch (Exception e) {

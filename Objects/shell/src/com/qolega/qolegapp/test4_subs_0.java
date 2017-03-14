@@ -8,7 +8,7 @@ public class test4_subs_0 {
 
 public static RemoteObject  _activity_create(RemoteObject _firsttime) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Create (test4) ","test4",8,test4.mostCurrent.activityBA,test4.mostCurrent,17);
+		Debug.PushSubsStack("Activity_Create (test4) ","test4",11,test4.mostCurrent.activityBA,test4.mostCurrent,17);
 if (RapidSub.canDelegate("activity_create")) return test4.remoteMe.runUserSub(false, "test4","activity_create", _firsttime);
 Debug.locals.put("FirstTime", _firsttime);
  BA.debugLineNum = 17;BA.debugLine="Sub Activity_Create(FirstTime As Boolean)";
@@ -32,7 +32,7 @@ finally {
 		}}
 public static RemoteObject  _activity_pause(RemoteObject _userclosed) throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Pause (test4) ","test4",8,test4.mostCurrent.activityBA,test4.mostCurrent,34);
+		Debug.PushSubsStack("Activity_Pause (test4) ","test4",11,test4.mostCurrent.activityBA,test4.mostCurrent,34);
 if (RapidSub.canDelegate("activity_pause")) return test4.remoteMe.runUserSub(false, "test4","activity_pause", _userclosed);
 Debug.locals.put("UserClosed", _userclosed);
  BA.debugLineNum = 34;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
@@ -50,7 +50,7 @@ finally {
 		}}
 public static RemoteObject  _activity_resume() throws Exception{
 try {
-		Debug.PushSubsStack("Activity_Resume (test4) ","test4",8,test4.mostCurrent.activityBA,test4.mostCurrent,30);
+		Debug.PushSubsStack("Activity_Resume (test4) ","test4",11,test4.mostCurrent.activityBA,test4.mostCurrent,30);
 if (RapidSub.canDelegate("activity_resume")) return test4.remoteMe.runUserSub(false, "test4","activity_resume");
  BA.debugLineNum = 30;BA.debugLine="Sub Activity_Resume";
 Debug.ShouldStop(536870912);
@@ -77,7 +77,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _searchitem_click() throws Exception{
 try {
-		Debug.PushSubsStack("SearchItem_Click (test4) ","test4",8,test4.mostCurrent.activityBA,test4.mostCurrent,26);
+		Debug.PushSubsStack("SearchItem_Click (test4) ","test4",11,test4.mostCurrent.activityBA,test4.mostCurrent,26);
 if (RapidSub.canDelegate("searchitem_click")) return test4.remoteMe.runUserSub(false, "test4","searchitem_click");
  BA.debugLineNum = 26;BA.debugLine="Sub SearchItem_Click";
 Debug.ShouldStop(33554432);

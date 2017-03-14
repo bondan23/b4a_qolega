@@ -14,7 +14,7 @@ if (RapidSub.canDelegate("awesome")) return __ref.runUserSub(false, "fonts","awe
 Debug.ShouldStop(268435456);
  BA.debugLineNum = 30;BA.debugLine="Return FA";
 Debug.ShouldStop(536870912);
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_fa");
+if (true) return __ref.getField(false,"_fa");
  BA.debugLineNum = 31;BA.debugLine="End Sub";
 Debug.ShouldStop(1073741824);
 return RemoteObject.createImmutable(null);
@@ -78,7 +78,7 @@ if (RapidSub.canDelegate("proximanovalight")) return __ref.runUserSub(false, "fo
 Debug.ShouldStop(16777216);
  BA.debugLineNum = 26;BA.debugLine="Return light";
 Debug.ShouldStop(33554432);
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_light");
+if (true) return __ref.getField(false,"_light");
  BA.debugLineNum = 27;BA.debugLine="End Sub";
 Debug.ShouldStop(67108864);
 return RemoteObject.createImmutable(null);
@@ -98,7 +98,7 @@ if (RapidSub.canDelegate("proximanovaregular")) return __ref.runUserSub(false, "
 Debug.ShouldStop(1048576);
  BA.debugLineNum = 22;BA.debugLine="Return regular";
 Debug.ShouldStop(2097152);
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_regular");
+if (true) return __ref.getField(false,"_regular");
  BA.debugLineNum = 23;BA.debugLine="End Sub";
 Debug.ShouldStop(4194304);
 return RemoteObject.createImmutable(null);
@@ -118,7 +118,7 @@ if (RapidSub.canDelegate("proximanovasemibold")) return __ref.runUserSub(false, 
 Debug.ShouldStop(65536);
  BA.debugLineNum = 18;BA.debugLine="Return semiBold";
 Debug.ShouldStop(131072);
-Debug.CheckDeviceExceptions();if (true) return __ref.getField(false,"_semibold");
+if (true) return __ref.getField(false,"_semibold");
  BA.debugLineNum = 19;BA.debugLine="End Sub";
 Debug.ShouldStop(262144);
 return RemoteObject.createImmutable(null);

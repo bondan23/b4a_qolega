@@ -177,23 +177,23 @@ referringlist,activity_create,0,0,27,47
 ,qauth,,font,,api,,scrollview,,detaillist,,resultlist
 
 auth,initialize,fonts,initialize,api,initialize,api,get,auth,getstore,httpjob,initialize,httpjob,download
-referringlist,activity_pause,0,0,368,370
+referringlist,activity_pause,0,0,369,371
 
 
 
-referringlist,activity_resume,0,0,364,366
+referringlist,activity_resume,0,0,365,367
 
 
 
-referringlist,detailbtn_click,0,0,391,402
+referringlist,detailbtn_click,0,0,392,403
 ,detaillist,referringprogress,userid
 referringprogress,userid
 
-referringlist,detailbtn_down,0,0,404,412
+referringlist,detailbtn_down,0,0,405,413
 ,detaillist
 
 
-referringlist,detailbtn_up,0,0,414,422
+referringlist,detailbtn_up,0,0,415,423
 ,detaillist
 
 
@@ -205,19 +205,19 @@ referringlist,jobdone,0,0,49,59
 ,loadmoretop,,scrollview,,json,,font,,su,,detaillist,,loadmore,httputils2service,tempfolder
 
 ,looppanel,httpjob,getstring,httpjob,release,fonts,proximanovasemibold,fonts,proximanovaregular,,tomixcase,fonts,awesome,httpjob,getstring2
-referringlist,looppanel,0,0,62,358
+referringlist,looppanel,0,0,62,359
 ,scrollview,,json,,font,,su,,detaillist,,loadmore
 
 fonts,proximanovasemibold,fonts,proximanovaregular,,tomixcase,fonts,awesome
-referringlist,loadmore_click,1,0,372,380
+referringlist,loadmore_click,1,0,373,381
 ,loadmore,,loadmoretop,,api
 ,loadmore,,loadmoretop
 ,sleep,api,get,httpjob,download
-referringlist,sleep,1,0,382,389
+referringlist,sleep,1,0,383,390
 
 
 
-referringlist,tomixcase,0,0,424,462
+referringlist,tomixcase,0,0,425,463
 
 
 
@@ -225,7 +225,7 @@ referringlist,process_globals,0,1,6,9
 
 
 
-referringlist,searchitem_click,0,0,360,362
+referringlist,searchitem_click,0,0,361,363
 ,qauth
 
 auth,logout
@@ -269,7 +269,7 @@ api,post,0,0,17,19
 
 
 
-referringprogress,activity_actionbarhomeclick,0,0,353,355
+referringprogress,activity_actionbarhomeclick,0,0,367,369
 
 
 
@@ -277,31 +277,31 @@ referringprogress,activity_create,0,0,29,48
 ,font,,api,,detaillist,,container,,bar,,userid
 
 fonts,initialize,api,initialize,api,get,httpjob,initialize,httpjob,download
-referringprogress,activity_pause,0,0,361,363
+referringprogress,activity_pause,0,0,375,377
 
 
 
-referringprogress,activity_resume,0,0,357,359
+referringprogress,activity_resume,0,0,371,373
 
 
 
-referringprogress,areequal,0,0,457,460
+referringprogress,areequal,0,0,471,474
 
 
 
-referringprogress,closeicon_click,0,0,407,428
+referringprogress,closeicon_click,0,0,421,442
 ,detaillist,,scrollview,,showicon,,closeicon
 
 
-referringprogress,drawbordertop,0,0,447,455
+referringprogress,drawbordertop,0,0,461,469
 
 
 
-referringprogress,drawdashline,0,0,431,445
+referringprogress,drawdashline,0,0,445,459
 
 
 
-referringprogress,drawleftborder,0,0,365,383
+referringprogress,drawleftborder,0,0,379,397
 
 
 
@@ -313,11 +313,11 @@ referringprogress,jobdone,0,0,50,60
 ,json,,container,,font,,su,,detaillist,,showicon,,closeicon,,scrollview,httputils2service,tempfolder
 
 ,looppanel,httpjob,getstring,httpjob,release,fonts,proximanovasemibold,fonts,proximanovaregular,,drawbordertop,,tomixcase,,drawdashline,httpjob,getstring2
-referringprogress,looppanel,0,0,62,351
+referringprogress,looppanel,0,1,62,365
 ,json,,container,,font,,su,,detaillist,,showicon,,closeicon,,scrollview
 
 fonts,proximanovasemibold,fonts,proximanovaregular,,drawbordertop,,tomixcase,,drawdashline
-referringprogress,tomixcase,0,0,462,500
+referringprogress,tomixcase,0,0,476,514
 
 
 
@@ -325,7 +325,7 @@ referringprogress,process_globals,0,1,6,11
 
 
 
-referringprogress,showicon_click,0,0,385,405
+referringprogress,showicon_click,0,0,399,419
 ,detaillist,,scrollview,,showicon,,closeicon
 
 
@@ -369,30 +369,6 @@ test3,searchitem_click,1,0,31,33
 
 
 
-test4,activity_create,1,0,17,24
-
-
-
-test4,activity_pause,0,0,34,36
-
-
-
-test4,activity_resume,0,0,30,32
-
-
-
-test4,globals,0,1,12,15
-
-
-
-test4,process_globals,0,1,6,10
-
-
-
-test4,searchitem_click,1,0,26,28
-
-
-
 httputils2service,completejob,0,0,66,72
 ,taskidtojob
 
@@ -429,3 +405,27 @@ httputils2service,submitjob,0,0,27,36
 ,taskcounter,,taskidtojob,,hc
 ,taskcounter
 httpjob,getrequest
+test4,activity_create,1,0,17,24
+
+
+
+test4,activity_pause,0,0,34,36
+
+
+
+test4,activity_resume,0,0,30,32
+
+
+
+test4,globals,0,1,12,15
+
+
+
+test4,process_globals,0,1,6,10
+
+
+
+test4,searchitem_click,1,0,26,28
+
+
+

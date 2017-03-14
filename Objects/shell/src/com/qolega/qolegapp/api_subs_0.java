@@ -19,7 +19,7 @@ return RemoteObject.createImmutable("");
 }
 public static RemoteObject  _get(RemoteObject __ref,RemoteObject _endpoint) throws Exception{
 try {
-		Debug.PushSubsStack("Get (api) ","api",11,__ref.getField(false, "ba"),__ref,13);
+		Debug.PushSubsStack("Get (api) ","api",10,__ref.getField(false, "ba"),__ref,13);
 if (RapidSub.canDelegate("get")) return __ref.runUserSub(false, "api","get", __ref, _endpoint);
 Debug.locals.put("Endpoint", _endpoint);
  BA.debugLineNum = 13;BA.debugLine="Public Sub Get(Endpoint As String)";
@@ -40,7 +40,7 @@ finally {
 		}}
 public static RemoteObject  _initialize(RemoteObject __ref,RemoteObject _ba,RemoteObject _name,RemoteObject _this) throws Exception{
 try {
-		Debug.PushSubsStack("Initialize (api) ","api",11,__ref.getField(false, "ba"),__ref,9);
+		Debug.PushSubsStack("Initialize (api) ","api",10,__ref.getField(false, "ba"),__ref,9);
 if (RapidSub.canDelegate("initialize")) return __ref.runUserSub(false, "api","initialize", __ref, _ba, _name, _this);
 __ref.runVoidMethodAndSync("innerInitializeHelper", _ba);
 Debug.locals.put("ba", _ba);
@@ -64,7 +64,7 @@ finally {
 		}}
 public static RemoteObject  _post(RemoteObject __ref,RemoteObject _endpoint) throws Exception{
 try {
-		Debug.PushSubsStack("Post (api) ","api",11,__ref.getField(false, "ba"),__ref,17);
+		Debug.PushSubsStack("Post (api) ","api",10,__ref.getField(false, "ba"),__ref,17);
 if (RapidSub.canDelegate("post")) return __ref.runUserSub(false, "api","post", __ref, _endpoint);
 Debug.locals.put("EndPoint", _endpoint);
  BA.debugLineNum = 17;BA.debugLine="Public Sub Post(EndPoint As String)";
