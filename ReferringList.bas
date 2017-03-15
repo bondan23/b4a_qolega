@@ -333,9 +333,9 @@ Sub LoopPanel(StartTop As Int)
 	loadMore.TextColor = Colors.White
 	loadMore.Gravity = Gravity.CENTER
 	loadMore.Tag = PanelTop
-	Container.AddView(loadMore,(100%x-100dip)/2,PanelTop,100dip,40dip)
+	'Container.AddView(loadMore,(100%x-100dip)/2,PanelTop,100dip,40dip)
 	
-	Container.Height = PanelTop + 50dip
+	Container.Height = PanelTop '+ 50dip
 End Sub
 
 Sub SearchItem_Click

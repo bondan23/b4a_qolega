@@ -1,103 +1,655 @@
 [
   {
     "id": 1,
-    "jobtitle":"Head of Marketing & External Relation",
+    "jobtitle":"Accounting Staff",
     "location":"Greater Jakarta Area, Indonesia",
-    "jobdesc":"Consulting, Reserach, & Legal Services",
-    "commision":8000000,
+    "jobdesc":"Manufacturing",
+    "commision":2000000,
     "reference":[
        {
-	     "userId":0,
-         "name":"Ferdyansyah Assegaf",
-         "company":"Focus Forward Indonesia",
-		 "status_text":"Qualifying",
-         "status":1
+	     "userId":47,
+         "name":"Chris Adrianto Hartono",
+         "company":"Android Corner",
+		 "status_text":"Interviewed by consultant",
+         "status":2
        },
        {
-	     "userId":1,
-         "name":"Ferry Kurniawan",
-         "company":"Energizer Indonesia",
-		 "status_text":"Qualifying",
-         "status":1
-       },
-       {
-	     "userId":2,
-         "name":"Cicilia Elisabeth Tenges",
-         "company":"Cussons Indonesia",
-		 "status_text":"Completed",
-         "status":8
+	     "userId":46,
+         "name":"C.A. Yuliana Muriani Lestari",
+         "company":"Elang Group",
+		 "status_text":"Interviewed by consultant",
+         "status":2
        }
     ]
   },
   {
     "id": 2,
-    "jobtitle":"Trade Marketing Manager / Senior Manager",
+    "jobtitle":"Branch Manager",
     "location":"Greater Jakarta Area, Indonesia",
-    "jobdesc":"Consulting, Reserach, & Legal Services",
-    "commision":9500000,
+    "jobdesc":"Travel & Tourism",
+    "commision":2000000,
     "reference":[
        {
-	     "userId":3,
-         "name":"Puput Prihadi",
-         "company":"PT M3",
+	     "userId":28,
+         "name":"Karina N. Ayi",
+         "company":"Annisa Travel",
 		 "status_text":"Qualifying",
          "status":1
        },
        {
-	     "userId":4,
-         "name":"Sidharta Sugiono",
-         "company":"PT HM Sampoerna, Tbk",
+	     "userId":36,
+         "name":"Vina Livia",
+         "company":"Antavaya",
 		 "status_text":"Qualifying",
          "status":1
+       },
+       {
+	     "userId":41,
+         "name":"Widya Gunawan",
+         "company":"PT. Royal Permai Tour & Travel",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       },
+       {
+	     "userId":54,
+         "name":"Violeta Bunga Lestari",
+         "company":"Waskita Travel",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       }
+	   ,
+       {
+	     "userId":55,
+         "name":"Amriza Satria Putra",
+         "company":"Antavaya",
+		 "status_text":"Sent to client",
+         "status":3
+       }
+	   ,
+       {
+	     "userId":56,
+         "name":"Edwin Sanny Tanujaya",
+         "company":"Smailing Tour and Travel",
+		 "status_text":"Sent to client",
+         "status":3
        }
     ]
   },
   {
     "id": 3,
-    "jobtitle":"Head of Investor Relations",
+    "jobtitle":"CFO",
     "location":"Greater Jakarta Area, Indonesia",
-    "jobdesc":"Consulting, Reserach, & Legal Services",
-    "commision":10000000,
+    "jobdesc":"Education",
+    "commision":6000000,
     "reference":[
 		{
-	     "userId":5,
-         "name":"Eko Kurniadi",
-         "company":"Astra International",
-		 "status_text":"2nd Interview",
-         "status":4
+	     "userId":0,
+         "name":"Edy Lo",
+         "company":"Australian Independent School Indonesia",
+		 "status_text":"Interviewed by consultant",
+         "status":2
         }
 	]
   },
   {
     "id": 4,
-    "jobtitle":"R & D Senior Manager",
+    "jobtitle":"Director of Sales & Marketing",
     "location":"Greater Jakarta Area, Indonesia",
-    "jobdesc":"Consulting, Reserach, & Legal Services",
-    "commision":8500000,
+    "jobdesc":"Media",
+    "commision":9000000,
     "reference":[
 		{
-	     "userId":6,
-         "name":"Setiawan Wijaya",
-         "company":"PT Kino Indonesia Tbk",
-		 "status_text":"1st interview",
-         "status":4
+	     "userId":3,
+         "name":"Dina Handayani Effendy",
+         "company":"Maxuri",
+		 "status_text":"Interview by consultant",
+         "status":2
+        },
+		{
+	     "userId":50,
+         "name":"Ike Hamdan",
+         "company":"Rumah.com",
+		 "status_text":"Interview by consultant",
+         "status":2
        }
 	]
   },
   {
     "id": 5,
-    "jobtitle":"Senior Sales & Marketing Manager",
+    "jobtitle":"Finance Accounting Head",
     "location":"Greater Jakarta Area, Indonesia",
-    "jobdesc":"Consulting, Reserach, & Legal Services",
-    "commision":3500000,
+    "jobdesc":"Healthcare",
+    "commision":5000000,
     "reference":[
 		{
-		 "userId":7,
-		 "name":"Rinto Kwan",
-		 "company":"PT Lippo Karawaci Tbk",
-		 "status_text":"Completed",
-		 "status":8
+		 "userId":42,
+		 "name":"Ricky Santoso",
+		 "company":"Kalbe Nutritional",
+		 "status_text":"Sent to client",
+		 "status":3
 		}
+	]
+  },
+  {
+    "id": 6,
+    "jobtitle":"Finance Accounting SPV",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Manufacturing",
+    "commision":2000000,
+    "reference":[
+       {
+	     "userId":19,
+         "name":"David Setiawan",
+         "company":"Miracle Graha Inti",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       },
+       {
+	     "userId":23,
+         "name":"Julius Steven Saydito",
+         "company":"PT. Cipta Plantation Tbk",
+		 "status_text":"Sent to client",
+         "status":3
+       },
+       {
+	     "userId":26,
+         "name":"Jimmy Aluwyn",
+         "company":"PT. MAS Sumbiri",
+		 "status_text":"Sent to client",
+         "status":3
+       },
+       {
+	     "userId":30,
+         "name":"Fransisca Megawati Shelvia",
+         "company":"PT. Sentral Fortisindo",
+		 "status_text":"Sent to client",
+         "status":3
+       },
+       {
+	     "userId":31,
+         "name":"Martinus Erik Bunawan",
+         "company":"PT. Ricky Putra Globalindo, Tbk",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       },
+       {
+	     "userId":34,
+         "name":"Andreas Yudhistira",
+         "company":"Cahata Buana Group",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       },
+       {
+	     "userId":38,
+         "name":"William Halim",
+         "company":"PT Anugerah Pharmindo Lestari",
+		 "status_text":"Qualifying",
+         "status":1
+       },
+       {
+	     "userId":39,
+         "name":"Shella Tanoto",
+         "company":"Tanito Coal",
+		 "status_text":"Qualifying",
+         "status":2
+       }
+    ]
+  },
+  {
+    "id": 7,
+    "jobtitle":"Finance Manager",
+    "location":"Pontianak, Indonesia",
+    "jobdesc":"Trading",
+    "commision":3000000,
+    "reference":[
+       {
+	     "userId":48,
+         "name":"Silvia Irawan",
+         "company":"Wahana Indo Trade",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       }
+	]
+  },
+  {
+    "id": 8,
+    "jobtitle":"Franchise Operations Manager",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Printing & Publishing",
+    "commision":4000000,
+    "reference":[
+       {
+	     "userId":20,
+         "name":"Rini Wahyuningsih",
+         "company":"Levi Strauss Indonesia",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       }
+	]
+  },
+  {
+    "id": 8,
+    "jobtitle":"Head of Finance and Accounting",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Hospitality",
+    "commision":9000000,
+    "reference":[
+       {
+	     "userId":13,
+         "name":"Silvia Fadiel",
+         "company":"Advance Career Indonesia",
+		 "status_text":"Qualifying",
+         "status":1
+       }
+	]
+  },
+  {
+    "id": 9,
+    "jobtitle":"Head of Finance and Accounting",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Trading",
+    "commision":5000000,
+    "reference":[
+       {
+	     "userId":12,
+         "name":"Stephen Kurniawan",
+         "company":"PT Austindo Nusantara Jaya Healthcare",
+		 "status_text":"Qualifying",
+         "status":1
+       }
+	]
+  },
+  {
+    "id": 10,
+    "jobtitle":"Head of Investor Relations",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Trading",
+    "commision":5000000,
+    "reference":[
+       {
+	     "userId":8,
+         "name":"Ranadipta Nugraha",
+         "company":"PwC",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       },
+	   {
+	     "userId":9,
+         "name":"Tommy Hermin Santoso",
+         "company":"Ancora Capital",
+		 "status_text":"Qualifying",
+         "status":1
+       },
+	   {
+	     "userId":10,
+         "name":"Noel Krisnandar Yahja",
+         "company":"Capsugel Indonesia",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       },
+	   {
+	     "userId":5,
+         "name":"Reza Sukianto",
+         "company":"Orang Tua",
+		 "status_text":"Qualifying",
+         "status":1
+       }
+	   ,{
+	     "userId":6,
+         "name":"Regina Korompis",
+         "company":"PT. Matahari Department Stores. Tbk ",
+		 "status_text":"Sent to client",
+         "status":3
+       },
+	   {
+	     "userId":27,
+         "name":"Christopher Andre Benas",
+         "company":"PT Indofood Sukses Makmur Tbk",
+		 "status_text":"Interviewd by consultant",
+         "status":2
+       }
+	]
+  },
+  {
+    "id": 11,
+    "jobtitle":"Head of IR",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Banking & Financial",
+    "commision":2000000,
+    "reference":[
+       {
+	     "userId":37,
+         "name":"Christian Yo",
+         "company":"PwC",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       },
+	   {
+	     "userId":29,
+         "name":"Alvin Lioes",
+         "company":"PwC",
+		 "status_text":"Qualifying",
+         "status":1
+       }
+	]
+  },
+  {
+    "id": 12,
+    "jobtitle":"Head of Legal",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Banking & Financial",
+    "commision":7000000,
+    "reference":[
+       {
+	     "userId":16,
+         "name":"Deasy Fitriana",
+         "company":"PT Capitalinc Finance",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       }
+	]
+  },
+  {
+    "id": 13,
+    "jobtitle":"Head of Marketing",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Real estate & Property",
+    "commision":8000000,
+    "reference":[
+       {
+	     "userId":24,
+         "name":"Arif Budi Hendarin",
+         "company":"Inspira",
+		 "status_text":"Qualifying",
+         "status":1
+       }
+	]
+  },
+  {
+    "id": 14,
+    "jobtitle":"Head of Marketing and External Relations",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Beauty and Wellness",
+    "commision":8000000,
+    "reference":[
+       {
+	     "userId":11,
+         "name":"Cicilia Elisabeth Tenges",
+         "company":"Cussons Indonesia",
+		 "status_text":"Qualifying",
+         "status":1
+       }
+	]
+  },
+  {
+    "id": 15,
+    "jobtitle":"Head of RMO",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Trading",
+    "commision":4000000,
+    "reference":[
+       {
+	     "userId":49,
+         "name":"Laurensius David",
+         "company":"UT",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       }
+	]
+  },
+  {
+    "id": 16,
+    "jobtitle":"Head of Treasury",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Trading",
+    "commision":5000000,
+    "reference":[
+       {
+	     "userId":21,
+         "name":"Viviani Sutjiadi",
+         "company":"Danone Aqua",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       }
+	]
+  },
+  {
+    "id": 17,
+    "jobtitle":"IT Head",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Healthcare",
+    "commision":3000000,
+    "reference":[
+       {
+	     "userId":22,
+         "name":"Sujanto Bambang",
+         "company":"Mayapada Hospital",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       }
+	]
+  },
+  {
+    "id": 18,
+    "jobtitle":"IT Manager",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Healthcare",
+    "commision":3000000,
+    "reference":[
+       {
+	     "userId":32,
+         "name":"Budhi Prasetyo",
+         "company":"RS Mitra Keluarga Group",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       }
+	]
+  },
+  {
+    "id": 19,
+    "jobtitle":"Marketing Manager",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Healthcare",
+    "commision":4000000,
+    "reference":[
+       {
+	     "userId":14,
+         "name":"Rani Tunjung Pramesti",
+         "company":"GlaxoSmithKline",
+		 "status_text":"Qualifying",
+         "status":1
+       }
+	]
+  },
+  {
+    "id": 20,
+    "jobtitle":"Finance Assistant Manager",
+    "location":"Medan, Indonesia",
+    "jobdesc":"Trading",
+    "commision":15000000,
+    "reference":[
+       {
+	     "userId":53,
+         "name":"Susanti Susanti",
+         "company":"PT. The Univenus",
+		 "status_text":"Qualifying",
+         "status":1
+       }
+	]
+  },
+  {
+    "id": 21,
+    "jobtitle":"Project Manager",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Startup & Digital",
+    "commision":4000000,
+    "reference":[
+       {
+	     "userId":2,
+         "name":"Tophan Anggoro Putra",
+         "company":"Steinhoff International Sourcing and Logistics",
+		 "status_text":"Qualifying",
+         "status":1
+       },
+	   {
+	     "userId":18,
+         "name":"Arijono Ari",
+         "company":"Fabelio",
+		 "status_text":"Interviewd by consultant",
+         "status":2
+       },
+	   {
+	     "userId":40,
+         "name":"Aditya Perdana Putra",
+         "company":"Aditya Putra Design Service",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       },
+	   {
+	     "userId":43,
+         "name":"Nathaniel Wijaya",
+         "company":"Lavendig",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       },
+	   {
+	     "userId":44,
+         "name":"Daniar Septiaji",
+         "company":"",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       },
+	   {
+	     "userId":51,
+         "name":"Benny Kristianto",
+         "company":"San Juan Ventures",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       }
+	]
+  },
+  {
+    "id": 22,
+    "jobtitle":"R&D Manager",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"FMCG",
+    "commision":5000000,
+    "reference":[
+       {
+	     "userId":35,
+         "name":"Tri Eko Nanda Lindy",
+         "company":"Suntory Beverage and Food Indonesia",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       }
+	]
+  },
+  {
+    "id": 23,
+    "jobtitle":"Sales Manager - Food Division",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Industrial Goods & Chemical",
+    "commision":7000000,
+    "reference":[
+       {
+	     "userId":1,
+         "name":"Nando Rahmansyah",
+         "company":"Lakeland Asia Pacific",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       },
+	   {
+	     "userId":4,
+         "name":"William Cuaca",
+         "company":"Halim Sakti Pratama",
+		 "status_text":"Qualifying",
+         "status":1
+       },
+	   {
+	     "userId":15,
+         "name":"Wahyu Hendro Pranoto",
+         "company":"IMCD Group B.V",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       }
+	]
+  },
+  {
+    "id": 24,
+    "jobtitle":"Senior Sales & Marketing Manager",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Real Estate & Property",
+    "commision":3500000,
+    "reference":[
+       {
+	     "userId":45,
+         "name":"Antony Susanto",
+         "company":"PT. Agung Podomoro Land, Tbk",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       }
+	]
+  },
+  {
+    "id": 25,
+    "jobtitle":"Showroom Manager",
+    "location":"Bandung, Indonesia",
+    "jobdesc":"Building Material",
+    "commision":3000000,
+    "reference":[
+       {
+	     "userId":25,
+         "name":"Cepi Saefuloh",
+         "company":"Paloma Hardware",
+		 "status_text":"Sent to client",
+         "status":3
+       },
+	   {
+	     "userId":17,
+         "name":"Andi N.Sugiharja",
+         "company":"Log In Megastore",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       }
+	]
+  },
+  {
+    "id": 26,
+    "jobtitle":"Showroom Manager",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Travel & Tourism",
+    "commision":2000000,
+    "reference":[
+       {
+	     "userId":52,
+         "name":"Akhyar Azni",
+         "company":"PT. Asuransi Jiwa Sinarmas MSIG",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       }
+	]
+  },
+  {
+    "id": 27,
+    "jobtitle":"Trade Marketing Manager / Senior Manager",
+    "location":"Greater Jakarta Area, Indonesia",
+    "jobdesc":"Industrial Goods % Chemical",
+    "commision":7000000,
+    "reference":[
+       {
+	     "userId":33,
+         "name":"Tejo Negoro",
+         "company":"Sealed Ir Corporation",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       },
+	   {
+	     "userId":7,
+         "name":"Rudy Issudirman",
+         "company":"PT. Castrol Indonesia",
+		 "status_text":"Interviewed by consultant",
+         "status":2
+       }
 	]
   }
 ]

@@ -348,10 +348,10 @@ public static void initializeProcessGlobals() {
             }
 }
 public static String  _activity_actionbarhomeclick() throws Exception{
- //BA.debugLineNum = 333;BA.debugLine="Sub Activity_ActionBarHomeClick";
- //BA.debugLineNum = 334;BA.debugLine="Activity.Finish";
+ //BA.debugLineNum = 338;BA.debugLine="Sub Activity_ActionBarHomeClick";
+ //BA.debugLineNum = 339;BA.debugLine="Activity.Finish";
 mostCurrent._activity.Finish();
- //BA.debugLineNum = 335;BA.debugLine="End Sub";
+ //BA.debugLineNum = 340;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_create(boolean _firsttime) throws Exception{
@@ -378,23 +378,23 @@ _looppanel();
 return "";
 }
 public static String  _activity_pause(boolean _userclosed) throws Exception{
- //BA.debugLineNum = 341;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
- //BA.debugLineNum = 343;BA.debugLine="End Sub";
+ //BA.debugLineNum = 346;BA.debugLine="Sub Activity_Pause (UserClosed As Boolean)";
+ //BA.debugLineNum = 348;BA.debugLine="End Sub";
 return "";
 }
 public static String  _activity_resume() throws Exception{
- //BA.debugLineNum = 337;BA.debugLine="Sub Activity_Resume";
- //BA.debugLineNum = 339;BA.debugLine="End Sub";
+ //BA.debugLineNum = 342;BA.debugLine="Sub Activity_Resume";
+ //BA.debugLineNum = 344;BA.debugLine="End Sub";
 return "";
 }
 public static boolean  _areequal(int _b1,int _b2) throws Exception{
- //BA.debugLineNum = 437;BA.debugLine="Sub AreEqual(b1 As Int, b2 As Int) As Boolean";
- //BA.debugLineNum = 438;BA.debugLine="If b1 <> b2 Then Return False";
+ //BA.debugLineNum = 442;BA.debugLine="Sub AreEqual(b1 As Int, b2 As Int) As Boolean";
+ //BA.debugLineNum = 443;BA.debugLine="If b1 <> b2 Then Return False";
 if (_b1!=_b2) { 
 if (true) return anywheresoftware.b4a.keywords.Common.False;};
- //BA.debugLineNum = 439;BA.debugLine="Return True";
+ //BA.debugLineNum = 444;BA.debugLine="Return True";
 if (true) return anywheresoftware.b4a.keywords.Common.True;
- //BA.debugLineNum = 440;BA.debugLine="End Sub";
+ //BA.debugLineNum = 445;BA.debugLine="End Sub";
 return false;
 }
 public static String  _closeicon_click() throws Exception{
@@ -402,118 +402,118 @@ anywheresoftware.b4a.objects.PanelWrapper _detailpanel = null;
 anywheresoftware.b4a.objects.PanelWrapper _jobtitlepanel = null;
 anywheresoftware.b4a.objects.PanelWrapper _journeypanel = null;
 anywheresoftware.b4a.objects.LabelWrapper _utiltextlabel = null;
- //BA.debugLineNum = 387;BA.debugLine="Sub closeIcon_Click";
- //BA.debugLineNum = 388;BA.debugLine="Dim detailPanel,jobTitlePanel,journeyPanel As Pan";
+ //BA.debugLineNum = 392;BA.debugLine="Sub closeIcon_Click";
+ //BA.debugLineNum = 393;BA.debugLine="Dim detailPanel,jobTitlePanel,journeyPanel As Pan";
 _detailpanel = new anywheresoftware.b4a.objects.PanelWrapper();
 _jobtitlepanel = new anywheresoftware.b4a.objects.PanelWrapper();
 _journeypanel = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 389;BA.debugLine="Dim utilTextLabel As Label";
+ //BA.debugLineNum = 394;BA.debugLine="Dim utilTextLabel As Label";
 _utiltextlabel = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 391;BA.debugLine="detailPanel = detailList.Get(0)";
+ //BA.debugLineNum = 396;BA.debugLine="detailPanel = detailList.Get(0)";
 _detailpanel.setObject((android.view.ViewGroup)(mostCurrent._detaillist.Get((int) (0))));
- //BA.debugLineNum = 392;BA.debugLine="utilTextLabel = detailList.Get(1)";
+ //BA.debugLineNum = 397;BA.debugLine="utilTextLabel = detailList.Get(1)";
 _utiltextlabel.setObject((android.widget.TextView)(mostCurrent._detaillist.Get((int) (1))));
- //BA.debugLineNum = 393;BA.debugLine="jobTitlePanel = detailList.Get(2)";
+ //BA.debugLineNum = 398;BA.debugLine="jobTitlePanel = detailList.Get(2)";
 _jobtitlepanel.setObject((android.view.ViewGroup)(mostCurrent._detaillist.Get((int) (2))));
- //BA.debugLineNum = 394;BA.debugLine="journeyPanel = detailList.Get(3)";
+ //BA.debugLineNum = 399;BA.debugLine="journeyPanel = detailList.Get(3)";
 _journeypanel.setObject((android.view.ViewGroup)(mostCurrent._detaillist.Get((int) (3))));
- //BA.debugLineNum = 396;BA.debugLine="detailPanel.Height = detailPanel.Height - 200dip";
+ //BA.debugLineNum = 401;BA.debugLine="detailPanel.Height = detailPanel.Height - 200dip";
 _detailpanel.setHeight((int) (_detailpanel.getHeight()-anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (200))));
- //BA.debugLineNum = 397;BA.debugLine="utilTextLabel.Top = detailPanel.Height";
+ //BA.debugLineNum = 402;BA.debugLine="utilTextLabel.Top = detailPanel.Height";
 _utiltextlabel.setTop(_detailpanel.getHeight());
- //BA.debugLineNum = 398;BA.debugLine="utilTextLabel.Text = \"Show candidate details\"";
+ //BA.debugLineNum = 403;BA.debugLine="utilTextLabel.Text = \"Show candidate details\"";
 _utiltextlabel.setText((Object)("Show candidate details"));
- //BA.debugLineNum = 399;BA.debugLine="jobTitlePanel.Top = utilTextLabel.Top + utilTextL";
+ //BA.debugLineNum = 404;BA.debugLine="jobTitlePanel.Top = utilTextLabel.Top + utilTextL";
 _jobtitlepanel.setTop((int) (_utiltextlabel.getTop()+_utiltextlabel.getHeight()));
- //BA.debugLineNum = 400;BA.debugLine="scrollView.Top = jobTitlePanel.Top + jobTitlePane";
+ //BA.debugLineNum = 405;BA.debugLine="scrollView.Top = jobTitlePanel.Top + jobTitlePane";
 mostCurrent._scrollview.setTop((int) (_jobtitlepanel.getTop()+_jobtitlepanel.getHeight()));
- //BA.debugLineNum = 401;BA.debugLine="journeyPanel.Height = journeyPanel.Height - jobTi";
+ //BA.debugLineNum = 406;BA.debugLine="journeyPanel.Height = journeyPanel.Height - jobTi";
 _journeypanel.setHeight((int) (_journeypanel.getHeight()-_jobtitlepanel.getTop()+_jobtitlepanel.getHeight()));
- //BA.debugLineNum = 406;BA.debugLine="showIcon.Visible = True";
+ //BA.debugLineNum = 411;BA.debugLine="showIcon.Visible = True";
 mostCurrent._showicon.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 407;BA.debugLine="closeIcon.Visible = False";
+ //BA.debugLineNum = 412;BA.debugLine="closeIcon.Visible = False";
 mostCurrent._closeicon.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 408;BA.debugLine="End Sub";
+ //BA.debugLineNum = 413;BA.debugLine="End Sub";
 return "";
 }
 public static String  _drawbordertop(anywheresoftware.b4a.objects.ConcreteViewWrapper _target,int _acolor,int _strokewidth) throws Exception{
 anywheresoftware.b4a.objects.drawable.CanvasWrapper _c = null;
 anywheresoftware.b4a.objects.drawable.CanvasWrapper.PathWrapper _path = null;
- //BA.debugLineNum = 427;BA.debugLine="Sub DrawBorderTop(Target As View,aColor As Int,Str";
- //BA.debugLineNum = 428;BA.debugLine="Dim c As Canvas";
+ //BA.debugLineNum = 432;BA.debugLine="Sub DrawBorderTop(Target As View,aColor As Int,Str";
+ //BA.debugLineNum = 433;BA.debugLine="Dim c As Canvas";
 _c = new anywheresoftware.b4a.objects.drawable.CanvasWrapper();
- //BA.debugLineNum = 429;BA.debugLine="c.Initialize(Target)";
+ //BA.debugLineNum = 434;BA.debugLine="c.Initialize(Target)";
 _c.Initialize((android.view.View)(_target.getObject()));
- //BA.debugLineNum = 430;BA.debugLine="Dim Path As Path";
+ //BA.debugLineNum = 435;BA.debugLine="Dim Path As Path";
 _path = new anywheresoftware.b4a.objects.drawable.CanvasWrapper.PathWrapper();
- //BA.debugLineNum = 431;BA.debugLine="Path.Initialize(0,0)";
+ //BA.debugLineNum = 436;BA.debugLine="Path.Initialize(0,0)";
 _path.Initialize((float) (0),(float) (0));
- //BA.debugLineNum = 432;BA.debugLine="Path.LineTo(Target.Width,0)";
+ //BA.debugLineNum = 437;BA.debugLine="Path.LineTo(Target.Width,0)";
 _path.LineTo((float) (_target.getWidth()),(float) (0));
- //BA.debugLineNum = 433;BA.debugLine="c.DrawPath(Path,aColor,False,StrokeWidth)";
+ //BA.debugLineNum = 438;BA.debugLine="c.DrawPath(Path,aColor,False,StrokeWidth)";
 _c.DrawPath((android.graphics.Path)(_path.getObject()),_acolor,anywheresoftware.b4a.keywords.Common.False,(float) (_strokewidth));
- //BA.debugLineNum = 434;BA.debugLine="Target.Invalidate";
+ //BA.debugLineNum = 439;BA.debugLine="Target.Invalidate";
 _target.Invalidate();
- //BA.debugLineNum = 435;BA.debugLine="End Sub";
+ //BA.debugLineNum = 440;BA.debugLine="End Sub";
 return "";
 }
 public static String  _drawdashline(anywheresoftware.b4a.objects.ConcreteViewWrapper _target,float _x1,float _y1,float _x2,float _y2,int _col,float _stroke) throws Exception{
 com.AB.ABExtDrawing.ABExtDrawing.ABPaint _p = null;
 com.AB.ABExtDrawing.ABExtDrawing _extdrawing = null;
 anywheresoftware.b4a.objects.drawable.CanvasWrapper _cvsmain = null;
- //BA.debugLineNum = 411;BA.debugLine="Sub DrawDashLine(Target As View,x1 As Float, y1 As";
- //BA.debugLineNum = 412;BA.debugLine="Dim p As ABPaint";
+ //BA.debugLineNum = 416;BA.debugLine="Sub DrawDashLine(Target As View,x1 As Float, y1 As";
+ //BA.debugLineNum = 417;BA.debugLine="Dim p As ABPaint";
 _p = new com.AB.ABExtDrawing.ABExtDrawing.ABPaint();
- //BA.debugLineNum = 413;BA.debugLine="Dim ExtDrawing As ABExtDrawing";
+ //BA.debugLineNum = 418;BA.debugLine="Dim ExtDrawing As ABExtDrawing";
 _extdrawing = new com.AB.ABExtDrawing.ABExtDrawing();
- //BA.debugLineNum = 414;BA.debugLine="Dim cvsMain As Canvas";
+ //BA.debugLineNum = 419;BA.debugLine="Dim cvsMain As Canvas";
 _cvsmain = new anywheresoftware.b4a.objects.drawable.CanvasWrapper();
- //BA.debugLineNum = 416;BA.debugLine="cvsMain.Initialize(Target)";
+ //BA.debugLineNum = 421;BA.debugLine="cvsMain.Initialize(Target)";
 _cvsmain.Initialize((android.view.View)(_target.getObject()));
- //BA.debugLineNum = 418;BA.debugLine="p.Initialize";
+ //BA.debugLineNum = 423;BA.debugLine="p.Initialize";
 _p.Initialize();
- //BA.debugLineNum = 419;BA.debugLine="p.SetStrokeWidth(Stroke)";
+ //BA.debugLineNum = 424;BA.debugLine="p.SetStrokeWidth(Stroke)";
 _p.SetStrokeWidth(_stroke);
- //BA.debugLineNum = 420;BA.debugLine="p.SetStyle(p.Style_STROKE)";
+ //BA.debugLineNum = 425;BA.debugLine="p.SetStyle(p.Style_STROKE)";
 _p.SetStyle(_p.Style_STROKE);
- //BA.debugLineNum = 421;BA.debugLine="p.SetColor(col)";
+ //BA.debugLineNum = 426;BA.debugLine="p.SetColor(col)";
 _p.SetColor(_col);
- //BA.debugLineNum = 422;BA.debugLine="p.SetDashPathEffect(1, Array As Float(2dip, 2d";
+ //BA.debugLineNum = 427;BA.debugLine="p.SetDashPathEffect(1, Array As Float(2dip, 2d";
 _p.SetDashPathEffect((int) (1),new float[]{(float) (anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (2))),(float) (anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (2)))},(float) (0));
- //BA.debugLineNum = 423;BA.debugLine="p.DoPathEffectSingle(1)";
+ //BA.debugLineNum = 428;BA.debugLine="p.DoPathEffectSingle(1)";
 _p.DoPathEffectSingle((int) (1));
- //BA.debugLineNum = 424;BA.debugLine="ExtDrawing.DrawLine(cvsMain, x1, y1, x2, y2, p";
+ //BA.debugLineNum = 429;BA.debugLine="ExtDrawing.DrawLine(cvsMain, x1, y1, x2, y2, p";
 _extdrawing.drawLine(_cvsmain,_x1,_y1,_x2,_y2,_p);
- //BA.debugLineNum = 425;BA.debugLine="End Sub";
+ //BA.debugLineNum = 430;BA.debugLine="End Sub";
 return "";
 }
 public static String  _drawleftborder(anywheresoftware.b4a.objects.ConcreteViewWrapper _target,int _acolor,int _strokewidth,boolean _last,boolean _single) throws Exception{
 anywheresoftware.b4a.objects.drawable.CanvasWrapper _c = null;
 anywheresoftware.b4a.objects.drawable.CanvasWrapper.PathWrapper _path1 = null;
- //BA.debugLineNum = 345;BA.debugLine="Public Sub DrawLeftBorder(Target As View, aColor A";
- //BA.debugLineNum = 346;BA.debugLine="Dim c As Canvas";
+ //BA.debugLineNum = 350;BA.debugLine="Public Sub DrawLeftBorder(Target As View, aColor A";
+ //BA.debugLineNum = 351;BA.debugLine="Dim c As Canvas";
 _c = new anywheresoftware.b4a.objects.drawable.CanvasWrapper();
- //BA.debugLineNum = 347;BA.debugLine="c.Initialize(Target)";
+ //BA.debugLineNum = 352;BA.debugLine="c.Initialize(Target)";
 _c.Initialize((android.view.View)(_target.getObject()));
- //BA.debugLineNum = 348;BA.debugLine="Dim Path1 As Path";
+ //BA.debugLineNum = 353;BA.debugLine="Dim Path1 As Path";
 _path1 = new anywheresoftware.b4a.objects.drawable.CanvasWrapper.PathWrapper();
- //BA.debugLineNum = 349;BA.debugLine="Path1.Initialize(0,0)";
+ //BA.debugLineNum = 354;BA.debugLine="Path1.Initialize(0,0)";
 _path1.Initialize((float) (0),(float) (0));
- //BA.debugLineNum = 351;BA.debugLine="If Last == True Then";
+ //BA.debugLineNum = 356;BA.debugLine="If Last == True Then";
 if (_last==anywheresoftware.b4a.keywords.Common.True) { 
  }else {
- //BA.debugLineNum = 354;BA.debugLine="If Single == True Then";
+ //BA.debugLineNum = 359;BA.debugLine="If Single == True Then";
 if (_single==anywheresoftware.b4a.keywords.Common.True) { 
  }else {
- //BA.debugLineNum = 357;BA.debugLine="Path1.LineTo(0,Target.Height)";
+ //BA.debugLineNum = 362;BA.debugLine="Path1.LineTo(0,Target.Height)";
 _path1.LineTo((float) (0),(float) (_target.getHeight()));
  };
  };
- //BA.debugLineNum = 361;BA.debugLine="c.DrawPath(Path1, aColor, False, StrokeWidth)";
+ //BA.debugLineNum = 366;BA.debugLine="c.DrawPath(Path1, aColor, False, StrokeWidth)";
 _c.DrawPath((android.graphics.Path)(_path1.getObject()),_acolor,anywheresoftware.b4a.keywords.Common.False,(float) (_strokewidth));
- //BA.debugLineNum = 362;BA.debugLine="Target.Invalidate";
+ //BA.debugLineNum = 367;BA.debugLine="Target.Invalidate";
 _target.Invalidate();
- //BA.debugLineNum = 363;BA.debugLine="End Sub";
+ //BA.debugLineNum = 368;BA.debugLine="End Sub";
 return "";
 }
 public static String  _globals() throws Exception{
@@ -603,6 +603,7 @@ String _iconname = "";
 anywheresoftware.b4a.objects.ImageViewWrapper _statusicon = null;
 anywheresoftware.b4a.objects.drawable.ColorDrawable _cd = null;
 int _refstatusheight = 0;
+int _addheight = 0;
  //BA.debugLineNum = 45;BA.debugLine="Sub LoopPanel";
  //BA.debugLineNum = 46;BA.debugLine="Dim jobTitlePanel,detailPanel,journeyPanel,refere";
 _jobtitlepanel = new anywheresoftware.b4a.objects.PanelWrapper();
@@ -772,7 +773,7 @@ _lll.setText((Object)("-"));
 _lll.setText(_valuelist.Get(_i));
  };
  //BA.debugLineNum = 152;BA.debugLine="refDetWrapper.AddView(lll,l.Width+ll.Width+Gap,t";
-_refdetwrapper.AddView((android.view.View)(_lll.getObject()),(int) (_l.getWidth()+_ll.getWidth()+_gap),_toppos,(int) (anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA)/(double)1.5),(int) (-2));
+_refdetwrapper.AddView((android.view.View)(_lll.getObject()),(int) (_l.getWidth()+_ll.getWidth()+_gap),_toppos,(int) (anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA)/(double)2),(int) (-2));
  //BA.debugLineNum = 153;BA.debugLine="Dim x As Int";
 _x = 0;
  //BA.debugLineNum = 154;BA.debugLine="x = su.MeasureMultilineTextHeight(lll,lll.Text)";
@@ -1000,36 +1001,43 @@ _reftext.setText((Object)(_journeytext));
 _reftext.setTypeface((android.graphics.Typeface)(mostCurrent._font._proximanovaregular().getObject()));
  //BA.debugLineNum = 306;BA.debugLine="If rStatus = 0 Then";
 if (_rstatus==0) { 
- //BA.debugLineNum = 307;BA.debugLine="progressBox.AddView(refText,15dip,10dip,progres";
-_progressbox.AddView((android.view.View)(_reftext.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (15)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)),(int) (_progressbox.getWidth()-anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (30))),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
+ //BA.debugLineNum = 307;BA.debugLine="progressBox.AddView(refText,15dip,13.5dip,progr";
+_progressbox.AddView((android.view.View)(_reftext.getObject()),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (15)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (13.5)),(int) (_progressbox.getWidth()-anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (30))),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (20)));
  }else {
  //BA.debugLineNum = 309;BA.debugLine="progressBox.AddView(refText,refStatus.Left+refS";
-_progressbox.AddView((android.view.View)(_reftext.getObject()),(int) (_refstatus.getLeft()+_refstatus.getWidth()+_gap),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)),(int) (_progressbox.getWidth()/(double)1.5),anywheresoftware.b4a.keywords.Common.PerYToCurrent((float) (100),mostCurrent.activityBA));
+_progressbox.AddView((android.view.View)(_reftext.getObject()),(int) (_refstatus.getLeft()+_refstatus.getWidth()+_gap),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (10)),(int) (_progressbox.getWidth()/(double)2),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (20)));
  };
  //BA.debugLineNum = 313;BA.debugLine="Dim TextHeight As Int";
 _textheight = 0;
  //BA.debugLineNum = 314;BA.debugLine="TextHeight =  su.MeasureMultilineTextHeight(refT";
 _textheight = mostCurrent._su.MeasureMultilineTextHeight((android.widget.TextView)(_reftext.getObject()),_reftext.getText());
- //BA.debugLineNum = 316;BA.debugLine="If BoxHeight < TextHeight Then";
-if (_boxheight<_textheight) { 
- //BA.debugLineNum = 317;BA.debugLine="progressBox.Height = TextHeight + BoxHeight";
-_progressbox.setHeight((int) (_textheight+_boxheight));
+ //BA.debugLineNum = 316;BA.debugLine="If refText.Height < TextHeight Then";
+if (_reftext.getHeight()<_textheight) { 
+ //BA.debugLineNum = 318;BA.debugLine="refText.Height = TextHeight";
+_reftext.setHeight(_textheight);
+ //BA.debugLineNum = 319;BA.debugLine="If progressBox.Height < TextHeight+refText.Top";
+if (_progressbox.getHeight()<_textheight+_reftext.getTop()) { 
+ //BA.debugLineNum = 320;BA.debugLine="Dim addHeight As Int = (TextHeight+refText.Top";
+_addheight = (int) ((_textheight+_reftext.getTop())-_progressbox.getHeight());
+ //BA.debugLineNum = 321;BA.debugLine="progressBox.Height = progressBox.Height + addH";
+_progressbox.setHeight((int) (_progressbox.getHeight()+_addheight+_reftext.getTop()));
  };
- //BA.debugLineNum = 321;BA.debugLine="IconTop = IconTop + progressBox.Height + Gap";
+ };
+ //BA.debugLineNum = 326;BA.debugLine="IconTop = IconTop + progressBox.Height + Gap";
 _icontop = (int) (_icontop+_progressbox.getHeight()+_gap);
- //BA.debugLineNum = 322;BA.debugLine="PanelTop = PanelTop + progressBox.Height + Gap";
+ //BA.debugLineNum = 327;BA.debugLine="PanelTop = PanelTop + progressBox.Height + Gap";
 _paneltop = (int) (_paneltop+_progressbox.getHeight()+_gap);
- //BA.debugLineNum = 323;BA.debugLine="LastIconTop = statusIcon.Top";
+ //BA.debugLineNum = 328;BA.debugLine="LastIconTop = statusIcon.Top";
 _lasticontop = _statusicon.getTop();
  }
 ;
- //BA.debugLineNum = 326;BA.debugLine="journeyPanel.Height = PanelTop + scrollView.Top";
+ //BA.debugLineNum = 331;BA.debugLine="journeyPanel.Height = PanelTop + scrollView.Top";
 _journeypanel.setHeight((int) (_paneltop+mostCurrent._scrollview.getTop()));
- //BA.debugLineNum = 328;BA.debugLine="referenceWrapper.Height = LastIconTop";
+ //BA.debugLineNum = 333;BA.debugLine="referenceWrapper.Height = LastIconTop";
 _referencewrapper.setHeight(_lasticontop);
- //BA.debugLineNum = 329;BA.debugLine="DrawDashLine(referenceWrapper,0,0,0,referenceWrap";
+ //BA.debugLineNum = 334;BA.debugLine="DrawDashLine(referenceWrapper,0,0,0,referenceWrap";
 _drawdashline((anywheresoftware.b4a.objects.ConcreteViewWrapper) anywheresoftware.b4a.AbsObjectWrapper.ConvertToWrapper(new anywheresoftware.b4a.objects.ConcreteViewWrapper(), (android.view.View)(_referencewrapper.getObject())),(float) (0),(float) (0),(float) (0),(float) (_referencewrapper.getHeight()),anywheresoftware.b4a.keywords.Common.Colors.RGB((int) (177),(int) (177),(int) (177)),(float) (anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (4))));
- //BA.debugLineNum = 331;BA.debugLine="End Sub";
+ //BA.debugLineNum = 336;BA.debugLine="End Sub";
 return "";
 }
 public static String  _process_globals() throws Exception{
@@ -1044,40 +1052,40 @@ anywheresoftware.b4a.objects.PanelWrapper _detailpanel = null;
 anywheresoftware.b4a.objects.PanelWrapper _jobtitlepanel = null;
 anywheresoftware.b4a.objects.PanelWrapper _journeypanel = null;
 anywheresoftware.b4a.objects.LabelWrapper _utiltextlabel = null;
- //BA.debugLineNum = 365;BA.debugLine="Sub showIcon_Click";
- //BA.debugLineNum = 366;BA.debugLine="Dim detailPanel,jobTitlePanel,journeyPanel As Pan";
+ //BA.debugLineNum = 370;BA.debugLine="Sub showIcon_Click";
+ //BA.debugLineNum = 371;BA.debugLine="Dim detailPanel,jobTitlePanel,journeyPanel As Pan";
 _detailpanel = new anywheresoftware.b4a.objects.PanelWrapper();
 _jobtitlepanel = new anywheresoftware.b4a.objects.PanelWrapper();
 _journeypanel = new anywheresoftware.b4a.objects.PanelWrapper();
- //BA.debugLineNum = 367;BA.debugLine="Dim utilTextLabel As Label";
+ //BA.debugLineNum = 372;BA.debugLine="Dim utilTextLabel As Label";
 _utiltextlabel = new anywheresoftware.b4a.objects.LabelWrapper();
- //BA.debugLineNum = 369;BA.debugLine="detailPanel = detailList.Get(0)";
+ //BA.debugLineNum = 374;BA.debugLine="detailPanel = detailList.Get(0)";
 _detailpanel.setObject((android.view.ViewGroup)(mostCurrent._detaillist.Get((int) (0))));
- //BA.debugLineNum = 370;BA.debugLine="utilTextLabel = detailList.Get(1)";
+ //BA.debugLineNum = 375;BA.debugLine="utilTextLabel = detailList.Get(1)";
 _utiltextlabel.setObject((android.widget.TextView)(mostCurrent._detaillist.Get((int) (1))));
- //BA.debugLineNum = 371;BA.debugLine="jobTitlePanel = detailList.Get(2)";
+ //BA.debugLineNum = 376;BA.debugLine="jobTitlePanel = detailList.Get(2)";
 _jobtitlepanel.setObject((android.view.ViewGroup)(mostCurrent._detaillist.Get((int) (2))));
- //BA.debugLineNum = 372;BA.debugLine="journeyPanel = detailList.Get(3)";
+ //BA.debugLineNum = 377;BA.debugLine="journeyPanel = detailList.Get(3)";
 _journeypanel.setObject((android.view.ViewGroup)(mostCurrent._detaillist.Get((int) (3))));
- //BA.debugLineNum = 374;BA.debugLine="detailPanel.Height = detailPanel.Height + 200dip";
+ //BA.debugLineNum = 379;BA.debugLine="detailPanel.Height = detailPanel.Height + 200dip";
 _detailpanel.setHeight((int) (_detailpanel.getHeight()+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (200))));
- //BA.debugLineNum = 375;BA.debugLine="utilTextLabel.Top = detailPanel.Height";
+ //BA.debugLineNum = 380;BA.debugLine="utilTextLabel.Top = detailPanel.Height";
 _utiltextlabel.setTop(_detailpanel.getHeight());
- //BA.debugLineNum = 376;BA.debugLine="utilTextLabel.Text = \"Hide candidate details\"";
+ //BA.debugLineNum = 381;BA.debugLine="utilTextLabel.Text = \"Hide candidate details\"";
 _utiltextlabel.setText((Object)("Hide candidate details"));
- //BA.debugLineNum = 377;BA.debugLine="jobTitlePanel.Top = utilTextLabel.Top + utilTextL";
+ //BA.debugLineNum = 382;BA.debugLine="jobTitlePanel.Top = utilTextLabel.Top + utilTextL";
 _jobtitlepanel.setTop((int) (_utiltextlabel.getTop()+_utiltextlabel.getHeight()));
- //BA.debugLineNum = 378;BA.debugLine="scrollView.Top = jobTitlePanel.Top + jobTitlePane";
+ //BA.debugLineNum = 383;BA.debugLine="scrollView.Top = jobTitlePanel.Top + jobTitlePane";
 mostCurrent._scrollview.setTop((int) (_jobtitlepanel.getTop()+_jobtitlepanel.getHeight()));
- //BA.debugLineNum = 379;BA.debugLine="journeyPanel.Height = journeyPanel.Height + jobTi";
+ //BA.debugLineNum = 384;BA.debugLine="journeyPanel.Height = journeyPanel.Height + jobTi";
 _journeypanel.setHeight((int) (_journeypanel.getHeight()+_jobtitlepanel.getTop()+_jobtitlepanel.getHeight()));
- //BA.debugLineNum = 381;BA.debugLine="showIcon.Visible = False";
+ //BA.debugLineNum = 386;BA.debugLine="showIcon.Visible = False";
 mostCurrent._showicon.setVisible(anywheresoftware.b4a.keywords.Common.False);
- //BA.debugLineNum = 383;BA.debugLine="closeIcon.Top = detailPanel.Height - 5dip";
+ //BA.debugLineNum = 388;BA.debugLine="closeIcon.Top = detailPanel.Height - 5dip";
 mostCurrent._closeicon.setTop((int) (_detailpanel.getHeight()-anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (5))));
- //BA.debugLineNum = 384;BA.debugLine="closeIcon.Visible = True";
+ //BA.debugLineNum = 389;BA.debugLine="closeIcon.Visible = True";
 mostCurrent._closeicon.setVisible(anywheresoftware.b4a.keywords.Common.True);
- //BA.debugLineNum = 385;BA.debugLine="End Sub";
+ //BA.debugLineNum = 390;BA.debugLine="End Sub";
 return "";
 }
 }

@@ -154,7 +154,7 @@ Sub LoopPanel
 		Else
 			lll.Text = valueList.Get(i)
 		End If
-		refDetWrapper.AddView(lll,l.Width+ll.Width+Gap,topPos,100%x/1.5,-2)
+		refDetWrapper.AddView(lll,l.Width+ll.Width+Gap,topPos,100%x/2,-2)
 		Dim x As Int
 		x = su.MeasureMultilineTextHeight(lll,lll.Text)
 		
@@ -309,17 +309,22 @@ Sub LoopPanel
 		refText.Typeface = font.proximanovaRegular
 		
 		If rStatus = 0 Then
-			progressBox.AddView(refText,15dip,10dip,progressBox.Width-30dip,100%y)
+			progressBox.AddView(refText,15dip,13.5dip,progressBox.Width-30dip,20dip)
 		Else
-			progressBox.AddView(refText,refStatus.Left+refStatus.Width+Gap,10dip,progressBox.Width/1.5,100%y)
+			progressBox.AddView(refText,refStatus.Left+refStatus.Width+Gap,10dip,progressBox.Width/2,20dip)
 		End If
 		
 		'measure text height, get value, and update to progressBox
 		Dim TextHeight As Int
 		TextHeight =  su.MeasureMultilineTextHeight(refText,refText.Text)
 		
-		If BoxHeight < TextHeight Then
-			progressBox.Height = TextHeight + BoxHeight
+		If refText.Height < TextHeight Then
+			'progressBox.Height = progressBox.Height + TextHeight
+			refText.Height = TextHeight
+			If progressBox.Height < TextHeight+refText.Top Then
+				Dim addHeight As Int = (TextHeight+refText.Top)-progressBox.Height
+				progressBox.Height = progressBox.Height + addHeight + refText.Top
+			End If
 		End If
 		
 		'Utility

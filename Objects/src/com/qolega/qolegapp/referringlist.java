@@ -914,10 +914,8 @@ mostCurrent._loadmore.setTextColor(anywheresoftware.b4a.keywords.Common.Colors.W
 mostCurrent._loadmore.setGravity(anywheresoftware.b4a.keywords.Common.Gravity.CENTER);
  //BA.debugLineNum = 330;BA.debugLine="loadMore.Tag = PanelTop";
 mostCurrent._loadmore.setTag((Object)(_paneltop));
- //BA.debugLineNum = 331;BA.debugLine="Container.AddView(loadMore,(100%x-100dip)/2,Panel";
-_container.AddView((android.view.View)(mostCurrent._loadmore.getObject()),(int) ((anywheresoftware.b4a.keywords.Common.PerXToCurrent((float) (100),mostCurrent.activityBA)-anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)))/(double)2),_paneltop,anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (100)),anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (40)));
- //BA.debugLineNum = 333;BA.debugLine="Container.Height = PanelTop + 50dip";
-_container.setHeight((int) (_paneltop+anywheresoftware.b4a.keywords.Common.DipToCurrent((int) (50))));
+ //BA.debugLineNum = 333;BA.debugLine="Container.Height = PanelTop '+ 50dip";
+_container.setHeight(_paneltop);
  //BA.debugLineNum = 334;BA.debugLine="End Sub";
 return "";
 }

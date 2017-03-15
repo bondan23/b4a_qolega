@@ -1,396 +1,2019 @@
 [
+{
+"userId": 0,
+"name": "Edy Lo",
+"company": "Australian Independent School Indonesia",
+"latest_position": "Finance Director",
+"linkedin_url": "",
+"note": "Overbudget",
+"cv_uploaded": "",
+"phone_number": "08136151188",
+"email": "bernedy@yahoo.com",
+"job_title": "CFO",
+"journeys": [
+{
+"journeyId": 1,
+"text": "Candidate has been contacted",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":3,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 1,
+"name": "Nando Rahmansyah",
+"company": "Lakeland Asia Pacific",
+"latest_position": "National Sales Manager",
+"linkedin_url": "",
+"note": "Under 8 years of experience",
+"cv_uploaded": "",
+"phone_number": "081515170117",
+"email": "nando.rahmansyah@gmail.com",
+"job_title": "Sales Manager - Food Division",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":3,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 2,
+"name": "Tophan Anggoro Putra",
+"company": "Steinhoff International Sourcing and Logistics",
+"latest_position": "Product Manager",
+"linkedin_url": "",
+"note": "Proceed to qualifying - Shirley on phone 21/2 at 5PM",
+"cv_uploaded": "",
+"phone_number": "0816700120 / 081284066577",
+"email": "tophan.mdmmco@gmail.com",
+"job_title": "Project Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId":3,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 3,
+"name": "Dina Handayani Effendy",
+"company": "Maxuri",
+"latest_position": "Sales Director",
+"linkedin_url": "",
+"note": "never been in magazine",
+"cv_uploaded": "",
+"phone_number": "081290930094",
+"email": "",
+"job_title": "Director of Sales & Marketing",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":3,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 4,
+"name": "William Cuaca",
+"company": "Halim Sakti Pratama",
+"latest_position": "Sales Executive",
+"linkedin_url": "",
+"note": "",
+"cv_uploaded": "",
+"phone_number": "081210508868",
+"email": "williamcuaca@gmail.com",
+"job_title": "Sales Manager - Food Division",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":3,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 5,
+"name": "Reza Sukianto",
+"company": "Orang Tua",
+"latest_position": "Corporate Finance",
+"linkedin_url": "",
+"note": "overbudget",
+"cv_uploaded": "",
+"phone_number": "081932327788",
+"email": "re_glanz@hotmail.com",
+"job_title": "Head of Investor Relations",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":3,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+	"userId": 6,
+	"name": "Regina Korompis",
+	"company": "PT. Matahari Department Stores. Tbk ",
+	"latest_position": "Senior Investor Relations Manager",
+	"linkedin_url": "",
+	"note": "sent to client",
+	"cv_uploaded": "",
+	"phone_number": "0811999134",
+	"email": "reginakorompis@yahoo.com",
+	"job_title": "Head of Investor Relations",
+	"journeys": [
 	{
-		"id": 1,
-		"userId":0,
-		"name":"Ferdyansyah Assegaf",
-		"company":"Focus Forward Indonesia",
-		"latest_position":"Country Manager",
-		"linkedin_url":"",
-		"note":"",
-		"cv_uploaded":"",
-		"phone_number":"0818677686",
-		"email":"ferdyansyah.assega@gmail.com",
-		"jobtitle":"Head of Marketing & External Relation",
-		"journeys":[
-		   {
-			 "journeyId":1,
-			 "text":"Preliminary Checking",
-			 "status_text":"Qualifying",
-			 "status":1,
-			 "state":1
-		   },
-		   {
-			 "journeyId":2,
-			 "text":"Candidate is going through the qualifying stage",
-			 "status_text":null,
-			 "status":0,
-			 "state":0
-		   }
-		]
+	"journeyId": 1,
+	"text": "candidate is qualified and interested",
+	"status_text": "Qualifying",
+	"status": 1,
+	"state": 1
 	},
 	{
-		"id": 2,
-		"userId":1,
-		"name":"Ferry Kurniawan",
-		"company":"Energizer Indonesia",
-		"latest_position":"Brand Manager",
-		"linkedin_url":"",
-		"note":"",
-		"cv_uploaded":"",
-		"phone_number":"0811232191",
-		"email":"fery.kurniawan@live.com",
-		"jobtitle":"Head of Marketing & External Relation",
-		"journeys":[
-		   {
-			 "journeyId":1,
-			 "text":"Preliminary Checking",
-			 "status_text":"Qualifying",
-			 "status":1,
-			 "state":1
-		   },
-		   {
-			 "journeyId":2,
-			 "text":"Candidate didn't pass the qualification",
-			 "status_text":null,
-			 "status":0,
-			 "state":2
-		   }
-		]
+	"journeyId": 2,
+	"text": "Interviewed by consultant",
+	"status_text": "Interviewed by consultant",
+	"status": 2,
+	"state":1
 	},
 	{
-		"id": 2,
-		"userId":2,
-		"name":"Cicilia Elisabeth Tenges",
-		"company":"Cussons Indonesia",
-		"latest_position":"Brand Activation Manager",
-		"linkedin_url":"",
-		"note":"",
-		"cv_uploaded":"",
-		"phone_number":"0811232191",
-		"email":"cicilia.elizabeth@gmail.com",
-		"jobtitle":"Head of Marketing & External Relation",
-		"journeys":[
-		   {
-			 "journeyId":1,
-			 "text":"Candidate is qualified and interested",
-			 "status_text":"Qualifying",
-			 "status":1,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Interview by consultant",
-			 "status_text":"Interview by consultant",
-			 "status":2,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Sent to client",
-			 "status_text":"Candidate's profile has been sent to client",
-			 "status":3,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Interviewed by HR",
-			 "status_text":"1st Interview",
-			 "status":4,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Interviewed by Manager",
-			 "status_text":"2nd Interview",
-			 "status":4,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Interview by Manager",
-			 "status_text":"3rd Interview",
-			 "status":4,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Follow Up",
-			 "status_text":"Following up with client",
-			 "status":5,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Candidate is hired",
-			 "status_text":"Hired",
-			 "status":6,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Candidate 1st day at new job",
-			 "status_text":"1st Day",
-			 "status":7,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"End of guarantee period.Recruitment process is complete. Thank you for referring the best candidate.",
-			 "status_text":"Complete",
-			 "status":8,
-			 "state":1
-		   }
-		]
+	"journeyId": 3,
+	"text": "sent to client",
+	"status": "sent to client",
+	"status": 3,
+	"state":1
 	},
 	{
-		"id": 2,
-		"userId":2,
-		"name":"Puput Prihadi",
-		"company":"PT M3",
-		"latest_position":"Board of Advisor",
-		"linkedin_url":"",
-		"note":"",
-		"cv_uploaded":"",
-		"phone_number":"0818177977",
-		"email":"puput.prihadi@rocketmail.com",
-		"jobtitle":"Head of Marketing & External Relation",
-		"journeys":[
-		   {
-			 "journeyId":1,
-			 "text":"Preliminary Checking",
-			 "status_text":"Qualifying",
-			 "status":1,
-			 "state":1
-		   },
-		   {
-			 "journeyId":2,
-			 "text":"Candidate is going through the qualifying stage",
-			 "status_text":null,
-			 "status":0,
-			 "state":0
-		   }
-		]
-	},
-	{
-		"id": 2,
-		"userId":2,
-		"name":"Sidharta Sugiono",
-		"company":"PT HM Sampoerna, Tbk ",
-		"latest_position":"Manager Retail Channel",
-		"linkedin_url":"",
-		"note":"",
-		"cv_uploaded":"",
-		"phone_number":"08170901982",
-		"email":"sihadrta.sugiono@gmail.com",
-		"jobtitle":"Head of Marketing & External Relation",
-		"journeys":[
-		   {
-			 "journeyId":1,
-			 "text":"Preliminary Checking",
-			 "status_text":"Qualifying",
-			 "status":1,
-			 "state":1
-		   },
-		   {
-			 "journeyId":2,
-			 "text":"Candidate is going through the qualifying stage",
-			 "status_text":null,
-			 "status":0,
-			 "state":0
-		   }
-		]
-	},
-	{
-		"id": 2,
-		"userId":2,
-		"name":"Eko Kurniadi",
-		"company":"Astra International",
-		"latest_position":"Corporate Finance, Strategy Manager",
-		"linkedin_url":"",
-		"note":"",
-		"cv_uploaded":"",
-		"phone_number":"087884496980",
-		"email":"eko.kurniadi@yahoo.com",
-		"jobtitle":"Head of Marketing & External Relation",
-		"journeys":[
-		   {
-			 "journeyId":1,
-			 "text":"Preliminary Checking",
-			 "status_text":"Qualifying",
-			 "status":1,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Interview by consultant",
-			 "status_text":"Interview by consultant",
-			 "status":2,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Sent to client",
-			 "status_text":"Candidate's profile has been sent to client",
-			 "status":3,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Interviewed by HR",
-			 "status_text":"1st Interview",
-			 "status":4,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Interviewed by Manager",
-			 "status_text":"2nd Interview",
-			 "status":4,
-			 "state":1
-		   },
-		   {
-			 "journeyId":2,
-			 "text":"Waiting for the next interview",
-			 "status_text":null,
-			 "status":0,
-			 "state":0
-		   }
-		   
-		]
-	},
-	{
-		"id": 2,
-		"userId":2,
-		"name":"Setiawan Wijaya",
-		"company":"PT Kino Indonesia Tbk",
-		"latest_position":"R&D Senior Manager",
-		"linkedin_url":"",
-		"note":"",
-		"cv_uploaded":"",
-		"phone_number":"087884737659",
-		"email":"setiawan.wijaya@yahoo.com",
-		"jobtitle":"Head of Marketing & External Relation",
-		"journeys":[
-		   {
-			 "journeyId":1,
-			 "text":"Preliminary Checking",
-			 "status_text":"Qualifying",
-			 "status":1,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Interview by consultant",
-			 "status_text":"Interview by consultant",
-			 "status":2,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Sent to client",
-			 "status_text":"Candidate's profile has been sent to client",
-			 "status":3,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Interviewed by HR",
-			 "status_text":"1st Interview",
-			 "status":4,
-			 "state":1
-		   },
-		   {
-			 "journeyId":2,
-			 "text":"Waiting for the next interview",
-			 "status_text":null,
-			 "status":0,
-			 "state":0
-		   }
-		]
-	},
-	{
-		"id": 2,
-		"userId":2,
-		"name":"Rinto Kwan",
-		"company":"PT Lippo Karawaci Tbk",
-		"latest_position":"Senior Sales Marketing Manager",
-		"linkedin_url":"",
-		"note":"",
-		"cv_uploaded":"",
-		"phone_number":"08128787812",
-		"email":"rinto.kwan@gmail.com",
-		"jobtitle":"Head of Marketing & External Relation",
-		"journeys":[
-		   {
-			 "journeyId":1,
-			 "text":"Candidate is qualified and interested",
-			 "status_text":"Qualifying",
-			 "status":1,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Interview by consultant",
-			 "status_text":"Interview by consultant",
-			 "status":2,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Sent to client",
-			 "status_text":"Candidate's profile has been sent to client",
-			 "status":3,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Interviewed by HR",
-			 "status_text":"1st Interview",
-			 "status":4,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Interviewed by Manager",
-			 "status_text":"2nd Interview",
-			 "status":4,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Interview by Manager",
-			 "status_text":"3rd Interview",
-			 "status":4,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Follow Up",
-			 "status_text":"Following up with client",
-			 "status":5,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Candidate is hired",
-			 "status_text":"Hired",
-			 "status":6,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"Candidate 1st day at new job",
-			 "status_text":"1st Day",
-			 "status":7,
-			 "state":1
-		   },
-		   {
-			 "journeyId":1,
-			 "text":"End of guarantee period.Recruitment process is complete. Thank you for referring the best candidate.",
-			 "status_text":"Complete",
-			 "status":8,
-			 "state":1
-		   }
-		]
+	"journeyId":4,
+	"text":"Candidate is going through the qualifying stage",
+	"status_text":null,
+	"status":0,
+	"state":0
 	}
+	]
+},
+{
+"userId": 7,
+"name": "Rudy Issudirman",
+"company": "PT. Castrol Indonesia",
+"latest_position": "Channel Development Manager",
+"linkedin_url": "",
+"note": "not interested (prefer PE)",
+"cv_uploaded": "",
+"phone_number": "081311576567",
+"email": "rissudirman@gmail.com",
+"job_title": "Trade Marketing Manager / Senior Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 8,
+"name": "Ranadipta Nugraha",
+"company": "PwC",
+"latest_position": "Ass. Mgr - Valuation Strategy",
+"linkedin_url": "",
+"note": "not interested (prefer PE)",
+"cv_uploaded": "",
+"phone_number": "081286261888",
+"email": "ranadipta.nugraha@gmail.com",
+"job_title": "Head of Investor Realations",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 9,
+"name": "Tommy Hermin Santoso",
+"company": "Ancora Capital",
+"latest_position": "Senior Associate",
+"linkedin_url": "",
+"note": "still considering the opportunity",
+"cv_uploaded": "",
+"phone_number": "08170835121",
+"email": "tommy.hermin@gmail.com",
+"job_title": "Head of Investor Realations",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 10,
+"name": "Noel Krisnandar Yahja",
+"company": "Capsugel Indonesia",
+"latest_position": "Finance Director",
+"linkedin_url": "",
+"note": "Overbudget",
+"cv_uploaded": "",
+"phone_number": "08129435406",
+"email": "blueeyes99i99@hotmail.com",
+"job_title": "Head of Investor Realations",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 11,
+"name": "Cicilia Elisabeth Tenges",
+"company": "Cussons Indonesia",
+"latest_position": "Brand Activation Manager",
+"linkedin_url": "",
+"note": "",
+"cv_uploaded": "",
+"phone_number": "085813315579",
+"email": "cicilia.el@gmail.com",
+"job_title": "Head of Marketing and External Relations",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 12,
+"name": "Stephen Kurniawan",
+"company": "PT Austindo Nusantara Jaya Healthcare",
+"latest_position": "Head of Finance & Accounting Division",
+"linkedin_url": "",
+"note": "",
+"cv_uploaded": "",
+"phone_number": "08159906402",
+"email": "stephen_kurniawan@yahoo.com",
+"job_title": "Head of Finance Accounting",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 13,
+"name": "Silvia Fadiel",
+"company": "Advance Career Indonesia",
+"latest_position": "Finance and Accounting Manager",
+"linkedin_url": "",
+"note": "",
+"cv_uploaded": "",
+"phone_number": "0811938298",
+"email": "silvia.fadiel@yahoo.com",
+"job_title": "Head Finance and Accounting",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 14,
+"name": "Rani Tunjung Pramesti",
+"company": "Glaxo Smith ",
+"latest_position": "Senior Brand Manager",
+"linkedin_url": "",
+"note": "open in july",
+"cv_uploaded": "",
+"phone_number": "08164229047",
+"email": "Ranipramesti@yahoo.com",
+"job_title": "Marketing Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 15,
+"name": "Wahyu Hendro Pranoto",
+"company": "IMCD Group B.V.",
+"latest_position": "Sales Manager",
+"linkedin_url": "",
+"note": "want job description",
+"cv_uploaded": "",
+"phone_number": "081808715604",
+"email": "whpranot@gmail.com",
+"job_title": "Sales Manager - Food Division",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 16,
+"name": "Deasy Fitriana",
+"company": "PT Capitalinc Finance",
+"latest_position": "Legal Division Head",
+"linkedin_url": "",
+"note": "Her experience not fit requirement",
+"cv_uploaded": "",
+"phone_number": "08122121848",
+"email": "deasyfitriana@yahoo.com",
+"job_title": "Head of Legal",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 17,
+"name": "Andi N. Sugiharja",
+"company": "Log In Megastore",
+"latest_position": "Store Development Manager",
+"linkedin_url": "",
+"note": "",
+"cv_uploaded": "",
+"phone_number": "0817215651",
+"email": "andi.sugiharja@gmail.com",
+"job_title": "Showroom Manager Bandung",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 18,
+"name": "Arijono Ari",
+"company": "Fabelio",
+"latest_position": "Head of Buying",
+"linkedin_url": "",
+"note": "interested",
+"cv_uploaded": "",
+"phone_number": "0813 1864 1168 / 0816 17163948",
+"email": "ari_jono@yahoo.com",
+"job_title": "Project Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 19,
+"name": "David Setiawan",
+"company": "Miracle Graha Inti",
+"latest_position": "Finance Accounting SPV",
+"linkedin_url": "",
+"note": "budget masuk",
+"cv_uploaded": "",
+"phone_number": "081284409927",
+"email": "corneliusdavid.lie@gmail.com",
+"job_title": "Finance Accounting SPV",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 20,
+"name": "Rini Wahyuningsih",
+"company": "Levi Strauss Indonesia",
+"latest_position": "Key Account Manager",
+"linkedin_url": "",
+"note": "no training experience",
+"cv_uploaded": "",
+"phone_number": "087888300899",
+"email": "rini.w.martanto@gmail.com",
+"job_title": "Franchise Operations Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 21,
+"name": "Viviani Sutjiadi",
+"company": "Danone Aqua",
+"latest_position": "Treasury Head",
+"linkedin_url": "",
+"note": "Already interviewed",
+"cv_uploaded": "",
+"phone_number": "0812-9600468",
+"email": "viviani.sutjiadi@danone.com",
+"job_title": "Head of Treasury",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 22,
+"name": "Sujanto Bambang",
+"company": "Mayapada Hospital",
+"latest_position": "ICT Department Head",
+"linkedin_url": "",
+"note": "He is already become Linardi client",
+"cv_uploaded": "",
+"phone_number": "085810431984",
+"email": "sb4384@gmail.com",
+"job_title": "IT Head",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 23,
+"name": "Julius Steven Saydito",
+"company": "PT. Cipta Plantation Tbk",
+"latest_position": "Cost Accounting Supervisor",
+"linkedin_url": "",
+"note": "sent to Dessi",
+"cv_uploaded": "",
+"phone_number": "08179100712",
+"email": "julz_stev87@hotmail.com",
+"job_title": "Finance Accounting SPV",
+"Scheduled Interview": "17/3/17 morning",
+"Interviewed by Client": "",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 24,
+"name": "Arif Budi Hendarin",
+"company": "Inspira",
+"latest_position": "Insight and Strategic Planning Manager",
+"linkedin_url": "",
+"note": "",
+"cv_uploaded": "",
+"phone_number": "081230866895",
+"email": "arif.hendarin@gmail.com",
+"job_title": "Head of Marketing",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 25,
+"name": "Cepi Saefuloh",
+"company": "Paloma Hardware",
+"latest_position": "Store Manager",
+"linkedin_url": "",
+"note": "sent to client",
+"cv_uploaded": "",
+"phone_number": "087824030140",
+"email": "iilham412@gmail.com",
+"job_title": "Showroom Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId": 2,
+"text": "sent to client",
+"status_text": "sent to client",
+"status": 3,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 26,
+"name": "Jimmy Aluwyn",
+"company": "PT MAS Sumbiri",
+"latest_position": "Internal Audit Manager",
+"linkedin_url": "",
+"note": "sent to Dessi",
+"cv_uploaded": "",
+"phone_number": "081310134696/ 081511131882 (WA only)",
+"email": "aluwyn@gmail.com",
+"job_title": "Finance Accounting SPV",
+"Scheduled Interview": "08/03/2017 at 2 pm",
+"Interviewed by Client": "x",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId": 2,
+"text": "Candidate's profile has been sent to client",
+"status": "sent to client",
+"status": 3,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 27,
+"name": "Christhoper Andre Benas",
+"company": "Indofood",
+"latest_position": "Investor Relations Manager",
+"linkedin_url": "",
+"note": "already interviewed",
+"cv_uploaded": "",
+"phone_number": "08111076860",
+"email": "andre.benas@yahoo.com",
+"job_title": "Head of Investor Relations",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 28,
+"name": "Karina N. Ayi",
+"company": "Annisa Travel",
+"latest_position": "GM Travel",
+"linkedin_url": "",
+"note": "",
+"cv_uploaded": "",
+"phone_number": "8118075400",
+"email": "karinanurunnisa@gmail.com",
+"job_title": "Branch Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 29,
+"name": "Alvin Lioes",
+"company": "PwC",
+"latest_position": "Manager",
+"linkedin_url": "",
+"note": "tim audit internal for manufacture",
+"cv_uploaded": "",
+"phone_number": "81289105108",
+"email": "alvin_lioes@yahoo.com",
+"job_title": "Head of IR",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 30,
+"name": "Fransisca Megawati Shelvia",
+"company": "PT. Sentral Fortisindo",
+"latest_position": "Accounting and Finance Assistant Manager ",
+"linkedin_url": "",
+"note": "",
+"cv_uploaded": "",
+"phone_number": "819 1058 1825",
+"email": "fransisca_ms@yahoo.com",
+"job_title": "Finance Accounting SPV",
+"Scheduled Interview": "9/3/17 at 4 pm",
+"Interviewed by Client": "waiting for conf.",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId": 2,
+"text": "Candidate's profile has been sent to client",
+"status": "sent to client",
+"status": 3,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 31,
+"name": "Martinus Erik Bunawan",
+"company": "PT. Ricky Putra Globalindo, Tbk  ",
+"latest_position": "Internal Audit",
+"linkedin_url": "",
+"note": "hold. waiting for client's review for 3 previous batch (3 candidates)",
+"cv_uploaded": "",
+"phone_number": "08988282199",
+"email": "erik.martinus91@yahoo.com",
+"job_title": "Finance Accounting SPV",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 32,
+"name": "Budhi Prasetiyo",
+"company": "RS Mitra Keluarga Group",
+"latest_position": "Corporate IT Manager",
+"linkedin_url": "",
+"note": "less exp in hospital",
+"cv_uploaded": "",
+"phone_number": "818160800",
+"email": "budhitjahyo@yahoo.com",
+"job_title": "IT Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 33,
+"name": "Tejo Negoro",
+"company": "Sealed Ir Corporation",
+"latest_position": "Marketing Manager",
+"linkedin_url": "",
+"note": "send to Mbak Hesti",
+"cv_uploaded": "",
+"phone_number": "081212035306",
+"email": "tejonegoro@yahoo.com",
+"job_title": "Senior Marketing Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 34,
+"name": "Andreas Yudhistira",
+"company": "Cahaya Buana Group",
+"latest_position": "Internal audit ",
+"linkedin_url": "",
+"note": "hold. waiting for client's review for 3 previous batch (3 candidates)",
+"cv_uploaded": "",
+"phone_number": "0811 2288 968 ",
+"email": "andreas_yudhistira@yahoo.com",
+"job_title": "Finance Accounting SPV",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 35,
+"name": "Tri Eko Nanda Lindy",
+"company": "Suntory Beverage and Food Indonesia",
+"latest_position": "Manager R&D",
+"linkedin_url": "",
+"note": "not interested",
+"cv_uploaded": "",
+"phone_number": "081287202031",
+"email": "tri_eko_ipb@yahoo.com",
+"job_title": "R&D Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 36,
+"name": "Vina Livia",
+"company": "Antavaya",
+"latest_position": "Branch Manager",
+"linkedin_url": "",
+"note": "Interested",
+"cv_uploaded": "",
+"phone_number": "08174992575",
+"email": "vinalivia@yahoo.com",
+"job_title": "Branch Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 37,
+"name": "Christian Yo",
+"company": "PwC",
+"latest_position": "Manager",
+"linkedin_url": "",
+"note": "tax",
+"cv_uploaded": "",
+"phone_number": "815 1020 2306",
+"email": "Christie_tjoa@yahoo.com",
+"job_title": "Head of IR",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 38,
+"name": "William Halim",
+"company": "PT Anugerah Pharmindo Lestari",
+"latest_position": "Senior Accounting Analyst",
+"linkedin_url": "",
+"note": "not open",
+"cv_uploaded": "",
+"phone_number": "081289998587",
+"email": "wghalim@gmail.com",
+"job_title": "Finance Accounting SPV",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 39,
+"name": "Shella Tanoto",
+"company": "Tanito Coal",
+"latest_position": "Acc and Tax",
+"linkedin_url": "",
+"note": "not open",
+"cv_uploaded": "",
+"phone_number": "0818867052",
+"email": "shellatanoto@gmail.com",
+"job_title": "Finance Accounting SPV",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 40,
+"name": "Aditya Perdana Putra",
+"company": "Aditya Putra Design Service",
+"latest_position": "Independent Residential Building Designer",
+"linkedin_url": "",
+"note": "sent to Melda",
+"cv_uploaded": "",
+"phone_number": "081316214717",
+"email": "a_perdana78@yahoo.com\nkirayatra@yahoo.com",
+"job_title": "Project Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId": 2,
+"text": "Candidate's profile has been sent to client",
+"status": "sent to client",
+"status": 3,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 41,
+"name": "Widya Gunawan",
+"company": "PT. Royal Permai Tour & Travel",
+"latest_position": "Branch Manager",
+"linkedin_url": "",
+"note": "overbudget",
+"cv_uploaded": "",
+"phone_number": "08161175222",
+"email": "widya_royaltour18@yahoo.com",
+"job_title": "Branch Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 42,
+"name": "Ricky Santoso",
+"company": "Kalbe Nutritional",
+"latest_position": "Head of Finance Controller",
+"linkedin_url": "",
+"note": "not interested",
+"cv_uploaded": "",
+"phone_number": "085888509268",
+"email": "santoso2@gmail.com",
+"job_title": "Finance Accounting Head",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 43,
+"name": "Nathaniel Wijaya",
+"company": "Lavendig",
+"latest_position": "Project Manager",
+"linkedin_url": "",
+"note": "Jobdesc. Specialy.",
+"cv_uploaded": "",
+"phone_number": "8119620666",
+"email": "nathaniel.wijaya@yahoo.co.id",
+"job_title": "Project Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 44,
+"name": "Daniar Septiaji",
+"company": "",
+"latest_position": "Interior Design Development Manager",
+"linkedin_url": "",
+"note": "",
+"cv_uploaded": "",
+"phone_number": "08111388343",
+"email": "dhanee_22@yahoo.com",
+"job_title": "Project Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 45,
+"name": "Antony Susanto",
+"company": "PT. Agung Podomoro Land, Tbk",
+"latest_position": "Marketing Manager",
+"linkedin_url": "",
+"note": "already been proceed",
+"cv_uploaded": "",
+"phone_number": "08161153810",
+"email": "antony_mgr2@yahoo.com",
+"job_title": "Senior Sales & Marketing Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 46,
+"name": "C.A. Yuliana Muriani Lestari",
+"company": "Elang Group",
+"latest_position": "Accounting & Finance Supervisor",
+"linkedin_url": "",
+"note": "interested",
+"cv_uploaded": "",
+"phone_number": "08128569614",
+"email": "ch.a_yuliana@yahoo.com",
+"job_title": "Acopunting Staff",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 47,
+"name": "Chris Adrianto Hartono",
+"company": "Android Corner",
+"latest_position": "Manager Accounts Manager Team Head",
+"linkedin_url": "",
+"note": "interested. waiting for the CV",
+"cv_uploaded": "",
+"phone_number": "081296348112 / 0895332267982",
+"email": "hsky7187@gmail.com",
+"job_title": "Accounting Staff",
+"Scheduled Interview": "10/3/17 at 11am",
+"Interviewed by Client": "",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 48,
+"name": "Silvia Irawan",
+"company": "Wahana Indo Trada",
+"latest_position": "Head of Finance Accounting",
+"linkedin_url": "",
+"note": "already proceed",
+"cv_uploaded": "",
+"phone_number": "087821050770",
+"email": "silvia_irawan89@yahoo.co.id",
+"job_title": "Finance Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 49,
+"name": "Laurensius David",
+"company": "UT",
+"latest_position": "Head of Sales Control, Credit & Collection",
+"linkedin_url": "",
+"note": "not interested",
+"cv_uploaded": "",
+"phone_number": "081318289088",
+"email": "david_laurensius@yahoo.com",
+"job_title": "Head of RMO",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 50,
+"name": "Ike Hamdan",
+"company": "Rumah.com",
+"latest_position": "Head of Marketing",
+"linkedin_url": "",
+"note": "not interested",
+"cv_uploaded": "",
+"phone_number": "08176410937",
+"email": "Ikehamdan@gmail.com",
+"job_title": "Sales and Marketing Director",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 51,
+"name": "Benny Kristanto",
+"company": "San Juan Ventures",
+"latest_position": "Project manager",
+"linkedin_url": "",
+"note": "independent",
+"cv_uploaded": "",
+"phone_number": "081999761199",
+"email": "Benny.xtanto@gmail.com",
+"job_title": "Project Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 52,
+"name": "Akhyar Azni",
+"company": "PT. Asuransi Jiwa Sinarmas MSIG",
+"latest_position": "PHP Senior Programmer",
+"linkedin_url": "",
+"note": "still considering",
+"cv_uploaded": "",
+"phone_number": "081385162287",
+"email": "akhyar_az@rocketmail.com",
+"job_title": "SIS Admin Supervisor",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 53,
+"name": "Susanti Susanti",
+"company": "PT. The Univenus ",
+"latest_position": "Finance & Accounting",
+"linkedin_url": "",
+"note": "",
+"cv_uploaded": "",
+"phone_number": "082165979786",
+"email": "santi.leong@ymail.com",
+"job_title": "Medan Finance Asst Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 54,
+"name": "Violeta Bunga Lestari",
+"company": "Waskita travel",
+"latest_position": "Senior Travel Consultant",
+"linkedin_url": "",
+"note": "send to Dessi",
+"cv_uploaded": "",
+"phone_number": "6281315187331",
+"email": "vio.lestari12@gmail.com",
+"job_title": "Branch Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 55,
+"name": "Amriza Satria Putra",
+"company": "Antavaya",
+"latest_position": "Travel Consultant",
+"linkedin_url": "",
+"note": "not open",
+"cv_uploaded": "",
+"phone_number": "081381811314",
+"email": "asatriap1@gmail.com",
+"job_title": "Branch Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId": 2,
+"text": "Candidate's profile has been sent to client",
+"status": "sent to client",
+"status": 3,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+},
+{
+"userId": 56,
+"name": "Edwin Sanny Tanujaya",
+"company": "Smailing Tour and Travel",
+"latest_position": "Sr Travel Consultant, Tour Leader",
+"linkedin_url": "",
+"note": "",
+"cv_uploaded": "",
+"phone_number": "0812902316666 ",
+"email": "soundtrain_777@yahoo.com",
+"job_title": "Branch Manager",
+"journeys": [
+{
+"journeyId": 1,
+"text": "candidate is qualified and interested",
+"status_text": "Qualifying",
+"status": 1,
+"state": 1
+},
+{
+"journeyId": 2,
+"text": "Interviewed by consultant",
+"status_text": "Interviewed by consultant",
+"status": 2,
+"state":1
+},
+{
+"journeyId": 2,
+"text": "Candidate's profile has been sent to client",
+"status": "sent to client",
+"status": 3,
+"state":1
+},
+{
+"journeyId":4,
+"text":"Candidate is going through the qualifying stage",
+"status_text":null,
+"status":0,
+"state":0
+}
+]
+}
 ]
