@@ -68,7 +68,7 @@ Sub LoopPanel
 	Dim dataUrl As String = root.Get("linkedin_url")
 	Dim dataEmail As String = root.Get("email")
 	Dim dataNote As String = root.Get("note")
-	Dim dataJobtitle As String = root.Get("jobtitle")
+	Dim dataJobtitle As String = root.Get("job_title")
 	
 	'Default Panel Top position
 	PanelTop = 10dip

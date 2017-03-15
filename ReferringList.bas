@@ -31,6 +31,7 @@ Sub Activity_Create(FirstTime As Boolean)
 	
 	'Do not forget to load the layout file created with the visual designer. For example:
 	'Activity.LoadLayout("Layout1")
+	
 	Activity.AddMenuItem3("SearchItem", "SearchItem", LoadBitmap(File.DirAssets, "Logout.png"), True)
 	scrollView.Initialize(Activity.Height)
 	scrollView.Color = Colors.RGB(246,246,246)
@@ -114,13 +115,13 @@ Sub LoopPanel(StartTop As Int)
 		JobDesc.TextSize = JobTitle.TextSize / 1.25
 		
 		Currency.Typeface = font.proximanovaSemiBold
-		Currency.Text = "IDR "&NumberFormat(job_commision,0,2)
+		Currency.Text = "IDR "&NumberFormat(job_commision,0,2)&" Commision"
 		Currency.TextColor = Colors.RGB(74,74,74)
 '		Currency.TextSize = 12dip
-		Commision.Typeface = font.proximanovaRegular
-		Commision.Text = "Commision"
-		Commision.TextColor = Colors.RGB(179,179,179)
-		Commision.TextSize = JobTitle.TextSize / 1.25
+'		Commision.Typeface = font.proximanovaRegular
+'		Commision.Text = "Commision"
+'		Commision.TextColor = Colors.RGB(179,179,179)
+'		Commision.TextSize = JobTitle.TextSize / 1.25
 		
 		'JobTitle Add View
 		JoblistPanel.AddView(JobTitle,10dip,10dip,100%x-(10dip*2),50dip)
@@ -142,14 +143,14 @@ Sub LoopPanel(StartTop As Int)
 		'Moneyicon
 		JoblistPanel.AddView(moneyIcon,10dip,TextHeight+Gap*2.2,14dip,11.2dip)
 		'Currency & Commision Add View
-		JoblistPanel.AddView(Currency,30.9dip,TextHeight+Gap*2,105dip,50dip)
+		JoblistPanel.AddView(Currency,30.9dip,TextHeight+Gap*2,100%x-30.9*2,50dip)
 		
 		Dim Canv As Canvas
 		Canv.Initialize(Currency)
 		Dim newCurrencyWidth = Canv.MeasureStringWidth(Currency.Text,font.proximanovaRegular,Currency.TextSize) As Int
 		Currency.Width = newCurrencyWidth+Gap/2
 		
-		JoblistPanel.AddView(Commision,Currency.Width+Currency.Left,TextHeight+Gap*2.2,100%x,50dip)
+		'joblistPanel.AddView(Commision,Currency.Width+Currency.Left,TextHeight+Gap*2.2,100%x,50dip)
 		TextHeight = TextHeight + su.MeasureMultilineTextHeight(Currency,Currency.Text)
 		
 		JoblistPanel.Color=Colors.RGB(255,255,255)
@@ -265,6 +266,7 @@ Sub LoopPanel(StartTop As Int)
 			If refStatusHeight > refStatus.Height Then
 				refStatus.Height = refStatusHeight
 				ReferencePanel.Height = ReferenceHeight + Gap
+				ReferenceTop = ReferenceTop + Gap
 			End If
 			
 '			Dim gd1 As GradientDrawable 
@@ -280,10 +282,10 @@ Sub LoopPanel(StartTop As Int)
 			'detailButton
 			Dim sld As StateListDrawable
 			Dim pressed As ColorDrawable
-    		pressed.Initialize(Colors.RGB(255, 255, 255), 2dip)
+    		pressed.Initialize(Colors.White, 2dip)
 			
 			sld.Initialize
-			sld.AddState(sld.State_Pressed,pressed)
+			sld.AddState(sld.State_Enabled,pressed)
 			
 			
 			detailButton.Initialize("detailBtn") 
@@ -292,7 +294,7 @@ Sub LoopPanel(StartTop As Int)
 			detailButton.Text = "Detail Progress "&font.awesome.GetFontAwesomeIconByName("fa-arrow-right")
 			detailButton.TextSize = JobTitle.TextSize / 1.4
 			detailButton.TextColor = Colors.RGB(22,176,221)
-			detailButton.Gravity = Gravity.CENTER
+			detailButton.Gravity = Gravity.RIGHT
 			detailButton.Background = sld
 			
 			'detailBtn
@@ -307,7 +309,7 @@ Sub LoopPanel(StartTop As Int)
 			detailList.Add(detailButton)
 			
 			'Log(ReferencePanel.Width)
-			ReferencePanel.AddView(detailButton,(ReferencePanel.Width - 125dip)-Gap,refCompany.Top+refCompany.Height+5dip,125dip,35dip)
+			ReferencePanel.AddView(detailButton,(ReferencePanel.Width - 126dip),refCompany.Top+refCompany.Height+5dip,125dip,34.5dip)
 			
 			ReferenceTop = ReferenceTop+ReferenceHeight+Gap
 		Next
