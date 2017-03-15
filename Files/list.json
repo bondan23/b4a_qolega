@@ -148,7 +148,7 @@
 	     "userId":23,
          "name":"Julius Steven Saydito",
          "company":"PT. Cipta Plantation Tbk",
-		 "status_text":"Sent to client",
+		 "status_text":"Interviewed by consultant",
          "status":3
        },
        {
@@ -191,7 +191,7 @@
          "name":"Shella Tanoto",
          "company":"Tanito Coal",
 		 "status_text":"Qualifying",
-         "status":2
+         "status":1
        }
     ]
   },
@@ -305,7 +305,7 @@
 	     "userId":27,
          "name":"Christopher Andre Benas",
          "company":"PT Indofood Sukses Makmur Tbk",
-		 "status_text":"Interviewd by consultant",
+		 "status_text":"Interviewed by consultant",
          "status":2
        }
 	]

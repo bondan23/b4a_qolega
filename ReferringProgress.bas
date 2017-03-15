@@ -200,7 +200,7 @@ Sub LoopPanel
 	detailList.Add(jobTitlePanel)
 
 	jobTitle.Initialize("")
-	jobTitle.Text = "Referal Progress for "&dataJobtitle
+	jobTitle.Text = "Referral Progress for "&dataJobtitle
 '	jobTitle.TextSize = 14dip
 	jobTitle.TextColor = Colors.RGB(74,74,74)
 	jobTitlePanel.AddView(jobTitle,10dip,6dip,jobTitlePanel.Width - (10dip*2),jobTitlePanel.Height)

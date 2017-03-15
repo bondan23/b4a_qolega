@@ -32,7 +32,7 @@ Sub Activity_Create(FirstTime As Boolean)
 	'Do not forget to load the layout file created with the visual designer. For example:
 	'Activity.LoadLayout("Layout1")
 	
-	Activity.AddMenuItem3("SearchItem", "SearchItem", LoadBitmap(File.DirAssets, "Logout.png"), True)
+	Activity.AddMenuItem3("", "LogoutButton", LoadBitmap(File.DirAssets,"logout.png"), True)
 	scrollView.Initialize(Activity.Height)
 	scrollView.Color = Colors.RGB(246,246,246)
 	Activity.AddView(scrollView,0,0,100%x,100%y)
@@ -44,7 +44,7 @@ End Sub
 Sub LoopPanel(StartTop As Int)
 	Dim Bitmap1 As Bitmap
 	Dim Container As Panel
-	Dim JoblistPanel,ReferencePanel As Panel
+	Dim JoblistPanel As Panel
 	Dim PanelTop,defaultPanelHeight,PanelHeight,ReferenceTop,ReferenceHeight,Gap,TextHeight As Int
 	Dim JobTitle,Location,JobDesc,Currency,Commision As Label
 	Dim locationIcon,industryIcon,moneyIcon As ImageView
@@ -115,7 +115,7 @@ Sub LoopPanel(StartTop As Int)
 		JobDesc.TextSize = JobTitle.TextSize / 1.25
 		
 		Currency.Typeface = font.proximanovaSemiBold
-		Currency.Text = "IDR "&NumberFormat(job_commision,0,2)&" Commision"
+		Currency.Text = "IDR "&NumberFormat(job_commision,0,2)&" Commission"
 		Currency.TextColor = Colors.RGB(74,74,74)
 '		Currency.TextSize = 12dip
 '		Commision.Typeface = font.proximanovaRegular
@@ -167,6 +167,9 @@ Sub LoopPanel(StartTop As Int)
 		
 		PanelHeight = PanelHeight+(ReferenceHeight*SizeOfRef)+(Gap*SizeOfRef)
 		
+		Dim ReferencePanel(reference.Size) As Panel
+		Dim i = 0 As Int
+		
 		For Each colreference As Map In reference
 			Dim refName,refCompany,refStatus,detailBtn,refDay As Label
 			Dim detailButton As Button
@@ -185,26 +188,28 @@ Sub LoopPanel(StartTop As Int)
 			userIcon.Initialize("")
 			userIcon.Bitmap = LoadBitmap(File.DirAssets,"user.png")
 			userIcon.Gravity = Gravity.FILL
-			ReferencePanel.Initialize("")	
+			
+			ReferencePanel(i).Initialize("ReferencePanel")	
+			ReferencePanel(i).Tag = userId
 '			ReferencePanel.Color = Colors.White
-			JoblistPanel.AddView(ReferencePanel,25dip,ReferenceTop,100%x-(25dip*2),ReferenceHeight)
-
+			JoblistPanel.AddView(ReferencePanel(i),25dip,ReferenceTop,100%x-(25dip*2),ReferenceHeight)
+			
 			Dim cd As ColorDrawable
    			'cd.Initialize(Colors.Red, 10dip)
 			cd.Initialize2(Colors.White, 3dip, 1.9dip, Colors.RGB(218,218,218))
-			ReferencePanel.Background = cd
+			ReferencePanel(i).Background = cd
 '			DrawBorder(ReferencePanel,Colors.RGB(219,219,219),4)	
 			'DrawDashLine(ReferencePanel,0,0,0,ReferencePanel.Height,Colors.Red,2dip)
 			
 			'refName
-			ReferencePanel.AddView(userIcon,10dip,10dip,24dip,24dip)
+			ReferencePanel(i).AddView(userIcon,10dip,10dip,24dip,24dip)
 			refName.Initialize("")
 			refName.Text = rName
 			refName.TextColor = Colors.RGB(74,74,74)
 '			refName.TextSize = 14dip
 			refName.Typeface = font.proximanovaSemiBold
 			refName.Gravity = Gravity.CENTER_VERTICAL
-			ReferencePanel.AddView(refName,38dip,12dip,ReferencePanel.Width-38dip*2,20dip)
+			ReferencePanel(i).AddView(refName,38dip,12dip,ReferencePanel(i).Width-38dip*2,20dip)
 			
 			'refDay
 			refDay.Initialize("")
@@ -213,7 +218,7 @@ Sub LoopPanel(StartTop As Int)
 			refDay.TextColor = Colors.RGB(179,179,179)
 			refDay.Gravity = Gravity.CENTER
 			refDay.TextSize = refName.TextSize / 1.25
-			ReferencePanel.AddView(refDay,ReferencePanel.Width-20dip-Gap,refName.Top,20dip,refName.Height)
+			ReferencePanel(i).AddView(refDay,ReferencePanel(i).Width-20dip-Gap,refName.Top,20dip,refName.Height)
 			
 			
 			'refCompany
@@ -222,7 +227,7 @@ Sub LoopPanel(StartTop As Int)
 			refCompany.TextColor = Colors.RGB(179,179,179)
 			refCompany.TextSize = JobTitle.TextSize / 1.25
 			refCompany.Gravity = Gravity.CENTER_VERTICAL
-			ReferencePanel.AddView(refCompany,38dip,refName.Height+refName.Top,ReferencePanel.Width-38dip*2,20dip)
+			ReferencePanel(i).AddView(refCompany,38dip,refName.Height+refName.Top,ReferencePanel(i).Width-38dip*2,20dip)
 			
 			'refStatus
 			refStatus.Initialize("")
@@ -259,15 +264,26 @@ Sub LoopPanel(StartTop As Int)
 '			refStatus.Color = statusRefColor
 			refStatus.Gravity = Gravity.CENTER
 
-			ReferencePanel.AddView(refStatus,38dip,refCompany.Top+refCompany.Height+Gap,100dip,20dip)
-			Dim refStatusHeight As Int
-			refStatusHeight =  su.MeasureMultilineTextHeight(refStatus,refStatus.Text)
+			ReferencePanel(i).AddView(refStatus,38dip,refCompany.Top+refCompany.Height+Gap,100dip,20dip)
+			Dim c As Canvas 'for measure text width
+			c.Initialize(refStatus)
+			Dim textWidth As Int = c.MeasureStringWidth(refStatus.Text,refStatus.Typeface,refStatus.TextSize)
 			
-			If refStatusHeight > refStatus.Height Then
-				refStatus.Height = refStatusHeight
-				ReferencePanel.Height = ReferenceHeight + Gap
-				ReferenceTop = ReferenceTop + Gap
+			Log(textWidth)
+			Log(refStatus.Width)
+			
+			If textWidth > refStatus.Width Then
+				refStatus.Width = textWidth + Gap
 			End If
+			
+'			Dim refStatusHeight As Int
+'			refStatusHeight =  su.MeasureMultilineTextHeight(refStatus,refStatus.Text)
+'			
+'			If refStatusHeight > refStatus.Height Then
+'				refStatus.Height = refStatusHeight
+'				ReferencePanel(i).Height = ReferenceHeight + Gap
+'				ReferenceTop = ReferenceTop + Gap
+'			End If
 			
 '			Dim gd1 As GradientDrawable 
 '			Dim cols(2) As Int 
@@ -288,14 +304,14 @@ Sub LoopPanel(StartTop As Int)
 			sld.AddState(sld.State_Enabled,pressed)
 			
 			
-			detailButton.Initialize("detailBtn") 
-			detailButton.Typeface = font.awesome.FontAwesomeTypeface
-			detailButton.Tag = userId
-			detailButton.Text = "Detail Progress "&font.awesome.GetFontAwesomeIconByName("fa-arrow-right")
-			detailButton.TextSize = JobTitle.TextSize / 1.4
-			detailButton.TextColor = Colors.RGB(22,176,221)
-			detailButton.Gravity = Gravity.RIGHT
-			detailButton.Background = sld
+'			detailButton.Initialize("detailBtn") 
+'			detailButton.Typeface = font.awesome.FontAwesomeTypeface
+'			detailButton.Tag = userId
+'			detailButton.Text = "Detail Progress "&font.awesome.GetFontAwesomeIconByName("fa-arrow-right")
+'			detailButton.TextSize = JobTitle.TextSize / 1.4
+'			detailButton.TextColor = Colors.RGB(22,176,221)
+'			detailButton.Gravity = Gravity.RIGHT
+'			detailButton.Background = sld
 			
 			'detailBtn
 '			detailBtn.Initialize("detailBtn")
@@ -306,11 +322,11 @@ Sub LoopPanel(StartTop As Int)
 '			detailBtn.TextColor = Colors.RGB(22,176,221)
 '			detailBtn.Gravity = Gravity.CENTER
 			'add to list
-			detailList.Add(detailButton)
+			'detailList.Add(detailButton)
 			
 			'Log(ReferencePanel.Width)
-			ReferencePanel.AddView(detailButton,(ReferencePanel.Width - 126dip),refCompany.Top+refCompany.Height+5dip,125dip,34.5dip)
-			
+'			ReferencePanel.AddView(detailButton,(ReferencePanel.Width - 126dip),refCompany.Top+refCompany.Height+5dip,125dip,34.5dip)
+			i = i + 1
 			ReferenceTop = ReferenceTop+ReferenceHeight+Gap
 		Next
 		
@@ -340,7 +356,7 @@ Sub LoopPanel(StartTop As Int)
 	Container.Height = PanelTop '+ 50dip
 End Sub
 
-Sub SearchItem_Click
+Sub LogoutButton_Click
 	qAuth.Logout
 End Sub
 
@@ -370,18 +386,33 @@ Dim now As Long
    Loop
 End Sub
 
-Sub detailBtn_Click
-	For i = 0 To detailList.Size - 1
-		Dim detailBtn As Button
-		detailBtn = detailList.Get(i)
-		detailBtn = Sender
-	Next
-	
-	'Msgbox(detailBtn.Tag&" Was Clicked","Button Clicked")
-	ReferringProgress.userId = detailBtn.Tag
-	StartActivity(ReferringProgress)
-		
+Sub ReferencePanel_Touch (Action As Int, X As Float, Y As Float) As Boolean
+	Select Action
+      Case Activity.ACTION_DOWN
+         Log("down")
+      Case Activity.ACTION_UP
+         Dim pnl As Panel
+	     Dim key As Int
+	     pnl = Sender
+	     key = pnl.Tag
+		 
+		 ReferringProgress.userId = key
+		 StartActivity(ReferringProgress)
+   End Select
 End Sub
+
+'Sub detailBtn_Click
+'	For i = 0 To detailList.Size - 1
+'		Dim detailBtn As Button
+'		detailBtn = detailList.Get(i)
+'		detailBtn = Sender
+'	Next
+'	
+'	'Msgbox(detailBtn.Tag&" Was Clicked","Button Clicked")
+'	ReferringProgress.userId = detailBtn.Tag
+'	StartActivity(ReferringProgress)
+'		
+'End Sub
 
 Sub detailBtn_Down
 	For i = 0 To detailList.Size - 1
